@@ -33,10 +33,10 @@ h3. Directory structure
 * **img/**: Global images
 * **pages/**: Page type examples
 * **components/**: Components organized by directory. For example, components/he01 is version 01 of the Header component. It should contain the following:
-  * [name].html markup file
-  * [name].scss SASS file
-  * [name].js Javascript file (if necessary)
-  * i directory for images (if necessary)
+** [name].html markup file
+** [name].scss SASS file
+** [name].js Javascript file (if necessary)
+** i directory for images (if necessary)
 * **css/**: Target directory for global, compiled scss files
 * **css/components**: Target directory for component scss files
 * **bower_components**: Dependencies installed by the Bower package manager. For example, jQuery.
