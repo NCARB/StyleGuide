@@ -1,4 +1,4 @@
-h1. NCARB Design System
+h1. NCARB Design Library
 
 h2. Objective
 
@@ -13,3 +13,33 @@ The design system sample should include:
 * visual index to provide an overview of the NCARB aesthetic, including colors and typography
 * component index to provide an overview of all design components
 * component detail pages for up to 10 components and their variations, including light guidelines for usage
+
+h2. Development
+
+To contribute to this library you will need to use the Grunt.js tools provided in order to compile the SCSS files in this repo.
+
+h3. Commands
+
+* **grunt watch**: Have grunt watch the files and perform the following tasks:
+  * Recompile .scss files that have changed
+  * Minify complied CSS into a single file (both base and component CSS)
+  * Run jshint on .js files
+  * Post to livereload (compatible with the LiveReload browser plugin)
+
+h3. Directory structure
+
+* **sass/**: Global scss files
+* **js/**: Global JS
+* **img/**: Global images
+* **pages/**: Page type examples
+* **components/**: Components organized by directory. For example, components/he01 is version 01 of the Header component. It should contain the following:
+  * [name].html markup file
+  * [name].scss SASS file
+  * [name].js Javascript file (if necessary)
+  * i directory for images (if necessary)
+* **css/**: Target directory for global, compiled scss files
+* **css/components**: Target directory for component scss files
+* **bower_components**: Dependencies installed by the Bower package manager. For example, jQuery.
+* **node_modules**: Dependencies installed by the Node package manager (NPM). For example, Grunt.
+* **package.json**: Manifest of Node modules.
+* **config.rb**: To configure Compass
