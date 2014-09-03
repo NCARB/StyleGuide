@@ -1,0 +1,15 @@
+h1. NCARB Design System
+
+h2. Objective
+
+A base visual language upon which projects can be built. Instantiate a sample design library for NCARB based on design elements for three completed projects: NCARB.org home page, Roster, Renewals. We will also use the IDP app to inform the over visual styling.
+
+A Design Library is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design.
+
+h2. Scope
+
+The design system sample should include:
+* entry page to orient people on the design library
+* visual index to provide an overview of the NCARB aesthetic, including colors and typography
+* component index to provide an overview of all design components
+* component detail pages for up to 10 components and their variations, including light guidelines for usage

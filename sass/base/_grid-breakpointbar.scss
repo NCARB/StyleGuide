@@ -1,0 +1,130 @@
+/**
+ *
+ * _breakpoint-debug.scss: Shows the current breakpoint as on overlay at the bottom of the page.
+ *
+ */
+// NOTE: base.scss includes susy and grid functions.
+
+
+body::after {
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+  content: "(0 - 239px)";
+  color: rgba(255,255,255,1);
+  text-align:right;
+  padding: 4px 8px;
+  background: rgba(204,204,204, 0.8);
+  font-size: $type-S;
+  line-height:1;
+}
+
+// These styles are for use with the jquery.breakpointbar.js plugin
+.breakpoint-debug {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 5px;
+  color: black;
+  background: rgba(204,204,204, 0.8);
+  font-size: $type-S;
+
+  span {
+    display: block;
+    padding: 3px 0;
+  }
+}
+
+@include breakpoint(XS) {
+  body::after {
+    content: "XS (240 - 319px)";
+    background: rgba(51,153,102, 0.8);
+  }
+}
+
+@include breakpoint(S) {
+  body::after {
+    content: "S (320 - 479px)";
+    background: rgba(204,204,0, 0.8);
+  }
+}
+
+@include breakpoint(SM) {
+  body::after {
+    content: "SM (480 - 559px)";
+    background: rgba(51,153,204, 0.8);
+  }
+}
+
+@include breakpoint(M) {
+  body::after {
+    content: "M (560 - 671px)";
+    background: rgba(51,153,204, 0.8);
+  }
+}
+
+@include breakpoint(MML) {
+  body::after {
+    content: "MML (672 - 767px)";
+    background: rgba(51,153,204, 0.8);
+  }
+}
+
+@include breakpoint(ML) {
+  body::after {
+    content: "ML (768 - 863px)";
+    background: rgba(51,153,204, 0.8);
+  }
+}
+
+@include breakpoint(MLL) {
+  body::after {
+    content: "MLL (864 - 959px)";
+    background: rgba(51,153,204, 0.8);
+  }
+}
+
+@include breakpoint(L) {
+  body::after {
+    content: "L (960 - 1023px)";
+    background: rgba(204,102,0, 0.8);
+  }
+}
+
+@include breakpoint(XL) {
+  body::after {
+    content: "XL (1023 - 1259px)";
+    background: rgba(153,102,51, 0.8);
+  }
+}
+
+@include breakpoint(XXL) {
+  body::after {
+    content: "XXL (1260px and up)";
+    background: rgba(0,153,204, 0.8);
+  }
+}
+
+// Use this to debug any component or sub-body grid section
+@mixin breakpoint-debug($msg, $color: rgba(204,204,104,0.8)) {
+  &::after {
+    font-weight: bold;
+    display: block;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 99;
+    content: $msg;
+    background: #{$color};
+    font-size: 10px;
+  }
+}

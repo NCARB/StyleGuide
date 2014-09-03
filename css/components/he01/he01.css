@@ -1,0 +1,30 @@
+.l-header.he01 {
+  position: relative;
+  padding: 15px 20px 20px;
+  background-color: #F4F4F2;
+  *zoom: 1; }
+  .l-header.he01:before, .l-header.he01:after {
+    content: "";
+    display: table; }
+  .l-header.he01:after {
+    clear: both; }
+  .l-header.he01 .logo {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem; }
+    .js .l-header.he01 .logo {
+      margin: 0 auto 2rem auto;
+      text-align: center; }
+      @media (min-width: 42em) {
+        .js .l-header.he01 .logo {
+          float: left;
+          width: 50%;
+          margin: 0;
+          text-align: left; } }
+    .l-header.he01 .logo a {
+      display: block; }
+    .l-header.he01 .logo img {
+      width: 176px;
+      height: auto; }
+
+/*# sourceMappingURL=he01.css.map */

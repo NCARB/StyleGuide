@@ -1,0 +1,49 @@
+// Colors
+
+// Home page
+$color-white        : #fff;
+$color-black        : #000;
+
+$color-gray-1       : #F4F4F2;
+$color-gray-2       : #E2E2E2;
+$color-gray-3       : #CCCCCC;
+$color-gray-4       : #999999;
+$color-gray-5       : #666666;
+$color-gray-6       : #444444;
+$color-gray         : $color-gray-6;
+
+$color-tan_gray-1   : #EEEAE3;
+$color-tan_gray-2   : #DBD9D1;
+$color-tan_gray-3   : #97958C;
+$color-tan_gray     : $color-tan_gray-3;
+
+$color-blue-1       : #ABEAFF;
+$color-blue-2       : #00A4E3;
+$color-blue         : $color-blue-2;
+
+$color-pink         : #EC1163;
+
+$color-red-1        : #F2DEDE;
+$color-red-2        : #D2222A;
+$color-red          : $color-red-1;
+
+$color-orange       : #F05A21;
+
+$color-purple       : #9A3993;
+
+$color-yellow-1     : #FFE194;
+$color-yellow-2     : #FFC50A;
+$color-yellow-3     : #FFF100;
+$color-yellow       : $color-yellow-3;
+
+$color-green-1      : #EAF9D4;
+$color-green-2      : #C6E8CA;
+$color-green-3      : #88BA3A;
+$color-green-4      : #39B549;
+$color-green        : $color-green-4;
+
+// Colors by type
+$color_base         : $color-gray;
+$color_link         : $color_blue;
+$color_linkhover    : $color_black;
+$color_linkactive   : $color_red;

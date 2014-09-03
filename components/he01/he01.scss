@@ -1,0 +1,39 @@
+// Header v01 (he01)
+@import "compass/css3";
+@import "base/functions";
+@import "base/breakpoints";
+@import "base/colors";
+
+.l-header.he01 {
+  position: relative;
+  padding: 15px 20px 20px;
+  background-color: $color-gray-1;
+  @include clear();
+
+  .logo {
+    float: left;
+    width: 100%;
+    margin-bottom: 1rem;
+
+    .js & {
+      margin: 0 auto 2rem auto;
+      text-align: center;
+
+      @include breakpoint(MML) {
+          float: left;
+          width: 50%;
+          margin: 0;
+          text-align: left;
+      }
+    }
+
+    a {
+      display: block;
+    }
+
+    img {
+      width: 176px;
+      height: auto;
+    }
+  }
+}

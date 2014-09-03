@@ -1,0 +1,175 @@
+    /*////////////////////////////////////////////////////////*/
+   /*//                                                    //*/
+  /*//    Guts                                            //*/
+ /*//                                                    //*/
+/*////////////////////////////////////////////////////////*/
+
+/* Root Layout
+---------------------------------------- */
+$bodytopspacing: 4px;
+
+html {
+  position: relative;
+  font-family: $font_regular;
+  font-size: 100%;
+  color: $color_base;
+  background-color: $color-blue;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $font_regular;
+  font-size: 100%;
+  line-height: $base-line-height;
+  color: $color_base;
+}
+
+.strip-top {
+  width: 100%;
+  height: $bodytopspacing;
+  background: url(i/topstrip.png) repeat-y center 0;
+
+  @include breakpoint(M) {
+    height:($bodytopspacing + 4px);
+  }
+}
+
+.canvas * {
+  @include box-sizing(border-box);
+}
+
+/* Device Adaption
+   (throwing a bone to IE10 which ignores the
+    meta viewport tag in favor of this)
+---------------------------------------- */
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+/* Links
+---------------------------------------- */
+a {
+  color: $color_link;
+  line-height: inherit;
+
+  &:hover {
+    color: $color_linkhover;
+    text-decoration: underline;
+  }
+  &:active {
+    color: $color_linkactive;
+  }
+  &:focus {
+    color: $color_linkactive;
+    outline-offset: 2px;
+  }
+}
+
+/*  Typography
+---------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-black;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  @extend .type-XXL;
+}
+
+h2 {
+  @extend .type-XL;
+
+  small {
+    @include fontSize($type-M);
+    text-transform: uppercase;
+
+    a {
+      margin-left: 5px;
+      color: $color_gray;
+      text-decoration: none;
+    }
+  }
+}
+
+h3 {
+  @extend .type-L;
+}
+
+h4 {
+  @extend .type-M;
+  color: $color-black;
+}
+
+h5 {
+  @extend .type-S;
+  color: $color-black;
+}
+
+h6 {
+  @extend .type-S;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-black;
+}
+
+p {
+  margin: 0 0 10px;
+  @include fontSize($type-S);
+  line-height: $base-line-height;
+}
+
+p img {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+small {
+  @include fontSize($type-XS);
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small {
+  color: $color-gray-3;
+}

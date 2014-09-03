@@ -1,0 +1,24 @@
+// Fonts
+// Font faces are separated from typography to avoid referencing AND
+// thus fetching the font files multiple times.
+
+// Agenda
+@font-face {
+  font-family: 'Agenda-Light';
+  src: url('fonts/Agenda/Agenda-Light.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Agenda-Medium';
+  src: url('fonts/Agenda/Agenda-Medium.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Agenda-Bold';
+  src: url('fonts/Agenda/Agenda-Bold.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}

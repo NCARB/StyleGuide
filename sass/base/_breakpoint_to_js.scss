@@ -1,0 +1,60 @@
+@include breakpoint(XS) {
+  body::after {
+    content: "XS";
+  }
+}
+
+@include breakpoint(S) {
+  body::after {
+    content: "S";
+  }
+}
+
+@include breakpoint(SM) {
+  body::after {
+    content: "SM";
+  }
+}
+
+@include breakpoint(M) {
+  body::after {
+    content: "M";
+  }
+}
+
+@include breakpoint(MML) {
+  body::after {
+    content: "MML";
+  }
+}
+
+@include breakpoint(ML) {
+  body::after {
+    content: "ML";
+  }
+}
+
+@include breakpoint(MLL) {
+  body::after {
+    content: "MLL";
+  }
+}
+
+@include breakpoint(L) {
+  body::after {
+    content: "L";
+  }
+}
+
+@include breakpoint(XL) {
+  body::after {
+    content: "XL";
+  }
+}
+
+@include breakpoint(XXL) {
+  body::after {
+    content: "XXL";
+  }
+}
+

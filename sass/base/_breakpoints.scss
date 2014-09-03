@@ -1,0 +1,25 @@
+// Include this file to get at the breakpoints mixin
+
+$breakpoints: (
+  "(min-width: 20em)" "S",        //  320px at 16px base font
+  "(min-width: 30em)" "SM",       //  480px at 16px base font
+  "(min-width: 35em)" "M",        //  560px at 16px base font
+  "(min-width: 42em)" "MML",      //  672px at 16px base font
+  "(min-width: 48em)" "ML",       //  768px at 16px base font
+  "(min-width: 54em)" "MLL",      //  864px at 16px base font
+  "(min-width: 60em)" "L",        //  960px at 16px base font
+  "(min-width: 64em)" "XL",       // 1024px at 16px base font
+  "(min-width: 78.75em)" "XXL"    // 1260px at 16px base font
+);
+
+@mixin breakpoint($point) {
+  @each $breakpoint in $breakpoints {
+    $query: nth($breakpoint, 1);
+    $name: nth($breakpoint, 2);
+
+    @if ($name == $point) {
+      @media #{$query} { @content }
+    }
+  }
+}
+

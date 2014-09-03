@@ -1,0 +1,102 @@
+// https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_fontSize.scss
+// Function for converting a px based font-size to rem.
+@function calculateRem($size) {
+  $remSize: $size / $base-font-size;
+  // Default font size on html element is 100%, equivalent to 16px;
+  @return #{$remSize}rem;
+}
+
+// Mixin that will include the fall back px declaration as well as the calculated rem value.
+@mixin fontSize($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin lineHeight($size) {
+  line-height: $size;
+  line-height: calculateRem($size);
+}
+
+@mixin type-XXL {
+  font-family: $font_light;
+  @include fontSize($type-XXL);
+  @include lineHeight($type-XXL + 4px);
+  margin: 0 0 15px;
+}
+
+@mixin type-XL {
+  font-family: $font_light;
+  font-style: normal;
+  font-weight: normal;
+  @include fontSize($type-XL);
+  @include lineHeight($type-XL + 3px);
+  margin: 0 0 12px;
+}
+
+@mixin type-L {
+  font-family: $font_light;
+  @include fontSize($type-L);
+  @include lineHeight($type-L + 6px);
+  margin: 0 0 10px;
+}
+
+@mixin type-M {
+  font-family: $font_regular;
+  @include fontSize($type-M);
+  @include lineHeight($type-M + 5px);
+  margin: 0 0 8px;
+}
+
+@mixin type-S {
+  font-family: $font_regular;
+  @include fontSize($type-S);
+  @include lineHeight($type-S + 2px);
+  margin: 0 0 6px;
+}
+
+@mixin type-XS {
+  font-family: $font_regular;
+  @include fontSize($type-XS);
+  @include lineHeight($type-XS + 2px);
+}
+
+@mixin type-body() {
+  @include type-S();
+  color: $color_base;
+}
+
+@mixin sub-section-title() {
+  margin-bottom: 0;
+  font-family: $font_light;
+  @include fontSize($type-S + 1);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: $color_gray-5;
+  text-transform: uppercase;
+}
+
+// Use these styles with @extend
+.type-XXL {
+  @include type-XXL;
+}
+.type-XL {
+  @include type-XL;
+}
+.type-L {
+  @include type-L;
+}
+.type-M {
+  @include type-M;
+}
+.type-S {
+  @include type-S;
+}
+.type-XS {
+  @include type-XS;
+}
+
+.body-header {
+  @include fontSize($type-L);
+  margin-bottom: 10px;
+  color: $color_gray-6;
+}

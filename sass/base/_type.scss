@@ -1,0 +1,24 @@
+// ---------------------------------------------------------------------------
+// Font Variables
+@import 'functions';
+
+$font_regular  : Arial, Helvetica, sans-serif;
+$font_base     : $font_regular;
+$font_light    : "Agenda-Light", $font_regular;
+$font_medium   : "Agenda-Medium", $font_regular;
+$font_bold     : "Agenda-Bold", $font_regular;
+
+// ---------------------------------------------------------------------------
+// Type Sizes
+
+$type-XS  : 12px;
+$type-S   : 14px;
+$type-M   : 16px;
+$type-L   : 18px;
+$type-XL  : 24px;
+$type-XXL : 36px;
+
+$normpx   : $type-M;
+$base-font-size   : $type-M;
+$base-line-height : 1.428571429; // Adopting from Bootstrap
+

@@ -1,0 +1,139 @@
+    ////////////////////////////////////////////////////////////
+   ////                                                    ////
+  ////    Mixins                                          ////
+ ////                                                    ////
+////////////////////////////////////////////////////////////
+
+// Vertical Gradient
+@mixin vgradient($top,$bottom) {
+  background-color:$bottom;
+  background-image:-moz-linear-gradient(top, $top, $bottom);
+  background-image:-webkit-gradient(linear,left top,left bottom,color-stop(0, $top),color-stop(1, $bottom));
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}');
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$top}', endColorstr='#{$bottom}')";
+}
+
+// Clearfix
+@mixin clear {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear:both;
+  }
+  *zoom: 1;
+}
+
+@mixin removeClearfix() {
+  &:before,
+  &:after {
+      display: inherit;
+  }
+  &:after {
+      clear: none;
+  }
+  *zoom: inherit;
+}
+
+// Add percentage of white to a color
+@function tint($color, $percent){
+  @return mix(white, $color, $percent);
+}
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function shade($color, $percent){
+  @return mix(black, $color, $percent);
+}
+
+// Inline-block, including baseline adjustments and IE loveliness
+@mixin inline-block {
+  display: inline-block;
+  vertical-align: baseline;
+  zoom: 1;
+  *display: inline;
+  *vertical-align: auto;
+}
+
+// Text-indent method for hiding text
+@mixin hide-text {
+  text-indent: -888em;
+  overflow: hidden;
+}
+
+// Obscuring text to hide text; preferred, though not always possible.
+@mixin hide-text_alt {
+  font: 0/0 a;
+  color: transparent;
+}
+
+// Positioning. If one of "$coordinates" is unitless, it omits the prop/val pair
+@mixin position($position: relative, $coordinates: 0 0 0 0) {
+
+  @if type-of($position) == list {
+    $coordinates: $position;
+    $position: relative;
+  }
+
+  $top: nth($coordinates, 1);
+  $right: nth($coordinates, 2);
+  $bottom: nth($coordinates, 3);
+  $left: nth($coordinates, 4);
+
+  position: $position;
+
+  @if $top == auto {
+    top: $top;
+  }
+  @else if not(unitless($top)) {
+    top: $top;
+  }
+
+  @if $right == auto {
+    right: $right;
+  }
+  @else if not(unitless($right)) {
+    right: $right;
+  }
+
+  @if $bottom == auto {
+    bottom: $bottom;
+  }
+  @else if not(unitless($bottom)) {
+    bottom: $bottom;
+  }
+
+  @if $left == auto {
+    left: $left;
+  }
+  @else if not(unitless($left)) {
+    left: $left;
+  }
+}
+
+@mixin calc($property, $expression) {
+  #{$property}: -webkit-calc(#{$expression});
+  #{$property}: -khtml-calc(#{$expression});
+  #{$property}: -moz-calc(#{$expression});
+  #{$property}: -ms-calc(#{$expression});
+  #{$property}: -o-calc(#{$expression});
+  #{$property}: calc(#{$expression});
+}
+
+// Icons (to avoid importing the entire icon file when all you need is the mixins)
+@mixin basic-icon {
+  content: " ";
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+@mixin icon($size) {
+  @include basic-icon();
+  width: $size;
+  height: $size;
+}
