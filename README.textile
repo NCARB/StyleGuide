@@ -38,7 +38,7 @@ h3. Directory structure
 ** [name].js Javascript file (if necessary)
 ** i directory for images (if necessary)
 * **css/**: Target directory for global, compiled scss files
-* **css/components**: Target directory for component scss files
+* **css/components/**: Target directory for component scss files
 * **bower_components/**: Dependencies installed by the Bower package manager. For example, jQuery.
 * **node_modules/**: Dependencies installed by the Node package manager (NPM). For example, Grunt.
 * **package.json**: Manifest of Node modules.
