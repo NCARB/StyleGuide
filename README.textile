@@ -21,10 +21,10 @@ To contribute to this library you will need to use the Grunt.js tools provided i
 h3. Commands
 
 * **grunt watch**: Have grunt watch the files and perform the following tasks:
-  * Recompile .scss files that have changed
-  * Minify complied CSS into a single file (both base and component CSS)
-  * Run jshint on .js files
-  * Post to livereload (compatible with the LiveReload browser plugin)
+** Recompile .scss files that have changed
+** Minify complied CSS into a single file (both base and component CSS)
+** Run jshint on .js files
+** Post to livereload (compatible with the LiveReload browser plugin)
 
 h3. Directory structure
 
