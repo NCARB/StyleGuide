@@ -65,7 +65,9 @@
 }
 
 @mixin type-body() {
-  @include type-M();
+  font-family: $font_regular;
+  @include fontSize($type-M);
+  @include lineHeight($type-M + 5px);
   color: $color_base;
 }
 

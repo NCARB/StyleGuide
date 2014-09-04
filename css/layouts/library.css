@@ -163,12 +163,14 @@ ul.figure li a {
 .t-box-color-swatch {
   position: relative;
   min-width: 145px;
-  min-height: 25px;
+  min-height: 42px;
   padding: 5px;
   color: #444444; }
   .t-box-color-swatch.primary {
-    min-height: 50px;
-    color: #fff; }
+    min-height: 84px; }
+    .t-box-color-swatch.primary .name,
+    .t-box-color-swatch.primary .code {
+      color: #fff; }
   .t-box-color-swatch .name {
     width: 100%;
     text-align: left; }
@@ -194,8 +196,10 @@ ul.figure li a {
   .t-box-color-swatch.yellow-2 {
     background-color: #FFC50A; }
   .t-box-color-swatch.yellow-3 {
-    background-color: #FFF100;
-    color: #444444; }
+    background-color: #FFF100; }
+    .t-box-color-swatch.yellow-3 .name,
+    .t-box-color-swatch.yellow-3 .code {
+      color: #444444; }
   .t-box-color-swatch.green-1 {
     background-color: #EAF9D4; }
   .t-box-color-swatch.green-2 {
@@ -204,9 +208,12 @@ ul.figure li a {
     background-color: #88BA3A; }
   .t-box-color-swatch.green-4 {
     background-color: #39B549; }
-  .t-box-color-swatch.white {
-    background-color: #fff;
-    border: 1px solid #666666; }
+  .t-box-color-swatch.tan_gray-1 {
+    background-color: #EEEAE3; }
+  .t-box-color-swatch.tan_gray-2 {
+    background-color: #DBD9D1; }
+  .t-box-color-swatch.tan_gray-3 {
+    background-color: #97958C; }
   .t-box-color-swatch.gray-1 {
     background-color: #F4F4F2; }
   .t-box-color-swatch.gray-2 {
@@ -214,19 +221,20 @@ ul.figure li a {
   .t-box-color-swatch.gray-3 {
     background-color: #CCCCCC; }
   .t-box-color-swatch.gray-4 {
-    background-color: #999999;
-    color: #fff; }
+    background-color: #999999; }
+    .t-box-color-swatch.gray-4 .code {
+      color: #fff; }
   .t-box-color-swatch.gray-5 {
-    background-color: #666666;
-    color: #fff; }
+    background-color: #666666; }
+    .t-box-color-swatch.gray-5 .code {
+      color: #fff; }
   .t-box-color-swatch.gray-6 {
     background-color: #444444;
     color: #fff; }
-  .t-box-color-swatch.tan_gray-1 {
-    background-color: #EEEAE3; }
-  .t-box-color-swatch.tan_gray-2 {
-    background-color: #DBD9D1; }
-  .t-box-color-swatch.tan_gray-3 {
-    background-color: #97958C; }
+  .t-box-color-swatch.black {
+    background-color: #000; }
+  .t-box-color-swatch.white {
+    background-color: #fff;
+    border: 1px solid #444444; }
 
 /*# sourceMappingURL=library.css.map */

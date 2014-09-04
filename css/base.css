@@ -159,12 +159,11 @@ h6 {
   color: #000; }
 
 p {
-  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 21px;
   line-height: 1.3125rem;
-  margin: 0 0 8px;
   color: #444444; }
 
 em,

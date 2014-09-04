@@ -134,7 +134,7 @@ ul.figure li a {
 }
 
 .t-box-color-swatch {
-  $swatch-min-height: 25px;
+  $swatch-min-height: 42px;
   position: relative;
   min-width: 145px;
   min-height: $swatch-min-height;
@@ -143,7 +143,11 @@ ul.figure li a {
 
   &.primary {
     min-height: $swatch-min-height * 2;
-    color: $color-white;
+
+    .name,
+    .code {
+      color: $color-white;
+    }
   }
 
   .name {
@@ -190,7 +194,11 @@ ul.figure li a {
   }
   &.yellow-3 {
     background-color: $color-yellow-3;
-    color: $color-gray;
+
+    .name,
+    .code {
+      color: $color-gray;
+    }
   }
 
   &.green-1 {
@@ -206,10 +214,16 @@ ul.figure li a {
     background-color: $color-green-4;
   }
 
-  &.white {
-    background-color: $color-white;
-    border: 1px solid $color-gray-5;
+  &.tan_gray-1 {
+    background-color: $color-tan_gray-1;
   }
+  &.tan_gray-2 {
+    background-color: $color-tan_gray-2;
+  }
+  &.tan_gray-3 {
+    background-color: $color-tan_gray-3;
+  }
+
   &.gray-1 {
     background-color: $color-gray-1;
   }
@@ -221,24 +235,28 @@ ul.figure li a {
   }
   &.gray-4 {
     background-color: $color-gray-4;
-    color: $color-white;
+
+    .code {
+      color: $color-white;
+    }
   }
   &.gray-5 {
     background-color: $color-gray-5;
-    color: $color-white;
+
+    .code {
+      color: $color-white;
+    }
   }
   &.gray-6 {
     background-color: $color-gray-6;
     color: $color-white;
   }
 
-  &.tan_gray-1 {
-    background-color: $color-tan_gray-1;
+  &.black {
+    background-color: $color-black;
   }
-  &.tan_gray-2 {
-    background-color: $color-tan_gray-2;
-  }
-  &.tan_gray-3 {
-    background-color: $color-tan_gray-3;
+  &.white {
+    background-color: $color-white;
+    border: 1px solid $color-gray;
   }
 }
