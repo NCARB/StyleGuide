@@ -26,5 +26,10 @@
     .l-header.he01 .logo img {
       width: 176px;
       height: auto; }
+  @media (min-width: 64em) {
+    .l-header.he01 .header-brand,
+    .l-header.he01 .header-strip {
+      margin: 0 auto;
+      width: 1023px; } }
 
 /*# sourceMappingURL=he01.css.map */

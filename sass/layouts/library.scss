@@ -1,5 +1,6 @@
+@import "compass/css3";
 @import "base/colors";
-@import "base/type";
+@import "base/type_sizes";
 @import "base/type_mixins";
 
 section {
@@ -30,7 +31,6 @@ section {
 
 .figure {
   width: 50%;
-  @include type-M();
   margin-bottom: 45px;
   padding-top: 80px;
   text-transform: uppercase;
@@ -106,6 +106,29 @@ ul.figure li a {
   }
 }
 
+// --------------------------------------  GRID -----------------------------
+.l-grid {
+  &.t-demo {
+    padding-top: .5rem;
+  }
+  .t-demo {
+    width: 100%;
+    padding: .8rem 1rem 0;
+    margin-bottom: 1rem;
+    background: $color-blue-2;
+    color: $color-white;
+    @include border-radius(3px);
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: .8rem;
+      height: 1px;
+    }
+  }
+}
+
+// --------------------------------------  COLORS -----------------------------
 .l-color-group {
   margin-bottom: 2rem;
 }

@@ -18,14 +18,16 @@
 }
 
 @mixin type-XXL {
-  font-family: $font_light;
+  font-family: $font_medium;
+  font-style: normal;
+  font-weight: normal;
   @include fontSize($type-XXL);
   @include lineHeight($type-XXL + 4px);
   margin: 0 0 15px;
 }
 
 @mixin type-XL {
-  font-family: $font_light;
+  font-family: $font_medium;
   font-style: normal;
   font-weight: normal;
   @include fontSize($type-XL);
@@ -35,13 +37,15 @@
 
 @mixin type-L {
   font-family: $font_light;
+  font-style: normal;
+  font-weight: normal;
   @include fontSize($type-L);
-  @include lineHeight($type-L + 6px);
+  @include lineHeight($type-XXL + 6px);
   margin: 0 0 10px;
 }
 
 @mixin type-M {
-  font-family: $font_regular;
+  font-family: $font_light;
   @include fontSize($type-M);
   @include lineHeight($type-M + 5px);
   margin: 0 0 8px;
@@ -61,7 +65,7 @@
 }
 
 @mixin type-body() {
-  @include type-S();
+  @include type-M();
   color: $color_base;
 }
 

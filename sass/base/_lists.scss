@@ -1,0 +1,75 @@
+    /*////////////////////////////////////////////////////////*/
+   /*//                                                    //*/
+  /*//    Lists                                           //*/
+ /*//                                                    //*/
+/*////////////////////////////////////////////////////////*/
+
+.list-bullet {
+  margin-bottom: 1rem;
+
+  > li {
+    list-style-type: circle;
+    margin-left: 20px;
+    line-height: $base-line-height;
+  }
+}
+
+.list-inline {
+  margin-bottom: 1rem;
+
+  > li {
+    display: inline;
+    line-height: $base-line-height;
+  }
+}
+
+.list-comma {
+  > li {
+    line-height: $base-line-height;
+
+    &:after {
+      content:', '
+    }
+  }
+}
+
+.list-ordered {
+  margin-bottom: 1rem;
+
+  > li {
+    list-style-type: decimal;
+    margin-left: 23px;
+    line-height: $base-line-height;
+  }
+}
+
+.list-pipe {
+  > li {
+    line-height: $base-line-height;
+
+    &:after {
+    	content:' |';
+    	margin-left: 4px;
+    	margin-right: 3px;
+    	color: $color-gray-4;
+    }
+  }
+
+  > li:last-child {
+    &:after {
+      display:none;
+    }
+  }
+}
+
+.list-spread {
+  > li {
+    line-height: $base-line-height;
+    margin-bottom: 1rem;
+  }
+}
+
+.list-definition {
+  margin-bottom: 1rem;
+}
+

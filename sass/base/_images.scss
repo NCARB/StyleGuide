@@ -1,0 +1,15 @@
+// Responsive Images
+p img {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto;
+}
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic;
+}
+

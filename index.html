@@ -52,17 +52,86 @@
       <section>
         <h2 class="figure">Layout</h2>
         <p>
-          Responsive Grids work by adding media classes to the Grid cells or containers. When those media values are met, the grids automatically adjust accordingly.
+          We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
         </p>
         <p>
-          The cells below should be full width by default and scaled to fit above 48em. Resize your browser to see them in action.
+          For example, the grid below consists of two containers, with the same classes. The first container holds 2 columns. The second container holds 3 columns. Each container has two "media classes" assigned to it:
         </p>
+        <ol class="list-ordered">
+          <li><code>.g-B--full</code></li>
+          <li><code>.g-ML--fit</code></li>
+        </ol>
+        <p>
+          The class names can be parsed as follows:
+        </p>
+        <ul class="list-bullet">
+          <li><code>g</code> stands for Grid.</li>
+          <li><code>B</code> and <code>ML</code> are breakpoint sizes that correspond to <code>base</code> (default) and <code>48em/768px</code>, respectively.</li>
+          <li><code>full</code> will make the columns full width.</li>
+          <li><code>fit</code> will make the columns fit inside their container.</li>
+        </ul>
+        <p>
+          The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives .5 rem of padding between each cell.
+        <p>
+          Resize your browser window to see how the grid behaves.
+        </p>
+        <h4>Base: Full, ML: 1/2</h4>
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit g-v-center t-demo">
+          <div class="g-cell">
+            <div class="t-demo">Full / Halves</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">Full / Halves</div>
+          </div>
+        </div>
+
+        <h4>Base: Full, ML: 1/3</h4>
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit g-v-center t-demo">
+          <div class="g-cell">
+            <div class="t-demo">Full / Thirds</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">Full / Thirds</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">Full / Thirds</div>
+          </div>
+        </div>
+        <p>
+          There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container:
+        </p>
+        <h4>Base: Full, SM: 1/2, ML: 1/4</h4>
+        <div class="l-grid g-B--gutters g-B--full g-SM--1of2 g-ML--1of4 g-v-center t-demo">
+          <div class="g-cell">
+            <div class="t-demo">1/4</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">1/4</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">1/4</div>
+          </div>
+          <div class="g-cell">
+            <div class="t-demo">1/4</div>
+          </div>
+        </div>
+
+        <h3>Grid classes</h3>
+        <p>
+          The full explanation of each grid class and what it controls is below:
+        </p>
+        <dl>
+          <dt><code>l-grid</code></dt>
+          <dd>
+            Identifies an element that will act as the grid container.
+          </dd>
+        </dl>
       </section>
       <section>
         <h2 class="figure">Color</h2>
-        <div>
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Blue -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary blue-2">
               <span class="name">Blue</span>
               <p class="code">#00A4E3</p>
@@ -73,7 +142,7 @@
           </div>
 
           <!-- Pink -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary pink">
               <span class="name">Pink</span>
               <p class="code">#EC1163</p>
@@ -81,7 +150,7 @@
           </div>
 
           <!-- Red -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary red-2">
               <span class="name">Red</span>
               <p class="code">#D2222A</p>
@@ -92,15 +161,17 @@
           </div>
 
           <!-- Orange -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary orange">
               <span class="name">Orange</span>
               <p class="code">#F05A21</p>
             </div>
           </div>
+        </div>
 
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Purple -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary purple">
               <span class="name">Purple</span>
               <p class="code">#9A3993</p>
@@ -108,7 +179,7 @@
           </div>
 
           <!-- Yellow -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary yellow-3">
               <span class="name">Yellow</span>
               <p class="code">#FFF100</p>
@@ -122,7 +193,7 @@
           </div>
 
           <!-- Green -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary green-4">
               <span class="name">Green</span>
               <p class="code">#39B549</p>
@@ -139,7 +210,7 @@
           </div>
 
           <!-- Gray -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary gray-6">
               <span class="name">Gray</span>
               <p class="code">#444444</p>
@@ -165,7 +236,7 @@
           </div>
 
           <!-- Tan Gray -->
-          <div class="l-color-group">
+          <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary tan_gray-3">
               <span class="name">Tan Gray</span>
               <p class="code">#97958C</p>

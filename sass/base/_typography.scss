@@ -1,0 +1,85 @@
+/*  Typography
+---------------------------------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $color-black;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font-weight: inherit;
+}
+
+h1 {
+  @include type-XXL();
+}
+
+h2 {
+  @include type-XL();
+
+  small {
+    @include fontSize($type-M);
+    text-transform: uppercase;
+
+    a {
+      margin-left: 5px;
+      color: $color_gray;
+      text-decoration: none;
+    }
+  }
+}
+
+h3 {
+  @include type-L();
+  @include fontSize($type-XXL);
+  @include lineHeight($type-XXL + 4px);
+}
+
+h4 {
+  @include type-M();
+  @include fontSize($type-XL);
+}
+
+h5 {
+  @include type-S();
+}
+
+h6 {
+  @extend .type-S;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: $color-black;
+}
+
+p {
+  @include type-body();
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+small {
+  @include fontSize($type-XS);
+}
+
+h1 small,
+h2 small,
+h3 small,
+h4 small,
+h5 small {
+  color: $color-gray-3;
+}

@@ -57,6 +57,7 @@
 }
 
 // Examples:
+//  .g-B-full
 //  .g-S--fit
 //  .g-M--full
 //  .g-L--1of2
@@ -65,7 +66,7 @@
 @mixin grid-sizing($name: "") {
   $sep: "-";
   @if $name == "" {
-    $sep: "B";
+    $sep: "B-";
   }
   .g-#{$name}#{$sep}-fit > .g-cell,
   .g-cell.g-#{$name}#{$sep}-fit {
@@ -108,30 +109,30 @@
 @mixin grid-gutters($name: "") {
   $sep: "-";
   @if $name == "" {
-    $name: "B";
+    $name: "B-";
   }
   .g-#{$name}#{$sep}gutters {
-    margin-left: -1em;
+    margin-left: -0.5rem;
     & > .g-cell {
-      padding-left: 1em;
+      padding-left: 0.5rem;
     }
   }
   .g-#{$name}#{$sep}guttersLarge {
-    margin-left: -1.5em;
+    margin-left: -1rem;
     & > .g-cell {
-      padding-left: 1.5em;
+      padding-left: 1rem;
     }
   }
   .g-#{$name}#{$sep}gutters2x {
-    margin-left: -2em;
+    margin-left: -2rem;
     & > .g-cell {
-      padding-left: 2em;
+      padding-left: 2rem;
     }
   }
   .g-#{$name}#{$sep}gutters3x {
-    margin-left: -3em;
+    margin-left: -3rem;
     & > .g-cell {
-      padding-left: 3em;
+      padding-left: 3rem;
     }
   }
 }

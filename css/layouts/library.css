@@ -1,5 +1,7 @@
 .type-XXL {
-  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 40px;
@@ -7,7 +9,7 @@
   margin: 0 0 15px; }
 
 .type-XL {
-  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -18,14 +20,16 @@
 
 .type-L {
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 42px;
+  line-height: 2.625rem;
   margin: 0 0 10px; }
 
 .type-M {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 21px;
@@ -75,12 +79,6 @@ section {
 
 .figure {
   width: 50%;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 21px;
-  line-height: 1.3125rem;
-  margin: 0 0 8px;
   margin-bottom: 45px;
   padding-top: 80px;
   text-transform: uppercase;
@@ -141,6 +139,23 @@ ul.figure li a {
     color: #444444 !important;
     font-size: 20px;
     padding: 10px; }
+
+.l-grid.t-demo {
+  padding-top: .5rem; }
+.l-grid .t-demo {
+  width: 100%;
+  padding: .8rem 1rem 0;
+  margin-bottom: 1rem;
+  background: #00A4E3;
+  color: #fff;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px; }
+  .l-grid .t-demo:after {
+    content: '';
+    display: block;
+    margin-top: .8rem;
+    height: 1px; }
 
 .l-color-group {
   margin-bottom: 2rem; }

@@ -16,16 +16,18 @@
   src: url("fonts/Agenda/Agenda-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal; }
-.type-XXL, h1 {
-  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+.type-XXL {
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 40px;
   line-height: 2.5rem;
   margin: 0 0 15px; }
 
-.type-XL, h2 {
-  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+.type-XL {
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 24px;
@@ -34,23 +36,25 @@
   line-height: 1.6875rem;
   margin: 0 0 12px; }
 
-.type-L, h3 {
+.type-L {
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 42px;
+  line-height: 2.625rem;
   margin: 0 0 10px; }
 
-.type-M, h4 {
-  font-family: Arial, Helvetica, sans-serif;
+.type-M {
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 21px;
   line-height: 1.3125rem;
   margin: 0 0 8px; }
 
-.type-S, h5, h6 {
+.type-S, h6 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
@@ -71,66 +75,6 @@
   margin-bottom: 10px;
   color: #444444; }
 
-/*////////////////////////////////////////////////////////*/
-/*//                                                    //*/
-/*//    Guts                                            //*/
-/*//                                                    //*/
-/*////////////////////////////////////////////////////////*/
-/* Root Layout
----------------------------------------- */
-html {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  color: #444444;
-  background-color: #00A4E3;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  line-height: 1.42857;
-  color: #444444; }
-
-.strip-top {
-  width: 100%;
-  height: 4px;
-  background: url(i/topstrip.png) repeat-y center 0; }
-  @media (min-width: 35em) {
-    .strip-top {
-      height: 8px; } }
-
-.canvas * {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* Device Adaption
-   (throwing a bone to IE10 which ignores the
-    meta viewport tag in favor of this)
----------------------------------------- */
-@viewport {
-  zoom: 1.0;
-  width: extend-to-zoom; }
-@-ms-viewport {
-  zoom: 1.0;
-  width: extend-to-zoom; }
-/* Links
----------------------------------------- */
-a {
-  color: #00A4E3;
-  line-height: inherit; }
-  a:hover {
-    color: #000;
-    text-decoration: underline; }
-  a:active {
-    color: #F2DEDE; }
-  a:focus {
-    color: #F2DEDE;
-    outline-offset: 2px; }
-
 /*  Typography
 ---------------------------------------- */
 h1,
@@ -149,20 +93,65 @@ h5 a,
 h6 a {
   font-weight: inherit; }
 
-h2 small {
-  font-size: 16px;
-  font-size: 1rem;
-  text-transform: uppercase; }
-  h2 small a {
-    margin-left: 5px;
-    color: #444444;
-    text-decoration: none; }
+h1 {
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 40px;
+  line-height: 2.5rem;
+  margin: 0 0 15px; }
+
+h2 {
+  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 27px;
+  line-height: 1.6875rem;
+  margin: 0 0 12px; }
+  h2 small {
+    font-size: 16px;
+    font-size: 1rem;
+    text-transform: uppercase; }
+    h2 small a {
+      margin-left: 5px;
+      color: #444444;
+      text-decoration: none; }
+
+h3 {
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 42px;
+  line-height: 2.625rem;
+  margin: 0 0 10px;
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 40px;
+  line-height: 2.5rem; }
 
 h4 {
-  color: #000; }
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.3125rem;
+  margin: 0 0 8px;
+  font-size: 24px;
+  font-size: 1.5rem; }
 
 h5 {
-  color: #000; }
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+  margin: 0 0 6px; }
 
 h6 {
   text-transform: uppercase;
@@ -170,21 +159,13 @@ h6 {
   color: #000; }
 
 p {
-  margin: 0 0 10px;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.42857; }
-
-p img {
-  margin: 0; }
-
-img {
-  max-width: 100%;
-  height: auto;
-  width: auto; }
-
-.ie7 img {
-  -ms-interpolation-mode: bicubic; }
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 21px;
+  line-height: 1.3125rem;
+  margin: 0 0 8px;
+  color: #444444; }
 
 em,
 i {
@@ -203,6 +184,17 @@ h3 small,
 h4 small,
 h5 small {
   color: #CCCCCC; }
+
+p img {
+  margin: 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  width: auto; }
+
+.ie7 img {
+  -ms-interpolation-mode: bicubic; }
 
 .l-grid {
   display: -webkit-flexbox;
@@ -281,24 +273,24 @@ h5 small {
   -webkit-align-self: center;
   align-self: center; }
 
-.g-B-fit > .g-cell,
-.g-cell.g-B-fit {
+.g-B--fit > .g-cell,
+.g-cell.g-B--fit {
   flex: 1; }
 
-.g-B-full > .g-cell,
-.g-cell.g-B-full {
+.g-B--full > .g-cell,
+.g-cell.g-B--full {
   flex: 0 0 100%; }
 
-.g-B-1of2 > .g-cell,
-.g-cell.g-B-1of2 {
+.g-B--1of2 > .g-cell,
+.g-cell.g-B--1of2 {
   flex: 0 0 50%; }
 
-.g-B-1of3 > .g-cell,
-.g-cell.g-B-1of3 {
+.g-B--1of3 > .g-cell,
+.g-cell.g-B--1of3 {
   flex: 0 0 33.3333%; }
 
-.g-B-1of4 > .g-cell,
-.g-cell.g-B-1of4 {
+.g-B--1of4 > .g-cell,
+.g-cell.g-B--1of4 {
   flex: 0 0 25%; }
 
 @media (min-width: 20em) {
@@ -481,206 +473,231 @@ h5 small {
   .g-XXL--1of4 > .g-cell,
   .g-cell.g-XXL--1of4 {
     flex: 0 0 25%; } }
-.g-B-gutters {
-  margin-left: -1em; }
-  .g-B-gutters > .g-cell {
-    padding-left: 1em; }
+.g-B--gutters {
+  margin-left: -0.5rem; }
+  .g-B--gutters > .g-cell {
+    padding-left: 0.5rem; }
 
-.g-B-guttersLarge {
-  margin-left: -1.5em; }
-  .g-B-guttersLarge > .g-cell {
-    padding-left: 1.5em; }
+.g-B--guttersLarge {
+  margin-left: -1rem; }
+  .g-B--guttersLarge > .g-cell {
+    padding-left: 1rem; }
 
-.g-B-gutters2x {
-  margin-left: -2em; }
-  .g-B-gutters2x > .g-cell {
-    padding-left: 2em; }
+.g-B--gutters2x {
+  margin-left: -2rem; }
+  .g-B--gutters2x > .g-cell {
+    padding-left: 2rem; }
 
-.g-B-gutters3x {
-  margin-left: -3em; }
-  .g-B-gutters3x > .g-cell {
-    padding-left: 3em; }
+.g-B--gutters3x {
+  margin-left: -3rem; }
+  .g-B--gutters3x > .g-cell {
+    padding-left: 3rem; }
 
 @media (min-width: 20em) {
   .g-S-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-S-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-S-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-S-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-S-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-S-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-S-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-S-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 30em) {
   .g-SM-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-SM-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-SM-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-SM-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-SM-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-SM-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-SM-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-SM-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 35em) {
   .g-M-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-M-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-M-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-M-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-M-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-M-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-M-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-M-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 42em) {
   .g-MML-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-MML-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-MML-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-MML-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-MML-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-MML-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-MML-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-MML-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 48em) {
   .g-ML-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-ML-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-ML-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-ML-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-ML-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-ML-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-ML-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-ML-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 54em) {
   .g-MLL-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-MLL-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-MLL-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-MLL-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-MLL-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-MLL-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-MLL-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-MLL-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 60em) {
   .g-L-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-L-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-L-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-L-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-L-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-L-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-L-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-L-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 64em) {
   .g-XL-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-XL-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-XL-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-XL-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-XL-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-XL-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-XL-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-XL-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
 @media (min-width: 78.75em) {
   .g-XXL-gutters {
-    margin-left: -1em; }
+    margin-left: -0.5rem; }
     .g-XXL-gutters > .g-cell {
-      padding-left: 1em; }
+      padding-left: 0.5rem; }
 
   .g-XXL-guttersLarge {
-    margin-left: -1.5em; }
+    margin-left: -1rem; }
     .g-XXL-guttersLarge > .g-cell {
-      padding-left: 1.5em; }
+      padding-left: 1rem; }
 
   .g-XXL-gutters2x {
-    margin-left: -2em; }
+    margin-left: -2rem; }
     .g-XXL-gutters2x > .g-cell {
-      padding-left: 2em; }
+      padding-left: 2rem; }
 
   .g-XXL-gutters3x {
-    margin-left: -3em; }
+    margin-left: -3rem; }
     .g-XXL-gutters3x > .g-cell {
-      padding-left: 3em; } }
+      padding-left: 3rem; } }
+html {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: #444444;
+  background-color: #00A4E3;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.42857;
+  color: #444444; }
+
+.strip-top {
+  width: 100%;
+  height: 4px;
+  background: url(i/topstrip.png) repeat-y center 0; }
+  @media (min-width: 35em) {
+    .strip-top {
+      height: 8px; } }
+
 .js .skip {
   /* Accessible hide */
   position: absolute;
@@ -712,17 +729,16 @@ h5 small {
 .no-js .skip {
   display: block;
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
   font-size: 18px;
   font-size: 1.125rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  line-height: 42px;
+  line-height: 2.625rem;
   margin: 0 0 10px;
   background-color: #fff;
   padding: 20px 20px 0;
   text-align: center; }
-
-body {
-  margin: 0; }
 
 .canvas {
   background-color: #fff;
@@ -739,6 +755,11 @@ body {
     -ms-transform: translate3d(16em, 0, 0);
     -webkit-transform: translate3d(16em, 0, 0);
     transform: translate3d(16em, 0, 0); }
+
+.canvas * {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
 
 .canvas-blackout {
   display: none;
@@ -774,39 +795,23 @@ main {
   main .well {
     margin-bottom: 25px; }
 
-/* Left / Right
+/* Device Adaption
+   (throwing a bone to IE10 which ignores the
+    meta viewport tag in favor of this)
 ---------------------------------------- */
-.blocking {
-  text-align: center;
-  padding-top: 50px;
-  background-color: #EEEAE3;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: #aeaa98;
-  font-size: 18px; }
-
-.rail-block {
-  padding-bottom: 1em;
-  padding-right: 15px;
-  padding-left: 4px;
-  border-bottom: 1px solid #CCCCCC;
-  margin-bottom: 1.75em; }
-  .well-content .rail-block {
-    padding-right: 0;
-    padding-left: 0;
-    position: relative; }
-    .well-content .rail-block h2 {
-      font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 24px;
-      font-size: 1.5rem;
-      line-height: 27px;
-      line-height: 1.6875rem;
-      margin: 0 0 12px; }
-
-.rail-other {
-  display: none; }
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom; }
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom; }
+.clear {
+  *zoom: 1; }
+  .clear:before, .clear:after {
+    content: "";
+    display: table; }
+  .clear:after {
+    clear: both; }
 
 @media (min-width: 42em) {
   .canvas {
@@ -828,27 +833,24 @@ main {
     bottom: 0px;
     left: 0px;
     background-color: transparent; } }
-@media (min-width: 60em) {
-  .main-well {
-    float: left;
-    width: 75%; }
-
-  .rail.right {
-    float: right;
-    width: 25%; }
-
-  .l-gradient {
-    width: 100%;
-    height: 100%;
-    padding: 32px 0 100px 0;
-    background: url("../images/mainbg.gif") repeat-x; } }
 @media (min-width: 64em) {
-  .l-header .header-brand,
-  .l-header .header-strip,
-  main,
-  .l-footer .l-container {
+  main {
     margin: 0 auto;
     width: 1023px; } }
+/* Links
+---------------------------------------- */
+a {
+  color: #00A4E3;
+  line-height: inherit; }
+  a:hover {
+    color: #000;
+    text-decoration: underline; }
+  a:active {
+    color: #F2DEDE; }
+  a:focus {
+    color: #F2DEDE;
+    outline-offset: 2px; }
+
 input[type="submit"].btn,
 button.btn {
   -moz-appearance: none;
@@ -993,6 +995,53 @@ input[type="submit"].btn-inline {
   ::-moz-focus-inner {
     border: 0;
     padding: 0; } }
+/*////////////////////////////////////////////////////////*/
+/*//                                                    //*/
+/*//    Lists                                           //*/
+/*//                                                    //*/
+/*////////////////////////////////////////////////////////*/
+.list-bullet {
+  margin-bottom: 1rem; }
+  .list-bullet > li {
+    list-style-type: circle;
+    margin-left: 20px;
+    line-height: 1.42857; }
+
+.list-inline {
+  margin-bottom: 1rem; }
+  .list-inline > li {
+    display: inline;
+    line-height: 1.42857; }
+
+.list-comma > li {
+  line-height: 1.42857; }
+  .list-comma > li:after {
+    content: ", "; }
+
+.list-ordered {
+  margin-bottom: 1rem; }
+  .list-ordered > li {
+    list-style-type: decimal;
+    margin-left: 23px;
+    line-height: 1.42857; }
+
+.list-pipe > li {
+  line-height: 1.42857; }
+  .list-pipe > li:after {
+    content: ' |';
+    margin-left: 4px;
+    margin-right: 3px;
+    color: #999999; }
+.list-pipe > li:last-child:after {
+  display: none; }
+
+.list-spread > li {
+  line-height: 1.42857;
+  margin-bottom: 1rem; }
+
+.list-definition {
+  margin-bottom: 1rem; }
+
 @media (min-width: 20em) {
   body::after {
     content: "S"; } }
@@ -1020,12 +1069,5 @@ input[type="submit"].btn-inline {
 @media (min-width: 78.75em) {
   body::after {
     content: "XXL"; } }
-.clear {
-  *zoom: 1; }
-  .clear:before, .clear:after {
-    content: "";
-    display: table; }
-  .clear:after {
-    clear: both; }
 
 /*# sourceMappingURL=base.css.map */

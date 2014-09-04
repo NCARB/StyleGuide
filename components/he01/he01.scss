@@ -36,4 +36,12 @@
       height: auto;
     }
   }
+
+  .header-brand,
+  .header-strip {
+    @include breakpoint(XL) {
+      margin: 0 auto;
+      width: 1023px;
+    }
+  }
 }

@@ -1,4 +1,34 @@
-// Layouts
+// Shell
+$bodytopspacing: 4px;
+
+html {
+  position: relative;
+  font-family: $font_regular;
+  font-size: 100%;
+  color: $color_base;
+  background-color: $color-blue;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: $font_regular;
+  font-size: 100%;
+  line-height: $base-line-height;
+  color: $color_base;
+}
+
+.strip-top {
+  width: 100%;
+  height: $bodytopspacing;
+  background: url(i/topstrip.png) repeat-y center 0;
+
+  @include breakpoint(M) {
+    height:($bodytopspacing + 4px);
+  }
+}
 
 .js .skip {
   /* Accessible hide */
@@ -38,10 +68,6 @@
   text-align: center;
 }
 
-body {
-  margin: 0;
-}
-
 .canvas {
   background-color: #fff;
   @include transform(none);
@@ -50,6 +76,10 @@ body {
   &.is-pushed {
     @include transform(translate3d(16em,0,0));
   }
+}
+
+.canvas * {
+  @include box-sizing(border-box);
 }
 
 .canvas-blackout {
@@ -85,38 +115,30 @@ main {
   }
 }
 
-/* Left / Right
+/* Device Adaption
+   (throwing a bone to IE10 which ignores the
+    meta viewport tag in favor of this)
 ---------------------------------------- */
-.blocking {
-  text-align: center;
-  padding-top: 50px;
-  background-color: $color-tan_gray-1;
-  margin-bottom: 20px;
-  font-weight: bold;
-  color: darken($color-tan_gray-2, 20%);
-  font-size: 18px;
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
 }
 
-.rail-block {
-  padding-bottom: 1em;
-  padding-right: 15px;
-  padding-left: 4px;
-  border-bottom: 1px solid $color-gray-3;
-  margin-bottom: 1.75em;
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
 
-  .well-content & {
-    padding-right: 0;
-    padding-left: 0;
-    position: relative;
-
-    h2 {
-      @include type-XL;
-    }
+.clear {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
   }
-}
-
-.rail-other {
-  display: none;
+  &:after {
+      clear:both;
+  }
+  *zoom: 1;
 }
 
 @include breakpoint(MML) {
@@ -134,29 +156,8 @@ main {
   }
 }
 
-@include breakpoint(L) {
-  .main-well {
-    float: left;
-    width: 75%;
-  }
-  .rail.right {
-    float: right;
-    width: 25%;
-  }
-
-  .l-gradient {
-    width: 100%;
-    height: 100%;
-    padding: 32px 0 100px 0;
-    background: url("../images/mainbg.gif") repeat-x;
-  }
-}
-
 @include breakpoint(XL) {
-  .l-header .header-brand,
-  .l-header .header-strip,
-  main,
-  .l-footer .l-container {
+  main {
     margin: 0 auto;
     width: 1023px;
   }

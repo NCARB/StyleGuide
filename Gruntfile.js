@@ -67,6 +67,9 @@ module.exports = function(grunt) {
       gruntfile: 'Gruntfile.js'
     },
     watch: {
+      options: {
+        livereload: true
+      },
       gruntfile: {
         files: 'Gruntfile.js',
         tasks: ['jshint:gruntfile']
@@ -85,29 +88,20 @@ module.exports = function(grunt) {
         files: [
           'index.html'
         ],
-        tasks: ['sass'],
-        options: {
-          livereload: true
-        }
+        tasks: ['sass']
       },
       base_styles: {
         files: [
           'sass/base.scss',
           'sass/*/*.scss',
         ],
-        tasks: ['sass', 'cssmin'],
-        options: {
-          livereload: true
-        }
+        tasks: ['sass', 'cssmin']
       },
       component_styles: {
         files: [
           'components/*/*.scss'
         ],
-        tasks: ['sass', 'cssmin'],
-        options: {
-          livereload: true
-        }
+        tasks: ['sass', 'cssmin']
       }
     }
   });
