@@ -6,7 +6,7 @@ module.exports = function(grunt) {
     sass: {
       dist: {
         options: {
-          compass: true,
+          loadPath: 'sass/',
           update: true
         },
         files: [
@@ -37,7 +37,7 @@ module.exports = function(grunt) {
           'bower_components/jquery/dist/jquery.min.js',
           'components/*/*.js'
         ],
-        dest: 'dist/ncarb-design-library-<%= pkg.version %>.min.js'
+        dest: 'js/ncarb-design-library-<%= pkg.version %>.min.js'
       },
     },
     cssmin: {
@@ -106,6 +106,6 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('default', ['sass', 'concat:js', 'cssmin']);
+  grunt.registerTask('default', ['sass', 'concat:js', 'cssmin', 'watch']);
   grunt.registerTask('css', ['cssmin']);
 };

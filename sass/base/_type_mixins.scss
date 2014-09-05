@@ -18,18 +18,18 @@
 }
 
 @mixin type-XXL {
-  font-family: $font_medium;
+  font-family: $font_light;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   @include fontSize($type-XXL);
   @include lineHeight($type-XXL + 4px);
   margin: 0 0 15px;
 }
 
 @mixin type-XL {
-  font-family: $font_medium;
+  font-family: $font_light;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   @include fontSize($type-XL);
   @include lineHeight($type-XL + 3px);
   margin: 0 0 12px;

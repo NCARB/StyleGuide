@@ -1,7 +1,7 @@
 .type-XXL {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 40px;
@@ -9,9 +9,9 @@
   margin: 0 0 15px; }
 
 .type-XL {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 27px;
@@ -148,8 +148,6 @@ ul.figure li a {
   margin-bottom: 1rem;
   background: #00A4E3;
   color: #fff;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
   border-radius: 3px; }
   .l-grid .t-demo:after {
     content: '';
