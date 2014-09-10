@@ -107,11 +107,13 @@ ul.figure li a {
   left: auto;
   margin-bottom: 1rem; }
 
-.l-main .l-nav {
+.l-main .l-inline-nav {
   display: block; }
-
-.l-canvas .l-leftoffcanvas {
-  left: 0; }
+  .l-main .l-inline-nav a {
+    display: block;
+    padding: .5rem 0;
+    width: 33%;
+    text-decoration: none; }
 
 .js [role="navigation"] {
   top: 0;
@@ -167,12 +169,16 @@ ul.figure li a {
   .t-box-color-swatch.primary {
     min-height: 84px; }
     .t-box-color-swatch.primary .name,
-    .t-box-color-swatch.primary .code {
+    .t-box-color-swatch.primary .code,
+    .t-box-color-swatch.primary .codename {
       color: #fff; }
+    .t-box-color-swatch.primary .code {
+      padding-top: 20px; }
   .t-box-color-swatch .name {
     width: 100%;
     text-align: left; }
-  .t-box-color-swatch .code {
+  .t-box-color-swatch .code,
+  .t-box-color-swatch .codename {
     margin: 0;
     text-align: right; }
   .t-box-color-swatch.blue-1 {
@@ -196,7 +202,8 @@ ul.figure li a {
   .t-box-color-swatch.yellow-3 {
     background-color: #FFF100; }
     .t-box-color-swatch.yellow-3 .name,
-    .t-box-color-swatch.yellow-3 .code {
+    .t-box-color-swatch.yellow-3 .code,
+    .t-box-color-swatch.yellow-3 .codename {
       color: #444444; }
   .t-box-color-swatch.green-1 {
     background-color: #EAF9D4; }
@@ -220,11 +227,13 @@ ul.figure li a {
     background-color: #CCCCCC; }
   .t-box-color-swatch.gray-4 {
     background-color: #999999; }
-    .t-box-color-swatch.gray-4 .code {
+    .t-box-color-swatch.gray-4 .code,
+    .t-box-color-swatch.gray-4 .codename {
       color: #fff; }
   .t-box-color-swatch.gray-5 {
     background-color: #666666; }
-    .t-box-color-swatch.gray-5 .code {
+    .t-box-color-swatch.gray-5 .code,
+    .t-box-color-swatch.gray-5 .codename {
       color: #fff; }
   .t-box-color-swatch.gray-6 {
     background-color: #444444;

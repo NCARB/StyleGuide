@@ -2,9 +2,8 @@
  * Copyright (C) 2014 NCARB, National Council of Architectural Registration Boards
  */
 
-// Importing Compass stuff
-@import "compass";
-@import "compass/css3";
+// Load Bourbon
+@import "bourbon/bourbon";
 
 // Base
 @import "base/colors";

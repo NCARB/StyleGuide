@@ -17,9 +17,9 @@
   font-weight: normal;
   font-style: normal; }
 .type-XXL {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 40px;
@@ -27,9 +27,9 @@
   margin: 0 0 15px; }
 
 .type-XL {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 27px;
@@ -94,9 +94,9 @@ h6 a {
   font-weight: inherit; }
 
 h1 {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 36px;
   font-size: 2.25rem;
   line-height: 40px;
@@ -104,9 +104,9 @@ h1 {
   margin: 0 0 15px; }
 
 h2 {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
-  font-weight: normal;
+  font-weight: 800;
   font-size: 24px;
   font-size: 1.5rem;
   line-height: 27px;
@@ -165,6 +165,14 @@ p {
   line-height: 21px;
   line-height: 1.3125rem;
   color: #444444; }
+
+.small {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 16px;
+  line-height: 1rem;
+  margin: 0 0 6px; }
 
 em,
 i {
@@ -741,23 +749,24 @@ body {
 
 .canvas {
   background-color: #fff;
+  -webkit-transform: none;
   -moz-transform: none;
   -ms-transform: none;
-  -webkit-transform: none;
+  -o-transform: none;
   transform: none;
-  -moz-transition: all 0.33s ease-out;
-  -o-transition: all 0.33s ease-out;
   -webkit-transition: all 0.33s ease-out;
+  -moz-transition: all 0.33s ease-out;
   transition: all 0.33s ease-out; }
   .canvas.is-pushed {
+    -webkit-transform: translate3d(16em, 0, 0);
     -moz-transform: translate3d(16em, 0, 0);
     -ms-transform: translate3d(16em, 0, 0);
-    -webkit-transform: translate3d(16em, 0, 0);
+    -o-transform: translate3d(16em, 0, 0);
     transform: translate3d(16em, 0, 0); }
 
 .canvas * {
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box; }
 
 .canvas-blackout {
@@ -814,14 +823,14 @@ main {
 
 @media (min-width: 42em) {
   .canvas {
-    -moz-transition: none;
-    -o-transition: none;
     -webkit-transition: none;
+    -moz-transition: none;
     transition: none; }
     .canvas.is-pushed {
+      -webkit-transform: translate3d(0, 0, 0);
       -moz-transform: translate3d(0, 0, 0);
       -ms-transform: translate3d(0, 0, 0);
-      -webkit-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
       transform: translate3d(0, 0, 0); }
 
   .canvas-blackout {
@@ -852,8 +861,11 @@ a {
 
 input[type="submit"].btn,
 button.btn {
-  -moz-appearance: none;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
   width: 100%; }
 
 input {
@@ -876,10 +888,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 .btn {
   background: #00A4E3 no-repeat 100% center;
   color: #e5f5fc;
-  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-weight: 800;
   position: relative;
   display: block;
   line-height: 1;
@@ -888,10 +901,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 18px;
   border: 0;
   text-align: left;
-  cursor: pointer;
-  -moz-border-radius: 0;
-  -webkit-border-radius: 0;
-  border-radius: 0; }
+  cursor: pointer; }
   .btn:focus, .btn:hover {
     background-color: #0099d4;
     color: #e5f5fc; }
@@ -946,7 +956,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     content: ''; }
 
 .btn-toggle {
-  font-family: "Agenda-Medium", Arial, Helvetica, sans-serif;
+  font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+  font-weight: 800;
   background-color: #f4f4f2;
   background-image: none;
   color: #97948b;
@@ -954,9 +965,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   font-size: 18px;
   letter-spacing: 0.05em;
   text-shadow: 0 1px 0 #fff;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
   .btn-toggle:focus, .btn-toggle:hover {
     background-color: #e8e8e4;

@@ -63,12 +63,21 @@ ul.figure li a {
   margin-bottom: 1rem;
 }
 
-.l-main .l-nav {
+.l-main .l-inline-nav {
   display: block;
+
+  a {
+    display: block;
+    padding: .5rem 0;
+    width: 33%;
+    text-decoration: none;
+
+    &:before {
+
+    }
+  }
 }
-.l-canvas .l-leftoffcanvas {
-  left: 0;
-}
+
 .js [role="navigation"] {
   top: 0;
   position: static;
@@ -144,8 +153,13 @@ ul.figure li a {
     min-height: $swatch-min-height * 2;
 
     .name,
-    .code {
+    .code,
+    .codename {
       color: $color-white;
+    }
+
+    .code {
+      padding-top: 20px;
     }
   }
 
@@ -154,7 +168,8 @@ ul.figure li a {
     text-align: left;
   }
 
-  .code {
+  .code,
+  .codename {
     margin: 0;
     text-align: right;
   }
@@ -195,7 +210,8 @@ ul.figure li a {
     background-color: $color-yellow-3;
 
     .name,
-    .code {
+    .code,
+    .codename {
       color: $color-gray;
     }
   }
@@ -235,14 +251,16 @@ ul.figure li a {
   &.gray-4 {
     background-color: $color-gray-4;
 
-    .code {
+    .code,
+    .codename {
       color: $color-white;
     }
   }
   &.gray-5 {
     background-color: $color-gray-5;
 
-    .code {
+    .code,
+    .codename {
       color: $color-white;
     }
   }

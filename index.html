@@ -41,16 +41,27 @@
       <section class="t-box-frame l-top">
         <h1>NCARB Design Library</h1>
         <div class="l-grid g-M-gutters">
-          <p class="g-cell g-S--fit intro-text">
-            Welcome to NCARB’s Design Library Sample. It is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design. This Design Library Sample is made up of six pillars: a fluid grid-based lay- out system, color, typography, form elements, navigation, and content.
-          </p>
+          <div class="g-cell g-S--fit intro-text">
+            <p>
+              Welcome to NCARB’s Design Library Sample. It is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design. This Design Library Sample is made up of six pillars: a fluid grid-based lay- out system, color, typography, form elements, navigation, and content.
+            </p>
+            <nav class="l-inline-nav">
+              <a href="#layout">Layout</a>
+              <a href="#color">Color</a>
+              <a href="#typography">Typography</a>
+              <a href="#iconography">Iconography</a>
+              <a href="#form_elements">Form Elements</a>
+              <a href="#navigation">Navigation</a>
+              <a href="#content">Content</a>
+            </nav>
+          </div>
           <span class="g-cell g-S--fit g-M--1of3 project-examples">
             <img src="img/ncarb-projects.png" alt="Project examples" />
           </span>
         </div>
       </section>
       <section>
-        <h2 class="figure">Layout</h2>
+        <h2 id="layout" class="figure">Layout</h2>
         <p>
           We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
         </p>
@@ -128,16 +139,18 @@
         </dl>
       </section>
       <section>
-        <h2 class="figure">Color</h2>
+        <h2 id="color" class="figure">Color</h2>
         <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Blue -->
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary blue-2">
               <span class="name">Blue</span>
-              <p class="code">#00A4E3</p>
+              <p class="small code">#00A4E3</p>
+              <p class="small codename">$color-blue</p>
             </div>
             <div class="t-box-color-swatch blue-1">
-              <p class="code">#ABEAFF</p>
+              <p class="small code">#ABEAFF</p>
+              <p class="small codename">$color-blue-1</p>
             </div>
           </div>
 
@@ -145,7 +158,8 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary pink">
               <span class="name">Pink</span>
-              <p class="code">#EC1163</p>
+              <p class="small code">#EC1163</p>
+              <p class="small codename">$color-pink</p>
             </div>
           </div>
 
@@ -153,10 +167,12 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary red-2">
               <span class="name">Red</span>
-              <p class="code">#D2222A</p>
+              <p class="small code">#D2222A</p>
+              <p class="small codename">$color-red</p>
             </div>
             <div class="t-box-color-swatch red-1">
-              <p class="code">#F2DEDE</p>
+              <p class="small code">#F2DEDE</p>
+              <p class="small codename">$color-red-1</p>
             </div>
           </div>
 
@@ -164,7 +180,8 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary orange">
               <span class="name">Orange</span>
-              <p class="code">#F05A21</p>
+              <p class="small code">#F05A21</p>
+              <p class="small codename">$color-orange</p>
             </div>
           </div>
 
@@ -172,7 +189,8 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary purple">
               <span class="name">Purple</span>
-              <p class="code">#9A3993</p>
+              <p class="small code">#9A3993</p>
+              <p class="small codename">$color-purple</p>
             </div>
           </div>
         </div>
@@ -182,13 +200,16 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary yellow-3">
               <span class="name">Yellow</span>
-              <p class="code">#FFF100</p>
+              <p class="small code">#FFF100</p>
+              <p class="small codename">$color-yellow</p>
             </div>
             <div class="t-box-color-swatch yellow-1">
-              <p class="code">#FFE194</p>
+              <p class="small code">#FFE194</p>
+              <p class="small codename">$color-yellow-1</p>
             </div>
             <div class="t-box-color-swatch yellow-2">
-              <p class="code">#FFC50A</p>
+              <p class="small code">#FFC50A</p>
+              <p class="small codename">$color-yellow-2</p>
             </div>
           </div>
 
@@ -196,16 +217,20 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary green-4">
               <span class="name">Green</span>
-              <p class="code">#39B549</p>
+              <p class="small code">#39B549</p>
+              <p class="small codename">$color-green</p>
             </div>
             <div class="t-box-color-swatch green-1">
-              <p class="code">#EAF9D4</p>
+              <p class="small code">#EAF9D4</p>
+              <p class="small codename">$color-green-1</p>
             </div>
             <div class="t-box-color-swatch green-2">
-              <p class="code">#C6E8CA</p>
+              <p class="small code">#C6E8CA</p>
+              <p class="small codename">$color-green-2</p>
             </div>
             <div class="t-box-color-swatch green-3">
-              <p class="code">#88BA3A</p>
+              <p class="small code">#88BA3A</p>
+              <p class="small codename">$color-green-3</p>
             </div>
           </div>
 
@@ -213,13 +238,16 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary tan_gray-3">
               <span class="name">Tan Gray</span>
-              <p class="code">#97958C</p>
+              <p class="small code">#97958C</p>
+              <p class="small codename">$color-tan_gray</p>
             </div>
             <div class="t-box-color-swatch tan_gray-1">
-              <p class="code">#EEEAE3</p>
+              <p class="small code">#EEEAE3</p>
+              <p class="small codename">$color-tan_gray-1</p>
             </div>
             <div class="t-box-color-swatch tan_gray-2">
-              <p class="code">#DBD9D1</p>
+              <p class="small code">#DBD9D1</p>
+              <p class="small codename">$color-tan_gray-2</p>
             </div>
           </div>
 
@@ -227,22 +255,28 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary gray-6">
               <span class="name">Gray</span>
-              <p class="code">#444444</p>
+              <p class="small code">#444444</p>
+              <p class="small codename">$color-gray</p>
             </div>
             <div class="t-box-color-swatch gray-1">
-              <p class="code">#F4F4F2</p>
+              <p class="small code">#F4F4F2</p>
+              <p class="small codename">$color-gray-1</p>
             </div>
             <div class="t-box-color-swatch gray-2">
-              <p class="code">#E2E2E2</p>
+              <p class="small code">#E2E2E2</p>
+              <p class="small codename">$color-gray-2</p>
             </div>
             <div class="t-box-color-swatch gray-3">
-              <p class="code">#CCCCCC</p>
+              <p class="small code">#CCCCCC</p>
+              <p class="small codename">$color-gray-3</p>
             </div>
             <div class="t-box-color-swatch gray-4">
-              <p class="code">#999999</p>
+              <p class="small code">#999999</p>
+              <p class="small codename">$color-gray-4</p>
             </div>
             <div class="t-box-color-swatch gray-5">
-              <p class="code">#666666</p>
+              <p class="small code">#666666</p>
+              <p class="small codename">$color-gray-5</p>
             </div>
           </div>
 
@@ -250,16 +284,18 @@
           <div class="g-cell l-color-group">
             <div class="t-box-color-swatch primary black">
               <span class="name">Black</span>
-              <p class="code">#00000</p>
+              <p class="small code">#00000</p>
+              <p class="small codename">$color-black</p>
             </div>
             <div class="t-box-color-swatch white">
-              <p class="code">#FFFFFF</p>
+              <p class="small code">#FFFFFF</p>
+              <p class="small codename">$color-white</p>
             </div>
           </div>
         </div>
       </section>
       <section>
-        <h2 class="figure">
+        <h2 id="typography" class="figure">
           Typography
         </h2>
         <div class="t-box">
@@ -313,7 +349,7 @@
         </div>
       </section>
       <section>
-        <h2 class="figure">Typographical Elements</h2>
+        <h2 id="vertical_rhythm" class="figure">Vertical Rhythm</h2>
         <div class="t-box">
           <h3 class="figure">Body</h3>
           <p>Body text.</p>
@@ -339,9 +375,7 @@
         </div>
       </section>
       <section>
-        <h2 class="figure">
-          Buttons
-        </h2>
+        <h2 id="buttons" class="figure">Buttons</h2>
         <div class="t-box">
           <div class="form-group l-buttons">
             <button type="button" class="btn btn-primary btn-continue">
@@ -358,133 +392,12 @@
           </div>
         </div>
       </section>
-      <!-- section>
-        <h2 class="figure">
-          Iconography
-        </h2>
+      <section>
+        <h2 id="iconography" class="figure">Iconography</h2>
         <div class="t-box l-box-iconography">
-          <p>
-            <span class="icon-share"></span>
-            <span class="icon-view-grid"></span>
-            <span class="icon-video"></span>
-            <span class="icon-twitter"></span>
-            <span class="icon-success"></span>
-            <span class="icon-save-on"></span>
-            <span class="icon-save-off"></span>
-            <span class="icon-print"></span>
-            <span class="icon-photo-gallery"></span>
-            <span class="icon-phone"></span>
-            <span class="icon-menu"></span>
-            <span class="icon-external-site"></span>
-            <span class="icon-error"></span>
-            <span class="icon-email"></span>
-            <span class="icon-drawer-open"></span>
-            <span class="icon-drawer-close"></span>
-            <span class="icon-close"></span>
-            <span class="icon-calendar"></span>
-            <span class="icon-arrow-up"></span>
-            <span class="icon-arrow-right"></span>
-            <span class="icon-arrow-left"></span>
-            <span class="icon-arrow-down"></span>
-            <span class="icon-view-map"></span>
-            <span class="icon-triangle-up"></span>
-            <span class="icon-triangle-down"></span>
-            <span class="icon-asterisk"></span>
-            <span class="icon-dot"></span>
-            <span class="icon-pause"></span>
-            <span class="icon-play"></span>
-            <span class="icon-minus"></span>
-            <span class="icon-plus"></span>
-            <span class="icon-warning"></span>
-            <span class="icon-carousel-arrow-left"></span>
-            <span class="icon-carousel-arrow-right"></span>
-            <span class="icon-view-list"></span>
-            <span class="icon-image-loading"></span>
-            <span class="icon-image-worldmap"></span>
-          </p>
         </div>
-        <div class="t-box">
-          <h3 class="figure">
-            <ul class="disc-list figure">
-              <li><a href="http://marriottdigital.com/elements/buttons/secondary/">Guidelines</a></li>
-            </ul>
-            Secondary Button
-          </h3>
-          <div data-component="buttons" data-variation="secondary-basic"></div>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            <ul class="disc-list figure">
-              <li><a href="http://marriottdigital.com/elements/buttons/large-primary-call-to-action/">Guidelines</a></li>
-            </ul>
-            Secondary CTA
-          </h3>
-          <div data-component="form-elements" data-variation="secondary-cta"></div>
-        </div>
-        <h2 class="figure">
-          Forms
-        </h2>
-        <div class="t-box">
-          <h3 class="figure">
-            Radio Buttons
-          </h3>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            Checkboxes
-          </h3>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            Text
-          </h3>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            Placeholder Text
-          </h3>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            Select / Options Menu
-          </h3>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            Labels &amp; Microcopy
-          </h3>
-        </div>
-        <h2 class="figure">
-          Messaging
-        </h2>
-        <div class="t-box">
-          <h3 class="figure">Success / Confirmation</h3>
-          <div data-component="message" data-variation="success-form"></div>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">Error</h3>
-          <div data-component="message" data-variation="invalid-preference-plus"></div>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">Warning</h3>
-          <div data-component="message" data-variation="warning-form"></div>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">Informational</h3>
-          <div data-component="message" data-variation="info-form"></div>
-        </div>
-        <h2 class="figure">
-          Modals
-        </h2>
-        <div class="t-box">
-          <div>
-            <p>
-              <a href="#modal2" class="button" data-modal-trigger="default">Open Default Modal</a>
-            </p>
-          </div>
-        </div>
-        <section data-component="modals" data-variation="default" data-modal="default">
-        </section -->
+      </section>
+
       <div class="l-grid">
         <div class="g-cell g-S--fit">
           <ul class="list_resources">
