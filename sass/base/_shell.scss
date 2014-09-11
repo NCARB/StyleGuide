@@ -62,7 +62,7 @@ body {
 
 .no-js .skip {
   display: block;
-  @include type-L();
+  @include type-4();
   background-color: $color-white;
   padding: 20px 20px 0;
   text-align: center;

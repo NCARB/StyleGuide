@@ -61,7 +61,7 @@
         </div>
       </section>
       <section>
-        <h2 id="layout" class="figure">Layout</h2>
+        <h3 id="layout" class="figure">Layout</h3>
         <p>
           We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
         </p>
@@ -139,7 +139,7 @@
         </dl>
       </section>
       <section>
-        <h2 id="color" class="figure">Color</h2>
+        <h3 id="color" class="figure">Color</h3>
         <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Blue -->
           <div class="g-cell l-color-group">
@@ -295,87 +295,122 @@
         </div>
       </section>
       <section>
-        <h2 id="typography" class="figure">
-          Typography
-        </h2>
-        <div class="t-box">
-          <h3 class="figure" style='font-family: "Arial";'>
-            Arial
-          </h3>
-          <p style="font-size: 24px;">A B C D E F G H I J K L M N O P Q R S T U V W X Y Z</p>
-          <p style="font-size: 24px;">a b c d e f g h i j k l m n o p q r s t u v w x y z</p>
-        </div>
-        <div class="t-box">
-          <h3 class="figure" style='font-family: "Arial"; font-weight: bold;'>
-            Arial Bold
-          </h3>
-          <p style='font-weight: bold; font-size: 24px;'>
-            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+        <h3 id="typography" class="figure">Typography</h3>
+        <h2>Fonts</h2>
+        <div class="l-fonts">
+          <h4>Agenda, Light</h4>
+          <p class="t-agenda-light">
+            The quick brown fox jumps over the lazy dog.
           </p>
-          <p style='font-weight: bold; font-size: 24px;'>
-            a b c d e f g h i j k l m n o p q r s t u v w x y z
+          <p>
+            <a href="http://www.fonts.com/font/font-bureau/agenda" class="l-download font">Download Agenda Font</a>
+          </p>
+
+          <h4>Arial, Regular & Bold</h4>
+          <p class="t-arial-bold">
+            The quick brown fox jumps over the lazy dog.
           </p>
         </div>
-        <div class="t-box">
-          <h3 class="figure" style='font-family: "Agenda-Light"; font-weight: normal;'>
-            Agenda Light
-          </h3>
-          <p style='font-family: "Agenda-Light"; font-size: 24px;'>
-            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
+
+        <h2>Standard Styles</h2>
+        <div class="l-header-styles">
+          <p class="small type-header">h1</p>
+          <h1>Agenda Light Bold All Caps, 36px</h1>
+
+          <p class="small type-header">h2</p>
+          <h2>Agenda Light, 36px</h2>
+
+          <p class="small type-header">h3</p>
+          <h3>Agenda Light Bold All Caps, 24px</h3>
+
+          <p class="small type-header">h4</p>
+          <h4>Agenda Light, 24px</h4>
+
+          <p class="small type-header">h5</p>
+          <h5>Arial Regular, 18px</h5>
+
+          <p class="small type-header">h6</p>
+          <h5>Arial Bold, 18px</h5>
+
+          <p class="small type-header">label</p>
+          <p>
+            <label>Agenda Light Bold All Caps, 14px</label>
           </p>
-          <p style='font-family: "Agenda-Light"; font-size: 24px;'>
-            a b c d e f g h i j k l m n o p q r s t u v w x y z
-          </p>
-        </div>
-        <div class="t-box">
-          <h3 class="figure" style='font-family: "Agenda-Medium"; font-weight: normal;'>
-            Agenda Medium
-          </h3>
-          <p style='font-family: "Agenda-Medium"; font-size: 24px;'>
-            A B C D E F G H I J K L M N O P Q R S T U V W X Y Z
-          </p>
-          <p style='font-family: "Agenda-Medium"; font-size: 24px;'>
-            a b c d e f g h i j k l m n o p q r s t u v w x y z
-          </p>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">Font Sizes</h3>
-          <p class="type-XXL">XXL: 36px, 2.25rem</p>
-          <p class="type-XL">XL: 24px, 1.5rem</p>
-          <p class="type-L">L: 18px, 1.125rem</p>
-          <p class="type-M">M: 16px, 1rem</p>
-          <p class="type-S">S: 14px, 0.875rem</p>
-          <p class="type-XS">XS: 12px, 0.75rem</p>
+
+          <p class="small type-header">p</p>
+          <p>Arial Regular, 16px</p>
+
+          <p id="link-element" class="small type-header">a</p>
+          <p><a href="#link-element">Arial Regular, 14px</a></p>
+
+          <p class="small type-header">.small</p>
+          <p class="small">Arial Regular, 14px</p>
+
+          <p class="small type-header">.fine-print</p>
+          <p class="fine-print">Arial Regular, 12px</p>
         </div>
       </section>
+
       <section>
-        <h2 id="vertical_rhythm" class="figure">Vertical Rhythm</h2>
-        <div class="t-box">
-          <h3 class="figure">Body</h3>
-          <p>Body text.</p>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">Body Header</h3>
-          <p class="body-header">Body Header</p>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            H1 (Page Title)
-          </h3>
-          <h1>[Header, Level 1/Page Title]</h1>
-        </div>
-        <div class="t-box">
-          <h3 class="figure">
-            H2-H5 (Section Header)
-          </h3>
-          <h2>[Header 2 Text]</h2>
-          <h3>[Header 3 Text]</h3>
-          <h4>[Header 4 Text]</h4>
-          <h5>[Header 5 Text]</h5>
+        <h3 id="vertical_rhythm" class="figure">Vertical Rhythm</h3>
+        <p>The following is an example snippet from an existing page that has been formatted using the headers defined above.</p>
+        <div class="l-page-sample">
+          <h1>Licensure Matters: Change the World Your Way</h1>
+          <p>
+            Whether you want to start your own firm, turn your architectural vision into a reality, or simply increase your earning potential, getting licensed will put you in control of your future.
+          </p>
+          <h2>Path to Licensure </h2>
+          <p>
+            To be an architect, you need to be licensed. Architects are responsible for protecting the public health, safety, and welfare, so earning a license isn’t meant to be easy. The demanding academics, years of internship, and professional exam—it’s a path designed to prepare you for meeting the great responsibilities of the profession. If you’re going to change the world, would you want it any other way?
+          </p>
+          <h3>Licensure is Opportunity</h3>
+          <p>
+            In both good and bad economic times, licensure gives you a competitive edge. With a license you’re positioned to take on a greater role with clients and projects, which increases your value to a firm.
+          </p>
+          <p>
+            More architects on staff can enhance a firm’s marketability with prospective clients and may even lower its liability insurance costs—two more reasons to hire <span style="text-decoration: underline;">you</span>, if you’re licensed. Licensure can also be a ticket to higher earnings, especially as you progress in your career.
+          </p>
+          <h3>Licensure is Empowerment</h3>
+          <p>
+            With a license, you are legally empowered to practice architecture. You can start your own firm; seal, stamp, or sign your own drawings; and turn your ideas into reality. As an architect, you’ll have a seat at the table and more power over your career. Without a license, you’ll nearly always have to seek out the services of an architect to complete a building project.
+          </p>
+          <h2>Make Your Future Count</h2>
+          <p>
+            Being licensed matters—especially for the people who live, work, and play in the buildings that architects create. Architects have a unique and influential role in our communities—with a license, you can play a part in shaping the future of our built world.
+          </p>
+          <h4>Get licensed because you want to make your future count</h4>
+          <p>
+              <a href="/Getting-an-Initial-License.aspx">Learn more about getting an initial license.</a>
+          </p>
         </div>
       </section>
+
       <section>
-        <h2 id="buttons" class="figure">Buttons</h2>
+        <h3 id="iconography" class="figure">Iconography</h3>
+        <h2>Standard</h2>
+        <div class="l-box-iconography">
+          <p>
+            Icons used on their own are from <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a>. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. For the latest set please download at <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a>.
+          </p>
+        </div>
+        <h2>Custom</h2>
+        <p>
+          Custom icons incorporate <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a> icons at 35px and a FontAwesome fa-circle icon at 72px background in an NCARB brand
+        </p>
+        <ul class="l-services">
+          <li class="mobility">
+          </li>
+          <li class="idp">
+          </li>
+          <li class="record">
+          </li>
+          <li class="cost">
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h3 id="buttons" class="figure">Buttons</h3>
         <div class="t-box">
           <div class="form-group l-buttons">
             <button type="button" class="btn btn-primary btn-continue">
@@ -390,11 +425,6 @@
               Secondary Action
             </button>
           </div>
-        </div>
-      </section>
-      <section>
-        <h2 id="iconography" class="figure">Iconography</h2>
-        <div class="t-box l-box-iconography">
         </div>
       </section>
 

@@ -19,44 +19,27 @@ h6 a {
 }
 
 h1 {
-  @include type-XXL();
+  @include type-1();
 }
 
 h2 {
-  @include type-XL();
-
-  small {
-    @include fontSize($type-M);
-    text-transform: uppercase;
-
-    a {
-      margin-left: 5px;
-      color: $color_gray;
-      text-decoration: none;
-    }
-  }
+  @include type-2();
 }
 
 h3 {
-  @include type-L();
-  @include fontSize($type-XXL);
-  @include lineHeight($type-XXL + 4px);
+  @include type-3();
 }
 
 h4 {
-  @include type-M();
-  @include fontSize($type-XL);
+  @include type-4();
 }
 
 h5 {
-  @include type-S();
+  @include type-5();
 }
 
 h6 {
-  @extend .type-S;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: $color-black;
+  @include type-6();
 }
 
 p {
@@ -64,7 +47,11 @@ p {
 }
 
 .small {
-  @include type-S();
+  @include type-small();
+}
+
+.fine-print {
+  @include type-xsmall();
 }
 
 em,

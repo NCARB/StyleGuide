@@ -17,58 +17,100 @@
   line-height: calculateRem($size);
 }
 
-@mixin type-XXL {
+@mixin type-1 {
   font-family: $font_light;
   font-style: normal;
   font-weight: 800;
   @include fontSize($type-XXL);
-  @include lineHeight($type-XXL + 4px);
-  margin: 0 0 15px;
+  @include lineHeight($type-XXL);
+  letter-spacing: 0.05rem;
+  margin: calculateRem(30px) 0;
+  text-transform: uppercase;
 }
 
-@mixin type-XL {
+@mixin type-2 {
+  font-family: $font_light;
+  font-style: normal;
+  font-weight: normal;
+  @include fontSize($type-XXL);
+  @include lineHeight($type-XXL);
+  letter-spacing: 0.008rem;
+  margin: calculateRem(30px) 0;
+}
+
+@mixin type-3 {
   font-family: $font_light;
   font-style: normal;
   font-weight: 800;
   @include fontSize($type-XL);
-  @include lineHeight($type-XL + 3px);
-  margin: 0 0 12px;
+  @include lineHeight($type-XL);
+  letter-spacing: 0.05rem;
+  margin: calculateRem(20px) 0;
+  text-transform: uppercase;
 }
 
-@mixin type-L {
+@mixin type-4 {
   font-family: $font_light;
   font-style: normal;
   font-weight: normal;
+  @include fontSize($type-XL);
+  @include lineHeight($type-XL);
+  letter-spacing: 0.008rem;
+  margin: calculateRem(20px) 0;
+}
+
+@mixin type-5 {
+  font-family: $font_regular;
+  font-style: normal;
+  font-weight: normal;
   @include fontSize($type-L);
-  @include lineHeight($type-XXL + 6px);
-  margin: 0 0 10px;
+  @include lineHeight(35px);
+  letter-spacing: 0.008rem;
+  margin: calculateRem(20px) 0;
 }
 
-@mixin type-M {
-  font-family: $font_light;
-  @include fontSize($type-M);
-  @include lineHeight($type-M + 5px);
-  margin: 0 0 8px;
-}
-
-@mixin type-S {
+@mixin type-6 {
   font-family: $font_regular;
-  @include fontSize($type-S);
-  @include lineHeight($type-S + 2px);
-  margin: 0 0 6px;
+  font-style: normal;
+  font-weight: bold;
+  @include fontSize($type-L);
+  @include lineHeight(35px);
+  letter-spacing: 0.008rem;
+  margin: calculateRem(20px) 0;
 }
 
-@mixin type-XS {
+@mixin type-small {
   font-family: $font_regular;
-  @include fontSize($type-XS);
-  @include lineHeight($type-XS + 2px);
+  @include fontSize($type-L);
+  @include lineHeight(17px);
+  margin: 0;
 }
 
 @mixin type-body() {
   font-family: $font_regular;
   @include fontSize($type-M);
-  @include lineHeight($type-M + 5px);
+  @include lineHeight(20px);
   color: $color_base;
+  margin: 0;
+}
+
+@mixin type-xsmall {
+  font-family: $font_regular;
+  @include fontSize($type-XS);
+  @include lineHeight(18px);
+  letter-spacing: 0.008rem;
+  margin: 0;
+}
+
+@mixin type-label() {
+  font-family: $font_light;
+  font-style: normal;
+  font-weight: 800;
+  @include fontSize($type-M);
+  @include lineHeight(20px);
+  letter-spacing: 0.008rem;
+  text-transform: uppercase;
+  margin: calculateRem(20px) 0 calculateRem(10px);
 }
 
 @mixin sub-section-title() {
@@ -79,26 +121,6 @@
   letter-spacing: 0.05em;
   color: $color_gray-5;
   text-transform: uppercase;
-}
-
-// Use these styles with @extend
-.type-XXL {
-  @include type-XXL;
-}
-.type-XL {
-  @include type-XL;
-}
-.type-L {
-  @include type-L;
-}
-.type-M {
-  @include type-M;
-}
-.type-S {
-  @include type-S;
-}
-.type-XS {
-  @include type-XS;
 }
 
 .body-header {

@@ -3,6 +3,7 @@
 a {
   color: $color_link;
   line-height: inherit;
+  text-decoration: none;
 
   &:hover {
     color: $color_linkhover;
