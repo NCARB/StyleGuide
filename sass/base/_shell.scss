@@ -20,6 +20,10 @@ body {
   color: $color_base;
 }
 
+:focus {
+  outline: none;
+}
+
 .strip-top {
   width: 100%;
   height: $bodytopspacing;

@@ -94,6 +94,20 @@ input[type="week"] {
 
 input[type="search"] {
   @include appearance(none);
+  height: 40px;
+  padding: 0;
+  padding-left: 10px;
+  background-color: transparent;
+  border: 0;
+  box-shadow: none;
+  font-family: $font_light;
+  font-size: $type-L;
+}
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
 }
 
 [placeholder]:focus::-webkit-input-placeholder {

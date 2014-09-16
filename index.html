@@ -25,6 +25,7 @@
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
     <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
   <div class="strip-top"></div>
@@ -37,7 +38,7 @@
         </a>
       </figure>
     </header>
-    <main class="l-main" role="main">
+    <main class="l-main" role="main" id="main" tabindex="1">
       <section class="t-box-frame l-top">
         <h1>NCARB Design Library</h1>
         <div class="l-grid g-M-gutters">
@@ -45,7 +46,7 @@
             <p>
               Welcome to NCARB’s Design Library Sample. It is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design. This Design Library Sample is made up of six pillars: a fluid grid-based lay- out system, color, typography, form elements, navigation, and content.
             </p>
-            <nav class="l-inline-nav">
+            <nav class="l-inline-nav" role="navigation" tabindex="10">
               <a href="#layout">Layout</a>
               <a href="#color">Color</a>
               <a href="#typography">Typography</a>
@@ -60,7 +61,8 @@
           </span>
         </div>
       </section>
-      <section>
+
+      <section tabindex="20">
         <h3 id="layout" class="figure">Layout</h3>
         <p>
           We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
@@ -138,7 +140,8 @@
           </dd>
         </dl>
       </section>
-      <section>
+
+      <section tabindex="30">
         <h3 id="color" class="figure">Color</h3>
         <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Blue -->
@@ -294,7 +297,8 @@
           </div>
         </div>
       </section>
-      <section>
+
+      <section tabindex="40">
         <h3 id="typography" class="figure">Typography</h3>
         <h2>Fonts</h2>
         <div class="l-fonts">
@@ -351,7 +355,7 @@
         </div>
       </section>
 
-      <section>
+      <section tabindex="50">
         <h3 id="vertical_rhythm" class="figure">Vertical Rhythm</h3>
         <p>The following is an example snippet from an existing page that has been formatted using the headers defined above.</p>
         <div class="l-page-sample">
@@ -385,13 +389,14 @@
         </div>
       </section>
 
-      <section>
+      <section tabindex="60">
         <h3 id="iconography" class="figure">Iconography</h3>
         <h2>Standard</h2>
         <div class="l-box-iconography">
           <p>
             Icons used on their own are from <a href="http://fortawesome.github.io/Font-Awesome/">FontAwesome</a>. Font Awesome gives you scalable vector icons that can instantly be customized — size, color, drop shadow, and anything that can be done with the power of CSS. For the latest set please download at <a href="http://fortawesome.github.io/Font-Awesome/">http://fortawesome.github.io/Font-Awesome/</a>.
           </p>
+          <img src="img/font-awesome-sample.png" alt="Font Awesome sample" title="Font Awesome sample" />
         </div>
         <h2>Custom</h2>
         <p>
@@ -409,26 +414,132 @@
         </ul>
       </section>
 
-      <section>
-        <h3 id="buttons" class="figure">Buttons</h3>
-        <div class="t-box">
-          <div class="form-group l-buttons">
-            <button type="button" class="btn btn-primary btn-continue">
-              Primary
-            </button>
-            <button type="button" class="btn btn-secondary">
-              Secondary
-            </button>
-          </div>
-          <div class="form-group l-buttons">
-            <button type="button" class="btn btn-secondary is-secondary-action">
-              Secondary Action
-            </button>
+      <section tabindex="70">
+        <h3 id="form_elements" class="figure">Form Elements</h3>
+        <h2>Buttons</h2>
+        <p>
+          All buttons are text and/or an icon enclosed in a rectangular shape. NCARB blue is used as the primary call-to-action button and secondary buttons can be light yellow, dark grey, green or beige.
+        </p>
+        <div class="l-code-reveal">
+          <div class="small form_elements-header">.btn</div>
+          <div class="l-grid g-M-gutters">
+            <div class="g-cell g-B--full g-ML--fit">
+              <pre class="prettyprint">
+                <xmp>
+  <button class="btn" type="button">
+    Button
+  </button>
+  <a href="#form_elements" class="btn">Link button</a>
+  <input type="button" class="btn" value ="Input button" />
+  <input type="submit" class="btn block" value ="Submit button" />
+                </xmp>
+              </pre>
+              <div class="l-button-examples">
+                <button class="btn" type="button">Button</button>
+                <a href="#form_elements" class="btn">Link button</a>
+                <input type="button" class="btn" value ="Input button" />
+                <input type="submit" class="btn block" value ="Submit button" />
+              </div>
+            </div>
+            <div class="g-cell g-B--full g-ML--1of3">
+              <p>Usage:</p>
+              <p>
+                The <code>.btn</code> class will style a default button.
+              </p>
+              <p>
+                Adding the <code>.block</code> class to a <code>.btn</code> will make the button a block element with 100% width.
+              </p>
+            </div>
           </div>
         </div>
+
+        <div class="l-code-reveal">
+          <div class="small form_elements-header">.btn-primary</div>
+          <div class="l-grid g-M-gutters">
+            <div class="g-cell g-B--full g-ML--fit">
+              <pre class="prettyprint">
+                <xmp>
+  <button class="btn-primary" type="button">
+    Button
+  </button>
+  <a href="#form_elements" class="btn-primary continue">
+    Link button
+  </a>
+                </xmp>
+              </pre>
+              <button type="button" class="btn-primary">Button Title</button>
+              <a href="#form_elements" class="btn-primary continue">Link button</a>
+            </div>
+            <div class="g-cell g-B--full g-ML--1of3">
+              <p>Usage:</p>
+              <p>
+                The <code>.btn-primary</code> class will create a primary button. A primary button should be reserved for the main call to action for an entire page regardless of whether the button is found within a form, for selecting an item from a collection, applying a filter, or some other action.
+              </p>
+              <p>
+                Adding the <code>.continue</code> class to any <code>.btn</code> adds a right facing arrow to the button. It should be used when selecting the button would continue to the next step of a process.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="small form_elements-header">.btn-secondary</div>
+        <div class="l-grid g-M-gutters">
+          <div class="g-cell g-B--full g-ML--fit">
+            <div class="l-code-reveal">
+              <pre class="prettyprint">
+                <xmp>
+<button class="btn-secondary" type="button">
+  Secondary - Default
+</button>
+<button class="btn-secondary plus" type="button">
+  Secondary w/Plus
+</button>
+<a href="#form_elements" class="btn-secondary yellow block">
+  Secondary - Yellow
+</a>
+<a href="#form_elements" class="btn-secondary yellow block">
+  Secondary - Green
+</a>
+                </xmp>
+              </pre>
+              <div class="l-button-examples">
+                <button type="button" class="btn-secondary">Secondary - Default</button>
+                <button class="btn-secondary plus" type="button">Secondary w/Plus</button>
+                <a href="#form_elements" class="btn-secondary yellow block">Secondary - Yellow</a>
+                <a href="#form_elements" class="btn-secondary green block">Secondary - Green</a>
+              </div>
+            </div>
+          </div>
+          <div class="g-cell g-B--full g-ML--1of3">
+            <div class="l-usage">
+              <p>Usage:</p>
+              <p>
+                The <code>.btn-secondary</code> class will apply the secondary button styles and allow the secondary color palette. The default color is <code>$color-gray</code>.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Input Fields</h2>
+        <div class="small form_elements-header">input[type="text"]</div>
+        <div class="l-code-reveal">
+          <pre class="prettyprint">
+            <xmp>
+              <input type="text" value="" />
+            </xmp>
+          </pre>
+        </div>
+        <label for="card_number">Card Number</label>
+        <input type="text" name="card_number" value="123456789" />
+
+
+        <h2>Search Field</h2>
+        <h2>Select Menus</h2>
+        <h2>Radio Buttons &amp; Checkboxes</h2>
+
       </section>
 
-      <div class="l-grid">
+      <!-- div class="l-grid">
         <div class="g-cell g-S--fit">
           <ul class="list_resources">
             <li class="type-ext">
@@ -461,7 +572,7 @@
         </div>
         <div class="l-design-projects g-cell g-S--fit g-M--1of3">
           <h2>Design Projects</h2>
-          <h4>Corporate Sites</h4>
+          <h4>Sites</h4>
           <ul class="c00v16">
             <li>
               <a href="http://prototypes.eightshapes.com/ncarb/renewals">
@@ -470,7 +581,7 @@
             </li>
             <li>
               <a href="http://prototypes.eightshapes.com/ncarb/roster">
-                Renewals
+                Roster
               </a>
             </li>
             <li>
@@ -478,9 +589,14 @@
                 Home Page
               </a>
             </li>
+            <li>
+              <a href="https://itunes.apple.com/us/app/my-idp/id783855310?mt=8">
+                IDP app
+              </a>
+            </li>
           </ul>
         </div>
-      </div>
+      </div -->
     </main>
   </div>
 </body>

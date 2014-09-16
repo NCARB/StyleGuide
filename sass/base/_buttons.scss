@@ -1,7 +1,9 @@
+input[type="reset"].btn,
+input[type="button"].btn,
 input[type="submit"].btn,
+input[type="file"] > input[type="button"].btn,
 button.btn {
   @include appearance(none);
-  width: 100%;
 }
 
 input {
@@ -23,95 +25,125 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   border: none;
 }
 
-@mixin button($color) {
-  background: $color no-repeat 100% center;
-  color: tint($color, 90%);
+@mixin button-colors($bgcolor, $color: tint($bgcolor, 90%)) {
+  background: $bgcolor no-repeat 100% center;
+  color: $color;
 
   &:focus,
   &:hover {
-    background-color: darken($color, 3%);
-    color: tint($color, 90%);
+    background-color: darken($bgcolor, 3%);
+    color: $color;
+    text-decoration: none;
+    outline: 0;
   }
   &:active {
-    background-color: darken($color, 10%);
+    background-color: darken($bgcolor, 10%);
   }
 }
 
-.btn {
-  @include button($color_blue);
-  @include box-sizing(border-box);
-  font-family: $font_light;
-  font-weight: 800;
+@mixin button() {
+  display: inline-block;
   position: relative;
-  display: block;
-  line-height: 1;
+  @include box-sizing(border-box);
   padding: 11px 15px 6px;
+  font-family: $font_light;
+  font-size: $type-L;
+  font-weight: 800;
+  line-height: 1;
   text-decoration: none;
-  font-size: $type-M + 2px;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+  text-align: center;
   border: 0;
-  text-align: left;
   cursor: pointer;
+  background-image: none;
+}
+
+.btn {
+  @include button();
+  background: $color_button-default no-repeat 100% center;
+  color: $color-gray;
 
   &:focus,
   &:hover {
+    background-color: darken($color_button-default, 3%);
+    color: $color-gray;
     text-decoration: none;
     outline: 0;
+  }
+  &:active {
+    background-color: darken($color_button-default, 10%);
   }
 }
 
 .btn-primary {
-  padding-right:36px;
-
-  &:after {
-    content: "\f105";
-    position: absolute;
-    top: 8px;
-    right: 15px;
-    font-family: FontAwesome;
-    line-height: 1;
-
-    .lt-ie8 & {
-      display: none;
-    }
-  }
-
-  &.green {
-    @include button($color_green);
-  }
+  @include button();
+  @include button-colors($color-blue);
 }
 
 .btn-secondary {
-  background-color: $color-gray-6;
-  background-image: none;
+  @include button();
+  @include button-colors($color-gray, $color-gray-4);
   color: $color-gray-4;
 
   &:focus,
   &:hover {
-    color: $color-gray-4;
     background-color: #333333;
-    text-decoration: none;
-    outline: 0;
   }
   &:active {
-    color: $color-gray-4;
     background-color: $color-black;
   }
-  &:after {
-    content: "\f105";
-    position: absolute;
-    top: 8px;
-    right: 15px;
-    font-family: FontAwesome;
-    line-height: 1;
 
-    .lt-ie8 & {
-      display: none;
+  &.yellow {
+    @include button-colors($color-yellow-1, $color-gray);
+  }
+
+  &.green {
+    @include button-colors($color_green);
+  }
+}
+
+.btn,
+.btn-primary,
+.btn-secondary {
+  &.block {
+    display: block;
+    @include box-sizing(border-box);
+    width: 100%;
+  }
+
+  &.continue,
+  &.plus {
+    text-align: left;
+    padding-right: 36px;
+
+    &:after {
+      position: absolute;
+      top: 8px;
+      right: 15px;
+      @include fa-icon();
+      line-height: 1;
+
+      .lt-ie8 & {
+        display: none;
+      }
     }
   }
+}
 
-  &.is-secondary-action:after {
-    content: '';
-  }
+.btn.continue:after,
+.btn-primary.continue:after,
+.btn-secondary.continue:after {
+  content: "\f105";
+  font-weight: bold;
+}
+
+.btn.plus:after,
+.btn-primary.plus:after,
+.btn-secondary.plus:after {
+  content: $fa-var-plus;
+  font-size: $type-M;
+  line-height: $type-L;
 }
 
 .btn-toggle {

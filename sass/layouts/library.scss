@@ -59,14 +59,23 @@ ul.figure li a {
 
 .l-main .l-inline-nav {
   display: block;
+  margin: 1rem 0;
+  @include column-count(2);
+  @include column-gap(10px);
+
+  @include breakpoint(MML) {
+    @include column-count(3);
+    @include column-gap(20px);
+  }
 
   a {
     display: block;
-    padding: .5rem 0;
-    width: 33%;
+    padding: 0 0 .5rem 0;
 
     &:before {
-
+      @include fa-arrow-icon();
+      padding-right: 5px;
+      // @include arrow-nav-icon();
     }
   }
 }
@@ -329,5 +338,19 @@ ul.figure li a {
       content: '';
       @include cost-icon();
     }
+  }
+}
+
+// --------------------------------------  FORM ELEMENTS -----------------------------
+.small.form_elements-header {
+  font-weight: bold;
+  margin: 50px 0 30px;
+}
+
+.l-button-examples {
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    margin: .5rem 0;
   }
 }

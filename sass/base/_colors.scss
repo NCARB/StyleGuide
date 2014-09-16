@@ -44,6 +44,8 @@ $color-green        : $color-green-4;
 
 // Colors by type
 $color_base         : $color-gray;
-$color_link         : $color_blue;
-$color_linkhover    : $color_black;
-$color_linkactive   : $color_red;
+$color_link         : $color-blue;
+$color_linkhover    : $color-black;
+$color_linkactive   : $color-red-2;
+
+$color_button-default : #DBD9D1;

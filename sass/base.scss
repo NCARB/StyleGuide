@@ -2,8 +2,12 @@
  * Copyright (C) 2014 NCARB, National Council of Architectural Registration Boards
  */
 
-// Load Bourbon
+// Bourbon is a Sass mixin library: http://bourbon.io/
 @import "bourbon/bourbon";
+
+// Font Awesome is an icon-font set: http://fortawesome.github.io/Font-Awesome/
+@import "font-awesome/font-awesome";
+
 
 // Base
 @import "base/colors";
