@@ -91,7 +91,7 @@
   @include fontSize($type-M);
   @include lineHeight(20px);
   color: $color_base;
-  margin: 0;
+  margin: 1rem 0;
 }
 
 @mixin type-xsmall {

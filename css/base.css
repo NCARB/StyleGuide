@@ -1777,7 +1777,7 @@ p {
   line-height: 20px;
   line-height: 1.25rem;
   color: #444444;
-  margin: 0; }
+  margin: 1rem 0; }
 
 .small {
   font-family: Arial, Helvetica, sans-serif;
@@ -2470,7 +2470,7 @@ main {
 @media (min-width: 64em) {
   main {
     margin: 0 auto;
-    width: 1023px; } }
+    width: 1024px; } }
 /* Links
 ---------------------------------------- */
 a {

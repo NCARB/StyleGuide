@@ -23,6 +23,10 @@ module.exports = function(grunt) {
           {
             src: 'sass/layouts/library.scss',
             dest: 'css/layouts/library.css'
+          },
+          {
+            src: 'sass/layouts/vertical.scss',
+            dest: 'css/layouts/vertical.css'
           }
         ]
       }
