@@ -106,8 +106,8 @@
   font-family: $font_light;
   font-style: normal;
   font-weight: 800;
-  @include fontSize($type-M);
-  @include lineHeight(20px);
+  @include fontSize($type-S);
+  @include lineHeight($type-S);
   letter-spacing: 0.008rem;
   text-transform: uppercase;
   margin: calculateRem(20px) 0 calculateRem(10px);

@@ -2806,13 +2806,14 @@ input {
   font-size: 1rem; }
 
 label {
+  display: inline-block;
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 800;
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 20px;
-  line-height: 1.25rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  line-height: 0.875rem;
   letter-spacing: 0.008rem;
   text-transform: uppercase;
   margin: 1.25rem 0 0.625rem; }
@@ -2841,6 +2842,86 @@ input[type="week"] {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 2px; }
+  select::-webkit-input-placeholder,
+  textarea::-webkit-input-placeholder,
+  input[type="date"]::-webkit-input-placeholder,
+  input[type="datetime"]::-webkit-input-placeholder,
+  input[type="datetime-local"]::-webkit-input-placeholder,
+  input[type="email"]::-webkit-input-placeholder,
+  input[type="month"]::-webkit-input-placeholder,
+  input[type="number"]::-webkit-input-placeholder,
+  input[type="search"]::-webkit-input-placeholder,
+  input[type="password"]::-webkit-input-placeholder,
+  input[type="tel"]::-webkit-input-placeholder,
+  input[type="text"]::-webkit-input-placeholder,
+  input[type="time"]::-webkit-input-placeholder,
+  input[type="url"]::-webkit-input-placeholder,
+  input[type="week"]::-webkit-input-placeholder {
+    font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: normal;
+    padding-top: 2px; }
+  select::-moz-placeholder,
+  textarea::-moz-placeholder,
+  input[type="date"]::-moz-placeholder,
+  input[type="datetime"]::-moz-placeholder,
+  input[type="datetime-local"]::-moz-placeholder,
+  input[type="email"]::-moz-placeholder,
+  input[type="month"]::-moz-placeholder,
+  input[type="number"]::-moz-placeholder,
+  input[type="search"]::-moz-placeholder,
+  input[type="password"]::-moz-placeholder,
+  input[type="tel"]::-moz-placeholder,
+  input[type="text"]::-moz-placeholder,
+  input[type="time"]::-moz-placeholder,
+  input[type="url"]::-moz-placeholder,
+  input[type="week"]::-moz-placeholder {
+    font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: normal;
+    padding-top: 2px; }
+  select:-moz-placeholder,
+  textarea:-moz-placeholder,
+  input[type="date"]:-moz-placeholder,
+  input[type="datetime"]:-moz-placeholder,
+  input[type="datetime-local"]:-moz-placeholder,
+  input[type="email"]:-moz-placeholder,
+  input[type="month"]:-moz-placeholder,
+  input[type="number"]:-moz-placeholder,
+  input[type="search"]:-moz-placeholder,
+  input[type="password"]:-moz-placeholder,
+  input[type="tel"]:-moz-placeholder,
+  input[type="text"]:-moz-placeholder,
+  input[type="time"]:-moz-placeholder,
+  input[type="url"]:-moz-placeholder,
+  input[type="week"]:-moz-placeholder {
+    font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: normal;
+    padding-top: 2px; }
+  select:-ms-input-placeholder,
+  textarea:-ms-input-placeholder,
+  input[type="date"]:-ms-input-placeholder,
+  input[type="datetime"]:-ms-input-placeholder,
+  input[type="datetime-local"]:-ms-input-placeholder,
+  input[type="email"]:-ms-input-placeholder,
+  input[type="month"]:-ms-input-placeholder,
+  input[type="number"]:-ms-input-placeholder,
+  input[type="search"]:-ms-input-placeholder,
+  input[type="password"]:-ms-input-placeholder,
+  input[type="tel"]:-ms-input-placeholder,
+  input[type="text"]:-ms-input-placeholder,
+  input[type="time"]:-ms-input-placeholder,
+  input[type="url"]:-ms-input-placeholder,
+  input[type="week"]:-ms-input-placeholder {
+    font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: normal;
+    padding-top: 2px; }
 
 textarea,
 input[type="date"],
@@ -2866,13 +2947,10 @@ input[type="search"] {
   -o-appearance: none;
   appearance: none;
   height: 40px;
-  padding: 0;
-  padding-left: 10px;
+  max-width: 100%;
   background-color: transparent;
-  border: 0;
-  box-shadow: none;
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
-  font-size: 18px; }
+  line-height: normal; }
 
 input[type="search"]::-webkit-search-decoration,
 input[type="search"]::-webkit-search-cancel-button,
@@ -2880,18 +2958,47 @@ input[type="search"]::-webkit-search-results-button,
 input[type="search"]::-webkit-search-results-decoration {
   display: none; }
 
+.l-search-box fieldset {
+  display: block;
+  position: relative;
+  border: 0;
+  margin: 0;
+  padding: 0 40px 0 0;
+  background-color: #EEEAE3; }
+.l-search-box .search-submit {
+  font: 0/0 a;
+  color: transparent;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background: #00a4e3 url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo0RTM3NzgwNzY4QkExMUUyODcwRDg1N0VGREE2OEU3OSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo0RTM3NzgwODY4QkExMUUyODcwRDg1N0VGREE2OEU3OSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjRFMzc3ODA1NjhCQTExRTI4NzBEODU3RUZEQTY4RTc5IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjRFMzc3ODA2NjhCQTExRTI4NzBEODU3RUZEQTY4RTc5Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+ZGORLgAAAHxJREFUeNpirLv8gYOBgWENECcD8UsGJMAExIVA7A3E+4BYHF0yBsrWQlfABNV1D5sCkOQDILYD4pvoCpigAk+BOByI/yMpaIdJSgDxciBmhPKvA3ElSFISiPcDsSaShCPIWyDJ7UCsgS4Bc9B6bBIwyU4g3oYuAQIAAQYAuOIcWA9AXnoAAAAASUVORK5CYII=) no-repeat center center;
+  border: 0;
+  position: absolute;
+  top: 0px;
+  right: 0px; }
+
 [placeholder]:focus::-webkit-input-placeholder {
   transition: opacity 0.5s 0.5s ease;
   opacity: 0; }
 
 select,
 select.form-control {
+  display: block;
+  width: 100%;
+  height: 34px;
   padding: 8px 10px;
-  border: 1px solid #CCCCCC;
-  border-radius: 2px;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px;
-  font-size: 0.875rem; }
+  font-size: 0.875rem;
+  line-height: normal;
+  color: #444444;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #CCCCCC;
+  border-radius: 2px;
+  -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  -moz-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
 
 input[type="checkbox"] {
   border: 1px solid #444444;
