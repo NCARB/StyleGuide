@@ -1699,8 +1699,10 @@ section {
   font-weight: bold;
   margin: 50px 0 30px; }
 
-.l-system-element.first .small.header {
-  margin-top: 0; }
+.l-system-element {
+  position: relative; }
+  .l-system-element.first .small.header {
+    margin-top: 0; }
 
 ul.figure {
   float: right;

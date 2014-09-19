@@ -46,6 +46,8 @@ section {
 }
 
 .l-system-element {
+  position: relative;
+
   &.first .small.header {
     margin-top: 0;
   }
