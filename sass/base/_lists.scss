@@ -3,13 +3,14 @@
   /*//    Lists                                           //*/
  /*//                                                    //*/
 /*////////////////////////////////////////////////////////*/
-
-ul,
-ol {
+@mixin defaultList() {
+  list-style: none;
+  @include type-body();
   margin: 0;
   padding: 0;
 
-  li {
+  > li {
+    line-height: $base-line-height;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -17,73 +18,51 @@ ol {
   }
 }
 
+$margin-bottom-default: 1rem;
+
+
+ul,
+ol {
+  @include defaultList();
+}
+
 .list-bullet {
-  margin-bottom: 1rem;
+  @include defaultList();
+  margin-bottom: $margin-bottom-default;
 
   > li {
-    list-style-type: circle;
-    margin-left: 20px;
+    list-style-type: disc;
+    margin-left: 1.25rem;
+  }
+}
+
+.list-ordered {
+  margin-bottom: $margin-bottom-default;
+
+  > li {
+    list-style-type: decimal;
+    margin-left: 1.25rem;
     line-height: $base-line-height;
   }
 }
 
 .list-inline {
-  margin-bottom: 1rem;
+  @include defaultList();
+  margin-bottom: $margin-bottom-default;
 
   > li {
     display: inline;
-    line-height: $base-line-height;
   }
 }
 
 .list-comma {
-  > li {
-    line-height: $base-line-height;
+  @include defaultList();
 
+  > li {
     &:after {
       content:', '
     }
   }
-}
-
-.list-ordered {
-  margin-bottom: 1rem;
-
-  > li {
-    list-style-type: decimal;
-    margin-left: 23px;
-    line-height: $base-line-height;
-  }
-}
-
-.list-pipe {
-  > li {
-    line-height: $base-line-height;
-
-    &:after {
-    	content:' |';
-    	margin-left: 4px;
-    	margin-right: 3px;
-    	color: $color-gray-4;
-    }
-  }
-
-  > li:last-child {
-    &:after {
-      display:none;
-    }
-  }
-}
-
-.list-spread {
-  > li {
-    line-height: $base-line-height;
-    margin-bottom: 1rem;
-  }
-}
-
-.list-definition {
-  margin-bottom: 1rem;
 }
 
 // Note: Form group lists are kept in _forms.scss.

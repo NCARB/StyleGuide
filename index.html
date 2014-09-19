@@ -421,7 +421,7 @@
           All buttons are text and/or an icon enclosed in a rectangular shape. NCARB blue is used as the primary call-to-action button and secondary buttons can be light yellow, dark grey, green or beige.
         </p>
         <div class="l-code-reveal">
-          <div class="small form_elements-header">.btn</div>
+          <div class="small header">.btn</div>
           <div class="l-grid g-M-gutters">
             <div class="g-cell g-B--full g-ML--fit">
               <pre class="prettyprint">
@@ -454,7 +454,7 @@
         </div>
 
         <div class="l-code-reveal">
-          <div class="small form_elements-header">.btn-primary</div>
+          <div class="small header">.btn-primary</div>
           <div class="l-grid g-M-gutters">
             <div class="g-cell g-B--full g-ML--fit">
               <pre class="prettyprint">
@@ -482,7 +482,7 @@
           </div>
         </div>
 
-        <div class="small form_elements-header">.btn-secondary</div>
+        <div class="small header">.btn-secondary</div>
         <div class="l-grid g-M-gutters">
           <div class="g-cell g-B--full g-ML--fit">
             <div class="l-code-reveal">
@@ -522,7 +522,7 @@
 
         <div class="l-form-fields">
           <h2>Input Fields</h2>
-          <div class="small form_elements-header">input[type="text"]</div>
+          <div class="small header">input[type="text"]</div>
           <div class="l-code-reveal">
             <pre class="prettyprint">
               <xmp>
@@ -534,7 +534,7 @@
           <label for="card_number">Card Number</label>
           <input type="text" name="card_number" value="123456789" />
 
-          <div class="small form_elements-header">input[type="date"]</div>
+          <div class="small header">input[type="date"]</div>
           <div class="l-code-reveal">
             <pre class="prettyprint">
               <xmp>
@@ -571,7 +571,7 @@
           </div>
 
           <h2>Select Menus</h2>
-          <div class="small form_elements-header">select</div>
+          <div class="small header">select</div>
           <div class="l-code-reveal">
             <pre class="prettyprint">
               <xmp>
@@ -687,10 +687,24 @@
           </div>
 
           <h2>Radio Buttons &amp; Checkboxes</h2>
-          <div class="small form_elements-header">input[type="radio"]</div>
+          <div class="small header">input[type="radio"]</div>
           <div class="l-code-reveal">
             <pre class="prettyprint">
               <xmp>
+<div class="l-radios">
+  <div class="l-radio">
+    <input type="radio" id="opt1" name="radio-exp" value="option 1">
+    <label for="opt1">
+      Option 1
+    </label>
+  </div>
+  <div class="l-radio">
+    <input type="radio" id="opt2" name="radio-exp" value="option 2">
+    <label for="opt2">
+      Option 2
+    </label>
+  </div>
+</div>
               </xmp>
             </pre>
           </div>
@@ -721,9 +735,74 @@
       <section tabindex="90">
         <h3 id="content" class="figure">Content</h3>
         <h2>Imagery</h2>
+
         <h2>Lists</h2>
+
+          <div class="small header">list-ordered</div>
+          <div class="l-code-reveal">
+            <pre class="prettyprint">
+              <xmp>
+<ol class="list-ordered">
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+  <li>Item Four</li>
+</ol>
+              </xmp>
+            </pre>
+          </div>
+          <ol class="list-ordered">
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+            <li>Item Four</li>
+          </ol>
+
+
+          <div class="small header">list-unordered</div>
+          <div class="l-code-reveal">
+            <pre class="prettyprint">
+              <xmp>
+<ul>
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+  <li>Item Four</li>
+</ul>
+              </xmp>
+            </pre>
+          </div>
+          <ul>
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+            <li>Item Four</li>
+          </ul>
+
+          <div class="small header">list-bullet</div>
+          <div class="l-code-reveal">
+            <pre class="prettyprint">
+              <xmp>
+<ul class="list-bullet">
+  <li>Item One</li>
+  <li>Item Two</li>
+  <li>Item Three</li>
+  <li>Item Four</li>
+</ul>
+              </xmp>
+            </pre>
+          </div>
+          <ul class="list-bullet">
+            <li>Item One</li>
+            <li>Item Two</li>
+            <li>Item Three</li>
+            <li>Item Four</li>
+          </ul>
+
         <h2>Labels</h2>
+
         <h2>Separators</h2>
+
       </section>
 
       <!-- div class="l-grid">

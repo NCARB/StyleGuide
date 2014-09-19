@@ -40,6 +40,12 @@ section {
   clear: both;
 }
 
+.small.header {
+  font-weight: bold;
+  margin: 50px 0 30px;
+}
+
+
 ul.figure {
   float: right;
   padding: 2px 0 8px 0px;
@@ -342,11 +348,6 @@ ul.figure li a {
 }
 
 // --------------------------------------  FORM ELEMENTS -----------------------------
-.small.form_elements-header {
-  font-weight: bold;
-  margin: 50px 0 30px;
-}
-
 .l-button-examples {
   .btn,
   .btn-primary,
