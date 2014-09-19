@@ -1711,7 +1711,8 @@ h1 {
   line-height: 36px;
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
-  margin: 1.875rem 0;
+  margin: 0;
+  padding: 1.875rem 0;
   text-transform: uppercase; }
 
 h2 {
@@ -1723,7 +1724,8 @@ h2 {
   line-height: 36px;
   line-height: 2.25rem;
   letter-spacing: 0.008rem;
-  margin: 1.875rem 0; }
+  margin: 0;
+  padding: 1.875rem 0; }
 
 h3 {
   font-family: "Agenda-Light", Arial, Helvetica, sans-serif;
@@ -1734,7 +1736,9 @@ h3 {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
-  margin: 1.25rem 0;
+  margin: 0;
+  padding: 0;
+  padding: 1.25rem 0 0.9375rem;
   text-transform: uppercase; }
 
 h4 {
@@ -1746,7 +1750,8 @@ h4 {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
-  margin: 1.25rem 0; }
+  margin: 0;
+  padding: 0.9375rem 0 0.625rem; }
 
 h5 {
   font-family: Arial, Helvetica, sans-serif;
@@ -1757,7 +1762,8 @@ h5 {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 1.25rem 0; }
+  margin: 0;
+  padding: 0.5rem 0 0.3125rem; }
 
 h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -1768,7 +1774,8 @@ h6 {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 1.25rem 0; }
+  margin: 0;
+  padding: 0.3125rem 0; }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -1777,7 +1784,8 @@ p {
   line-height: 20px;
   line-height: 1.25rem;
   color: #444444;
-  margin: 1rem 0; }
+  margin: 0;
+  padding: 0 0 1rem; }
 
 .small {
   font-family: Arial, Helvetica, sans-serif;
@@ -2368,7 +2376,8 @@ body {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
-  margin: 1.25rem 0;
+  margin: 0;
+  padding: 0.9375rem 0 0.625rem;
   background-color: #fff;
   padding: 20px 20px 0;
   text-align: center; }
@@ -2816,7 +2825,8 @@ label {
   line-height: 0.875rem;
   letter-spacing: 0.008rem;
   text-transform: uppercase;
-  margin: 1.25rem 0 0.625rem; }
+  margin: 0;
+  padding: 1.25rem 0 0.625rem; }
 
 select,
 textarea,
@@ -3108,7 +3118,8 @@ legend {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 1.25rem 0;
+  margin: 0;
+  padding: 0.5rem 0 0.3125rem;
   border-bottom: 0; }
 
 ul.form-group {
