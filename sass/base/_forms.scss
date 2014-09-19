@@ -159,19 +159,21 @@ input[type="checkbox"] {
   @include background-image(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2hpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDpFNEU1QTBCMDczMjA2ODExODIyQTlGMjJFQkYyOEVCMyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDo5RkNFMDEwNEQ4NzgxMUUzOEQ4MThENERBMDREMzMyNyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDo5RkNFMDEwM0Q4NzgxMUUzOEQ4MThENERBMDREMzMyNyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M2IChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NjFBRDM4QzIyMjIwNjgxMTgyMkFERDZBQjhCNEREQjkiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6RTRFNUEwQjA3MzIwNjgxMTgyMkE5RjIyRUJGMjhFQjMiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz400LaOAAABuElEQVR42qSVTShEURiG7x2TofyvlJ+FsDELiTXKwkb+k2LFQn6LLFlpNkj+sqEGJTXSKEopbE1pMgsWyoZYsUBpRLxfvUfXdC8z9371dGbOOfe93znfOe/VQ6GwZhJu0EgqQR5IBQ/gDOyBXfBm9XBsNIAZUGoyVkjawS2YAOuxk1yG3zrwMQsRvALjwAtSgIf9A+AcFAA/WAXJVpnOgyEQpdgK+IhJ4prIWBdYBj0gDXSCL2OmrRR85/IXTQSNIQ9vgmrwAjrAoHH5kvoc/4+BIy3+CDNTiSmQo0TbuD+XXFaiEQAnIEO9QESbOSgb/qnZiwW2TUq0ih2Hmv04ZlsBkkQ0lx03DkSfwSOPXraLFVcVdRLqrEZdvHoSRQ4Es0A6eJUjJqIRDtQ7EK1hG1GFCrKjVzbZpugw26ASDdAcykCfDUExl1oWa02JSqFGOWEW1CUgWM7zLTEJnox3fwcs0Yn26QPuP8TE0brBKW9SwHABflnfCJ3KwwkX9AIvKysvKQb9IAQ2QCbYomP9HEndxPnF7adByT9Lv6NJ++NxfjHpAxpNCz8n+VzyPZ1J5mxbfU6+BRgAOslasYy6h1YAAAAASUVORK5CYII=));
 }
 
-.l-radios {
+.l-radios,
+.l-checkboxes {
   clear: both;
   @include clearfix();
+
+  .l-radio,
+  .l-checkbox {
+    // Container for each radio button in a series
+    float: left;
+    margin-right: 1.5rem;
+  }
 }
 
+.l-checkbox,
 .l-radio {
-  // Container for each radio button in a series
-  float: left;
-  margin-right: 1.25rem;
-}
-
-.checkbox,
-.radio {
   display: block;
   min-height: 20px;
   margin: 0 0 5px;
@@ -196,7 +198,7 @@ input[type="checkbox"] {
       display: inline-block;
       width: 21px;
       height: 21px;
-      margin-right: 10px;
+      margin-right: 5px;
       background-position: 0 0;
       background-repeat: no-repeat;
       vertical-align: middle;

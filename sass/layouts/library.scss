@@ -45,6 +45,12 @@ section {
   margin: 50px 0 30px;
 }
 
+.l-system-element {
+  &.first .small.header {
+    margin-top: 0;
+  }
+}
+
 
 ul.figure {
   float: right;
@@ -348,15 +354,20 @@ ul.figure li a {
 }
 
 // --------------------------------------  FORM ELEMENTS -----------------------------
+.l-form-fields {
+  max-width: 500px;
+
+  h2 {
+    padding-top: 4rem;
+  }
+}
+
 .l-button-examples {
+  max-width: 500px;
+
   .btn,
   .btn-primary,
   .btn-secondary {
     margin: .5rem 0;
   }
 }
-
-.l-form-fields {
-  max-width: 500px;
-}
-

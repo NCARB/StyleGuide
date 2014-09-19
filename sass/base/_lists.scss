@@ -21,6 +21,7 @@
 $margin-bottom-default: 1rem;
 
 
+// UNORDERED, ORDERED
 ul,
 ol {
   @include defaultList();
@@ -46,6 +47,8 @@ ol {
   }
 }
 
+
+// INLINE
 .list-inline {
   @include defaultList();
   margin-bottom: $margin-bottom-default;
@@ -55,6 +58,7 @@ ol {
   }
 }
 
+// COMMA
 .list-comma {
   @include defaultList();
 
@@ -66,3 +70,13 @@ ol {
 }
 
 // Note: Form group lists are kept in _forms.scss.
+
+
+// Definition Lists
+// TODO
+
+
+// DETAILS
+details summary::-webkit-details-marker {
+  color: $color-blue;
+}

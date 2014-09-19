@@ -416,78 +416,88 @@
 
       <section tabindex="70">
         <h3 id="form_elements" class="figure">Form Elements</h3>
+
         <h2>Buttons</h2>
         <p>
           All buttons are text and/or an icon enclosed in a rectangular shape. NCARB blue is used as the primary call-to-action button and secondary buttons can be light yellow, dark grey, green or beige.
         </p>
-        <div class="l-code-reveal">
-          <div class="small header">.btn</div>
-          <div class="l-grid g-M-gutters">
-            <div class="g-cell g-B--full g-ML--fit">
-              <pre class="prettyprint">
-                <xmp>
-  <button class="btn" type="button">
-    Button
-  </button>
-  <a href="#form_elements" class="btn">Link button</a>
-  <input type="button" class="btn" value ="Input button" />
-  <input type="submit" class="btn block" value ="Load More" />
-                </xmp>
-              </pre>
-              <div class="l-button-examples">
-                <button class="btn" type="button">Button</button>
-                <a href="#form_elements" class="btn">Link button</a>
-                <input type="button" class="btn" value ="Input button" />
-                <input type="submit" class="btn block" value ="Load More" />
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.btn</summary>
+            <div class="l-grid g-M-gutters">
+              <div class="g-cell g-B--full g-ML--fit">
+                <pre class="prettyprint">
+                  <xmp>
+<button class="btn" type="button">
+  Button
+</button>
+<a href="#form_elements" class="btn">Link button</a>
+<input type="button" class="btn" value ="Input button" />
+<input type="submit" class="btn block" value ="Load More" />
+                  </xmp>
+                </pre>
+              </div>
+              <div class="g-cell g-B--full g-ML--1of3">
+                <p>Usage:</p>
+                <p>
+                  The <code>.btn</code> class will style a default button.
+                </p>
+                <p>
+                  Adding the <code>.block</code> class to a <code>.btn</code> will make the button a block element with 100% width.
+                </p>
               </div>
             </div>
-            <div class="g-cell g-B--full g-ML--1of3">
-              <p>Usage:</p>
-              <p>
-                The <code>.btn</code> class will style a default button.
-              </p>
-              <p>
-                Adding the <code>.block</code> class to a <code>.btn</code> will make the button a block element with 100% width.
-              </p>
-            </div>
+          </details>
+          <div class="l-button-examples">
+            <button class="btn" type="button">Button</button>
+            <a href="#form_elements" class="btn">Link button</a>
+            <input type="button" class="btn" value ="Input button" />
+            <input type="submit" class="btn block" value ="Load More" />
           </div>
         </div>
 
-        <div class="l-code-reveal">
-          <div class="small header">.btn-primary</div>
-          <div class="l-grid g-M-gutters">
-            <div class="g-cell g-B--full g-ML--fit">
-              <pre class="prettyprint">
-                <xmp>
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.btn-primary</summary>
+            <div class="l-grid g-M-gutters">
+              <div class="g-cell g-B--full g-ML--fit">
+                <pre class="prettyprint">
+                  <xmp>
   <button class="btn-primary" type="button">
     Button
   </button>
   <a href="#form_elements" class="btn-primary continue">
     Link button
   </a>
-                </xmp>
-              </pre>
-              <button type="button" class="btn-primary">Button Title</button>
-              <a href="#form_elements" class="btn-primary continue">Link button</a>
+                  </xmp>
+                </pre>
+              </div>
+              <div class="g-cell g-B--full g-ML--1of3">
+                <p>Usage:</p>
+                <p>
+                  The <code>.btn-primary</code> class will create a primary button. A primary button should be reserved for the main call to action for an entire page regardless of whether the button is found within a form, for selecting an item from a collection, applying a filter, or some other action.
+                </p>
+                <p>
+                  Adding the <code>.continue</code> class to any <code>.btn</code> adds a right facing arrow to the button. It should be used when selecting the button would continue to the next step of a process.
+                </p>
+              </div>
             </div>
-            <div class="g-cell g-B--full g-ML--1of3">
-              <p>Usage:</p>
-              <p>
-                The <code>.btn-primary</code> class will create a primary button. A primary button should be reserved for the main call to action for an entire page regardless of whether the button is found within a form, for selecting an item from a collection, applying a filter, or some other action.
-              </p>
-              <p>
-                Adding the <code>.continue</code> class to any <code>.btn</code> adds a right facing arrow to the button. It should be used when selecting the button would continue to the next step of a process.
-              </p>
-            </div>
+          </details>
+          <div class="l-button-examples">
+            <button type="button" class="btn-primary">Button Title</button>
+            <a href="#form_elements" class="btn-primary continue">Link button</a>
           </div>
         </div>
 
-        <div class="small header">.btn-secondary</div>
-        <div class="l-grid g-M-gutters">
-          <div class="g-cell g-B--full g-ML--fit">
-            <div class="l-code-reveal">
-              <pre class="prettyprint">
-                <xmp>
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.btn-secondary</summary>
+            <div class="l-grid g-M-gutters">
+              <div class="g-cell g-B--full g-ML--fit">
+                <div class="l-system-element">
+                  <pre class="prettyprint">
+                    <xmp>
 <button class="btn-secondary" type="button">
   Secondary - Default
 </button>
@@ -500,64 +510,65 @@
 <a href="#form_elements" class="btn-secondary yellow block">
   Secondary - Green
 </a>
-                </xmp>
-              </pre>
-              <div class="l-button-examples">
-                <button type="button" class="btn-secondary">Secondary - Default</button>
-                <button class="btn-secondary plus" type="button">Secondary w/Plus</button>
-                <a href="#form_elements" class="btn-secondary yellow block">Secondary - Yellow</a>
-                <a href="#form_elements" class="btn-secondary green block">Secondary - Green</a>
+                    </xmp>
+                  </pre>
+                </div>
+              </div>
+              <div class="g-cell g-B--full g-ML--1of3">
+                <div class="l-usage">
+                  <p>Usage:</p>
+                  <p>
+                    The <code>.btn-secondary</code> class will apply the secondary button styles and allow the secondary color palette. The default color is <code>$color-gray</code>.
+                  </p>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="g-cell g-B--full g-ML--1of3">
-            <div class="l-usage">
-              <p>Usage:</p>
-              <p>
-                The <code>.btn-secondary</code> class will apply the secondary button styles and allow the secondary color palette. The default color is <code>$color-gray</code>.
-              </p>
-            </div>
+          </details>
+          <div class="l-button-examples">
+            <button type="button" class="btn-secondary">Secondary - Default</button>
+            <button class="btn-secondary plus" type="button">Secondary w/Plus</button>
+            <a href="#form_elements" class="btn-secondary yellow block">Secondary - Yellow</a>
+            <a href="#form_elements" class="btn-secondary green block">Secondary - Green</a>
           </div>
         </div>
 
         <div class="l-form-fields">
           <h2>Input Fields</h2>
-          <div class="small header">input[type="text"]</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
-<label for="card_number">Card Number</label>
-<input type="text" name="card_number" value="123456789" />
-              </xmp>
-            </pre>
+
+          <div class="l-system-element first">
+            <details>
+              <summary class="small header">input[type="text"]</summary>
+              <pre class="prettyprint">
+                <xmp>
+  <label for="card_number">Card Number</label>
+  <input type="text" name="card_number" value="123456789" />
+                </xmp>
+              </pre>
+            </details>
+            <label for="card_number">Card Number</label>
+            <input type="text" name="card_number" value="123456789" />
           </div>
-          <label for="card_number">Card Number</label>
-          <input type="text" name="card_number" value="123456789" />
 
-          <div class="small header">input[type="date"]</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
-<label for="start_date">Start Date</label>
-<input type="date" name="start_date" value="" />
-              </xmp>
-            </pre>
+          <div class="l-system-element">
+            <details>
+              <summary class="small header">input[type="date"]</summary>
+              <pre class="prettyprint">
+                <xmp>
+  <label for="start_date">Start Date</label>
+  <input type="date" name="start_date" value="" />
+                </xmp>
+              </pre>
+            </details>
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" value="" />
           </div>
-          <label for="start_date">Start Date</label>
-          <input type="date" name="start_date" value="" />
-
-
 
           <h2>Search Field</h2>
-          <div class="l-search-box" role="search">
-            <fieldset>
-              <input name="headercontent_1$SearchBox" type="search" placeholder="SEARCH" autocomplete="off" class="search-box">
-              <input type="submit" name="headercontent_1$SearchButton" value="Submit" class="search-submit">
-            </fieldset>
-          </div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element first">
+            <details>
+              <summary class="small header">input[type="search"]</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-search-box" role="search">
   <fieldset>
     <input name="SearchBox" type="search"
@@ -566,15 +577,23 @@
     value="Submit" class="search-submit">
   </fieldset>
 </div>
-              </xmp>
-            </pre>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-search-box" role="search">
+              <fieldset>
+                <input name="headercontent_1$SearchBox" type="search" placeholder="SEARCH" autocomplete="off" class="search-box">
+                <input type="submit" name="headercontent_1$SearchButton" value="Submit" class="search-submit">
+              </fieldset>
+            </div>
           </div>
 
           <h2>Select Menus</h2>
-          <div class="small header">select</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element first">
+            <details>
+              <summary class="small header">select</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="form-group l-state">
   <div class="state">
     <label for="state">State</label>
@@ -606,91 +625,93 @@
     </select>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="form-group l-state">
-            <div class="state">
-              <label for="state">State</label>
-              <select class="form-control" name="state">
-                <option selected value="">Please select</option>
-                <optgroup label="UNITED STATES">
-                  <option value="AL">Alabama</option>
-                  <option value="AK">Alaska</option>
-                  <option value="AZ">Arizona</option>
-                  <option value="AR">Arkansas</option>
-                  <option value="CA">California</option>
-                  <option value="CO">Colorado</option>
-                  <option value="CT">Connecticut</option>
-                  <option value="DE">Delaware</option>
-                  <option value="DC">District of Columbia</option>
-                  <option value="FL">Florida</option>
-                  <option value="GA">Georgia</option>
-                  <option value="HI">Hawaii</option>
-                  <option value="ID">Idaho</option>
-                  <option value="IL">Illinois</option>
-                  <option value="IN">Indiana</option>
-                  <option value="IA">Iowa</option>
-                  <option value="KS">Kansas</option>
-                  <option value="KY">Kentucky</option>
-                  <option value="LA">Louisiana</option>
-                  <option value="ME">Maine</option>
-                  <option value="MD">Maryland</option>
-                  <option value="MA">Massachusetts</option>
-                  <option value="MI">Michigan</option>
-                  <option value="MN">Minnesota</option>
-                  <option value="MS">Mississippi</option>
-                  <option value="MO">Missouri</option>
-                  <option value="MT">Montana</option>
-                  <option value="NE">Nebraska</option>
-                  <option value="NV">Nevada</option>
-                  <option value="NH">New Hampshire</option>
-                  <option value="NJ">New Jersey</option>
-                  <option value="NM">New Mexico</option>
-                  <option value="NY">New York</option>
-                  <option value="NC">North Carolina</option>
-                  <option value="ND">North Dakota</option>
-                  <option value="OH">Ohio</option>
-                  <option value="OK">Oklahoma</option>
-                  <option value="OR">Oregon</option>
-                  <option value="PA">Pennsylvania</option>
-                  <option value="RI">Rhode Island</option>
-                  <option value="SC">South Carolina</option>
-                  <option value="SD">South Dakota</option>
-                  <option value="TN">Tennessee</option>
-                  <option value="TX">Texas</option>
-                  <option value="UT">Utah</option>
-                  <option value="VT">Vermont</option>
-                  <option value="VA">Virginia</option>
-                  <option value="WA">Washington</option>
-                  <option value="WV">West Virginia</option>
-                  <option value="WI">Wisconsin</option>
-                  <option value="WY">Wyoming</option>
-                </optgroup>
-                <optgroup label="CANADA">
-                  <option value="AB">Alberta</option>
-                  <option value="BC">British Columbia</option>
-                  <option value="MB">Manitoba</option>
-                  <option value="NB">New Brunswick</option>
-                  <option value="NF">Newfoundland and Labrador</option>
-                  <option value="NT">Northwest Territories</option>
-                  <option value="NS">Nova Scotia</option>
-                  <option value="NU">Nunavut</option>
-                  <option value="ON">Ontario</option>
-                  <option value="PE">Prince Edward Island</option>
-                  <option value="PQ">Quebec</option>
-                  <option value="SK">Saskatchewan</option>
-                  <option value="YT">Yukon Territory</option>
-                </optgroup>
-              </select>
+                </xmp>
+              </pre>
+            </details>
+            <div class="form-group l-state">
+              <div class="state">
+                <label for="state">State</label>
+                <select class="form-control" name="state">
+                  <option selected value="">Please select</option>
+                  <optgroup label="UNITED STATES">
+                    <option value="AL">Alabama</option>
+                    <option value="AK">Alaska</option>
+                    <option value="AZ">Arizona</option>
+                    <option value="AR">Arkansas</option>
+                    <option value="CA">California</option>
+                    <option value="CO">Colorado</option>
+                    <option value="CT">Connecticut</option>
+                    <option value="DE">Delaware</option>
+                    <option value="DC">District of Columbia</option>
+                    <option value="FL">Florida</option>
+                    <option value="GA">Georgia</option>
+                    <option value="HI">Hawaii</option>
+                    <option value="ID">Idaho</option>
+                    <option value="IL">Illinois</option>
+                    <option value="IN">Indiana</option>
+                    <option value="IA">Iowa</option>
+                    <option value="KS">Kansas</option>
+                    <option value="KY">Kentucky</option>
+                    <option value="LA">Louisiana</option>
+                    <option value="ME">Maine</option>
+                    <option value="MD">Maryland</option>
+                    <option value="MA">Massachusetts</option>
+                    <option value="MI">Michigan</option>
+                    <option value="MN">Minnesota</option>
+                    <option value="MS">Mississippi</option>
+                    <option value="MO">Missouri</option>
+                    <option value="MT">Montana</option>
+                    <option value="NE">Nebraska</option>
+                    <option value="NV">Nevada</option>
+                    <option value="NH">New Hampshire</option>
+                    <option value="NJ">New Jersey</option>
+                    <option value="NM">New Mexico</option>
+                    <option value="NY">New York</option>
+                    <option value="NC">North Carolina</option>
+                    <option value="ND">North Dakota</option>
+                    <option value="OH">Ohio</option>
+                    <option value="OK">Oklahoma</option>
+                    <option value="OR">Oregon</option>
+                    <option value="PA">Pennsylvania</option>
+                    <option value="RI">Rhode Island</option>
+                    <option value="SC">South Carolina</option>
+                    <option value="SD">South Dakota</option>
+                    <option value="TN">Tennessee</option>
+                    <option value="TX">Texas</option>
+                    <option value="UT">Utah</option>
+                    <option value="VT">Vermont</option>
+                    <option value="VA">Virginia</option>
+                    <option value="WA">Washington</option>
+                    <option value="WV">West Virginia</option>
+                    <option value="WI">Wisconsin</option>
+                    <option value="WY">Wyoming</option>
+                  </optgroup>
+                  <optgroup label="CANADA">
+                    <option value="AB">Alberta</option>
+                    <option value="BC">British Columbia</option>
+                    <option value="MB">Manitoba</option>
+                    <option value="NB">New Brunswick</option>
+                    <option value="NF">Newfoundland and Labrador</option>
+                    <option value="NT">Northwest Territories</option>
+                    <option value="NS">Nova Scotia</option>
+                    <option value="NU">Nunavut</option>
+                    <option value="ON">Ontario</option>
+                    <option value="PE">Prince Edward Island</option>
+                    <option value="PQ">Quebec</option>
+                    <option value="SK">Saskatchewan</option>
+                    <option value="YT">Yukon Territory</option>
+                  </optgroup>
+                </select>
+              </div>
             </div>
           </div>
 
           <h2>Radio Buttons &amp; Checkboxes</h2>
-          <div class="small header">input[type="radio"]</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element first">
+            <details>
+              <summary class="small header">input[type="radio"]</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-radios">
   <div class="l-radio">
     <input type="radio" id="opt1" name="radio-exp" value="option 1">
@@ -705,30 +726,49 @@
     </label>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="l-radios">
-            <div class="l-radio">
-              <input type="radio" id="opt1" name="radio-example" value="option 1">
-              <label for="opt1">
-                Option 1
-              </label>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-radios">
+              <div class="l-radio">
+                <input type="radio" id="opt1" name="radio-example" value="option 1">
+                <label for="opt1">
+                  Option 1
+                </label>
+              </div>
+              <div class="l-radio">
+                <input type="radio" id="opt2" name="radio-example" value="option 2">
+                <label for="opt2">
+                  Option 2
+                </label>
+              </div>
             </div>
-            <div class="l-radio">
-              <input type="radio" id="opt2" name="radio-example" value="option 2">
-              <label for="opt2">
-                Option 2
-              </label>
+          </div>
+
+          <div class="l-system-element">
+            <details>
+              <summary class="small header">input[type="checkbox"]</summary>
+              <pre class="prettyprint">
+                <xmp>
+<div class="l-checkbox">
+  <input type="checkbox" value="this_one" id="checkbox_1" name="checkbox_1">
+  <label for="checkbox_1">Selected</label>
+</div>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-checkbox">
+              <input type="checkbox" value="this_one" id="checkbox_1" name="checkbox_1">
+              <label for="checkbox_1">Selected</label>
             </div>
           </div>
-        </div>
 
           <h2>Status Messages</h2>
-          <div class="small header">.l-message.t-success</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element first">
+            <details>
+              <summary class="small header">.l-message.t-success</summary>
+                <pre class="prettyprint">
+                  <xmp>
 <div class="l-message t-success">
   <div class="msg-content">
     <div class="msg-header">
@@ -742,27 +782,29 @@
     </div>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="l-message t-success">
-            <div class="msg-content">
-              <div class="msg-header">
-                <p class="alert-header">
-                  Success header
-                </p>
-                </p>
-              </div>
-              <div class="msg-body">
-                <p>This is the success message body!</p>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-message t-success">
+              <div class="msg-content">
+                <div class="msg-header">
+                  <p class="alert-header">
+                    Success header
+                  </p>
+                  </p>
+                </div>
+                <div class="msg-body">
+                  <p>This is the success message body!</p>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="small header">.l-message.t-error</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element">
+            <details>
+              <summary class="small header">.l-message.t-error</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-message t-error">
   <div class="msg-content">
     <div class="msg-header">
@@ -776,28 +818,29 @@
     </div>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="l-message t-error">
-            <div class="msg-content">
-              <div class="msg-header">
-                <p class="alert-header">
-                  Error header
-                </p>
-                </p>
-              </div>
-              <div class="msg-body">
-                <p>This is the error message body!</p>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-message t-error">
+              <div class="msg-content">
+                <div class="msg-header">
+                  <p class="alert-header">
+                    Error header
+                  </p>
+                  </p>
+                </div>
+                <div class="msg-body">
+                  <p>This is the error message body!</p>
+                </div>
               </div>
             </div>
           </div>
 
-
-          <div class="small header">.l-message.t-warning</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element">
+            <details>
+              <summary class="small header">.l-message.t-warning</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-message t-warning">
   <div class="msg-content">
     <div class="msg-header">
@@ -811,28 +854,29 @@
     </div>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="l-message t-warning">
-            <div class="msg-content">
-              <div class="msg-header">
-                <p class="alert-header">
-                  Warning header
-                </p>
-                </p>
-              </div>
-              <div class="msg-body">
-                <p>This is the warning message body!</p>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-message t-warning">
+              <div class="msg-content">
+                <div class="msg-header">
+                  <p class="alert-header">
+                    Warning header
+                  </p>
+                  </p>
+                </div>
+                <div class="msg-body">
+                  <p>This is the warning message body!</p>
+                </div>
               </div>
             </div>
           </div>
 
-
-          <div class="small header">.l-message.t-info</div>
-          <div class="l-code-reveal">
-            <pre class="prettyprint">
-              <xmp>
+          <div class="l-system-element">
+            <details>
+              <summary class="small header">.l-message.t-info</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-message t-info">
   <div class="msg-content">
     <div class="msg-header">
@@ -846,23 +890,23 @@
     </div>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </div>
-          <div class="l-message t-info">
-            <div class="msg-content">
-              <div class="msg-header">
-                <p class="alert-header">
-                  Info header
-                </p>
-                </p>
-              </div>
-              <div class="msg-body">
-                <p>This is the informational message body.</p>
+                </xmp>
+              </pre>
+            </details>
+            <div class="l-message t-info">
+              <div class="msg-content">
+                <div class="msg-header">
+                  <p class="alert-header">
+                    Info header
+                  </p>
+                  </p>
+                </div>
+                <div class="msg-body">
+                  <p>This is the informational message body.</p>
+                </div>
               </div>
             </div>
           </div>
-
       </section>
 
       <section tabindex="80">
@@ -874,9 +918,9 @@
         <h2>Imagery</h2>
 
         <h2>Lists</h2>
-
-          <div class="small header">list-ordered</div>
-          <div class="l-code-reveal">
+        <div class="l-system-element first">
+          <details>
+            <summary class="small header">list-ordered</summary>
             <pre class="prettyprint">
               <xmp>
 <ol class="list-ordered">
@@ -887,17 +931,18 @@
 </ol>
               </xmp>
             </pre>
-          </div>
+          </details>
           <ol class="list-ordered">
             <li>Item One</li>
             <li>Item Two</li>
             <li>Item Three</li>
             <li>Item Four</li>
           </ol>
+        </div>
 
-
-          <div class="small header">list-unordered</div>
-          <div class="l-code-reveal">
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">list-unordered</summary>
             <pre class="prettyprint">
               <xmp>
 <ul>
@@ -908,16 +953,18 @@
 </ul>
               </xmp>
             </pre>
-          </div>
+          </details>
           <ul>
             <li>Item One</li>
             <li>Item Two</li>
             <li>Item Three</li>
             <li>Item Four</li>
           </ul>
+        </div>
 
-          <div class="small header">list-bullet</div>
-          <div class="l-code-reveal">
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">list-bullet</summary>
             <pre class="prettyprint">
               <xmp>
 <ul class="list-bullet">
@@ -928,26 +975,29 @@
 </ul>
               </xmp>
             </pre>
-          </div>
+          </details>
           <ul class="list-bullet">
             <li>Item One</li>
             <li>Item Two</li>
             <li>Item Three</li>
             <li>Item Four</li>
           </ul>
+        </div>
 
         <h2>Labels</h2>
 
         <h2>Separators</h2>
-          <div class="small header">hr</div>
-          <div class="l-code-reveal">
+        <div class="l-system-element first">
+          <details>
+            <summary class="small header">hr</summary>
             <pre class="prettyprint">
               <xmp>
 <hr />
               </xmp>
             </pre>
-          </div>
+          </details>
           <hr />
+        </div>
       </section>
 
       <!-- div class="l-grid">
