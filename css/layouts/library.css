@@ -1970,4 +1970,9 @@ ul.figure li a {
   .l-button-examples .btn-secondary {
     margin: .5rem 0; }
 
+.l-img-box {
+  width: 180px;
+  height: 180px;
+  margin: 0 .5rem; }
+
 /*# sourceMappingURL=library.css.map */
