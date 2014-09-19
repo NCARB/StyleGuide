@@ -1,0 +1,58 @@
+// Message
+
+@mixin messageColors($text-color, $background-color) {
+  border-color: $text-color;
+  background-color: $background-color;
+
+  .alert-header {
+    color: $text-color;
+  }
+  .msg-body p {
+    color: $text-color;
+  }
+}
+
+.l-message {
+  margin: 0.8rem;
+  padding: 1rem;
+  color: $color-gray;
+  border: 1px solid transparent;
+
+  &[data-state="is-hidden"] {
+    display: none;
+  }
+
+  .close {
+    top: -10px;
+    @include fontSize(32px);
+    color: $color_gray;
+  }
+
+  .alert-header {
+    font-weight: bold;
+  }
+
+  .msg-body {
+    ul,
+    ol {
+      margin: 0 0 0 1.25rem;
+      padding: 0;
+    }
+  }
+}
+
+.l-message.t-success {
+  @include messageColors($color-gray, $color-green-1);
+}
+
+.l-message.t-warning {
+  @include messageColors($color-yellow-2, $color-yellow-1);
+}
+
+.l-message.t-error {
+  @include messageColors($color-red-2, $color-red-1);
+}
+
+.l-message.t-info {
+  @include messageColors($color-blue, $color-blue-1);
+}

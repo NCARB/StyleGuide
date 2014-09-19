@@ -74,3 +74,9 @@ h4 small,
 h5 small {
   color: $color-gray-3;
 }
+
+hr {
+  margin: 0.5rem 0;
+  height: 1px;
+  border: 1px solid $color-gray-2;
+}

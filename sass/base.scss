@@ -25,7 +25,7 @@
 @import "base/buttons";
 @import "base/lists";
 @import "base/forms";
-// @import "base/alerts";
+@import "base/message";
 
 // Grid Breakpoints to JS via body::after (Cannot be used with grid-breakpointbar)
 @import "base/breakpoint_to_js";

@@ -1822,6 +1822,11 @@ h4 small,
 h5 small {
   color: #CCCCCC; }
 
+hr {
+  margin: 0.5rem 0;
+  height: 1px;
+  border: 1px solid #E2E2E2; }
+
 p img {
   margin: 0; }
 
@@ -3171,6 +3176,57 @@ ul.form-group {
 
 .btn-continue {
   max-width: 204px; }
+
+.l-message {
+  margin: 0.8rem;
+  padding: 1rem;
+  color: #444444;
+  border: 1px solid transparent; }
+  .l-message[data-state="is-hidden"] {
+    display: none; }
+  .l-message .close {
+    top: -10px;
+    font-size: 32px;
+    font-size: 2rem;
+    color: #444444; }
+  .l-message .alert-header {
+    font-weight: bold; }
+  .l-message .msg-body ul,
+  .l-message .msg-body ol {
+    margin: 0 0 0 1.25rem;
+    padding: 0; }
+
+.l-message.t-success {
+  border-color: #444444;
+  background-color: #EAF9D4; }
+  .l-message.t-success .alert-header {
+    color: #444444; }
+  .l-message.t-success .msg-body p {
+    color: #444444; }
+
+.l-message.t-warning {
+  border-color: #FFC50A;
+  background-color: #FFE194; }
+  .l-message.t-warning .alert-header {
+    color: #FFC50A; }
+  .l-message.t-warning .msg-body p {
+    color: #FFC50A; }
+
+.l-message.t-error {
+  border-color: #D2222A;
+  background-color: #F2DEDE; }
+  .l-message.t-error .alert-header {
+    color: #D2222A; }
+  .l-message.t-error .msg-body p {
+    color: #D2222A; }
+
+.l-message.t-info {
+  border-color: #00A4E3;
+  background-color: #ABEAFF; }
+  .l-message.t-info .alert-header {
+    color: #00A4E3; }
+  .l-message.t-info .msg-body p {
+    color: #00A4E3; }
 
 @media (min-width: 20em) {
   body::after {
