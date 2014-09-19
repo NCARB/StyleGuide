@@ -4,6 +4,19 @@
  /*//                                                    //*/
 /*////////////////////////////////////////////////////////*/
 
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+
+  li {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    zoom: 1;
+  }
+}
+
 .list-bullet {
   margin-bottom: 1rem;
 
@@ -73,3 +86,4 @@
   margin-bottom: 1rem;
 }
 
+// Note: Form group lists are kept in _forms.scss.
