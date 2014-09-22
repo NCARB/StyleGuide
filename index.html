@@ -84,7 +84,7 @@
           <li><code>fit</code> will make the columns fit inside their container.</li>
         </ul>
         <p>
-          The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives .5 rem of padding between each cell.
+          The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives 0.5rem (8px) of padding between each cell.
         <p>
           Resize your browser window to see how the grid behaves.
         </p>
@@ -98,6 +98,10 @@
           </div>
         </div>
 
+        <p>
+          There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
+        </p>
+
         <h4>Base: Full, ML: 1/3</h4>
         <div class="l-grid g-B--gutters g-B--full g-ML--fit g-v-center t-demo">
           <div class="g-cell">
@@ -110,9 +114,6 @@
             <div class="t-demo">Full / Thirds</div>
           </div>
         </div>
-        <p>
-          There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container:
-        </p>
         <h4>Base: Full, SM: 1/2, ML: 1/4</h4>
         <div class="l-grid g-B--gutters g-B--full g-SM--1of2 g-ML--1of4 g-v-center t-demo">
           <div class="g-cell">
@@ -129,15 +130,50 @@
           </div>
         </div>
 
-        <h3>Grid classes</h3>
+        <h3 id="grid-classes">Grid classes</h3>
         <p>
           The full explanation of each grid class and what it controls is below:
         </p>
+        <h4>Basic</h4>
         <dl>
           <dt><code>l-grid</code></dt>
-          <dd>
-            Identifies an element that will act as the grid container.
-          </dd>
+          <dd>Identifies an element that will act as the grid container.</dd>
+
+          <dt><code>g-cell</code></dt>
+          <dd>Identifies an element as a cell of the grid.</dd>
+        </dl>
+
+        <h4>Modifiers</h4>
+        <dl>
+          <dt><code>g-*--gutters</code></dt>
+          <dd>Creates a gutter, to the left, of each grid cell of 0.5rem (8px)</dd>
+
+          <dt><code>g-*--guttersLarge</code></dt>
+          <dd>Creates a larger gutter of 1rem (16px)</dd>
+
+          <dt><code>g-*--gutters2x</code></dt>
+          <dd>Creates a larger gutter of 2rem (32px)</dd>
+
+          <dt><code>g-*--gutters3x</code></dt>
+          <dd>Creates a very large gutter of 3rem (48px)</dd>
+
+        <h4>Cells</h4>
+        <dl>
+          <dt><code>g-*--full</code></dt>
+          <dd>Creates full width cells at the specified breakpoint.</dd>
+
+          <dt><code>g-*--fit</code></dt>
+          <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
+
+          <dt><code>g-*--1of2</code></dt>
+          <dd>A cell that is 50% of the total width of the grid.</dd>
+
+          <dt><code>g-*--1of3</code></dt>
+          <dd>A cell that is 33% of the total width of the grid.</dd>
+
+          <dt><code>g-*--1of4</code></dt>
+          <dd>A cell that is 25% of the total width of the grid.</dd>
+
         </dl>
       </section>
 
