@@ -65,7 +65,6 @@ module.exports = function(grunt) {
       },
       all: [
         'Gruntfile.js',
-        'js/*.js',
         'components/*/*.js'
       ],
       gruntfile: 'Gruntfile.js'

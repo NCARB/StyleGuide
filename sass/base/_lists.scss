@@ -3,6 +3,8 @@
   /*//    Lists                                           //*/
  /*//                                                    //*/
 /*////////////////////////////////////////////////////////*/
+@import 'icons';
+
 @mixin defaultList() {
   list-style: none;
   @include type-body();

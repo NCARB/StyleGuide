@@ -1,0 +1,95 @@
+// Drawer
+@import "base/colors";
+@import "base/type_sizes";
+@import "base/icons";
+
+[data-object="drawer"] {
+  .drawer-toggle {
+    display: block;
+    position: relative;
+    padding-left: 25px;
+
+    &:before {
+      content: '';
+      background-repeat: no-repeat;
+      @include fa-arrow-icon();
+      font-size: $type-M;
+      font-weight: bold;
+      color: $color-blue;
+      width: 11px;
+      height: 7px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+    }
+
+    &:hover,
+    &:active {
+      cursor: pointer;
+    }
+
+    // Default state == is-closed
+    & + * {
+      display: none;
+    }
+  }
+
+  &[data-state="is-open"] {
+    .drawer-toggle:before {
+      content: $fa-var-angle-down;
+      width: 23px;
+      height: 15px;
+    }
+    .drawer-toggle + * {
+      display: block;
+    }
+  }
+
+  .t-drawer-toggle {
+    text-decoration: none;
+    color: $color_black;
+    font-weight: bold;
+    font-size: $type-M;
+
+    &:hover {
+      text-decoration: none;
+    }
+    &:focus {
+      outline: none;
+      border-top: 1px solid rgba(19, 79, 143, 0.5);
+      border-bottom: 1px solid rgba(19, 79, 143, 0.6);
+      box-shadow: 0 0 3px rgba(19, 79, 143, 0.8);
+    }
+  }
+
+  .t-drawer-face {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid $color-gray-4;
+
+    &.last {
+      border-bottom: 1px solid $color-gray-4;
+  }
+
+    &:before {
+      padding-top: 12px;
+      padding-bottom: 10px;
+    }
+  }
+
+  .t-drawer {
+    margin-left: 25px;
+    margin-bottom: 10px;
+
+    li {
+      padding: 5px 0;
+    }
+  }
+}
+
+.l-drawers [data-object="drawer"]:last-child {
+  &[data-state="is-closed"] .t-drawer-face,
+  &[data-state="is-open"] {
+    border-bottom: 1px solid $color-gray-4;
+  }
+}
