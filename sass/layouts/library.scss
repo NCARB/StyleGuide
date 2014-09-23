@@ -197,6 +197,13 @@ ul.figure li a {
   &.blue-2 {
     background-color: $color-blue-2;
   }
+  &.blue-3 {
+    background-color: $color-blue-3;
+  }
+  &.blue-4 {
+    background-color: $color-blue-4;
+  }
+
 
   &.pink {
     background-color: $color-pink;
@@ -207,6 +214,15 @@ ul.figure li a {
   }
   &.red-2 {
     background-color: $color-red-2;
+  }
+  &.red-3 {
+    background-color: $color-red-3;
+  }
+  &.red-4 {
+    background-color: $color-red-4;
+  }
+  &.red-5 {
+    background-color: $color-red-5;
   }
 
   &.orange {
@@ -231,6 +247,15 @@ ul.figure li a {
     .codename {
       color: $color-gray;
     }
+  }
+  &.yellow-4 {
+    background-color: $color-yellow-4;
+  }
+  &.yellow-5 {
+    background-color: $color-yellow-5;
+  }
+  &.yellow-6 {
+    background-color: $color-yellow-6;
   }
 
   &.green-1 {
@@ -267,23 +292,12 @@ ul.figure li a {
   }
   &.gray-4 {
     background-color: $color-gray-4;
-
-    .code,
-    .codename {
-      color: $color-white;
-    }
   }
   &.gray-5 {
     background-color: $color-gray-5;
-
-    .code,
-    .codename {
-      color: $color-white;
-    }
   }
   &.gray-6 {
     background-color: $color-gray-6;
-    color: $color-white;
   }
 
   &.black {
@@ -292,6 +306,21 @@ ul.figure li a {
   &.white {
     background-color: $color-white;
     border: 1px solid $color-gray;
+  }
+
+  &.blue-3,
+  &.blue-4,
+  &.red-4,
+  &.red-5,
+  &.yellow-5,
+  &.gray-4,
+  &.gray-5,
+  &.gray-6 {
+    .name,
+    .code,
+    .codename {
+      color: $color-white;
+    }
   }
 }
 

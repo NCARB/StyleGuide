@@ -1,8 +1,8 @@
 @import "breakpoints";
-@import "flexbox";
+@import "bourbon/bourbon";
 
 .l-grid {
-  @include display-flex(flex);
+  @include display(flex);
   @include flex-flow(row wrap);
   list-style: none;
   margin: 0;
@@ -15,7 +15,7 @@
 
 .g-flex_cells {
   & > .g-cell {
-    @include display-flex(flex);
+    @include display(flex);
   }
 }
 
@@ -70,23 +70,23 @@
   }
   .g-#{$name}#{$sep}-fit > .g-cell,
   .g-cell.g-#{$name}#{$sep}-fit {
-    flex: 1;
+    @include flex(1);
   }
   .g-#{$name}#{$sep}-full > .g-cell,
   .g-cell.g-#{$name}#{$sep}-full {
-    flex: 0 0 100%;
+    @include flex(0 0 100%);
   }
   .g-#{$name}#{$sep}-1of2 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of2 {
-    flex: 0 0 50%
+    @include flex(0 0 50%);
   }
   .g-#{$name}#{$sep}-1of3 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of3 {
-    flex: 0 0 33.3333%
+    @include flex(0 0 33.3333%);
   }
   .g-#{$name}#{$sep}-1of4 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of4 {
-    flex: 0 0 25%
+    @include flex(0 0 25%);
   }
 }
 
