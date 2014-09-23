@@ -3,6 +3,7 @@
 @import "base/type_mixins";
 @import "base/icons";
 @import "base/breakpoints";
+@import "bourbon/bourbon";
 
 section {
   clear: both;
@@ -406,9 +407,32 @@ ul.figure li a {
 // --------------------------------------  CONTENT -----------------------------
 // Imagery
 .l-img-box {
-  width: 180px;
-  height: 180px;
-  margin: 0 .5rem;
+  position: relative;
+  margin: 0 0.5rem;
+  background-color: $color-gray-3;
+  color: $color-gray-6;
+  font-family: $font_regular;
+  @include fontSize($type-XXL);
+  text-align: center;
+
+  .desc {
+    display: block;
+    margin-top: 25%;
+    height: 50%;
+  }
+
+  &.one-to-one {
+    max-width: 100px;
+    height: 100px;
+  }
+  &.four-to-three {
+    max-width: 200px;
+    height: 150px;
+  }
+  &.homepage-feature {
+    max-width: 700px;
+    height: 327px;
+  }
 }
 
 .t-img-box {

@@ -2000,8 +2000,26 @@ ul.figure li a {
     margin: .5rem 0; }
 
 .l-img-box {
-  width: 180px;
-  height: 180px;
-  margin: 0 .5rem; }
+  position: relative;
+  margin: 0 0.5rem;
+  background-color: #CCCCCC;
+  color: #444444;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  font-size: 2.25rem;
+  text-align: center; }
+  .l-img-box .desc {
+    display: block;
+    margin-top: 25%;
+    height: 50%; }
+  .l-img-box.one-to-one {
+    max-width: 100px;
+    height: 100px; }
+  .l-img-box.four-to-three {
+    max-width: 200px;
+    height: 150px; }
+  .l-img-box.homepage-feature {
+    max-width: 700px;
+    height: 327px; }
 
 /*# sourceMappingURL=library.css.map */
