@@ -5138,7 +5138,22 @@ input[type="checkbox"] {
   .l-radio input[type="checkbox"],
   .l-radio input[type="radio"] {
     position: absolute;
-    left: -1000em; }
+    left: -1000em;
+    /* Unfinished
+    &.focus + label::before,
+    &:focus + label::before {
+      color: $color-gray-4;
+    }
+    &:active + label::before,
+    &:checked:focus + label::before,
+    &.focus:checked + label::before {
+      color: $color-blue;
+    }
+    &:disabled:focus + label::before {
+    }
+    &:checked:disabled:focus + label::before {
+    }
+    */ }
     .l-checkbox input[type="checkbox"] + label::before,
     .l-checkbox input[type="radio"] + label::before,
     .l-radio input[type="checkbox"] + label::before,
@@ -5158,25 +5173,6 @@ input[type="checkbox"] {
     .l-radio input[type="radio"]:checked,
     .l-radio input[type="radio"]:focus {
       outline: none !important; }
-    .l-checkbox input[type="checkbox"].focus + label::before, .l-checkbox input[type="checkbox"]:focus + label::before,
-    .l-checkbox input[type="radio"].focus + label::before,
-    .l-checkbox input[type="radio"]:focus + label::before,
-    .l-radio input[type="checkbox"].focus + label::before,
-    .l-radio input[type="checkbox"]:focus + label::before,
-    .l-radio input[type="radio"].focus + label::before,
-    .l-radio input[type="radio"]:focus + label::before {
-      color: #999999; }
-    .l-checkbox input[type="checkbox"]:active + label::before, .l-checkbox input[type="checkbox"]:checked:focus + label::before, .l-checkbox input[type="checkbox"].focus:checked + label::before,
-    .l-checkbox input[type="radio"]:active + label::before,
-    .l-checkbox input[type="radio"]:checked:focus + label::before,
-    .l-checkbox input[type="radio"].focus:checked + label::before,
-    .l-radio input[type="checkbox"]:active + label::before,
-    .l-radio input[type="checkbox"]:checked:focus + label::before,
-    .l-radio input[type="checkbox"].focus:checked + label::before,
-    .l-radio input[type="radio"]:active + label::before,
-    .l-radio input[type="radio"]:checked:focus + label::before,
-    .l-radio input[type="radio"].focus:checked + label::before {
-      color: #00A4E3; }
   .l-checkbox input[type="radio"] + label::before,
   .l-radio input[type="radio"] + label::before {
     display: inline-block;
