@@ -3,6 +3,7 @@
   /*//    Lists                                           //*/
  /*//                                                    //*/
 /*////////////////////////////////////////////////////////*/
+@import "bourbon/bourbon";
 @import 'icons';
 
 @mixin defaultList() {
@@ -29,7 +30,7 @@ ol {
   @include defaultList();
 }
 
-.list-bullet {
+.l-list-bullet {
   @include defaultList();
   margin-bottom: $margin-bottom-default;
 
@@ -39,7 +40,7 @@ ol {
   }
 }
 
-.list-ordered {
+.l-list-ordered {
   margin-bottom: $margin-bottom-default;
 
   > li {
@@ -51,7 +52,7 @@ ol {
 
 
 // INLINE
-.list-inline {
+.l-list-inline {
   @include defaultList();
   margin-bottom: $margin-bottom-default;
 
@@ -61,7 +62,7 @@ ol {
 }
 
 // COMMA
-.list-comma {
+.l-list-comma {
   @include defaultList();
 
   > li {
@@ -69,6 +70,62 @@ ol {
       content:', '
     }
   }
+}
+
+// MEDIA OBJECT
+.l-list-media-object {
+  @include display(flex);
+  @include flex-flow(row wrap);
+  @include align-items(flex-start);
+  width: 100%;
+  padding: 0.8rem;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  .figure {
+    margin-right: 0.65rem;
+    vertical-align: top;
+    min-width: 65px;
+  }
+
+  .body {
+    @include flex(1);
+
+    .header {
+      padding-top: 0;
+
+      &.link {
+        color: $color-blue;
+      }
+    }
+  }
+}
+
+// MEDIA
+.l-list-media {
+  .header {
+    @include type-5();
+    color: $color-blue;
+    font-family: $font_regular;
+    font-weight: bold;
+  }
+  .body {
+    margin: 0;
+    padding-bottom: 0.25rem;
+    @include fontSize($type-M);
+  }
+  .sub-header {
+    margin: 0;
+    color: $color-gray-4;
+  }
+  .header,
+  .sub-header {
+    margin: 0;
+    padding-top: 0;
+  }
+
 }
 
 // Note: Form group lists are kept in _forms.scss.

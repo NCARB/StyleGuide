@@ -63,7 +63,7 @@
       </section>
 
       <section tabindex="20">
-        <h3 id="layout" class="figure">Layout</h3>
+        <h3 id="layout" class="section-header">Layout</h3>
         <p>
           We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
         </p>
@@ -178,7 +178,7 @@
       </section>
 
       <section tabindex="30">
-        <h3 id="color" class="figure">Color</h3>
+        <h3 id="color" class="section-header">Color</h3>
         <div class="l-grid g-B--gutters g-B--full g-ML--fit">
           <!-- Blue -->
           <div class="g-cell l-color-group">
@@ -367,7 +367,7 @@
       </section>
 
       <section tabindex="40">
-        <h3 id="typography" class="figure">Typography</h3>
+        <h3 id="typography" class="section-header">Typography</h3>
         <h2>Fonts</h2>
         <div class="l-fonts">
           <h4>Agenda, Light</h4>
@@ -424,7 +424,7 @@
       </section>
 
       <section tabindex="50">
-        <h3 id="vertical_rhythm" class="figure">Vertical Rhythm</h3>
+        <h3 id="vertical_rhythm" class="section-header">Vertical Rhythm</h3>
         <p>The following is an example snippet from an existing page that has been formatted using the headers defined above.</p>
         <div class="l-page-sample">
           <h1>Licensure Matters: Change the World Your Way</h1>
@@ -458,7 +458,7 @@
       </section>
 
       <section tabindex="60">
-        <h3 id="iconography" class="figure">Iconography</h3>
+        <h3 id="iconography" class="section-header">Iconography</h3>
         <h2>Standard</h2>
         <div class="l-box-iconography">
           <p>
@@ -483,7 +483,7 @@
       </section>
 
       <section tabindex="70">
-        <h3 id="form_elements" class="figure">Form Elements</h3>
+        <h3 id="form_elements" class="section-header">Form Elements</h3>
 
         <h2>Buttons</h2>
         <p>
@@ -1035,7 +1035,7 @@
       </section>
 
       <section tabindex="80">
-        <h3 id="navigation" class="figure">Navigation</h3>
+        <h3 id="navigation" class="section-header">Navigation</h3>
 
         <div class="l-system-element first">
           <details>
@@ -1105,7 +1105,7 @@
       </section>
 
       <section tabindex="90">
-        <h3 id="content" class="figure">Content</h3>
+        <h3 id="content" class="section-header">Content</h3>
 
         <h2>Imagery</h2>
         <p>
@@ -1128,15 +1128,73 @@
             <summary class="small header">img-homepage-feature</summary>
             <pre class="prettyprint">
               <xmp>
-                <img src="img/placeholder.png" width="700px" height="327px" />
+<img src="img/placeholder.png" width="700px" height="327px" />
               </xmp>
             </pre>
           </details>
-          <div class="l-grid g-v-center">
-            <div class="g-cell g-cell-center l-img-box homepage-feature">
-              <span class="desc">700x327</span>
-            </div>
-          </div>
+          <img src="img/placeholder.png" width="700px" height="327px" />
+        </div>
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">img-feature</summary>
+            <pre class="prettyprint">
+              <xmp>
+<img src="img/placeholder.png" width="458px" height="300px" />
+              </xmp>
+            </pre>
+          </details>
+          <img src="img/placeholder.png" width="458px" height="300px" />
+        </div>
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">img-avatar</summary>
+            <pre class="prettyprint">
+              <xmp>
+<img src="img/placeholder.png" width="65px" height="65px" />
+<img src="img/placeholder.png" width="80px" height="80px" />
+              </xmp>
+            </pre>
+          </details>
+          <img src="img/placeholder.png" width="65px" height="65px" />
+          <img src="img/placeholder.png" width="80px" height="80px" />
+        </div>
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">img-thumbnail</summary>
+            <pre class="prettyprint">
+              <xmp>
+<img src="img/placeholder.png" width="54px" height="54px" />
+              </xmp>
+            </pre>
+          </details>
+          <img src="img/placeholder.png" width="54px" height="54px" />
+        </div>
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">img-topic</summary>
+            <pre class="prettyprint">
+              <xmp>
+<img src="img/placeholder.png" width="220px" height="150px" />
+              </xmp>
+            </pre>
+          </details>
+          <img src="img/placeholder.png" width="220px" height="150px" />
+        </div>
+
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">img-promo</summary>
+            <pre class="prettyprint">
+              <xmp>
+<img src="img/placeholder.png" width="215px" height="71px" />
+              </xmp>
+            </pre>
+          </details>
+          <img src="img/placeholder.png" width="215px" height="71px" />
         </div>
 
         <h2>Lists</h2>
@@ -1145,7 +1203,7 @@
             <summary class="small header">list-ordered</summary>
             <pre class="prettyprint">
               <xmp>
-<ol class="list-ordered">
+<ol class="l-list-ordered">
   <li>Item One</li>
   <li>Item Two</li>
   <li>Item Three</li>
@@ -1154,7 +1212,7 @@
               </xmp>
             </pre>
           </details>
-          <ol class="list-ordered">
+          <ol class="l-list-ordered">
             <li>Item One</li>
             <li>Item Two</li>
             <li>Item Three</li>
@@ -1189,7 +1247,7 @@
             <summary class="small header">list-bullet</summary>
             <pre class="prettyprint">
               <xmp>
-<ul class="list-bullet">
+<ul class="l-list-bullet">
   <li>Item One</li>
   <li>Item Two</li>
   <li>Item Three</li>
@@ -1198,7 +1256,7 @@
               </xmp>
             </pre>
           </details>
-          <ul class="list-bullet">
+          <ul class="l-list-bullet">
             <li>Item One</li>
             <li>Item Two</li>
             <li>Item Three</li>
@@ -1211,9 +1269,28 @@
             <summary class="small header">list-media-object</summary>
             <pre class="prettyprint">
               <xmp>
+<div class="l-list-media-object">
+  <img src="img/img-avatar-80x80.jpg" class="figure" />
+  <div class="body">
+    <h4 class="header">Lorem ipsum dolor sit amet</h4>
+    <p>
+      Consectetur adipiscing elit, sed do eiusmod tempor
+      incididunt ut labore et dolore magna aliqua.
+    </p>
+  </div>
+</div>
               </xmp>
             </pre>
           </details>
+          <a class="l-list-media-object" href="#list-media-object">
+            <img src="img/img-avatar-80x80.jpg" class="figure" />
+            <div class="body">
+              <h4 class="header link">Lorem ipsum dolor sit amet</h4>
+              <p>
+                Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+          </a>
         </div>
 
         <div class="l-system-element">
@@ -1224,6 +1301,24 @@
               </xmp>
             </pre>
           </details>
+          <dl class="l-list-media">
+            <dt class="header">Lorem ipsum dolor sit amet</dt>
+            <dd class="body">
+              Consectetur adipiscing elit
+            </dd>
+            <dd class="sub-header">
+              Sed do eiusmod tempor incididunt
+            </dd>
+          </dl>
+          <dl class="l-list-media">
+            <dt class="header">Lorem ipsum dolor sit amet</dt>
+            <dd class="body">
+              Consectetur adipiscing elit
+            </dd>
+            <dd class="sub-header">
+              Sed do eiusmod tempor incididunt
+            </dd>
+          </dl>
         </div>
 
         <h2>Separators</h2>
