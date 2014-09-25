@@ -617,7 +617,7 @@
 
           <h2>Input Fields</h2>
 
-          <div class="l-system-element first">
+          <div class="l-system-element first l-text-input">
             <details>
               <summary class="small header">input[type="text"]</summary>
               <pre class="prettyprint">
@@ -631,7 +631,7 @@
             <input type="text" name="card_number" value="123456789" />
           </div>
 
-          <div class="l-system-element">
+          <div class="l-system-element l-text-input">
             <details>
               <summary class="small header">input[type="date"]</summary>
               <pre class="prettyprint">
@@ -646,7 +646,7 @@
           </div>
 
           <h2>Search Field</h2>
-          <div class="l-system-element first">
+          <div class="l-system-element first l-text-input">
             <details>
               <summary class="small header">input[type="search"]</summary>
               <pre class="prettyprint">
@@ -796,13 +796,15 @@
                 <xmp>
 <div class="l-radios">
   <div class="l-radio">
-    <input type="radio" id="opt1" name="radio-exp" value="option 1">
+    <input type="radio" id="opt1" name="radio-exp"
+      value="option 1" checked="checked">
     <label for="opt1">
       Option 1
     </label>
   </div>
   <div class="l-radio">
-    <input type="radio" id="opt2" name="radio-exp" value="option 2">
+    <input type="radio" id="opt2" name="radio-exp"
+      value="option 2">
     <label for="opt2">
       Option 2
     </label>
@@ -813,7 +815,7 @@
             </details>
             <div class="l-radios">
               <div class="l-radio">
-                <input type="radio" id="opt1" name="radio-example" value="option 1">
+                <input type="radio" id="opt1" name="radio-example" value="option 1" checked="checked">
                 <label for="opt1">
                   Option 1
                 </label>
@@ -832,17 +834,69 @@
               <summary class="small header">input[type="checkbox"]</summary>
               <pre class="prettyprint">
                 <xmp>
-<div class="l-checkbox">
-  <input type="checkbox" value="this_one" id="checkbox_1" name="checkbox_1">
-  <label for="checkbox_1">Selected</label>
-</div>
+<fieldset class="l-checkboxes">
+  <div class="l-checkbox">
+    <input type="checkbox" value="one"
+      id="checkbox_1" name="checkbox_1">
+    <label for="checkbox_1">Unchecked</label>
+  </div>
+  <div class="l-checkbox">
+    <input type="checkbox" value="one-focus"
+      id="checkbox_1-focus" name="checkbox_1-focus" class="focus">
+    <label for="checkbox_1-focus">Unchecked with focus</label>
+  </div>
+  <div class="l-checkbox">
+    <input type="checkbox" value="two"
+      id="checkbox_2" name="checkbox_2" checked="checked">
+    <label for="checkbox_2">Checked</label>
+  </div>
+  <div class="l-checkbox">
+    <input type="checkbox" value="two-focus"
+     id="checkbox_2-focus" name="checkbox_2-focus"
+     checked="checked" class="focus">
+    <label for="checkbox_2-focus">Checked with focus</label>
+  </div>
+  <div class="l-checkbox">
+    <input type="checkbox" value="three"
+      id="checkbox_3" name="checkbox_3" disabled="disabled">
+    <label for="checkbox_3">Disabled</label>
+  </div>
+  <div class="l-checkbox">
+    <input type="checkbox" value="three"
+      id="checkbox_3" name="checkbox_3"
+      disabled="disabled" checked="checked">
+    <label for="checkbox_3">Checked &amp; Disabled</label>
+  </div>
+</fieldset>
                 </xmp>
               </pre>
             </details>
-            <div class="l-checkbox">
-              <input type="checkbox" value="this_one" id="checkbox_1" name="checkbox_1">
-              <label for="checkbox_1">Selected</label>
-            </div>
+            <fieldset class="l-checkboxes">
+              <div class="l-checkbox">
+                <input type="checkbox" value="one" id="checkbox_1" name="checkbox_1">
+                <label for="checkbox_1">Unchecked</label>
+              </div>
+              <div class="l-checkbox">
+                <input type="checkbox" value="one-focus" id="checkbox_1-focus" name="checkbox_1-focus" class="focus">
+                <label for="checkbox_1-focus">Unchecked with focus</label>
+              </div>
+              <div class="l-checkbox">
+                <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked="checked">
+                <label for="checkbox_2">Checked</label>
+              </div>
+              <div class="l-checkbox">
+                <input type="checkbox" value="two-focus" id="checkbox_2-focus" name="checkbox_2-focus" checked="checked" class="focus">
+                <label for="checkbox_2-focus">Checked with focus</label>
+              </div>
+              <div class="l-checkbox">
+                <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled">
+                <label for="checkbox_3">Disabled</label>
+              </div>
+              <div class="l-checkbox">
+                <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled" checked="checked">
+                <label for="checkbox_3">Checked &amp; Disabled</label>
+              </div>
+            </fieldset>
           </div>
 
           <h2>Status Messages</h2>

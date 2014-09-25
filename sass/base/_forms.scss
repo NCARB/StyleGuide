@@ -5,6 +5,10 @@
 /*////////////////////////////////////////////////////////*/
 @import "bourbon/bourbon";
 
+%focus {
+  outline: none;
+  border-color: $color-blue-3;
+}
 
 /*  Forms
 ---------------------------------------- */
@@ -51,6 +55,11 @@ input[type="week"] {
     line-height: normal;
     padding-top: 2px;
   }
+
+  &.sized {
+    width: auto;
+    max-width: inherit;
+  }
 }
 
 textarea,
@@ -69,6 +78,11 @@ input[type="url"],
 input[type="week"] {
   padding: 11px 5px;
   box-shadow: 1px 1px 3px rgba(0,0,0,.2) inset;
+
+  &:focus,
+  &:active {
+    @extend %focus;
+  }
 }
 
 input[type="search"] {
@@ -163,6 +177,8 @@ input[type="checkbox"] {
 .l-checkboxes {
   clear: both;
   @include clearfix();
+  width: 100%;
+  border: 0;
 
   .l-radio,
   .l-checkbox {
@@ -196,32 +212,65 @@ input[type="checkbox"] {
       content: "";
       position: relative;
       display: inline-block;
-      width: 21px;
-      height: 21px;
       margin-right: 5px;
       background-position: 0 0;
       background-repeat: no-repeat;
       vertical-align: middle;
     }
+
+    &:checked,
+    &:focus {
+      outline: none !important;
+    }
+
+    // Focus
+    &.focus + label::before,
+    &:focus + label::before {
+      color: $color-gray-4;
+    }
+    &:active + label::before,
+    &:checked:focus + label::before,
+    &.focus:checked + label::before {
+      color: $color-blue;
+    }
+    &:disabled:focus + label::before {
+    }
+    &:checked:disabled:focus + label::before {
+    }
   }
 
-  input[type="checkbox"],
   input[type="radio"] {
     & + label::before {
-      @include unchecked-icon();
+      @include fa-radio-icon-unchecked();
     }
     &:checked + label::before {
-      @include checked-icon();
+      @include fa-radio-icon-checked();
     }
     &:disabled + label::before {
-      @include disabled-icon();
-    }
-    &:checked:disabled + label::before {
-      @include selected-icon();
+      @include fa-radio-icon-unchecked();
       opacity: 0.5;
     }
-    &:active + label::before {
-      @include selected-icon();
+    &:checked:disabled + label::before {
+      @include fa-radio-icon-checked();
+      opacity: 0.5;
+    }
+  }
+
+  input[type="checkbox"] {
+    & + label::before {
+      @include fa-checkmark-icon-unchecked();
+    }
+    &:checked + label::before {
+      @include fa-checkmark-icon-checked();
+    }
+    &:disabled + label::before {
+      @include fa-checkmark-icon-unchecked();
+      color: $color-gray-3;
+      opacity: 0.7;
+    }
+    &:checked:disabled + label::before {
+      @include fa-checkmark-icon-checked();
+      color: $color-gray-3;
     }
   }
 }

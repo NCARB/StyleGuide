@@ -387,10 +387,18 @@ ul.figure li a {
 
 // --------------------------------------  FORM ELEMENTS -----------------------------
 .l-form-fields {
-  max-width: 500px;
+  .l-text-input {
+    max-width: 500px;
+  }
 
   h2 {
     padding-top: 4rem;
+  }
+
+  .focus {
+    outline: none;
+    border: 1px solid $color-blue-1;
+    box-shadow: 0 0 3px lighten($color-blue-1, 25%); // outer glow
   }
 }
 
