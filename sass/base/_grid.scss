@@ -4,6 +4,7 @@
 .l-grid {
   @include display(flex);
   @include flex-flow(row wrap);
+  @include flex-basis($base-font-size);
   list-style: none;
   margin: 0;
   padding: 0;
