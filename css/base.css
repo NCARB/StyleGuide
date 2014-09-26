@@ -2957,15 +2957,15 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   .btn-secondary:active {
     background-color: #000; }
   .btn-secondary.yellow {
-    background: #FFE194 no-repeat 100% center;
+    background: #FFE8AF no-repeat 100% center;
     color: #444444; }
     .btn-secondary.yellow:focus, .btn-secondary.yellow:hover {
-      background-color: #ffdd85;
+      background-color: #ffe4a0;
       color: #444444;
       text-decoration: none;
       outline: 0; }
     .btn-secondary.yellow:active {
-      background-color: #ffd361; }
+      background-color: #ffd97c; }
   .btn-secondary.green {
     background: #39B549 no-repeat 100% center;
     color: #ebf7ec; }
@@ -5413,7 +5413,7 @@ ul.form-group {
 
 .l-message.t-warning {
   border-color: #FFC50A;
-  background-color: #FFEDBF; }
+  background-color: #FFE8AF; }
   .l-message.t-warning .alert-header {
     color: #7E6206; }
   .l-message.t-warning .msg-body p {

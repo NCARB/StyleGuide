@@ -65,7 +65,7 @@
 }
 
 .l-message.t-warning {
-  @include messageColors($color-yellow-5, $color-yellow-4, $color-yellow-2, $color-yellow-6);
+  @include messageColors($color-yellow-5, $color-yellow-1, $color-yellow-2, $color-yellow-4);
 }
 
 .l-message.t-error {
