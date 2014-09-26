@@ -2903,7 +2903,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 11px 15px 6px;
+  padding: 10px 15px 9px;
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -2931,7 +2931,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 11px 15px 6px;
+  padding: 10px 15px 9px;
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -2959,7 +2959,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 11px 15px 6px;
+  padding: 10px 15px 9px;
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-weight: 800;
@@ -3027,7 +3027,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   .btn-secondary.continue:after,
   .btn-secondary.plus:after {
     position: absolute;
-    top: 8px;
+    top: 10px;
     right: 15px;
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
@@ -3042,6 +3042,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     .btn-secondary.continue:after, .lt-ie8
     .btn-secondary.plus:after {
       display: none; }
+.btn.continue:after,
+.btn-primary.continue:after,
+.btn-secondary.continue:after {
+  font-weight: bold; }
 
 .btn.continue:after,
 .btn-primary.continue:after,
