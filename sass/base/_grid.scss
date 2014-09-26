@@ -75,19 +75,23 @@
   }
   .g-#{$name}#{$sep}-full > .g-cell,
   .g-cell.g-#{$name}#{$sep}-full {
-    @include flex(0 0 100%);
+    width: 100% !important;
+    @include flex(none);
   }
   .g-#{$name}#{$sep}-1of2 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of2 {
-    @include flex(0 0 50%);
+    width: 50% !important;
+    @include flex(none);
   }
   .g-#{$name}#{$sep}-1of3 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of3 {
-    @include flex(0 0 33.3333%);
+    width: 33.3333% !important;
+    @include flex(none);
   }
   .g-#{$name}#{$sep}-1of4 > .g-cell,
   .g-cell.g-#{$name}#{$sep}-1of4 {
-    @include flex(0 0 25%);
+    width: 25% !important;
+    @include flex(none);
   }
 }
 
