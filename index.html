@@ -7,7 +7,6 @@
 <!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
 
 <head>
-  <meta charset="UTF-8" />
   <meta name="HandheldFriendly" content="True" />
   <meta name="MobileOptimized" content="320" />
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
@@ -21,10 +20,10 @@
   <script>
     $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
   </script>
+  <script src="js/modernizr.custom.24308.js"></script>
   <script src="bower_components/respond/dest/respond.min.js"></script>
   <!--[if lt IE 9]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
   <![endif]-->
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
 </head>
@@ -45,7 +44,7 @@
         <div class="l-grid g-M-gutters">
           <div class="g-cell g-S--fit intro-text">
             <p>
-              Welcome to NCARB’s Design Library Sample. It is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design. This Design Library Sample is made up of six pillars: a fluid grid-based layout system, color, typography, iconography, form elements, and content.
+              Welcome to NCARB’s Design Library Sample. It is a collection of UI elements and style guidelines that can be used across different properties to ensure a cohesive design. This Design Library Sample is made up of seven pillars: a fluid grid-based layout system, color, typography & iconography, form ele- ments, navigation, and content.
             </p>
             <nav class="l-inline-nav" role="navigation" tabindex="10">
               <a href="#layout">Layout</a>
@@ -158,6 +157,7 @@
 
           <dt><code>g-*--gutters3x</code></dt>
           <dd>Creates a very large gutter of 3rem (48px)</dd>
+        </dl>
 
         <h4>Cells</h4>
         <dl>
@@ -563,9 +563,8 @@
             <summary class="small header">.btn-secondary</summary>
             <div class="l-grid g-M-gutters">
               <div class="g-cell g-B--full g-ML--fit">
-                <div class="l-system-element">
-                  <pre class="prettyprint">
-                    <xmp>
+                <pre class="prettyprint">
+                  <xmp>
 <button class="btn-secondary" type="button">
   Secondary - Default
 </button>
@@ -578,9 +577,8 @@
 <a href="#form_elements" class="btn-secondary yellow block">
   Secondary - Green
 </a>
-                    </xmp>
-                  </pre>
-                </div>
+                  </xmp>
+                </pre>
               </div>
               <div class="g-cell g-B--full g-ML--1of3">
                 <div class="l-usage">
@@ -607,11 +605,11 @@
               <summary class="small header">label</summary>
               <pre class="prettyprint">
                 <xmp>
-<label for="desc">Agenda Light Bold All Caps, 14px</label>
+<label>Agenda Light Bold All Caps, 14px</label>
                 </xmp>
               </pre>
             </details>
-            <label for="desc">Agenda Light Bold All Caps, 14px</label>
+            <label>Agenda Light Bold All Caps, 14px</label>
           </div>
 
 
@@ -622,13 +620,13 @@
               <summary class="small header">input[type="text"]</summary>
               <pre class="prettyprint">
                 <xmp>
-  <label for="card_number">Card Number</label>
-  <input type="text" name="card_number" value="123456789" />
+<label for="card_number">Card Number</label>
+<input type="text" id="card_number" name="card_number" value="123456789" />
                 </xmp>
               </pre>
             </details>
             <label for="card_number">Card Number</label>
-            <input type="text" name="card_number" value="123456789" />
+            <input type="text" id="card_number" name="card_number" value="123456789" />
           </div>
 
           <div class="l-system-element l-text-input">
@@ -636,13 +634,13 @@
               <summary class="small header">input[type="date"]</summary>
               <pre class="prettyprint">
                 <xmp>
-  <label for="start_date">Start Date</label>
-  <input type="date" name="start_date" value="" />
+<label for="start_date">Start Date</label>
+<input type="date" id="start_date" name="start_date" value="" />
                 </xmp>
               </pre>
             </details>
             <label for="start_date">Start Date</label>
-            <input type="date" name="start_date" value="" />
+            <input type="date" id="start_date" name="start_date" value="" />
           </div>
 
           <h2>Search Field</h2>
@@ -713,7 +711,7 @@
             <div class="form-group l-state">
               <div class="state">
                 <label for="state">State</label>
-                <select class="form-control" name="state">
+                <select class="form-control" id="state" name="state">
                   <option selected value="">Please select</option>
                   <optgroup label="UNITED STATES">
                     <option value="AL">Alabama</option>
@@ -874,18 +872,19 @@
                 <label for="checkbox_3">Disabled</label>
               </div>
               <div class="l-checkbox">
-                <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled" checked="checked">
-                <label for="checkbox_3">Checked &amp; Disabled</label>
+                <input type="checkbox" value="three" id="checkbox_4" name="checkbox_4" disabled="disabled" checked="checked">
+                <label for="checkbox_4">Checked &amp; Disabled</label>
               </div>
             </fieldset>
           </div>
+        </div>
 
-          <h2>Status Messages</h2>
-          <div class="l-system-element first">
-            <details>
-              <summary class="small header">.l-message.t-success</summary>
-                <pre class="prettyprint">
-                  <xmp>
+        <h2>Status Messages</h2>
+        <div class="l-system-element first">
+          <details>
+            <summary class="small header">.l-message.t-success</summary>
+              <pre class="prettyprint">
+                <xmp>
 <div class="l-message t-success">
   <button type="button" class="close" data-dismiss="alert" aria-hidden="true" />
   <div class="msg-content">
@@ -893,145 +892,138 @@
       <p class="alert-header">
         Success header
       </p>
-      </p>
     </div>
     <div class="msg-body">
       <p>This is the success message body!</p>
     </div>
   </div>
 </div>
-                </xmp>
-              </pre>
-            </details>
-            <div class="l-message t-success">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-              <div class="msg-content">
-                <div class="msg-header">
-                  <p class="alert-header">
-                    Success header
-                  </p>
-                  </p>
-                </div>
-                <div class="msg-body">
-                  <p>This is the success message body!</p>
-                </div>
+              </xmp>
+            </pre>
+          </details>
+          <div class="l-message t-success">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+            <div class="msg-content">
+              <div class="msg-header">
+                <p class="alert-header">
+                  Success header
+                </p>
+              </div>
+              <div class="msg-body">
+                <p>This is the success message body!</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="l-system-element">
-            <details>
-              <summary class="small header">.l-message.t-error</summary>
-              <pre class="prettyprint">
-                <xmp>
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.l-message.t-error</summary>
+            <pre class="prettyprint">
+              <xmp>
 <div class="l-message t-error">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-  <div class="msg-content">
-    <div class="msg-header">
-      <p class="alert-header">
-        Error header
-      </p>
-      </p>
-    </div>
-    <div class="msg-body">
-      <p>This is the error message body!</p>
-    </div>
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+<div class="msg-content">
+  <div class="msg-header">
+    <p class="alert-header">
+      Error header
+    </p>
+    </p>
+  </div>
+  <div class="msg-body">
+    <p>This is the error message body!</p>
   </div>
 </div>
-                </xmp>
-              </pre>
-            </details>
-            <div class="l-message t-error">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-              <div class="msg-content">
-                <div class="msg-header">
-                  <p class="alert-header">
-                    Error header
-                  </p>
-                  </p>
-                </div>
-                <div class="msg-body">
-                  <p>This is the error message body!</p>
-                </div>
+</div>
+              </xmp>
+            </pre>
+          </details>
+          <div class="l-message t-error">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+            <div class="msg-content">
+              <div class="msg-header">
+                <p class="alert-header">
+                  Error header
+                </p>
+              </div>
+              <div class="msg-body">
+                <p>This is the error message body!</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="l-system-element">
-            <details>
-              <summary class="small header">.l-message.t-warning</summary>
-              <pre class="prettyprint">
-                <xmp>
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.l-message.t-warning</summary>
+            <pre class="prettyprint">
+              <xmp>
 <div class="l-message t-warning">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-  <div class="msg-content">
-    <div class="msg-header">
-      <p class="alert-header">
-        Warning header
-      </p>
-      </p>
-    </div>
-    <div class="msg-body">
-      <p>This is the warning message body!</p>
-    </div>
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+<div class="msg-content">
+  <div class="msg-header">
+    <p class="alert-header">
+      Warning header
+    </p>
+  </div>
+  <div class="msg-body">
+    <p>This is the warning message body!</p>
   </div>
 </div>
-                </xmp>
-              </pre>
-            </details>
-            <div class="l-message t-warning">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-              <div class="msg-content">
-                <div class="msg-header">
-                  <p class="alert-header">
-                    Warning header
-                  </p>
-                  </p>
-                </div>
-                <div class="msg-body">
-                  <p>This is the warning message body!</p>
-                </div>
+</div>
+              </xmp>
+            </pre>
+          </details>
+          <div class="l-message t-warning">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+            <div class="msg-content">
+              <div class="msg-header">
+                <p class="alert-header">
+                  Warning header
+                </p>
+              </div>
+              <div class="msg-body">
+                <p>This is the warning message body!</p>
               </div>
             </div>
           </div>
+        </div>
 
-          <div class="l-system-element">
-            <details>
-              <summary class="small header">.l-message.t-info</summary>
-              <pre class="prettyprint">
-                <xmp>
+        <div class="l-system-element">
+          <details>
+            <summary class="small header">.l-message.t-info</summary>
+            <pre class="prettyprint">
+              <xmp>
 <div class="l-message t-info">
-  <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-  <div class="msg-content">
-    <div class="msg-header">
-      <p class="alert-header">
-        Info header
-      </p>
-      </p>
-    </div>
-    <div class="msg-body">
-      <p>This is the informational message body.</p>
-    </div>
+<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+<div class="msg-content">
+  <div class="msg-header">
+    <p class="alert-header">
+      Info header
+    </p>
+  </div>
+  <div class="msg-body">
+    <p>This is the informational message body.</p>
   </div>
 </div>
-                </xmp>
-              </pre>
-            </details>
-            <div class="l-message t-info">
-              <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-              <div class="msg-content">
-                <div class="msg-header">
-                  <p class="alert-header">
-                    Info header
-                  </p>
-                  </p>
-                </div>
-                <div class="msg-body">
-                  <p>This is the informational message body.</p>
-                </div>
+</div>
+              </xmp>
+            </pre>
+          </details>
+          <div class="l-message t-info">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+            <div class="msg-content">
+              <div class="msg-header">
+                <p class="alert-header">
+                  Info header
+                </p>
+              </div>
+              <div class="msg-body">
+                <p>This is the informational message body.</p>
               </div>
             </div>
           </div>
+        </div>
       </section>
 
       <section tabindex="80">
@@ -1129,11 +1121,11 @@
               <summary class="small header">img-homepage-feature</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-homepage-feature.png" width="700px" height="327px" />
+  <img src="img/content_img-homepage-feature.png" width="700" height="327" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-homepage-feature.png" width="700px" height="327px" />
+            <img src="img/content_img-homepage-feature.png" width="700" height="327" alt="homepage-feature" />
           </div>
 
           <div class="l-system-element">
@@ -1141,11 +1133,11 @@
               <summary class="small header">img-feature</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-feature.png" width="458px" height="300px" />
+  <img src="img/content_img-feature.png" width="458" height="300" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-feature.png" width="458px" height="300px" />
+            <img src="img/content_img-feature.png" width="458" height="300" alt="feature" />
           </div>
 
           <div class="l-system-element">
@@ -1153,13 +1145,13 @@
               <summary class="small header">img-avatar</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-avatar-65x65.png" width="65px" height="65px" />
-  <img src="img/content_img-avatar-80x80.png" width="80px" height="80px" />
+  <img src="img/content_img-avatar-65x65.png" width="65" height="65" />
+  <img src="img/content_img-avatar-80x80.png" width="80" height="80" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-avatar-65x65.png" width="65px" height="65px" />
-            <img src="img/content_img-avatar-80x80.png" width="80px" height="80px" />
+            <img src="img/content_img-avatar-65x65.png" width="65" height="65" alt="avatar" />
+            <img src="img/content_img-avatar-80x80.png" width="80" height="80" alt="avatar" />
           </div>
 
           <div class="l-system-element">
@@ -1167,11 +1159,11 @@
               <summary class="small header">img-thumbnail</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-thumbnail.png" width="54px" height="54px" />
+  <img src="img/content_img-thumbnail.png" width="54" height="54" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-thumbnail.png" width="54px" height="54px" />
+            <img src="img/content_img-thumbnail.png" width="54" height="54" alt="thumbnail" />
           </div>
 
           <div class="l-system-element">
@@ -1179,11 +1171,11 @@
               <summary class="small header">img-topic</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-topic.png" width="220px" height="150px" />
+  <img src="img/content_img-topic.png" width="220" height="150" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-topic.png" width="220px" height="150px" />
+            <img src="img/content_img-topic.png" width="220" height="150" alt="topic" />
           </div>
 
           <div class="l-system-element">
@@ -1191,11 +1183,11 @@
               <summary class="small header">img-promo</summary>
               <pre class="prettyprint">
                 <xmp>
-  <img src="img/content_img-promo.png" width="215px" height="71px" />
+  <img src="img/content_img-promo.png" width="215" height="71" />
                 </xmp>
               </pre>
             </details>
-            <img src="img/content_img-promo.png" width="215px" height="71px" />
+            <img src="img/content_img-promo.png" width="215" height="71" alt="promo" />
           </div>
         </div>
 
@@ -1272,7 +1264,7 @@
             <pre class="prettyprint">
               <xmp>
 <div class="l-list-media-object">
-  <img src="img/content_img-avatar-80x80.png" class="figure" />
+  <img src="img/content_img-avatar-80x80.png" class="figure" alt="avatar" />
   <div class="body">
     <h4 class="header">Lorem ipsum dolor sit amet</h4>
     <p>
@@ -1285,7 +1277,7 @@
             </pre>
           </details>
           <a class="l-list-media-object" href="#list-media-object">
-            <img src="img/content_img-avatar-80x80.png" class="figure" />
+            <img src="img/content_img-avatar-80x80.png" class="figure" alt="avatar" />
             <div class="body">
               <h4 class="header link">Lorem ipsum dolor sit amet</h4>
               <p>
@@ -1336,67 +1328,12 @@
           <hr />
         </div>
       </section>
-
-      <!-- div class="l-grid">
-        <div class="g-cell g-S--fit">
-          <ul class="list_resources">
-            <li class="type-ext">
-              <a href="docs/all.html" class="list_resources-item">
-                Components and Page Types
-              </a>
-              <small>Browse all production-grade components and page types available in the Design System</small>
-            </li>
-            <li class="type-ext">
-              <a href="visual_index.html" class="list_resources-item">Visual Index</a>
-              <small>A snapshot of the Design System core elements and components</small>
-            </li>
-            <li class="type-ext">
-              <a href="../" class="list_resources-item">Browse Assets</a>
-              <small>Directory view of the components of the Design System</small>
-            </li>
-            <li class="type-pdf">
-              <a class="list_resources-item" href="DesignSystem.v1.0.pdf" download>
-                System Guidelines <span class="new">v1.0</span>
-              </a>
-              <small>Page Types & Component Guidelines</small>
-            </li>
-            <li class="type-xls">
-              <a class="list_resources-item" href="">
-                Component Catalog
-              </a>
-              <small>UI Tech Components</small>
-            </li>
-          </ul>
-        </div>
-        <div class="l-design-projects g-cell g-S--fit g-M--1of3">
-          <h2>Design Projects</h2>
-          <h4>Sites</h4>
-          <ul class="c00v16">
-            <li>
-              <a href="http://prototypes.eightshapes.com/ncarb/renewals">
-                Renewals
-              </a>
-            </li>
-            <li>
-              <a href="http://prototypes.eightshapes.com/ncarb/roster">
-                Roster
-              </a>
-            </li>
-            <li>
-              <a href="http://www.ncarb.org">
-                Home Page
-              </a>
-            </li>
-            <li>
-              <a href="https://itunes.apple.com/us/app/my-idp/id783855310?mt=8">
-                IDP app
-              </a>
-            </li>
-          </ul>
-        </div>
-      </div -->
     </main>
   </div>
   <script src="js/ncarb-design-library-1.0.0.min.js"></script>
+  <script src="js/jquery.details.min.js"></script>
+  <script>
+    $('details').details();
+  </script>
 </body>
 </html>
