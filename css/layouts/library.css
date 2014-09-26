@@ -2024,4 +2024,8 @@ ul.figure li a {
     max-width: 700px;
     height: 327px; }
 
+.l-imagery img {
+  width: auto;
+  max-width: inherit; }
+
 /*# sourceMappingURL=library.css.map */

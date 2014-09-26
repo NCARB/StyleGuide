@@ -440,5 +440,10 @@ ul.figure li a {
   }
 }
 
-.t-img-box {
+.l-imagery {
+  img {
+    width: auto;
+    max-width: inherit;
+  }
 }
+
