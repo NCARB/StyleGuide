@@ -1,8 +1,22 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
+  // Load grunt tasks automatically
+  require('load-grunt-tasks')(grunt);
+
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    connect: {
+      server: {
+        options: {
+          port: 9000,
+          hostname: 'localhost',
+          keepalive: false,
+          livereload: 35729,
+          open: true
+        }        
+    }    
+  },
     sass: {
       dist: {
         options: {
@@ -111,4 +125,14 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', ['sass', 'concat:js', 'cssmin', 'watch']);
   grunt.registerTask('css', ['cssmin']);
+  grunt.registerTask('serve', 'Compile then start a connect web server', function (target) {
+    if (target === 'dist') {
+      return grunt.task.run(['build', 'connect:dist:keepalive']);
+    }
+
+    grunt.task.run([            
+      'connect',
+      'watch'
+    ]);
+  });
 };
