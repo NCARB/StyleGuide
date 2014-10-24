@@ -75,6 +75,14 @@ h5 small {
   color: $color-gray-3;
 }
 
+h1 .normal,
+h2 .normal,
+h3 .normal,
+h4 .normal,
+h5 .normal {
+  font-size: .8em;
+}
+
 hr {
   margin: 0.5rem 0;
   height: 1px;
