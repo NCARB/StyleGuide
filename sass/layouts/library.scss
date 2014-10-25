@@ -192,117 +192,20 @@ ul.figure li a {
     @include type-xsmall;
   }
 
-  &.blue-1 {
-    background-color: $color-blue-1;
-  }
-  &.blue-2 {
-    background-color: $color-blue-2;
-  }
-  &.blue-3 {
-    background-color: $color-blue-3;
-  }
-  &.blue-4 {
-    background-color: $color-blue-4;
+  @each $name, $color in $colors {
+    &.#{$name} {
+      background-color: $color;
+    }
   }
 
-
-  &.pink {
-    background-color: $color-pink;
-  }
-
-  &.red-1 {
-    background-color: $color-red-1;
-  }
-  &.red-2 {
-    background-color: $color-red-2;
-  }
-  &.red-3 {
-    background-color: $color-red-3;
-  }
-  &.red-4 {
-    background-color: $color-red-4;
-  }
-  &.red-5 {
-    background-color: $color-red-5;
-  }
-
-  &.orange {
-    background-color: $color-orange;
-  }
-
-  &.purple {
-    background-color: $color-purple;
-  }
-
-  &.yellow-1 {
-    background-color: $color-yellow-1;
-  }
-  &.yellow-2 {
-    background-color: $color-yellow-2;
-  }
   &.yellow-3 {
-    background-color: $color-yellow-3;
-
     .name,
     .code,
     .codename {
       color: $color-gray;
     }
   }
-  &.yellow-4 {
-    background-color: $color-yellow-4;
-  }
-  &.yellow-5 {
-    background-color: $color-yellow-5;
-  }
-
-  &.green-1 {
-    background-color: $color-green-1;
-  }
-  &.green-2 {
-    background-color: $color-green-2;
-  }
-  &.green-3 {
-    background-color: $color-green-3;
-  }
-  &.green-4 {
-    background-color: $color-green-4;
-  }
-
-  &.tan_gray-1 {
-    background-color: $color-tan_gray-1;
-  }
-  &.tan_gray-2 {
-    background-color: $color-tan_gray-2;
-  }
-  &.tan_gray-3 {
-    background-color: $color-tan_gray-3;
-  }
-
-  &.gray-1 {
-    background-color: $color-gray-1;
-  }
-  &.gray-2 {
-    background-color: $color-gray-2;
-  }
-  &.gray-3 {
-    background-color: $color-gray-3;
-  }
-  &.gray-4 {
-    background-color: $color-gray-4;
-  }
-  &.gray-5 {
-    background-color: $color-gray-5;
-  }
-  &.gray-6 {
-    background-color: $color-gray-6;
-  }
-
-  &.black {
-    background-color: $color-black;
-  }
   &.white {
-    background-color: $color-white;
     border: 1px solid $color-gray;
   }
 
