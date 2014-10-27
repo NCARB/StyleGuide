@@ -1,0 +1,12 @@
+/* Color Shortcuts
+ * -------------------------- */
+
+@each $name, $color in $colors {
+	.#{$name} {
+		color: $color,
+	}
+
+	.#{$name}-bg {
+		background-color: $color,
+	}
+}

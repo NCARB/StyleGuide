@@ -57,3 +57,64 @@ $color_linkhover    : $color-black;
 $color_linkactive   : $color-red-2;
 
 $color_button-default : #DBD9D1;
+
+$colors: (
+	"white": $color-white,
+	"black": $color-black,
+
+	gray-1: $color-gray-1,
+	gray-2: $color-gray-2,
+	gray-3: $color-gray-3,
+	gray-4: $color-gray-4,
+	gray-5: $color-gray-5,
+	gray-6: $color-gray-6,
+	"gray": $color-gray,
+
+	tan_gray-1: $color-tan_gray-1,
+	tan_gray-2: $color-tan_gray-2,
+	tan_gray-3: $color-tan_gray-3,
+	tan_gray: $color-tan_gray,
+
+	blue-1: $color-blue-1,
+	blue-2: $color-blue-2,
+	blue-3: $color-blue-3,
+	blue-4: $color-blue-4,
+	"blue": $color-blue,
+
+	"pink": $color-pink,
+
+	red-1: $color-red-1,
+	red-2: $color-red-2,
+	red-3: $color-red-3,
+	red-4: $color-red-4,
+	red-5: $color-red-5,
+	"red": $color-red,
+
+	"orange": $color-orange,
+
+	"purple": $color-purple,
+
+	yellow-1: $color-yellow-1,
+	yellow-2: $color-yellow-2,
+	yellow-3: $color-yellow-3,
+	yellow-4: $color-yellow-4,
+	yellow-5: $color-yellow-5,
+	yellow-6: $color-yellow-6,
+	"yellow": $color-yellow,
+
+	green-1: $color-green-1,
+	green-2: $color-green-2,
+	green-3: $color-green-3,
+	green-4: $color-green-4,
+	"green": $color-green,
+);
+
+
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+ 
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
