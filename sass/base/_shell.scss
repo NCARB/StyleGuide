@@ -27,7 +27,7 @@ body {
 .strip-top {
   width: 100%;
   height: $bodytopspacing;
-  background: url(i/topstrip.png) repeat-y center 0;
+  background: $color-blue;
 
   @include breakpoint(M) {
     height:($bodytopspacing + 4px);
@@ -112,6 +112,8 @@ body {
 main {
   display: block;
   padding: 20px;
+  background: url(i/mainbg.gif) repeat-x;
+
   @include clear;
 
   .well {
@@ -158,11 +160,25 @@ main {
     @include position(absolute, 0px 0px 0px 0px);
     background-color: rgba(0,0,0,0);
   }
+  html {
+    background-color:$color-tan_gray-1;
+  }
 }
 
-@include breakpoint(XL) {
-  main {
-    margin: 0 auto;
-    width: 1024px;
-  }
+
+
+$recedeamount: 40px;
+@include breakpoint(XXL) {
+    .canvas {
+        margin:0 auto;
+        width:1000px;
+        padding-left: $recedeamount;
+        padding-right:$recedeamount;
+    }
+    main {
+        margin-left:-$recedeamount;
+        margin-right:-$recedeamount;
+        padding-left: $recedeamount + 20px;
+        padding-right:$recedeamount + 20px;
+    }
 }

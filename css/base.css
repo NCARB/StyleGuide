@@ -2950,7 +2950,7 @@ body {
 .strip-top {
   width: 100%;
   height: 4px;
-  background: url(i/topstrip.png) repeat-y center 0; }
+  background: #00A4E3; }
   @media (min-width: 35em) {
     .strip-top {
       height: 8px; } }
@@ -3046,6 +3046,7 @@ body {
 main {
   display: block;
   padding: 20px;
+  background: url(i/mainbg.gif) repeat-x;
   *zoom: 1; }
   main:before, main:after {
     content: "";
@@ -3092,11 +3093,22 @@ main {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    background-color: transparent; } }
-@media (min-width: 64em) {
-  main {
+    background-color: transparent; }
+
+  html {
+    background-color: #EEEAE3; } }
+@media (min-width: 78.75em) {
+  .canvas {
     margin: 0 auto;
-    width: 1024px; } }
+    width: 1000px;
+    padding-left: 40px;
+    padding-right: 40px; }
+
+  main {
+    margin-left: -40px;
+    margin-right: -40px;
+    padding-left: 60px;
+    padding-right: 60px; } }
 /* Links
 ---------------------------------------- */
 a {
