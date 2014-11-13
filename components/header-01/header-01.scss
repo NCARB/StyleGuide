@@ -220,7 +220,7 @@
     }
 }
 
-.header-nav {
+.main-nav {
     background-color:$color-blue;
     > ul > li {
         border-bottom:1px solid rgba(255,255,255,.4);
@@ -309,7 +309,7 @@ a.level-one:hover {
     @include position(absolute, 15px 0 0 20px); 
 }
 
-/**
+
 @include breakpoint(MML) {
     .header-strip {
         position:static;
@@ -338,9 +338,9 @@ a.level-one:hover {
             }
         }
     }
-    .header-nav {
+    .main-nav {
         border-top:0;
-        background-color:transparent;
+        //background-color:transparent;
         > ul:before,
         > ul:after {
             content:"";
@@ -356,18 +356,23 @@ a.level-one:hover {
         }
         > ul > li {
             float:left;
-            width:25%;
+            // width:25%;
+            width:100%;
             .lt-ie8 & {
-                width:24%;
+                // width:24%;
+                width:100%;
             }
+            border-bottom:0px; //remove bottom border
         }
         .js & .other {
             display:none;
         }
         .js & {
-            width:100%;
-            position:static;
+            // width:100%;
+            width:200px;
+            @include position(absolute, 0px 0px 0px 0px); 
             box-shadow:none;
+            padding-top:1em;
         }
     }
     .level-two_toggle {
@@ -379,11 +384,12 @@ a.level-one:hover {
         font-size:$type-M + 1px;
         font-family:$font_light;
         border:0;
-        text-align:center;
-        border-top:1px solid $color-gray-3;
+        // text-align:center;
+        // border-top:1px solid $color-gray-3;
         padding:12px 8px;
         font-weight:bold;
-        color:$color-gray-5;
+        // color:$color-gray-5;
+        color:#FFF;
         font-weight:normal;
         text-transform: none;
     }
@@ -398,7 +404,17 @@ a.level-one:hover {
     .off-canvas {
         display:none;
     }
+
+    .sticky {  
+        position: fixed;  
+        width: 100%;  
+        left: 0;  
+        top: 0;  
+        z-index: 100;  
+        border-top: 0;  
+    } 
 }
+/*
 @include breakpoint(L) {
     .header-brand {
         padding-top:   25px;
@@ -414,7 +430,7 @@ a.level-one:hover {
             }
         }
     }
-    .header-nav {
+    .main-nav {
         > ul {
             display:table;
             width:auto;
@@ -448,4 +464,5 @@ a.level-one:hover {
             }
         }
     }
-} */
+}
+*/

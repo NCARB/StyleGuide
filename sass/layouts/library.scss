@@ -7,7 +7,8 @@
 
 section {
   clear: both;
-  margin: 90px 0;
+  // margin: 90px 0;
+  margin: 90px 0 0 200px;
   padding: 1rem 0;
   border-bottom: 1px solid $color-gray-2;
 
@@ -95,10 +96,12 @@ ul.figure li a {
   }
 }
 
+/*
 .js [role="navigation"] {
   top: 0;
   position: static;
 }
+*/
 
 .t-box {
   border: 1px solid rgba(210,210,210, 1);

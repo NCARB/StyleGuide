@@ -1668,7 +1668,7 @@
 
 section {
   clear: both;
-  margin: 90px 0;
+  margin: 90px 0 0 200px;
   padding: 1rem 0;
   border-bottom: 1px solid #E2E2E2; }
   section.l-top {
@@ -1749,10 +1749,12 @@ ul.figure li a {
       font-weight: bold;
       padding-right: 5px; }
 
+/*
 .js [role="navigation"] {
   top: 0;
-  position: static; }
-
+  position: static;
+}
+*/
 .t-box {
   border: 1px solid #d2d2d2;
   padding: 8px;

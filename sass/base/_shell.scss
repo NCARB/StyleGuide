@@ -163,6 +163,9 @@ main {
   html {
     background-color:$color-tan_gray-1;
   }
+  main {
+        position:relative;
+    }
 }
 
 
@@ -172,13 +175,17 @@ $recedeamount: 40px;
     .canvas {
         margin:0 auto;
         width:1000px;
-        padding-left: $recedeamount;
-        padding-right:$recedeamount;
+        // padding-left: $recedeamount;
+        // padding-right:$recedeamount;
     }
     main {
-        margin-left:-$recedeamount;
-        margin-right:-$recedeamount;
-        padding-left: $recedeamount + 20px;
-        padding-right:$recedeamount + 20px;
+        // margin-left:-$recedeamount;
+        // margin-right:-$recedeamount;
+        // padding-left: $recedeamount + 20px;
+        // padding-right:$recedeamount + 20px;
+        position:relative;
+    }
+    section {
+      margin: 90px 0 0 200px;
     }
 }

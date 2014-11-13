@@ -169,12 +169,12 @@
     outline: 0;
     background-color: rgba(0, 0, 0, 0.03); }
 
-.header-nav {
+.main-nav {
   background-color: #00A4E3; }
-  .header-nav > ul > li {
+  .main-nav > ul > li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: relative; }
-  .js .header-nav {
+  .js .main-nav {
     width: 18em;
     position: absolute;
     top: 0px;
@@ -259,96 +259,87 @@ a.level-one:hover {
   .off-canvas:active {
     background-color: #DBD9D1; }
 
-/**
-@include breakpoint(MML) {
-    .header-strip {
-        position:static;
-    }
-    .header-brand {
-        padding-top:   20px;
-        padding-bottom:15px;
-        .logo {
-            text-align:left;
-            img {
-                width:152px;
-            }
-        }
-        .search-toggle {
-            display:none;
-        }
-        .search {
-            .js & {
-                top:30px;
-                width:220px;
-            }
-            fieldset {
-                .js & {
-                    display:block;
-                }
-            }
-        }
-    }
-    .header-nav {
-        border-top:0;
-        background-color:transparent;
-        > ul:before,
-        > ul:after {
-            content:"";
-            display:table;
-        }
-        > ul:after {
-            clear:both;
-        }
-        > ul {
-            margin:0 20px;
-            zoom:1;
-            width:auto;
-        }
-        > ul > li {
-            float:left;
-            width:25%;
-            .lt-ie8 & {
-                width:24%;
-            }
-        }
-        .js & .other {
-            display:none;
-        }
-        .js & {
-            width:100%;
-            position:static;
-            box-shadow:none;
-        }
-    }
-    .level-two_toggle {
-        .js & {
-            display:none;
-        }
-    }
-    .level-one {
-        font-size:$type-M + 1px;
-        font-family:$font_light;
-        border:0;
-        text-align:center;
-        border-top:1px solid $color-gray-3;
-        padding:12px 8px;
-        font-weight:bold;
-        color:$color-gray-5;
-        font-weight:normal;
-        text-transform: none;
-    }
-    a.level-one:hover {
-        background-color:transparent;
-        color:$color_black;
-    }
-    .is-toggled .level-two,
-    .no-js .level-two {
-        display:none;
-    }
-    .off-canvas {
-        display:none;
-    }
-}
+@media (min-width: 42em) {
+  .header-strip {
+    position: static; }
+
+  .header-brand {
+    padding-top: 20px;
+    padding-bottom: 15px; }
+    .header-brand .logo {
+      text-align: left; }
+      .header-brand .logo img {
+        width: 152px; }
+    .header-brand .search-toggle {
+      display: none; }
+    .js .header-brand .search {
+      top: 30px;
+      width: 220px; }
+    .js .header-brand .search fieldset {
+      display: block; }
+
+  .main-nav {
+    border-top: 0; }
+    .main-nav > ul:before,
+    .main-nav > ul:after {
+      content: "";
+      display: table; }
+    .main-nav > ul:after {
+      clear: both; }
+    .main-nav > ul {
+      margin: 0 20px;
+      zoom: 1;
+      width: auto; }
+    .main-nav > ul > li {
+      float: left;
+      width: 100%;
+      border-bottom: 0px; }
+      .lt-ie8 .main-nav > ul > li {
+        width: 100%; }
+    .js .main-nav .other {
+      display: none; }
+    .js .main-nav {
+      width: 200px;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      box-shadow: none;
+      padding-top: 1em; }
+
+  .js .level-two_toggle {
+    display: none; }
+
+  .level-one {
+    font-size: 17px;
+    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+    border: 0;
+    padding: 12px 8px;
+    font-weight: bold;
+    color: #FFF;
+    font-weight: normal;
+    text-transform: none; }
+
+  a.level-one:hover {
+    background-color: transparent;
+    color: #000; }
+
+  .is-toggled .level-two,
+  .no-js .level-two {
+    display: none; }
+
+  .off-canvas {
+    display: none; }
+
+  .sticky {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    border-top: 0; } }
+/*
 @include breakpoint(L) {
     .header-brand {
         padding-top:   25px;
@@ -364,7 +355,7 @@ a.level-one:hover {
             }
         }
     }
-    .header-nav {
+    .main-nav {
         > ul {
             display:table;
             width:auto;
@@ -398,6 +389,7 @@ a.level-one:hover {
             }
         }
     }
-} */
+}
+*/
 
 /*# sourceMappingURL=header-01.css.map */
