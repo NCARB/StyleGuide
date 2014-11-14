@@ -1668,12 +1668,15 @@
 
 section {
   clear: both;
-  margin: 90px 0 0 200px;
+  margin: 90px 0 0 0px;
   padding: 1rem 0;
   border-bottom: 1px solid #E2E2E2; }
   section.l-top {
     margin-top: 5px; }
 
+@media (min-width: 42em) {
+  section {
+    margin: 90px 0 0 200px; } }
 .intro-text {
   min-width: 300px; }
 

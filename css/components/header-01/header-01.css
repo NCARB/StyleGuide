@@ -10,7 +10,7 @@
     width: 100%;
     margin-bottom: 1rem; }
     .js .l-header.header-01 .logo {
-      margin: 0 auto 2rem auto;
+      margin: 0 auto .8rem auto;
       text-align: center; }
       @media (min-width: 42em) {
         .js .l-header.header-01 .logo {
@@ -20,7 +20,7 @@
     .l-header.header-01 .logo a {
       display: block; }
     .l-header.header-01 .logo img {
-      width: 176px;
+      width: 124px;
       height: auto; }
       @media (min-width: 42em) {
         .l-header.header-01 .logo img {
@@ -175,11 +175,11 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.4);
     position: relative; }
   .js .main-nav {
-    width: 18em;
+    width: 16em;
     position: absolute;
     top: 0px;
     bottom: 0px;
-    left: -18em;
+    left: -16em;
     z-index: 0;
     box-shadow: -7px 0 15px -7px rgba(0, 0, 0, 0.25) inset; }
 
@@ -220,6 +220,7 @@ button.level-two_toggle:hover {
   line-height: 1.25;
   padding: 13px 10px 12px 45px;
   position: relative;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-weight: bold;
   font-size: 16px; }
 
@@ -229,14 +230,14 @@ a.level-one:hover {
   text-decoration: none; }
 
 .level-two {
-  margin: -5px 0 5px 0;
+  margin: 0px 0 5px 0;
   z-index: 2;
   border-top: 1px solid #00A4E3; }
   .level-two a {
     display: block;
     color: #fff;
-    font-size: 16px;
-    line-height: 4.25px;
+    font-size: 14px;
+    line-height: 6.25px;
     padding: 8px 10px 7px 45px;
     text-decoration: none; }
     .level-two a:hover {
@@ -254,7 +255,7 @@ a.level-one:hover {
   height: 40px;
   background: #f4f1ed url(i/off-canvas.png) no-repeat center center;
   position: absolute;
-  top: 15px;
+  top: 20px;
   left: 20px; }
   .off-canvas:active {
     background-color: #DBD9D1; }
@@ -287,7 +288,7 @@ a.level-one:hover {
     .main-nav > ul:after {
       clear: both; }
     .main-nav > ul {
-      margin: 0 20px;
+      margin: 0 0px;
       zoom: 1;
       width: auto; }
     .main-nav > ul > li {
@@ -299,7 +300,7 @@ a.level-one:hover {
     .js .main-nav .other {
       display: none; }
     .js .main-nav {
-      width: 200px;
+      width: 175px;
       position: absolute;
       top: 0px;
       right: 0px;
@@ -312,18 +313,19 @@ a.level-one:hover {
     display: none; }
 
   .level-one {
-    font-size: 17px;
+    font-size: 15px;
     font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     border: 0;
-    padding: 12px 8px;
+    padding: 12px 20px;
     font-weight: bold;
     color: #FFF;
-    font-weight: normal;
+    font-weight: bold;
     text-transform: none; }
 
   a.level-one:hover {
-    background-color: transparent;
-    color: #000; }
+    background-color: #007fb0;
+    color: #fff;
+    text-decoration: none; }
 
   .is-toggled .level-two,
   .no-js .level-two {

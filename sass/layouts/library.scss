@@ -8,12 +8,18 @@
 section {
   clear: both;
   // margin: 90px 0;
-  margin: 90px 0 0 200px;
+  margin: 90px 0 0 0px;
   padding: 1rem 0;
   border-bottom: 1px solid $color-gray-2;
 
   &.l-top {
     margin-top: 5px;
+  }
+}
+
+@include breakpoint(MML) {
+  section {
+    margin: 90px 0 0 200px;
   }
 }
 
