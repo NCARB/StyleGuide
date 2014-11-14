@@ -393,5 +393,266 @@ a.level-one:hover {
     }
 }
 */
+/* Footer
+---------------------------------------- */
+.footer {
+  padding: 40px 20px 10px;
+  background-color: #DBD9D1; }
+
+.footer-blocks {
+  clear: both; }
+
+.footer-blocks > li h3 {
+  margin: 0; }
+.footer-blocks > li h3 a {
+  color: #444444;
+  text-decoration: none;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 20px; }
+  .footer-blocks > li h3 a:hover {
+    background-color: #d4d2c8; }
+.js .footer-blocks > li {
+  margin-left: -20px;
+  margin-right: -20px; }
+.footer-blocks > li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  margin-bottom: 20px; }
+
+.footer-links > li a {
+  margin: 0;
+  color: #444444;
+  text-decoration: none;
+  display: block;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  padding: 10px 20px; }
+  .footer-links > li a:hover {
+    background-color: #d4d2c8; }
+.js .footer-links > li {
+  margin-left: -20px;
+  margin-right: -20px; }
+
+.list-footer a {
+  color: #666666;
+  text-decoration: none;
+  display: block; }
+  .list-footer a:hover {
+    text-decoration: underline; }
+.js .list-footer {
+  display: none; }
+
+.footer-logo {
+  margin-bottom: 20px; }
+  .footer-logo img {
+    width: 50%;
+    height: auto;
+    -webkit-transition: width 0.2s ease-out;
+    -moz-transition: width 0.2s ease-out;
+    -o-transition: width 0.2s ease-out;
+    transition: width 0.2s ease-out; }
+
+.org-card {
+  line-height: 1.25;
+  margin-bottom: 20px; }
+  .org-card > li {
+    margin-bottom: 1em; }
+  .org-card .org {
+    display: block;
+    font-size: 16px;
+    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+    font-weight: bold; }
+  .org-card .tel {
+    margin-right: 10px; }
+
+.label-hide {
+  /* Accessible hide */
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  margin: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden; }
+
+.copyright {
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px 0 0;
+  margin-bottom: 30px; }
+  .copyright a {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #444444;
+    font-weight: normal; }
+
+@media (min-width: 42em) {
+  .well {
+    float: left;
+    width: 67%;
+    margin-bottom: 45px; }
+
+  .rail {
+    float: right;
+    width: 33%;
+    margin-bottom: 45px; }
+
+  .rail-content {
+    padding-left: 25px; }
+
+  .rail-other {
+    display: block; }
+
+  .events h2 small {
+    padding: 0;
+    float: none; }
+
+  .events-listing {
+    margin-left: -20px;
+    margin-right: -20px;
+    letter-spacing: -4px;
+    position: relative; }
+    .events-listing li {
+      display: inline-block;
+      width: 33.3333333333333%;
+      vertical-align: top;
+      letter-spacing: normal; }
+      .events-listing li:before {
+        content: '';
+        position: absolute;
+        top: -8px;
+        bottom: 0px;
+        width: 1px;
+        background-color: #CCCCCC; }
+      .events-listing li:nth-child(3n+1):before {
+        display: none; }
+    .events-listing a {
+      border-bottom: 0;
+      margin-bottom: 20px;
+      padding: 0 20px; }
+
+  .footer-logo {
+    width: 34%;
+    float: left; }
+    .footer-logo img {
+      width: 75%; }
+
+  .org-card {
+    float: left;
+    width: 42%; }
+    .org-card > li {
+      margin-left: 4px; }
+
+  .footer-links {
+    float: left;
+    width: 18%;
+    margin-top: 45px; }
+
+  .footer-links > li {
+    margin-bottom: .5em; }
+    .footer-links > li a {
+      font-size: inherit;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #444444;
+      border-top: 0;
+      padding: 0; }
+      .footer-links > li a:hover {
+        background-color: transparent;
+        text-decoration: underline; }
+    .js .footer-links > li {
+      margin-left: 0;
+      margin-right: 0; }
+
+  .footer-blocks {
+    border-top: 1px solid rgba(255, 255, 255, 0.6);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+    padding-top: 20px;
+    letter-spacing: -4px;
+    margin: 0 -10px; }
+    .footer-blocks:before, .footer-blocks:after {
+      content: "";
+      display: table; }
+    .footer-blocks:after {
+      clear: both; }
+    .footer-blocks {
+      zoom: 1; }
+
+  .footer-blocks > li {
+    display: inline-block;
+    width: 33.3333333333333%;
+    vertical-align: top;
+    letter-spacing: normal; }
+    .lt-ie8 .footer-blocks > li {
+      float: left;
+      width: 30%;
+      margin-bottom: 20px; }
+    .footer-blocks > li a {
+      padding-left: 10px;
+      padding-right: 10px; }
+    .footer-blocks > li h3 {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: .75em; }
+    .footer-blocks > li h3 a {
+      border-top: 0;
+      padding: 0;
+      padding-left: 10px;
+      padding-right: 10px; }
+      .footer-blocks > li h3 a:hover {
+        background-color: transparent;
+        text-decoration: underline; }
+    .js .footer-blocks > li {
+      margin-left: 0;
+      margin-right: 0; }
+    .footer-blocks > li:last-child {
+      border-bottom: 0; }
+
+  .list-footer {
+    margin-bottom: 20px; }
+    .js .list-footer {
+      display: block; }
+
+  .copyright {
+    text-align: left; }
+    .copyright p {
+      display: inline-block; }
+    .copyright p + p {
+      margin-left: 7px;
+      border-left: 1px solid rgba(255, 255, 255, 0.6);
+      padding-left: 12px; }
+    .copyright a {
+      text-decoration: none;
+      font-size: 14px; }
+      .copyright a:hover {
+        text-decoration: underline; } }
+@media (min-width: 60em) {
+  .well {
+    width: 73%; }
+
+  .rail {
+    width: 27%; }
+
+  .news-listing li {
+    width: 33.3333333333333%; }
+    .lt-ie8 .news-listing li {
+      width: 32%; }
+
+  .footer-logo {
+    width: 25%; }
+
+  .org-card {
+    width: 51.5%; }
+
+  .footer-links {
+    width: 14.5%;
+    margin-top: 28px; }
+
+  .footer-blocks > li {
+    width: 25%; }
+    .lt-ie8 .footer-blocks > li {
+      width: 24%; } }
 
 /*# sourceMappingURL=header-01.css.map */
