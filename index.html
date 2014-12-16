@@ -22,12 +22,15 @@
   </script>
   <script src="js/modernizr.custom.24308.js"></script>
   <script src="bower_components/respond/dest/respond.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="js/app.js"></script>
   <!--[if lt IE 9]>
     <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
   <![endif]-->
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
 </head>
-<body>
+<body ng-app="designSystem">
   <div class="strip-top"></div>
   <a class="skip" href="#main">Skip navigation</a>
   <div class="canvas">
@@ -43,6 +46,7 @@
         <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
       </ul>
 
+      <base href="/">
     </header>
       
       <!-- <div class="header-brand">
