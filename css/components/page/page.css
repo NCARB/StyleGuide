@@ -325,7 +325,7 @@ a.level-one:hover {
     font-weight: bold;
     text-transform: none; }
 
-  a.level-one:hover {
+  a.level-one:hover, a.level-one:active, a.level-one:active, a.level-one:focus {
     background-color: #007fb0;
     color: #fff;
     text-decoration: none; }
