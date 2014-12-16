@@ -1,32 +1,41 @@
-angular.module('designSystem', ['ngRoute'])
-	.config(['$routeProvider', '$locationProvider',
-		function($routeProvider, $locationProvider) {
-			$routeProvider
-				.when('/', {
+angular.module('designSystem', ['ui.router'])
+	.config(['$stateProvider', '$urlRouterProvider',
+		function($stateProvider, $urlRouterProvider) {
+
+			$urlRouterProvider.otherwise('/');
+
+			$stateProvider
+				.state('introduction', {
+					url: '/',
 					templateUrl: '../patterns/introduction.html'
 				})
-				.when('/layout', {
+				.state('layout', {
+					url: '/layout',
 					templateUrl: '../patterns/layout.html'
 				})
-				.when('/color', {
+				.state('color', {
+					url: '/color',
 					templateUrl: '../patterns/color.html'
 				})
-				.when('/typography', {
+				.state('typography', {
+					url: '/typography',
 					templateUrl: '../patterns/typography.html'
 				})
-				.when('/iconography', {
+				.state('iconography', {
+					url: '/iconography',
 					templateUrl: '../patterns/iconography.html'
 				})
-				.when('/formElements', {
+				.state('formElements', {
+					url: '/formElements',
 					templateUrl: '../patterns/form_elements.html'
 				})
-				.when('/navigation', {
+				.state('navigation', {
+					url: '/navigation',
 					templateUrl: '../patterns/navigation.html'
 				})
-				.when('/content', {
+				.state('content', {
+					url: '/content',
 					templateUrl: '../patterns/content.html'
 				});
-
-			$locationProvider.html5Mode(true);
 		}
 	]);
