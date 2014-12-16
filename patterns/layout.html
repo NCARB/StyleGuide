@@ -1,279 +1,116 @@
-<!DOCTYPE html>
-
-<!--[if lt IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"     lang="en"> <![endif]-->
-<!--[if IE 7]>        <html class="no-js lt-ie10 lt-ie9 lt-ie8 gt-ie6 ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>        <html class="no-js lt-ie10 lt-ie9 gt-ie6 gt-ie7 ie8" lang="en"> <![endif]-->
-<!--[if IE 9]>        <html class="no-js lt-ie10 gt-ie6 gt-ie7 gt-ie8 ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-
-<head>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
-  <title>NCARB Design System</title>
-
-  <link rel="stylesheet" href="http://cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
-  <link rel="stylesheet" href="../css/ncarb-design-library-1.0.0.min.css" />
-  <link rel="stylesheet" href="../css/layouts/library.css" media="all" />
-
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script>
-    $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
-  </script>
-  <script src="../js/modernizr.custom.24308.js"></script>
-  <script src="bower_components/respond/dest/respond.min.js"></script>
-  <!--[if lt IE 9]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-  <![endif]-->
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
-</head>
-<body>
-  <div class="strip-top"></div>
-  <a class="skip" href="#main">Skip navigation</a>
-  <div class="canvas">
-    <header class="l-header header-01" role="banner">
-      <div class="header-brand">
-      <figure class="logo"><a href="index.html"><img src="../components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-    </div>
-      <ul class="header-strip">
-        <!-- <li><figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
-        <li><a href="#link">Tool name 1</a></li>
-        <li><a href="#link">Tool name 2</a></li>
-        <li><a href="#link">Tool name 3</a></li>
-        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
-      </ul>
-
-    </header>
-      
-      <!-- <div class="header-brand">
-        <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-        <div class="search">
-            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
-            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
-                <fieldset>
-                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
-                    <button class="search-submit" type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </div>
-      </div> -->
-
-      <main class="l-main" role="main" id="main" tabindex="1">
-        <nav class="main-nav" id="nav" role="navigation">
-            <ul>
-              <li>
-                <a href="index.html" class="level-one">General stuff</a>
-              </li>
-              <li>
-                <a href="layout.html" class="level-one active">Layout</a>
-              </li>
-              <li>
-                <a href="color.html" class="level-one">Color</a>
-              </li>
-              <li>
-                <a href="typography.html" class="level-one">Typography</a>
-              </li>
-              <li>
-                <a href="iconography.html" class="level-one">Iconography</a>
-              </li>
-              <li>
-                <a href="form_elements.html" class="level-one">Form Elements</a>
-              </li>
-              <li>
-                <a href="navigation.html" class="level-one">Navigation</a>
-              </li>
-              <li>
-                <a href="content.html" class="level-one">Content</a>
-              </li>
-            </ul>
-            <ul class="other">
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-      <section tabindex="20">
-        <h1>Layout</h1>
-        <p>
-          We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
-        </p>
-        <p>
-          For example, the grid below consists of two containers, both share the same CSS class names. The first container holds 2 columns. The second container holds 3 columns. Each container has two "media classes" assigned to it:
-        </p>
-        <ol class="l-list-ordered">
-          <li><code>.g-B--full</code></li>
-          <li><code>.g-ML--fit</code></li>
-        </ol>
-        <p>
-          The class names can be parsed as follows:
-        </p>
-        <ul class="l-list-bullet">
-          <li><code>g</code> stands for Grid.</li>
-          <li><code>B</code> and <code>ML</code> are breakpoint sizes that correspond to <code>base</code> (default) and <code>48em/768px</code>, respectively.</li>
-          <li><code>full</code> will make the columns full width.</li>
-          <li><code>fit</code> will make the columns fit inside their container.</li>
-        </ul>
-        <p>
-          Resize your browser window to see how the grid behaves.
-        </p>
-        <h4>Base: Full, ML: 1/2</h4>
-        <div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
-          <div class="g-cell">
-            <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
-          </div>
-        </div>
-        <h4>Base: Full, ML: 1/3</h4>
-        <div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
-          <div class="g-cell">
-            <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
-          </div>
-        </div>
-
-        <p>
-          The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives 0.5rem (8px) of padding between each cell.
-        </p>
-        <p>
-          There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
-        </p>
-
-        <h4>Base: Full, SM: 1/2, ML: 1/4</h4>
-        <div class="l-grid g-B--gutters g-B--full g-SM--1of2 g-ML--1of4 t-demo">
-          <div class="g-cell">
-            <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
-          </div>
-          <div class="g-cell">
-            <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
-          </div>
-        </div>
-
-        <h3 id="grid-classes">Grid classes</h3>
-        <p>
-          The full explanation of each grid class and what it controls is below:
-        </p>
-        <h4>Basic</h4>
-        <dl>
-          <dt><code>l-grid</code></dt>
-          <dd>Identifies an element that will act as the grid container.</dd>
-
-          <dt><code>g-cell</code></dt>
-          <dd>Identifies an element as a cell of the grid.</dd>
-        </dl>
-
-        <h4>Modifiers</h4>
-        <dl>
-          <dt><code>g-*--gutters</code></dt>
-          <dd>Creates a gutter, to the left, of each grid cell of 0.5rem (8px)</dd>
-
-          <dt><code>g-*--guttersLarge</code></dt>
-          <dd>Creates a larger gutter of 1rem (16px)</dd>
-
-          <dt><code>g-*--gutters2x</code></dt>
-          <dd>Creates a larger gutter of 2rem (32px)</dd>
-
-          <dt><code>g-*--gutters3x</code></dt>
-          <dd>Creates a very large gutter of 3rem (48px)</dd>
-        </dl>
-
-        <h4>Cells</h4>
-        <dl>
-          <dt><code>g-*--full</code></dt>
-          <dd>Creates full width cells at the specified breakpoint.</dd>
-
-          <dt><code>g-*--fit</code></dt>
-          <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
-
-          <dt><code>g-*--1of2</code></dt>
-          <dd>A cell that is 50% of the total width of the grid.</dd>
-
-          <dt><code>g-*--1of3</code></dt>
-          <dd>A cell that is 33% of the total width of the grid.</dd>
-
-          <dt><code>g-*--1of4</code></dt>
-          <dd>A cell that is 25% of the total width of the grid.</dd>
-        </dl>
-
-        <h4>More</h4>
-        <p>For more on the Flexbox grid see the <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Solved by Flexbox</a> documentation.</p>
-      </section>
-
-      
-    </main>
-    <footer class="footer" role="contentinfo">
-          <div class="vcard">
-            <figure class="footer-logo photo"><a href="http://www.ncarb.org" class="url"><img src="../components/page/i/ncarb-logo_w.png" alt="NCARB home" /></a></figure>
-            <ul class="org-card">
-                <li>
-                    <span class="org">National Council of Architectural Registration Boards</span>
-                </li>
-                <li>
-                    <ul class="adr">
-                        <li><span class="street-address">1801 K Street, NW Suite 700K</span></li>
-                        <li>
-                            <span class="locality">Washington</span>, 
-                            <span class="region">DC</span>, 
-                            <span class="postal-code">20006</span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="tel">
-                        <span class="type">P<span class="label-hide">hone</span></span>:
-                        <span class="value">202-879-0520</span>
-                    </span>
-                    <span class="tel">
-                        <span class="type">F<span class="label-hide">ax</span></span>:
-                        <span class="value">202-783-0290</span>
-                    </span>
-                </li>
-            </ul>
-          </div>
-          <ul class="footer-links">
-              <li><a href="index.html">NCARB Home</a></li>
-              <li><a href="http://ncarb.org/en/FAQs.aspx">FAQs</a></li>
-              <li><a href="http://ncarb.org/en/Contact-Us.aspx">Contact Us</a></li>
-          </ul>
-          
-          <div class="copyright">
-              <p>&copy; National Council of Architectural Registration Boards</p>
-              <p><a href="#link">Privacy Policy</a></p>
-          </div>
-      </footer>
+<h1>Layout</h1>
+<p>
+  We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
+</p>
+<p>
+  For example, the grid below consists of two containers, both share the same CSS class names. The first container holds 2 columns. The second container holds 3 columns. Each container has two "media classes" assigned to it:
+</p>
+<ol class="l-list-ordered">
+  <li><code>.g-B--full</code></li>
+  <li><code>.g-ML--fit</code></li>
+</ol>
+<p>
+  The class names can be parsed as follows:
+</p>
+<ul class="l-list-bullet">
+  <li><code>g</code> stands for Grid.</li>
+  <li><code>B</code> and <code>ML</code> are breakpoint sizes that correspond to <code>base</code> (default) and <code>48em/768px</code>, respectively.</li>
+  <li><code>full</code> will make the columns full width.</li>
+  <li><code>fit</code> will make the columns fit inside their container.</li>
+</ul>
+<p>
+  Resize your browser window to see how the grid behaves.
+</p>
+<h4>Base: Full, ML: 1/2</h4>
+<div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
   </div>
-  <script src="../js/ncarb-design-library-1.0.0.min.js"></script>
-  <script src="../js/jquery.details.min.js"></script>
-  <script>
-    $('details').details();
-  </script>
-</body>
-</html>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
+  </div>
+</div>
+<h4>Base: Full, ML: 1/3</h4>
+<div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+</div>
+
+<p>
+  The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives 0.5rem (8px) of padding between each cell.
+</p>
+<p>
+  There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
+</p>
+
+<h4>Base: Full, SM: 1/2, ML: 1/4</h4>
+<div class="l-grid g-B--gutters g-B--full g-SM--1of2 g-ML--1of4 t-demo">
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+</div>
+
+<h3 id="grid-classes">Grid classes</h3>
+<p>
+  The full explanation of each grid class and what it controls is below:
+</p>
+<h4>Basic</h4>
+<dl>
+  <dt><code>l-grid</code></dt>
+  <dd>Identifies an element that will act as the grid container.</dd>
+
+  <dt><code>g-cell</code></dt>
+  <dd>Identifies an element as a cell of the grid.</dd>
+</dl>
+
+<h4>Modifiers</h4>
+<dl>
+  <dt><code>g-*--gutters</code></dt>
+  <dd>Creates a gutter, to the left, of each grid cell of 0.5rem (8px)</dd>
+
+  <dt><code>g-*--guttersLarge</code></dt>
+  <dd>Creates a larger gutter of 1rem (16px)</dd>
+
+  <dt><code>g-*--gutters2x</code></dt>
+  <dd>Creates a larger gutter of 2rem (32px)</dd>
+
+  <dt><code>g-*--gutters3x</code></dt>
+  <dd>Creates a very large gutter of 3rem (48px)</dd>
+</dl>
+
+<h4>Cells</h4>
+<dl>
+  <dt><code>g-*--full</code></dt>
+  <dd>Creates full width cells at the specified breakpoint.</dd>
+
+  <dt><code>g-*--fit</code></dt>
+  <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
+
+  <dt><code>g-*--1of2</code></dt>
+  <dd>A cell that is 50% of the total width of the grid.</dd>
+
+  <dt><code>g-*--1of3</code></dt>
+  <dd>A cell that is 33% of the total width of the grid.</dd>
+
+  <dt><code>g-*--1of4</code></dt>
+  <dd>A cell that is 25% of the total width of the grid.</dd>
+</dl>
+
+<h4>More</h4>
+<p>For more on the Flexbox grid see the <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Solved by Flexbox</a> documentation.</p>
