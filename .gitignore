@@ -8,3 +8,4 @@
 compass_app_log.txt
 *.sublime-*
 node_modules
+bower_components

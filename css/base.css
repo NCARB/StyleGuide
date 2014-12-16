@@ -3117,9 +3117,9 @@ a {
     color: #000;
     text-decoration: underline; }
   a:active {
-    color: #D2222A; }
+    color: #000; }
   a:focus {
-    color: #D2222A;
+    color: #000;
     outline-offset: 2px; }
 
 input[type="reset"].btn,
