@@ -224,6 +224,9 @@ button.level-two_toggle:hover {
   font-weight: bold;
   font-size: 16px; }
 
+.level-one.active {
+  background-color: #00719d; }
+
 a.level-one:hover {
   background-color: #007fb0;
   color: #fff;

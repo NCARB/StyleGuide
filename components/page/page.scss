@@ -271,6 +271,9 @@ button.level-two_toggle:hover {
     font-weight:bold;
     font-size:$type-M;
 }
+.level-one.active {
+    background-color:$color-blue-4;
+}
 a.level-one:hover {
     background-color:darken($color_blue,10%);
     color:$color_white;

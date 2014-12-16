@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"     lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie10 lt-ie9 lt-ie8 gt-ie6 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie10 lt-ie9 gt-ie6 gt-ie7 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js lt-ie10 gt-ie6 gt-ie7 gt-ie8 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+  <title>NCARB Design System</title>
+
+  <link rel="stylesheet" href="http://cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
+  <link rel="stylesheet" href="../css/ncarb-design-library-1.0.0.min.css" />
+  <link rel="stylesheet" href="../css/layouts/library.css" media="all" />
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
+  </script>
+  <script src="../js/modernizr.custom.24308.js"></script>
+  <script src="bower_components/respond/dest/respond.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+  <![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+</head>
+<body>
+  <div class="strip-top"></div>
+  <a class="skip" href="#main">Skip navigation</a>
+  <div class="canvas">
+    <header class="l-header header-01" role="banner">
+      <div class="header-brand">
+      <figure class="logo"><a href="index.html"><img src="../components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+    </div>
+      <ul class="header-strip">
+        <!-- <li><figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
+        <li><a href="#link">Tool name 1</a></li>
+        <li><a href="#link">Tool name 2</a></li>
+        <li><a href="#link">Tool name 3</a></li>
+        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
+      </ul>
+
+    </header>
+      
+      <!-- <div class="header-brand">
+        <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+        <div class="search">
+            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
+            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
+                <fieldset>
+                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
+                    <button class="search-submit" type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+      </div> -->
+
+      <main class="l-main" role="main" id="main" tabindex="1">
+        <nav class="main-nav" id="nav" role="navigation">
+            <ul>
+              <li>
+                <a href="index.html" class="level-one">General stuff</a>
+              </li>
+              <li>
+                <a href="layout.html" class="level-one">Layout</a>
+              </li>
+              <li>
+                <a href="color.html" class="level-one">Color</a>
+              </li>
+              <li>
+                <a href="typography.html" class="level-one active">Typography</a>
+              </li>
+              <li>
+                <a href="iconography.html" class="level-one">Iconography</a>
+              </li>
+              <li>
+                <a href="form_elements.html" class="level-one">Form Elements</a>
+              </li>
+              <li>
+                <a href="navigation.html" class="level-one">Navigation</a>
+              </li>
+              <li>
+                <a href="content.html" class="level-one">Content</a>
+              </li>
+            </ul>
+            <ul class="other">
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+      <section tabindex="40">
+        <h1>Typography</h1>
+        <h2>Fonts</h2>
+        <div class="l-fonts">
+          <h4>Agenda, Light</h4>
+          <p class="t-agenda-light">
+            The quick brown fox jumps over the lazy dog.
+          </p>
+          <p>
+            <a href="http://www.fonts.com/font/font-bureau/agenda" class="l-download font">Download Agenda Font</a>
+          </p>
+
+          <h4>Arial, Regular & Bold</h4>
+          <p class="t-arial-bold">
+            The quick brown fox jumps over the lazy dog.
+          </p>
+        </div>
+
+        <h2>Standard Styles</h2>
+        <div class="l-header-styles">
+          <p class="small type-header">h1</p>
+          <h1>Agenda Light Bold All Caps, 36px</h1>
+
+          <p class="small type-header">h2</p>
+          <h2>Agenda Light, 36px</h2>
+
+          <p class="small type-header">h3</p>
+          <h3>Agenda Light Bold All Caps, 24px</h3>
+
+          <p class="small type-header">h4</p>
+          <h4>Agenda Light, 24px</h4>
+
+          <p class="small type-header">h5</p>
+          <h5>Arial Regular, 18px</h5>
+
+          <p class="small type-header">h6</p>
+          <h5>Arial Bold, 18px</h5>
+
+          <p class="small type-header">label</p>
+          <p>
+            <label>Agenda Light Bold All Caps, 14px</label>
+          </p>
+
+          <p class="small type-header">p</p>
+          <p>Arial Regular, 16px</p>
+
+          <p id="link-element" class="small type-header">a</p>
+          <p><a href="#link-element">Arial Regular, 14px</a></p>
+
+          <p class="small type-header">.small</p>
+          <p class="small">Arial Regular, 14px</p>
+
+          <p class="small type-header">.fine-print</p>
+          <p class="fine-print">Arial Regular, 12px</p>
+
+          <p class="small type-header">h# .normal</p>
+          <h4>H4 <span class="normal">Normal</span></p>
+        </div>
+      </section>
+
+      <section tabindex="50">
+        <h3 id="vertical_rhythm" class="section-header">Vertical Rhythm</h3>
+        <p>The following is an example snippet from an existing page that has been formatted using the headers defined above.</p>
+        <div class="l-page-sample">
+          <h1>Licensure Matters: Change the World Your Way</h1>
+          <p>
+            Whether you want to start your own firm, turn your architectural vision into a reality, or simply increase your earning potential, getting licensed will put you in control of your future.
+          </p>
+          <h2>Path to Licensure </h2>
+          <p>
+            To be an architect, you need to be licensed. Architects are responsible for protecting the public health, safety, and welfare, so earning a license isn’t meant to be easy. The demanding academics, years of internship, and professional exam—it’s a path designed to prepare you for meeting the great responsibilities of the profession. If you’re going to change the world, would you want it any other way?
+          </p>
+          <h3>Licensure is Opportunity</h3>
+          <p>
+            In both good and bad economic times, licensure gives you a competitive edge. With a license you’re positioned to take on a greater role with clients and projects, which increases your value to a firm.
+          </p>
+          <p>
+            More architects on staff can enhance a firm’s marketability with prospective clients and may even lower its liability insurance costs—two more reasons to hire <span style="text-decoration: underline;">you</span>, if you’re licensed. Licensure can also be a ticket to higher earnings, especially as you progress in your career.
+          </p>
+          <h3>Licensure is Empowerment</h3>
+          <p>
+            With a license, you are legally empowered to practice architecture. You can start your own firm; seal, stamp, or sign your own drawings; and turn your ideas into reality. As an architect, you’ll have a seat at the table and more power over your career. Without a license, you’ll nearly always have to seek out the services of an architect to complete a building project.
+          </p>
+          <h2>Make Your Future Count</h2>
+          <p>
+            Being licensed matters—especially for the people who live, work, and play in the buildings that architects create. Architects have a unique and influential role in our communities—with a license, you can play a part in shaping the future of our built world.
+          </p>
+          <h4>Get licensed because you want to make your future count</h4>
+          <p>
+              <a href="/Getting-an-Initial-License.aspx">Learn more about getting an initial license.</a>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer" role="contentinfo">
+          <div class="vcard">
+            <figure class="footer-logo photo"><a href="http://www.ncarb.org" class="url"><img src="../components/page/i/ncarb-logo_w.png" alt="NCARB home" /></a></figure>
+            <ul class="org-card">
+                <li>
+                    <span class="org">National Council of Architectural Registration Boards</span>
+                </li>
+                <li>
+                    <ul class="adr">
+                        <li><span class="street-address">1801 K Street, NW Suite 700K</span></li>
+                        <li>
+                            <span class="locality">Washington</span>, 
+                            <span class="region">DC</span>, 
+                            <span class="postal-code">20006</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="tel">
+                        <span class="type">P<span class="label-hide">hone</span></span>:
+                        <span class="value">202-879-0520</span>
+                    </span>
+                    <span class="tel">
+                        <span class="type">F<span class="label-hide">ax</span></span>:
+                        <span class="value">202-783-0290</span>
+                    </span>
+                </li>
+            </ul>
+          </div>
+          <ul class="footer-links">
+              <li><a href="index.html">NCARB Home</a></li>
+              <li><a href="http://ncarb.org/en/FAQs.aspx">FAQs</a></li>
+              <li><a href="http://ncarb.org/en/Contact-Us.aspx">Contact Us</a></li>
+          </ul>
+          
+          <div class="copyright">
+              <p>&copy; National Council of Architectural Registration Boards</p>
+              <p><a href="#link">Privacy Policy</a></p>
+          </div>
+      </footer>
+  </div>
+  <script src="../js/ncarb-design-library-1.0.0.min.js"></script>
+  <script src="../js/jquery.details.min.js"></script>
+  <script>
+    $('details').details();
+  </script>
+</body>
+</html>

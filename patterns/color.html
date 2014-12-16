@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"     lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie10 lt-ie9 lt-ie8 gt-ie6 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie10 lt-ie9 gt-ie6 gt-ie7 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js lt-ie10 gt-ie6 gt-ie7 gt-ie8 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+  <title>NCARB Design System</title>
+
+  <link rel="stylesheet" href="http://cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
+  <link rel="stylesheet" href="../css/ncarb-design-library-1.0.0.min.css" />
+  <link rel="stylesheet" href="../css/layouts/library.css" media="all" />
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
+  </script>
+  <script src="../js/modernizr.custom.24308.js"></script>
+  <script src="bower_components/respond/dest/respond.min.js"></script>
+  <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+  <![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+</head>
+<body>
+  <div class="strip-top"></div>
+  <a class="skip" href="#main">Skip navigation</a>
+  <div class="canvas">
+    <header class="l-header header-01" role="banner">
+      <div class="header-brand">
+      <figure class="logo"><a href="index.html"><img src="../components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+    </div>
+      <ul class="header-strip">
+        <!-- <li><figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
+        <li><a href="#link">Tool name 1</a></li>
+        <li><a href="#link">Tool name 2</a></li>
+        <li><a href="#link">Tool name 3</a></li>
+        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
+      </ul>
+
+    </header>
+      
+      <!-- <div class="header-brand">
+        <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+        <div class="search">
+            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
+            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
+                <fieldset>
+                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
+                    <button class="search-submit" type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+      </div> -->
+
+      <main class="l-main" role="main" id="main" tabindex="1">
+        <nav class="main-nav" id="nav" role="navigation">
+            <ul>
+              <li>
+                <a href="index.html" class="level-one">General stuff</a>
+              </li>
+              <li>
+                <a href="layout.html" class="level-one">Layout</a>
+              </li>
+              <li>
+                <a href="color.html" class="level-one active">Color</a>
+              </li>
+              <li>
+                <a href="typography.html" class="level-one">Typography</a>
+              </li>
+              <li>
+                <a href="iconography.html" class="level-one">Iconography</a>
+              </li>
+              <li>
+                <a href="form_elements.html" class="level-one">Form Elements</a>
+              </li>
+              <li>
+                <a href="navigation.html" class="level-one">Navigation</a>
+              </li>
+              <li>
+                <a href="content.html" class="level-one">Content</a>
+              </li>
+            </ul>
+            <ul class="other">
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+      <section tabindex="30">
+        <h1>Color</h1>
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit">
+          <!-- Blue -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary blue-2">
+              <span class="name">Blue</span>
+              <p class="small code">#00A4E3</p>
+              <p class="small codename">$color-blue</p>
+            </div>
+            <div class="t-box-color-swatch blue-1">
+              <p class="small code">#ABEAFF</p>
+              <p class="small codename">$color-blue-1</p>
+            </div>
+            <div class="t-box-color-swatch blue-3">
+              <p class="small code">#6BB4D1</p>
+              <p class="small codename">$color-blue-3</p>
+            </div>
+            <div class="t-box-color-swatch blue-4">
+              <p class="small code">#00719d</p>
+              <p class="small codename">$color-blue-4</p>
+            </div>
+          </div>
+
+          <!-- Pink -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary pink">
+              <span class="name">Pink</span>
+              <p class="small code">#EC1163</p>
+              <p class="small codename">$color-pink</p>
+            </div>
+          </div>
+
+          <!-- Red -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary red-2">
+              <span class="name">Red</span>
+              <p class="small code">#D2222A</p>
+              <p class="small codename">$color-red</p>
+            </div>
+            <div class="t-box-color-swatch red-1">
+              <p class="small code">#F2DEDE</p>
+              <p class="small codename">$color-red-1</p>
+            </div>
+            <div class="t-box-color-swatch red-3">
+              <p class="small code">#F1BDC0</p>
+              <p class="small codename">$color-red-3</p>
+            </div>
+            <div class="t-box-color-swatch red-4">
+              <p class="small code">#C97D80</p>
+              <p class="small codename">$color-red-4</p>
+            </div>
+            <div class="t-box-color-swatch red-5">
+              <p class="small code">#9C1A20</p>
+              <p class="small codename">$color-red-5</p>
+            </div>
+          </div>
+
+          <!-- Orange -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary orange">
+              <span class="name">Orange</span>
+              <p class="small code">#F05A21</p>
+              <p class="small codename">$color-orange</p>
+            </div>
+          </div>
+
+          <!-- Purple -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary purple">
+              <span class="name">Purple</span>
+              <p class="small code">#9A3993</p>
+              <p class="small codename">$color-purple</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="l-grid g-B--gutters g-B--full g-ML--fit">
+          <!-- Yellow -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary yellow-3">
+              <span class="name">Yellow</span>
+              <p class="small code">#FFF100</p>
+              <p class="small codename">$color-yellow</p>
+            </div>
+            <div class="t-box-color-swatch yellow-1">
+              <p class="small code">#FEE8AF</p>
+              <p class="small codename">$color-yellow-1</p>
+            </div>
+            <div class="t-box-color-swatch yellow-2">
+              <p class="small code">#FFC50A</p>
+              <p class="small codename">$color-yellow-2</p>
+            </div>
+            <div class="t-box-color-swatch yellow-4">
+              <p class="small code">#FFEDBF</p>
+              <p class="small codename">$color-yellow-4</p>
+            </div>
+            <div class="t-box-color-swatch yellow-5">
+              <p class="small code">#7E6206</p>
+              <p class="small codename">$color-yellow-5</p>
+            </div>
+          </div>
+
+          <!-- Green -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary green-4">
+              <span class="name">Green</span>
+              <p class="small code">#39B549</p>
+              <p class="small codename">$color-green</p>
+            </div>
+            <div class="t-box-color-swatch green-1">
+              <p class="small code">#EAF9D4</p>
+              <p class="small codename">$color-green-1</p>
+            </div>
+            <div class="t-box-color-swatch green-2">
+              <p class="small code">#C6E8CA</p>
+              <p class="small codename">$color-green-2</p>
+            </div>
+            <div class="t-box-color-swatch green-3">
+              <p class="small code">#88BA3A</p>
+              <p class="small codename">$color-green-3</p>
+            </div>
+          </div>
+
+          <!-- Tan Gray -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary tan_gray-3">
+              <span class="name">Tan Gray</span>
+              <p class="small code">#97958C</p>
+              <p class="small codename">$color-tan_gray</p>
+            </div>
+            <div class="t-box-color-swatch tan_gray-1">
+              <p class="small code">#EEEAE3</p>
+              <p class="small codename">$color-tan_gray-1</p>
+            </div>
+            <div class="t-box-color-swatch tan_gray-2">
+              <p class="small code">#DBD9D1</p>
+              <p class="small codename">$color-tan_gray-2</p>
+            </div>
+          </div>
+
+          <!-- Gray -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary gray-6">
+              <span class="name">Gray</span>
+              <p class="small code">#444444</p>
+              <p class="small codename">$color-gray</p>
+            </div>
+            <div class="t-box-color-swatch gray-1">
+              <p class="small code">#F4F4F2</p>
+              <p class="small codename">$color-gray-1</p>
+            </div>
+            <div class="t-box-color-swatch gray-2">
+              <p class="small code">#E2E2E2</p>
+              <p class="small codename">$color-gray-2</p>
+            </div>
+            <div class="t-box-color-swatch gray-3">
+              <p class="small code">#CCCCCC</p>
+              <p class="small codename">$color-gray-3</p>
+            </div>
+            <div class="t-box-color-swatch gray-4">
+              <p class="small code">#999999</p>
+              <p class="small codename">$color-gray-4</p>
+            </div>
+            <div class="t-box-color-swatch gray-5">
+              <p class="small code">#666666</p>
+              <p class="small codename">$color-gray-5</p>
+            </div>
+          </div>
+
+          <!-- Ebony & Ivory -->
+          <div class="g-cell l-color-group">
+            <div class="t-box-color-swatch primary black">
+              <span class="name">Black</span>
+              <p class="small code">#00000</p>
+              <p class="small codename">$color-black</p>
+            </div>
+            <div class="t-box-color-swatch white">
+              <p class="small code">#FFFFFF</p>
+              <p class="small codename">$color-white</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer" role="contentinfo">
+          <div class="vcard">
+            <figure class="footer-logo photo"><a href="http://www.ncarb.org" class="url"><img src="../components/page/i/ncarb-logo_w.png" alt="NCARB home" /></a></figure>
+            <ul class="org-card">
+                <li>
+                    <span class="org">National Council of Architectural Registration Boards</span>
+                </li>
+                <li>
+                    <ul class="adr">
+                        <li><span class="street-address">1801 K Street, NW Suite 700K</span></li>
+                        <li>
+                            <span class="locality">Washington</span>, 
+                            <span class="region">DC</span>, 
+                            <span class="postal-code">20006</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="tel">
+                        <span class="type">P<span class="label-hide">hone</span></span>:
+                        <span class="value">202-879-0520</span>
+                    </span>
+                    <span class="tel">
+                        <span class="type">F<span class="label-hide">ax</span></span>:
+                        <span class="value">202-783-0290</span>
+                    </span>
+                </li>
+            </ul>
+          </div>
+          <ul class="footer-links">
+              <li><a href="index.html">NCARB Home</a></li>
+              <li><a href="http://ncarb.org/en/FAQs.aspx">FAQs</a></li>
+              <li><a href="http://ncarb.org/en/Contact-Us.aspx">Contact Us</a></li>
+          </ul>
+          
+          <div class="copyright">
+              <p>&copy; National Council of Architectural Registration Boards</p>
+              <p><a href="#link">Privacy Policy</a></p>
+          </div>
+      </footer>
+  </div>
+  <script src="../js/ncarb-design-library-1.0.0.min.js"></script>
+  <script src="../js/jquery.details.min.js"></script>
+  <script>
+    $('details').details();
+  </script>
+</body>
+</html>
