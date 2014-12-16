@@ -1,228 +1,67 @@
-<!DOCTYPE html>
+<h1>Navigation</h1>
 
-<!--[if lt IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"     lang="en"> <![endif]-->
-<!--[if IE 7]>        <html class="no-js lt-ie10 lt-ie9 lt-ie8 gt-ie6 ie7" lang="en"> <![endif]-->
-<!--[if IE 8]>        <html class="no-js lt-ie10 lt-ie9 gt-ie6 gt-ie7 ie8" lang="en"> <![endif]-->
-<!--[if IE 9]>        <html class="no-js lt-ie10 gt-ie6 gt-ie7 gt-ie8 ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
-
-<head>
-  <meta name="HandheldFriendly" content="True" />
-  <meta name="MobileOptimized" content="320" />
-  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
-  <title>NCARB Design System</title>
-
-  <link rel="stylesheet" href="http://cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
-  <link rel="stylesheet" href="../css/ncarb-design-library-1.0.0.min.css" />
-  <link rel="stylesheet" href="../css/layouts/library.css" media="all" />
-
-  <script src="bower_components/jquery/dist/jquery.min.js"></script>
-  <script>
-    $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
-  </script>
-  <script src="../js/modernizr.custom.24308.js"></script>
-  <script src="bower_components/respond/dest/respond.min.js"></script>
-  <!--[if lt IE 9]>
-    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
-  <![endif]-->
-  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
-</head>
-<body>
-  <div class="strip-top"></div>
-  <a class="skip" href="#main">Skip navigation</a>
-  <div class="canvas">
-    <header class="l-header header-01" role="banner">
-      <div class="header-brand">
-      <figure class="logo"><a href="index.html"><img src="../components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-    </div>
-      <ul class="header-strip">
-        <!-- <li><figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
-        <li><a href="#link">Tool name 1</a></li>
-        <li><a href="#link">Tool name 2</a></li>
-        <li><a href="#link">Tool name 3</a></li>
-        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
-      </ul>
-
-    </header>
-      
-      <!-- <div class="header-brand">
-        <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-        <div class="search">
-            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
-            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
-                <fieldset>
-                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
-                    <button class="search-submit" type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </div>
-      </div> -->
-
-      <main class="l-main" role="main" id="main" tabindex="1">
-        <nav class="main-nav" id="nav" role="navigation">
-            <ul>
-              <li>
-                <a href="index.html" class="level-one">General stuff</a>
-              </li>
-              <li>
-                <a href="layout.html" class="level-one">Layout</a>
-              </li>
-              <li>
-                <a href="color.html" class="level-one">Color</a>
-              </li>
-              <li>
-                <a href="typography.html" class="level-one">Typography</a>
-              </li>
-              <li>
-                <a href="iconography.html" class="level-one">Iconography</a>
-              </li>
-              <li>
-                <a href="form_elements.html" class="level-one">Form Elements</a>
-              </li>
-              <li>
-                <a href="navigation.html" class="level-one active">Navigation</a>
-              </li>
-              <li>
-                <a href="content.html" class="level-one">Content</a>
-              </li>
-            </ul>
-            <ul class="other">
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-
-      <section tabindex="80">
-        <h1>Navigation</h1>
-
-        <div class="l-system-element first">
-          <details>
-            <summary class="small header">Nav-Tabs 01 (Component: nav-tabs-01)</summary>
-            <pre class="prettyprint">
-              <xmp>
+<div class="l-system-element first">
+  <details>
+    <summary class="small header">Nav-Tabs 01 (Component: nav-tabs-01)</summary>
+    <pre class="prettyprint">
+      <xmp>
 <div class="l-nav nav-tabs-01">
-  <div data-object="drawer" data-state="is-closed">
-    <a href="#nav-tabs-01-item1"
-      class="drawer-toggle t-drawer-toggle t-drawer-face"
-      data-behavior="accordion">
-      Item 1
-    </a>
-    <div class="drawer t-drawer">
-      <ul class="drawer-list">
-        <li>Contents</li>
-        <li>More contents</li>
-      </ul>
+<div data-object="drawer" data-state="is-closed">
+<a href="#nav-tabs-01-item1"
+class="drawer-toggle t-drawer-toggle t-drawer-face"
+data-behavior="accordion">
+Item 1
+</a>
+<div class="drawer t-drawer">
+<ul class="drawer-list">
+<li>Contents</li>
+<li>More contents</li>
+</ul>
+</div>
+</div>
+<div data-object="drawer" data-state="is-closed">
+<a href="#nav-tabs-01-item2"
+class="drawer-toggle t-drawer-toggle t-drawer-face last"
+data-behavior="accordion">
+Item 2
+</a>
+<div class="drawer t-drawer">
+<ul class="drawer-list">
+<li>These Contents</li>
+<li>Yet More contents</li>
+</ul>
+</div>
+</div>
+</div>
+      </xmp>
+    </pre>
+  </details>
+  <div class="l-nav nav-tabs-01">
+    <div data-object="drawer" data-state="is-closed">
+      <a href="#nav-tabs-01-item1"
+         class="drawer-toggle t-drawer-toggle t-drawer-face"
+         data-behavior="accordion">
+        Item 1
+      </a>
+      <div class="drawer t-drawer">
+        <ul class="drawer-list">
+          <li>Contents</li>
+          <li>More contents</li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <div data-object="drawer" data-state="is-closed">
-    <a href="#nav-tabs-01-item2"
-      class="drawer-toggle t-drawer-toggle t-drawer-face last"
-      data-behavior="accordion">
-      Item 2
-    </a>
-    <div class="drawer t-drawer">
-      <ul class="drawer-list">
-        <li>These Contents</li>
-        <li>Yet More contents</li>
-      </ul>
+    <div data-object="drawer" data-state="is-closed">
+      <a href="#nav-tabs-01-item2"
+        class="drawer-toggle t-drawer-toggle t-drawer-face last"
+        data-behavior="accordion">
+        Item 2
+      </a>
+      <div class="drawer t-drawer">
+        <ul class="drawer-list">
+          <li>These Contents</li>
+          <li>Yet More contents</li>
+        </ul>
+      </div>
     </div>
   </div>
 </div>
-              </xmp>
-            </pre>
-          </details>
-          <div class="l-nav nav-tabs-01">
-            <div data-object="drawer" data-state="is-closed">
-              <a href="#nav-tabs-01-item1"
-                 class="drawer-toggle t-drawer-toggle t-drawer-face"
-                 data-behavior="accordion">
-                Item 1
-              </a>
-              <div class="drawer t-drawer">
-                <ul class="drawer-list">
-                  <li>Contents</li>
-                  <li>More contents</li>
-                </ul>
-              </div>
-            </div>
-            <div data-object="drawer" data-state="is-closed">
-              <a href="#nav-tabs-01-item2"
-                class="drawer-toggle t-drawer-toggle t-drawer-face last"
-                data-behavior="accordion">
-                Item 2
-              </a>
-              <div class="drawer t-drawer">
-                <ul class="drawer-list">
-                  <li>These Contents</li>
-                  <li>Yet More contents</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-    <footer class="footer" role="contentinfo">
-          <div class="vcard">
-            <figure class="footer-logo photo"><a href="http://www.ncarb.org" class="url"><img src="../components/page/i/ncarb-logo_w.png" alt="NCARB home" /></a></figure>
-            <ul class="org-card">
-                <li>
-                    <span class="org">National Council of Architectural Registration Boards</span>
-                </li>
-                <li>
-                    <ul class="adr">
-                        <li><span class="street-address">1801 K Street, NW Suite 700K</span></li>
-                        <li>
-                            <span class="locality">Washington</span>, 
-                            <span class="region">DC</span>, 
-                            <span class="postal-code">20006</span>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <span class="tel">
-                        <span class="type">P<span class="label-hide">hone</span></span>:
-                        <span class="value">202-879-0520</span>
-                    </span>
-                    <span class="tel">
-                        <span class="type">F<span class="label-hide">ax</span></span>:
-                        <span class="value">202-783-0290</span>
-                    </span>
-                </li>
-            </ul>
-          </div>
-          <ul class="footer-links">
-              <li><a href="index.html">NCARB Home</a></li>
-              <li><a href="http://ncarb.org/en/FAQs.aspx">FAQs</a></li>
-              <li><a href="http://ncarb.org/en/Contact-Us.aspx">Contact Us</a></li>
-          </ul>
-          
-          <div class="copyright">
-              <p>&copy; National Council of Architectural Registration Boards</p>
-              <p><a href="#link">Privacy Policy</a></p>
-          </div>
-      </footer>
-  </div>
-  <script src="../js/ncarb-design-library-1.0.0.min.js"></script>
-  <script src="../js/jquery.details.min.js"></script>
-  <script>
-    $('details').details();
-  </script>
-</body>
-</html>
