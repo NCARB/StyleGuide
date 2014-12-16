@@ -1,0 +1,116 @@
+<h1>Layout</h1>
+<p>
+  We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
+</p>
+<p>
+  For example, the grid below consists of two containers, both share the same CSS class names. The first container holds 2 columns. The second container holds 3 columns. Each container has two "media classes" assigned to it:
+</p>
+<ol class="l-list-ordered">
+  <li><code>.g-B--full</code></li>
+  <li><code>.g-ML--fit</code></li>
+</ol>
+<p>
+  The class names can be parsed as follows:
+</p>
+<ul class="l-list-bullet">
+  <li><code>g</code> stands for Grid.</li>
+  <li><code>B</code> and <code>ML</code> are breakpoint sizes that correspond to <code>base</code> (default) and <code>48em/768px</code>, respectively.</li>
+  <li><code>full</code> will make the columns full width.</li>
+  <li><code>fit</code> will make the columns fit inside their container.</li>
+</ul>
+<p>
+  Resize your browser window to see how the grid behaves.
+</p>
+<h4>Base: Full, ML: 1/2</h4>
+<div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
+  </div>
+</div>
+<h4>Base: Full, ML: 1/3</h4>
+<div class="l-grid g-B--gutters g-B--full g-ML--fit t-demo">
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Thirds</div>
+  </div>
+</div>
+
+<p>
+  The contains also have a gutter class assigned: <code>.g-B--gutters</code>. This gives 0.5rem (8px) of padding between each cell.
+</p>
+<p>
+  There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
+</p>
+
+<h4>Base: Full, SM: 1/2, ML: 1/4</h4>
+<div class="l-grid g-B--gutters g-B--full g-SM--1of2 g-ML--1of4 t-demo">
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+  <div class="g-cell">
+    <div class="t-demo">1/2 <span class="fa fa-long-arrow-right"></span> 1/4</div>
+  </div>
+</div>
+
+<h3 id="grid-classes">Grid classes</h3>
+<p>
+  The full explanation of each grid class and what it controls is below:
+</p>
+<h4>Basic</h4>
+<dl>
+  <dt><code>l-grid</code></dt>
+  <dd>Identifies an element that will act as the grid container.</dd>
+
+  <dt><code>g-cell</code></dt>
+  <dd>Identifies an element as a cell of the grid.</dd>
+</dl>
+
+<h4>Modifiers</h4>
+<dl>
+  <dt><code>g-*--gutters</code></dt>
+  <dd>Creates a gutter, to the left, of each grid cell of 0.5rem (8px)</dd>
+
+  <dt><code>g-*--guttersLarge</code></dt>
+  <dd>Creates a larger gutter of 1rem (16px)</dd>
+
+  <dt><code>g-*--gutters2x</code></dt>
+  <dd>Creates a larger gutter of 2rem (32px)</dd>
+
+  <dt><code>g-*--gutters3x</code></dt>
+  <dd>Creates a very large gutter of 3rem (48px)</dd>
+</dl>
+
+<h4>Cells</h4>
+<dl>
+  <dt><code>g-*--full</code></dt>
+  <dd>Creates full width cells at the specified breakpoint.</dd>
+
+  <dt><code>g-*--fit</code></dt>
+  <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
+
+  <dt><code>g-*--1of2</code></dt>
+  <dd>A cell that is 50% of the total width of the grid.</dd>
+
+  <dt><code>g-*--1of3</code></dt>
+  <dd>A cell that is 33% of the total width of the grid.</dd>
+
+  <dt><code>g-*--1of4</code></dt>
+  <dd>A cell that is 25% of the total width of the grid.</dd>
+</dl>
+
+<h4>More</h4>
+<p>For more on the Flexbox grid see the <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Solved by Flexbox</a> documentation.</p>
