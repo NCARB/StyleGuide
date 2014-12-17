@@ -43,3 +43,4 @@ h3. Directory structure
 * **node_modules/**: Dependencies installed by the Node package manager (NPM). For example, Grunt.
 * **package.json**: Manifest of Node modules.
 * **config.rb**: To configure Compass
+* **bower.json**: Manifest of Bower packages
