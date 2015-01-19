@@ -2366,8 +2366,8 @@ ul.form-group {
     padding: 0; }
 
 .l-message.t-success {
-  border-color: #97958C;
-  background-color: #EAF9D4; }
+  border-color: #39B549;
+  background-color: #f9fdf4; }
   .l-message.t-success .alert-header {
     color: #444444; }
   .l-message.t-success .msg-body p {
@@ -2377,7 +2377,7 @@ ul.form-group {
 
 .l-message.t-warning {
   border-color: #FFC50A;
-  background-color: #FFE8AF; }
+  background-color: #fff9eb; }
   .l-message.t-warning .alert-header {
     color: #7E6206; }
   .l-message.t-warning .msg-body p {
@@ -2387,7 +2387,7 @@ ul.form-group {
 
 .l-message.t-error {
   border-color: #D2222A;
-  background-color: #F1BDC0; }
+  background-color: #fbeeef; }
   .l-message.t-error .alert-header {
     color: #9C1A20; }
   .l-message.t-error .msg-body p {
@@ -2397,7 +2397,7 @@ ul.form-group {
 
 .l-message.t-info {
   border-color: #00A4E3;
-  background-color: #ABEAFF; }
+  background-color: #eaf9ff; }
   .l-message.t-info .alert-header {
     color: #00719d; }
   .l-message.t-info .msg-body p {

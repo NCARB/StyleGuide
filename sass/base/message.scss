@@ -2,7 +2,7 @@
 
 @mixin messageColors($text, $background, $border, $close) {
   border-color: $border;
-  background-color: $background;
+  background-color: tint($background, 75%);
 
   .alert-header {
     color: $text;
@@ -61,7 +61,7 @@
 }
 
 .l-message.t-success {
-  @include messageColors($color-gray-6, $color-green-1, $color-tan_gray-3, $color-gray-4);
+  @include messageColors($color-gray-6, $color-green-1, $color-green-4, $color-gray-4);
 }
 
 .l-message.t-warning {
