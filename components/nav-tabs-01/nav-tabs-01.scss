@@ -43,7 +43,7 @@
     text-decoration: none;
   }
 
-  @include breakpoint(MML) {
+  @include breakpoint(sm) {
     border-top: 0;
     background-color: transparent;
 
@@ -100,7 +100,7 @@
     }
   }
 
-  @include breakpoint(L) {
+  @include breakpoint(md) {
     > ul {
       display: table;
       width: auto;

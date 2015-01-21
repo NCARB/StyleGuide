@@ -1,0 +1,650 @@
+//
+// Font-Awesome for Glyphicons
+//
+// Since icons are fonts, they can be placed anywhere text is placed and are
+// thus automatically sized to match the surrounding child. To use, create an
+// inline element with the appropriate classes, like so:
+//
+// <a href="#"><span class="glyphicon glyphicon-star"></span> Star</a>
+
+.glyphicon {
+  position: relative;
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.glyphicon-asterisk:before {
+  content: "\f069";
+}
+.glyphicon-plus:before {
+  content: "\f067";
+}
+.glyphicon-euro:before {
+  content: "\f153";
+}
+.glyphicon-eur:before {
+  content: "\f153";
+}
+.glyphicon-minus:before {
+  content: "\f068";
+}
+.glyphicon-cloud:before {
+  content: "\f0c2";
+}
+.glyphicon-envelope:before {
+  content: "\f0e0";
+}
+.glyphicon-pencil:before {
+  content: "\f040";
+}
+.glyphicon-glass:before {
+  content: "\f000";
+}
+.glyphicon-music:before {
+  content: "\f001";
+}
+.glyphicon-search:before {
+  content: "\f002";
+}
+.glyphicon-heart:before {
+  content: "\f004";
+}
+.glyphicon-star:before {
+  content: "\f005";
+}
+.glyphicon-star-empty:before {
+  content: "\f006";
+}
+.glyphicon-user:before {
+  content: "\f007";
+}
+.glyphicon-film:before {
+  content: "\f008";
+}
+.glyphicon-th-large:before {
+  content: "\f009";
+}
+.glyphicon-th:before {
+  content: "\f00a";
+}
+.glyphicon-th-list:before {
+  content: "\f00b";
+}
+.glyphicon-ok:before {
+  content: "\f00c";
+}
+.glyphicon-remove:before {
+  content: "\f00d";
+}
+.glyphicon-zoom-in:before {
+  content: "\f00e";
+}
+.glyphicon-zoom-out:before {
+  content: "\f010";
+}
+.glyphicon-off:before {
+  content: "\f011";
+}
+.glyphicon-signal:before {
+  content: "\f012";
+}
+.glyphicon-cog:before {
+  content: "\f013";
+}
+.glyphicon-trash:before {
+  content: "\f014";
+}
+.glyphicon-home:before {
+  content: "\f015";
+}
+.glyphicon-file:before {
+  content: "\f15b";
+}
+.glyphicon-time:before {
+  content: "\f017";
+}
+.glyphicon-road:before {
+  content: "\f018";
+}
+.glyphicon-download-alt:before {
+  content: "\f019";
+}
+.glyphicon-download:before {
+  content: "\f01a";
+}
+.glyphicon-upload:before {
+  content: "\f01b";
+}
+.glyphicon-inbox:before {
+  content: "\f01c";
+}
+.glyphicon-play-circle:before {
+  content: "\f144";
+}
+.glyphicon-repeat:before {
+  content: "\f01e";
+}
+.glyphicon-refresh:before {
+  content: "\f021";
+}
+.glyphicon-list-alt:before {
+  content: "\f022";
+}
+.glyphicon-lock:before {
+  content: "\f023";
+}
+.glyphicon-flag:before {
+  content: "\f024";
+}
+.glyphicon-headphones:before {
+  content: "\f025";
+}
+.glyphicon-volume-off:before {
+  content: "\f026";
+}
+.glyphicon-volume-down:before {
+  content: "\f027";
+}
+.glyphicon-volume-up:before {
+  content: "\f028";
+}
+.glyphicon-qrcode:before {
+  content: "\f029";
+}
+.glyphicon-barcode:before {
+  content: "\f02a";
+}
+.glyphicon-tag:before {
+  content: "\f02b";
+}
+.glyphicon-tags:before {
+  content: "\f02c";
+}
+.glyphicon-book:before {
+  content: "\f02d";
+}
+.glyphicon-bookmark:before {
+  content: "\f02e";
+}
+.glyphicon-print:before {
+  content: "\f02f";
+}
+.glyphicon-camera:before {
+  content: "\f030";
+}
+.glyphicon-font:before {
+  content: "\f031";
+}
+.glyphicon-bold:before {
+  content: "\f032";
+}
+.glyphicon-italic:before {
+  content: "\f033";
+}
+.glyphicon-text-height:before {
+  content: "\f034";
+}
+.glyphicon-text-width:before {
+  content: "\f035";
+}
+.glyphicon-align-left:before {
+  content: "\f036";
+}
+.glyphicon-align-center:before {
+  content: "\f037";
+}
+.glyphicon-align-right:before {
+  content: "\f038";
+}
+.glyphicon-align-justify:before {
+  content: "\f039";
+}
+.glyphicon-list:before {
+  content: "\f03a";
+}
+.glyphicon-indent-left:before {
+  content: "\f03c";
+}
+.glyphicon-indent-right:before {
+  content: "\f03b";
+}
+.glyphicon-facetime-video:before {
+  content: "\f03d";
+}
+.glyphicon-picture:before {
+  content: "\f03e";
+}
+.glyphicon-map-marker:before {
+  content: "\f041";
+}
+.glyphicon-adjust:before {
+  content: "\f042";
+}
+.glyphicon-tint:before {
+  content: "\f043";
+}
+.glyphicon-edit:before {
+  content: "\f044";
+}
+.glyphicon-share:before {
+  content: "\f045";
+}
+.glyphicon-check:before {
+  content: "\f046";
+}
+.glyphicon-move:before {
+  content: "\f047";
+}
+.glyphicon-step-backward:before {
+  content: "\f048";
+}
+.glyphicon-fast-backward:before {
+  content: "\f049";
+}
+.glyphicon-backward:before {
+  content: "\f04a";
+}
+.glyphicon-play:before {
+  content: "\f04b";
+}
+.glyphicon-pause:before {
+  content: "\f04c";
+}
+.glyphicon-stop:before {
+  content: "\f04d";
+}
+.glyphicon-forward:before {
+  content: "\f04e";
+}
+.glyphicon-fast-forward:before {
+  content: "\f050";
+}
+.glyphicon-step-forward:before {
+  content: "\f051";
+}
+.glyphicon-eject:before {
+  content: "\f052";
+}
+.glyphicon-chevron-left:before {
+  content: "\f053";
+}
+.glyphicon-chevron-right:before {
+  content: "\f054";
+}
+.glyphicon-plus-sign:before {
+  content: "\f055";
+}
+.glyphicon-minus-sign:before {
+  content: "\f056";
+}
+.glyphicon-remove-sign:before {
+  content: "\f057";
+}
+.glyphicon-ok-sign:before {
+  content: "\f058";
+}
+.glyphicon-question-sign:before {
+  content: "\f059";
+}
+.glyphicon-info-sign:before {
+  content: "\f05a";
+}
+.glyphicon-screenshot:before {
+  content: "\f05b";
+}
+.glyphicon-remove-circle:before {
+  content: "\f05c";
+}
+.glyphicon-ok-circle:before {
+  content: "\f05d";
+}
+.glyphicon-ban-circle:before {
+  content: "\f05e";
+}
+.glyphicon-arrow-left:before {
+  content: "\f060";
+}
+.glyphicon-arrow-right:before {
+  content: "\f061";
+}
+.glyphicon-arrow-up:before {
+  content: "\f062";
+}
+.glyphicon-arrow-down:before {
+  content: "\f063";
+}
+.glyphicon-share-alt:before {
+  content: "\f064";
+}
+.glyphicon-resize-full:before {
+  content: "\f065";
+}
+.glyphicon-resize-small:before {
+  content: "\f066";
+}
+.glyphicon-exclamation-sign:before {
+  content: "\f06a";
+}
+.glyphicon-gift:before {
+  content: "\f06b";
+}
+.glyphicon-leaf:before {
+  content: "\f06c";
+}
+.glyphicon-fire:before {
+  content: "\f06d";
+}
+.glyphicon-eye-open:before {
+  content: "\f06e";
+}
+.glyphicon-eye-close:before {
+  content: "\f070";
+}
+.glyphicon-warning-sign:before {
+  content: "\f071";
+}
+.glyphicon-plane:before {
+  content: "\f072";
+}
+.glyphicon-calendar:before {
+  content: "\f073";
+}
+.glyphicon-random:before {
+  content: "\f074";
+}
+.glyphicon-comment:before {
+  content: "\f075";
+}
+.glyphicon-magnet:before {
+  content: "\f076";
+}
+.glyphicon-chevron-up:before {
+  content: "\f077";
+}
+.glyphicon-chevron-down:before {
+  content: "\f078";
+}
+.glyphicon-retweet:before {
+  content: "\f079";
+}
+.glyphicon-shopping-cart:before {
+  content: "\f07a";
+}
+.glyphicon-folder-close:before {
+  content: "\f07b";
+}
+.glyphicon-folder-open:before {
+  content: "\f07c";
+}
+.glyphicon-resize-vertical:before {
+  content: "\f07d";
+}
+.glyphicon-resize-horizontal:before {
+  content: "\f07e";
+}
+.glyphicon-hdd:before {
+  content: "\f0a0";
+}
+.glyphicon-bullhorn:before {
+  content: "\f0a1";
+}
+.glyphicon-bell:before {
+  content: "\f0f3";
+}
+.glyphicon-certificate:before {
+  content: "\f0a3";
+}
+.glyphicon-thumbs-up:before {
+  content: "\f087";
+}
+.glyphicon-thumbs-down:before {
+  content: "\f088";
+}
+.glyphicon-hand-right:before {
+  content: "\f0a4";
+}
+.glyphicon-hand-left:before {
+  content: "\f0a5";
+}
+.glyphicon-hand-up:before {
+  content: "\f0a6";
+}
+.glyphicon-hand-down:before {
+  content: "\f0a7";
+}
+.glyphicon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+.glyphicon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+.glyphicon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+.glyphicon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+.glyphicon-globe:before {
+  content: "\f0ac";
+}
+.glyphicon-wrench:before {
+  content: "\f0ad";
+}
+.glyphicon-tasks:before {
+  content: "\f0ae";
+}
+.glyphicon-filter:before {
+  content: "\f0b0";
+}
+.glyphicon-briefcase:before {
+  content: "\f0b1";
+}
+.glyphicon-fullscreen:before {
+  content: "\f0b2";
+}
+.glyphicon-dashboard:before {
+  content: "\f0e4";
+}
+.glyphicon-paperclip:before {
+  content: "\f0c6";
+}
+.glyphicon-heart-empty:before {
+  content: "\f08a";
+}
+.glyphicon-link:before {
+  content: "\f0c1";
+}
+.glyphicon-phone:before {
+  content: "\f10b";
+}
+.glyphicon-pushpin:before {
+  content: "\f08d";
+}
+.glyphicon-usd:before {
+  content: "\f155";
+}
+.glyphicon-gbp:before {
+  content: "\f154";
+}
+.glyphicon-sort:before {
+  content: "\f0dc";
+}
+.glyphicon-sort-by-alphabet:before {
+  content: "\f15d";
+}
+.glyphicon-sort-by-alphabet-alt:before {
+  content: "\f15e";
+}
+.glyphicon-sort-by-order:before {
+  content: "\f162";
+}
+.glyphicon-sort-by-order-alt:before {
+  content: "\f163";
+}
+.glyphicon-sort-by-attributes:before {
+  content: "\f160";
+}
+.glyphicon-sort-by-attributes-alt:before {
+  content: "\f161";
+}
+.glyphicon-unchecked:before {
+  content: "\f096";
+}
+.glyphicon-expand:before {
+  content: "\f152";
+}
+.glyphicon-collapse-down:before {
+  content: "\f150";
+}
+.glyphicon-collapse-up:before {
+  content: "\f151";
+}
+.glyphicon-log-in:before {
+  content: "\f090";
+}
+.glyphicon-flash:before {
+  content: "\f0e7";
+}
+.glyphicon-log-out:before {
+  content: "\f08b";
+}
+.glyphicon-new-window:before {
+  content: "\f08e";
+}
+.glyphicon-record:before {
+  content: "\f192";
+}
+.glyphicon-save:before,
+.glyphicon-open:before,
+.glyphicon-saved:before,
+.glyphicon-export:before,
+.glyphicon-import:before {
+  position: absolute;
+  top: .6em;
+  display: block;
+  height: .4em;
+  overflow: hidden;
+  line-height: .05;
+  content: "\f0a0";
+}
+.glyphicon-save:after,
+.glyphicon-open:after,
+.glyphicon-saved:after,
+.glyphicon-export:after,
+.glyphicon-import:after {
+  position: relative;
+  top: -.5em;
+  left: .25em;
+  display: inline-block;
+  font-size: 60%;
+}
+.glyphicon-save:after {
+  content: "\f063";
+}
+.glyphicon-open:after {
+  content: "\f062";
+}
+.glyphicon-saved:after {
+  content: "\f00c";
+}
+.glyphicon-import:after {
+  content: "\f063";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=-0.5);
+  -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+       -o-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+.glyphicon-export:after {
+  content: "\f062";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0.5);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+       -o-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.glyphicon-send:before {
+  content: "\f1d8";
+}
+.glyphicon-floppy-disk:before {
+  content: "\f0c7";
+}
+.glyphicon-floppy-saved:before,
+.glyphicon-floppy-remove:before,
+.glyphicon-floppy-save:before,
+.glyphicon-floppy-open:before {
+  content: "\f0c7";
+}
+.glyphicon-floppy-saved:after,
+.glyphicon-floppy-remove:after,
+.glyphicon-floppy-save:after,
+.glyphicon-floppy-open:after {
+  position: absolute;
+  right: .1em;
+  bottom: .1em;
+  font-size: 50%;
+  text-shadow: 1px 1px 2px white;
+}
+.glyphicon-floppy-saved:after {
+  content: "\f00c";
+}
+.glyphicon-floppy-remove:after {
+  content: "\f00d";
+}
+.glyphicon-floppy-save:after {
+  content: "\f063";
+}
+.glyphicon-floppy-open:after {
+  content: "\f062";
+}
+.glyphicon-credit-card:before {
+  content: "\f09d";
+}
+.glyphicon-transfer:before {
+  content: "\f0ec";
+}
+.glyphicon-cutlery:before {
+  content: "\f0f5";
+}
+.glyphicon-header:before {
+  content: "\f1dc";
+}
+.glyphicon-compressed:before {
+  content: "\f1c6";
+}
+.glyphicon-earphone:before {
+  content: "\f095";
+}
+.glyphicon-stats:before {
+  content: "\f080";
+}
+.glyphicon-subtitles:before {
+  content: "\f20a";
+}
+.glyphicon-copyright-mark:before {
+  content: "\f1f9";
+}
+.glyphicon-registration-mark:before {
+  content: "\f1db";
+}
+.glyphicon-registration-mark:after {
+  position: absolute;
+  bottom: .27em;
+  left: .3em;
+  font-size: 65%;
+  font-weight: bold;
+  content: 'R';
+}
+.glyphicon-cloud-download:before {
+  content: "\f0ed";
+}
+.glyphicon-cloud-upload:before {
+  content: "\f0ee";
+}
+.glyphicon-tree-conifer:before {
+  content: "\f1bb";
+}

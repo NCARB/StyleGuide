@@ -12,7 +12,7 @@
     .js .l-header.header-01 .logo {
       margin: 0 auto .8rem auto;
       text-align: center; }
-      @media (min-width: 42em) {
+      @media (min-width: 768px) {
         .js .l-header.header-01 .logo {
           float: left;
           margin: 0;
@@ -22,13 +22,9 @@
     .l-header.header-01 .logo img {
       width: 124px;
       height: auto; }
-      @media (min-width: 42em) {
+      @media (min-width: 768px) {
         .l-header.header-01 .logo img {
           width: 100px; } }
-  @media (min-width: 64em) {
-    .l-header.header-01 .header-brand,
-    .l-header.header-01 .header-strip {
-      margin: 0 auto; } }
 
 .header-strip {
   *zoom: 1;
@@ -263,7 +259,7 @@ a.level-one:hover {
   .off-canvas:active {
     background-color: #DBD9D1; }
 
-@media (min-width: 42em) {
+@media (min-width: 768px) {
   .header-strip {
     position: static; }
 
@@ -344,58 +340,6 @@ a.level-one:hover {
     top: 0;
     z-index: 100;
     border-top: 0; } }
-/*
-@include breakpoint(L) {
-    .header-brand {
-        padding-top:   25px;
-        .logo {
-            img {
-                width:182px;
-            }
-        }
-        .search {
-            .js & {
-                width:310px;
-                top:40px;
-            }
-        }
-    }
-    .main-nav {
-        > ul {
-            display:table;
-            width:auto;
-            margin-left: 10px;
-            margin-right:5px;
-        }
-        > ul > li {
-            float:none;
-            width:auto;
-            display:table-cell;
-            .lt-ie8 & {
-                display:block;
-                float:left;
-                width:120px;
-            }
-        }
-    }
-    .level-one {
-        font-size:$type-M;
-        text-align:left;
-        border:0;
-        padding-right:5px;
-        font-weight:normal;
-        text-transform:none;
-        &:hover {
-            &::before {
-                content:'';
-                background-color:$color_blue;
-                @include position(absolute, -2px 14px 0 8px); 
-                height:6px;
-            }
-        }
-    }
-}
-*/
 /* Footer
 ---------------------------------------- */
 .footer {
@@ -492,7 +436,7 @@ a.level-one:hover {
     color: #444444;
     font-weight: normal; }
 
-@media (min-width: 42em) {
+@media (min-width: 768px) {
   .well {
     float: left;
     width: 67%;
@@ -631,7 +575,7 @@ a.level-one:hover {
       font-size: 14px; }
       .copyright a:hover {
         text-decoration: underline; } }
-@media (min-width: 60em) {
+@media (min-width: 960px) {
   .well {
     width: 73%; }
 

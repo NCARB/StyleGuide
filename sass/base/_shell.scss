@@ -29,7 +29,7 @@ body {
   height: $bodytopspacing;
   background: $color-blue;
 
-  @include breakpoint(M) {
+  @include breakpoint(sm) {
     height:($bodytopspacing + 4px);
   }
 }
@@ -147,7 +147,7 @@ main {
   *zoom: 1;
 }
 
-@include breakpoint(MML) {
+@include breakpoint(sm) {
   .canvas {
     @include transition(none);
 
@@ -171,7 +171,7 @@ main {
 
 
 $recedeamount: 40px;
-@include breakpoint(XXL) {
+@include breakpoint(lg) {
     .canvas {
         margin:0 auto;
         width:1000px;
