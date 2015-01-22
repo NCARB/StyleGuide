@@ -18,7 +18,7 @@ section {
   }
 }
 
-@include breakpoint(MML) {
+@include breakpoint(sm) {
   section {
     margin: 0px 0 0 200px;
   }
@@ -86,7 +86,7 @@ ul.figure li a {
   @include column-count(2);
   @include column-gap(10px);
 
-  @include breakpoint(MML) {
+  @include breakpoint(sm) {
     @include column-count(3);
     @include column-gap(20px);
   }
@@ -142,7 +142,7 @@ ul.figure li a {
 }
 
 // --------------------------------------  GRID -----------------------------
-.l-grid {
+.flex-container {
   &.t-demo {
     padding-top: .5rem;
   }
@@ -271,7 +271,7 @@ ul.figure li a {
     text-align: center;
     vertical-align: top;
 
-    @include breakpoint(SM) {
+    @include breakpoint(sm) {
       padding: 0 15px;
     }
 

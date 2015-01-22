@@ -36,6 +36,14 @@ angular.module('designSystem', ['ui.router'])
 				.state('content', {
 					url: '/content',
 					templateUrl: 'patterns/content.html'
+				})
+				.state('bootstrap-css', {
+					url: '/bootstrap-css',
+					templateUrl: 'patterns/bootstrap-css.html'
+				})
+				.state('bootstrap-components', {
+					url: '/bootstrap-components',
+					templateUrl: 'patterns/bootstrap-components.html'
 				});
 		}
 	]);

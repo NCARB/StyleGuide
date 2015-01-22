@@ -342,7 +342,7 @@ a.level-one:hover {
     z-index: 100;
     border-top: 0; } }
 /*
-@include breakpoint(L) {
+@include breakpoint(md) {
     .header-brand {
         padding-top:   25px;
         .logo {

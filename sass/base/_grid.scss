@@ -1,7 +1,7 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
-.l-grid {
+.flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
   @include flex-basis($base-font-size);
@@ -10,88 +10,92 @@
   padding: 0;
 }
 
-.g-cell {
-  @include flex(1);
+.flex-cell {
+  @include flex(none);
+  width: 100%;
 }
 
-.g-flex_cells {
-  & > .g-cell {
+.flex-cells {
+  & > .flex-cell {
     @include display(flex);
   }
 }
 
-.g-top {
+.flex-top {
   @include align-items(flex-start);
 }
 
-.g-bottom {
+.flex-bottom {
   @include align-items(flex-end);
 }
 
-.g-center {
+.flex-center {
   @include align-items(center);
 }
 
-.g-v-top {
+.flex-v-top {
   @include justify-content(flex-start);
 }
 
-.g-v-bottom {
+.flex-v-bottom {
   @include justify-content(flex-end);
 }
 
-.g-v-center {
+.flex-v-center {
   @include justify-content(center);
 }
 
-
-.g-cell-top {
+.flex-cell-top {
   @include align-self(flex-start);
 }
 
-.g-cell-bottom {
+.flex-cell-bottom {
   @include align-self(flex-end);
 }
 
-.g-cell-center {
+.flex-cell-center {
   @include align-self(center);
 }
 
 // Examples:
-//  .g-B-full
-//  .g-S--fit
-//  .g-M--full
-//  .g-L--1of2
-//  .g-XL-1of3
-//  .g-XXL-1of3
+//  .flex-full
+//  .flex-sm-fit
+//  .flex-md-1of2
+//  .flex-lg-1of3
 @mixin grid-sizing($name: "") {
-  $sep: "-";
-  @if $name == "" {
-    $sep: "B-";
+  @if $name != "" and $name != "xs" {
+    $name: "-#{$name}";
+  } @else {
+    $name: "";
   }
-  .g-#{$name}#{$sep}-fit > .g-cell,
-  .g-cell.g-#{$name}#{$sep}-fit {
+  .flex#{$name}-fit > .flex-cell,
+  .flex-cell.flex#{$name}-fit {
     @include flex(1);
   }
-  .g-#{$name}#{$sep}-full > .g-cell,
-  .g-cell.g-#{$name}#{$sep}-full {
-    width: 100% !important;
-    @include flex(none);
+  @each $part in 2, 3, 4 {
+    .flex-cell.flex#{$name}-#{$part} {
+      @include flex($part);
+    }
   }
-  .g-#{$name}#{$sep}-1of2 > .g-cell,
-  .g-cell.g-#{$name}#{$sep}-1of2 {
-    width: 50% !important;
-    @include flex(none);
+  .flex#{$name}-full > .flex-cell,
+  .flex-cell.flex#{$name}-full {
+    width: 100%;
   }
-  .g-#{$name}#{$sep}-1of3 > .g-cell,
-  .g-cell.g-#{$name}#{$sep}-1of3 {
-    width: 33.3333% !important;
-    @include flex(none);
+  @each $part in 2, 3, 4 {
+    .flex#{$name}-1of#{$part} > .flex-cell,
+    .flex-cell.flex#{$name}-1of#{$part} {
+      width: 100% / $part;
+    }
   }
-  .g-#{$name}#{$sep}-1of4 > .g-cell,
-  .g-cell.g-#{$name}#{$sep}-1of4 {
-    width: 25% !important;
-    @include flex(none);
+  @if $name == "" {
+    $name: "-xs";
+  }
+  $i: 0;
+  @while $i < 12 {
+    $i: $i + 1;
+    .col#{$name}-#{$i} {
+      width: 100% * $i / 12;
+    }
   }
 }
 
@@ -99,45 +103,39 @@
 @include grid-sizing();
 
 // create grid-sizing modifiers for each breakpoint
-@each $breakpoint in $breakpoints {
-  $name: nth($breakpoint, 2);
-  @include breakpoint($name) {
-    @include grid-sizing($name);
+@each $breakpoint, $min-width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @include grid-sizing($breakpoint);
   }
 }
 
 // Examples:
-//    .g-S-gutters
-//    .g-M-guttersLarge
-//    .g-L-gutters2x
-//    .g-XXL-gutters3x
+//    .flex-gutters
+//    .flex-sm-gutters-wide
+//    .flex-md-gutters-wider
+//    .flex-lg-gutters-widest
 @mixin grid-gutters($name: "") {
-  $sep: "-";
-  @if $name == "" {
-    $name: "B-";
+  @if $name != "" and $name != "xs" {
+    $name: "-#{$name}";
   }
-  .g-#{$name}#{$sep}gutters {
+  .flex#{$name}-gutters {
     margin-left: -0.5rem;
-    & > .g-cell {
+    & > .flex-cell {
       padding-left: 0.5rem;
     }
   }
-  .g-#{$name}#{$sep}guttersLarge {
-    margin-left: -1rem;
-    & > .g-cell {
-      padding-left: 1rem;
+  @each $part in 1, 2, 3 {
+    $r: "";
+    @if $part > 1 {
+      $r: "r";
+    } else {
+      $r: "st";
     }
-  }
-  .g-#{$name}#{$sep}gutters2x {
-    margin-left: -2rem;
-    & > .g-cell {
-      padding-left: 2rem;
-    }
-  }
-  .g-#{$name}#{$sep}gutters3x {
-    margin-left: -3rem;
-    & > .g-cell {
-      padding-left: 3rem;
+    .flex#{$name}-gutters-wide#{$r} {
+      margin-left: -1rem * $part;
+      & > .flex-cell {
+        padding-left: 1rem * $part;
+      }
     }
   }
 }
@@ -146,9 +144,8 @@
 @include grid-gutters();
 
 // create grid-gutters modifiers for each breakpoint
-@each $breakpoint in $breakpoints {
-  $name: nth($breakpoint, 2);
-  @include breakpoint($name) {
-    @include grid-gutters($name);
+@each $breakpoint, $min-width in $breakpoints {
+  @include breakpoint($breakpoint) {
+    @include grid-gutters($breakpoint);
   }
 }

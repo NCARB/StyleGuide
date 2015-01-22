@@ -98,7 +98,7 @@
     color: #fff;
     background-color: #007fb0;
     text-decoration: none; }
-  @media (min-width: 42em) {
+  @media (min-width: 768px) {
     .l-nav.nav-menu-01 {
       border-top: 0;
       background-color: transparent; }
@@ -137,7 +137,7 @@
       .l-nav.nav-menu-01 a.level-one:hover {
         background-color: transparent;
         color: #000; } }
-  @media (min-width: 60em) {
+  @media (min-width: 960px) {
     .l-nav.nav-menu-01 > ul {
       display: table;
       width: auto;

@@ -20,7 +20,7 @@
       margin: 0 auto .8rem auto;
       text-align: center;
 
-      @include breakpoint(MML) {
+      @include breakpoint(sm) {
           float: left;
           // width: 50%;
           margin: 0;
@@ -36,7 +36,7 @@
       width: 124px;
       height: auto;
 
-      @include breakpoint(MML) {
+      @include breakpoint(sm) {
           width:100px;
       }
     }
@@ -314,7 +314,7 @@ a.level-one:hover {
 }
 
 
-@include breakpoint(MML) {
+@include breakpoint(sm) {
     .header-strip {
         position:static;
     }
@@ -420,58 +420,6 @@ a.level-one:hover {
         border-top: 0;  
     } 
 }
-/*
-@include breakpoint(L) {
-    .header-brand {
-        padding-top:   25px;
-        .logo {
-            img {
-                width:182px;
-            }
-        }
-        .search {
-            .js & {
-                width:310px;
-                top:40px;
-            }
-        }
-    }
-    .main-nav {
-        > ul {
-            display:table;
-            width:auto;
-            margin-left: 10px;
-            margin-right:5px;
-        }
-        > ul > li {
-            float:none;
-            width:auto;
-            display:table-cell;
-            .lt-ie8 & {
-                display:block;
-                float:left;
-                width:120px;
-            }
-        }
-    }
-    .level-one {
-        font-size:$type-M;
-        text-align:left;
-        border:0;
-        padding-right:5px;
-        font-weight:normal;
-        text-transform:none;
-        &:hover {
-            &::before {
-                content:'';
-                background-color:$color_blue;
-                @include position(absolute, -2px 14px 0 8px); 
-                height:6px;
-            }
-        }
-    }
-}
-*/
 
 /* Footer
 ---------------------------------------- */
@@ -594,7 +542,7 @@ a.level-one:hover {
     margin-bottom:30px;
 }
 
-@include breakpoint(MML) {
+@include breakpoint(sm) {
     .well {
         float:left;
         width:67%;
@@ -772,7 +720,7 @@ a.level-one:hover {
 
 }
 
-@include breakpoint(L) {
+@include breakpoint(md) {
     .well {
         width:73%;
     }
