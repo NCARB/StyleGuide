@@ -91,10 +91,29 @@
     $name: "-xs";
   }
   $i: 0;
+  .col#{$name}-push-0 {
+    position: relative;
+    left: auto;
+  }
+  .col#{$name}-pull-0 {
+    position: relative;
+    right: auto;
+  }
   @while $i < 12 {
     $i: $i + 1;
     .col#{$name}-#{$i} {
       width: 100% * $i / 12;
+    }    
+    .col#{$name}-offset-#{$i} {
+      margin-left: 100% * $i / 12;
+    }
+    .col#{$name}-push-#{$i} {
+      position: relative;
+      left: 100% * $i / 12;
+    }
+    .col#{$name}-pull-#{$i} {
+      position: relative;
+      right: 100% * $i / 12;
     }
   }
 }
