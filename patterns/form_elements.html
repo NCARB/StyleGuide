@@ -17,7 +17,7 @@ Button
 </button>
 <a href="#form_elements" class="btn">Link button</a>
 <input type="button" class="btn" value ="Input button" />
-<input type="submit" class="btn block" value ="Load More" />
+<input type="submit" class="btn btn-block" value ="Load More" />
           </xmp>
         </pre>
       </div>
@@ -27,7 +27,7 @@ Button
           The <code>.btn</code> class will style a default button.
         </p>
         <p>
-          Adding the <code>.block</code> class to a <code>.btn</code> will make the button a block element with 100% width.
+          Adding the <code>.btn-block</code> class to a <code>.btn</code> will make the button a btn-block element with 100% width.
         </p>
       </div>
     </div>
@@ -36,21 +36,47 @@ Button
     <button class="btn" type="button">Button</button>
     <a href="#form_elements" class="btn">Link button</a>
     <input type="button" class="btn" value ="Input button" />
-    <input type="submit" class="btn block" value ="Load More" />
+    <input type="submit" class="btn btn-block" value ="Load More" />
   </div>
 </div>
 
 <div class="l-system-element">
   <details>
-    <summary class="small header">.btn-primary</summary>
+    <summary class="small header">.btn .btn-block</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-cell flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn-primary" type="button">
+<button class="btn btn-secondary btn-block">Block</button>
+          </xmp>
+        </pre>
+      </div>
+      <div class="flex-cell flex-full flex-md-1of3">
+        <div class="l-usage">
+          <p>Usage:</p>
+          <p>
+            The <code>.btn-block</code> class gives the button 100% width.
+          </p>
+        </div>
+      </div>
+    </div>
+  </details>
+  <div class="l-button-examples">
+    <button class="btn btn-block">Block</button>
+  </div>
+</div>
+
+<div class="l-system-element">
+  <details>
+    <summary class="small header">.btn .btn-primary</summary>
+    <div class="flex-container flex-sm-gutters">
+      <div class="flex-cell flex-full flex-md-fit">
+        <pre class="prettyprint">
+          <xmp>
+<button class="btn btn-primary" type="button">
 Button
 </button>
-<a href="#form_elements" class="btn-primary continue">
+<a href="#form_elements" class="btn btn-primary btn-continue">
 Link button
 </a>
           </xmp>
@@ -68,30 +94,24 @@ Link button
     </div>
   </details>
   <div class="l-button-examples">
-    <button type="button" class="btn-primary">Button Title</button>
-    <a href="#form_elements" class="btn-primary continue">Link button</a>
+    <button type="button" class="btn btn-primary">Button Title</button>
+    <a href="#form_elements" class="btn btn-primary btn-continue">Link button</a>
   </div>
 </div>
 
 <div class="l-system-element">
   <details>
-    <summary class="small header">.btn-secondary</summary>
+    <summary class="small header">.btn .btn-secondary</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-cell flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn-secondary" type="button">
+<button class="btn btn-secondary" type="button">
 Secondary - Default
 </button>
-<button class="btn-secondary plus" type="button">
+<button class="btn btn-secondary btn-plus" type="button">
 Secondary w/Plus
 </button>
-<a href="#form_elements" class="btn-secondary yellow block">
-Secondary - Yellow
-</a>
-<a href="#form_elements" class="btn-secondary yellow block">
-Secondary - Green
-</a>
           </xmp>
         </pre>
       </div>
@@ -106,10 +126,40 @@ Secondary - Green
     </div>
   </details>
   <div class="l-button-examples">
-    <button type="button" class="btn-secondary">Secondary - Default</button>
-    <button class="btn-secondary plus" type="button">Secondary w/Plus</button>
-    <a href="#form_elements" class="btn-secondary yellow block">Secondary - Yellow</a>
-    <a href="#form_elements" class="btn-secondary green block">Secondary - Green</a>
+    <button type="button" class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-secondary plus" type="button">Secondary w/Plus</button>
+  </div>
+</div>
+
+<div class="l-system-element">
+  <details>
+    <summary class="small header">.btn .btn-success, .btn .btn-warning, .btn .btn-info, .btn .btn-danger</summary>
+    <div class="flex-container flex-sm-gutters">
+      <div class="flex-cell flex-full flex-md-fit">
+        <pre class="prettyprint">
+          <xmp>
+    <button class="btn btn-warning">Warning</button>
+    <a href="#form_elements" class="btn btn-success">Success</a>
+    <a href="#form_elements" class="btn btn-info">Info</a>
+    <a href="#form_elements" class="btn btn-danger">Danger</a>
+          </xmp>
+        </pre>
+      </div>
+      <div class="flex-cell flex-full flex-md-1of3">
+        <div class="l-usage">
+          <p>Usage:</p>
+          <p>
+            Bootstrap color contexts.
+          </p>
+        </div>
+      </div>
+    </div>
+  </details>
+  <div class="l-button-examples">
+    <button class="btn btn-warning">Warning</button>
+    <a href="#form_elements" class="btn btn-success">Success</a>
+    <a href="#form_elements" class="btn btn-info">Info</a>
+    <a href="#form_elements" class="btn btn-danger">Danger</a>
   </div>
 </div>
 

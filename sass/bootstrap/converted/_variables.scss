@@ -23,11 +23,12 @@ $gray-light:             $color-gray-2; // #e2e2e2 !default; // #777
 $gray-lighter:           $color-gray-1; // #f4f4f2 !default; // #eee
 
 $brand-primary:         $color-blue;      // darken(#428bca, 6.5%) !default;
-$brand-success:         $color-green-1;   // #5cb85c !default;
-$brand-info:            $color-yellow-5;  // #5bc0de !default; TODO: DIFF FROM WARNING
-$brand-warning:         $color-yellow-5;  // #f0ad4e !default;
+$brand-success:         $color-green-4;   // #5cb85c !default;
+$brand-info:            $color-blue-3;  // #5bc0de !default;
+$brand-warning:         $color-yellow-2;  // #f0ad4e !default;
 $brand-danger:          $color-red-5;     // #d9534f !default;
 
+$context-colors: (success: $brand-success, info: $brand-info, warning: $brand-warning, danger: $brand-danger);
 
 //== Scaffolding
 //

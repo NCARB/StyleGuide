@@ -5,6 +5,10 @@
   width: 100%;
 }
 
+%relative {
+  position: relative;
+}
+
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
