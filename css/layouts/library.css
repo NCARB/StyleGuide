@@ -8,8 +8,7 @@
 section {
   clear: both;
   margin: 90px 0 0 0px;
-  padding: 1rem 0;
-  border-bottom: 1px solid #E2E2E2; }
+  padding: 1rem 0; }
   section.l-top {
     margin-top: 5px; }
 
@@ -24,9 +23,6 @@ section {
 
 .l-box {
   margin-bottom: 1.5rem; }
-
-.t-box-frame {
-  border-bottom: 1px solid #E2E2E2; }
 
 .section-header {
   width: 50%;

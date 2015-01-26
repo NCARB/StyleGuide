@@ -1,6 +1,10 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
+%mobile-first {
+  width: 100%;
+}
+
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
@@ -11,8 +15,7 @@
 }
 
 .flex-cell {
-  @include flex(none);
-  width: 100%;
+  @extend %mobile-first;
 }
 
 .flex-cells {
@@ -84,11 +87,20 @@
   @each $part in 2, 3, 4 {
     .flex#{$name}-1of#{$part} > .flex-cell,
     .flex-cell.flex#{$name}-1of#{$part} {
-      width: 100% / $part;
+      width: percentage(1 / $part);
     }
   }
   @if $name == "" {
     $name: "-xs";
+    @each $breakpoint, $min-width in $breakpoints {
+      $i: 0;
+      @while $i < 12 {
+        $i: $i + 1;
+        .col-#{$breakpoint}-#{$i} {
+          @extend %mobile-first;
+        }
+      }
+    }
   }
   $i: 0;
   .col#{$name}-push-0 {
@@ -102,18 +114,18 @@
   @while $i < 12 {
     $i: $i + 1;
     .col#{$name}-#{$i} {
-      width: 100% * $i / 12;
+      width: percentage($i / 12);
     }    
     .col#{$name}-offset-#{$i} {
-      margin-left: 100% * $i / 12;
+      margin-left: percentage($i / 12);
     }
     .col#{$name}-push-#{$i} {
       position: relative;
-      left: 100% * $i / 12;
+      left: percentage($i / 12);
     }
     .col#{$name}-pull-#{$i} {
       position: relative;
-      right: 100% * $i / 12;
+      right: percentage($i / 12);
     }
   }
 }
@@ -147,7 +159,7 @@
     $r: "";
     @if $part > 1 {
       $r: "r";
-    } else {
+    } @else if $part > 2 {
       $r: "st";
     }
     .flex#{$name}-gutters-wide#{$r} {
