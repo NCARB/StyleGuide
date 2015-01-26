@@ -5,10 +5,6 @@
   width: 100%;
 }
 
-%relative {
-  position: relative;
-}
-
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
@@ -134,15 +130,6 @@
   }
 }
 
-// create the default grid-sizing modifiers
-@include grid-sizing();
-
-// create grid-sizing modifiers for each breakpoint
-@each $breakpoint, $min-width in $breakpoints {
-  @include breakpoint($breakpoint) {
-    @include grid-sizing($breakpoint);
-  }
-}
 
 // Examples:
 //    .flex-gutters
@@ -175,12 +162,12 @@
   }
 }
 
-// create the default grid-gutters modifiers
+@include grid-sizing();
 @include grid-gutters();
 
-// create grid-gutters modifiers for each breakpoint
 @each $breakpoint, $min-width in $breakpoints {
   @include breakpoint($breakpoint) {
-    @include grid-gutters($breakpoint);
+    @include grid-sizing($breakpoint);
+    @include grid-gutters($breakpoint); 
   }
 }
