@@ -132,7 +132,7 @@ NCARB.Home.App = (function (window) {
         offcanvasleveltwo();
         searchmobile();
         $('input, textarea').placeholder();
-        $.windowResize(viewport);
+        $(window).resize(viewport);
     };
 
     // end var
