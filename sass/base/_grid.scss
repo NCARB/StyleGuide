@@ -15,12 +15,12 @@
   padding: 0;
 }
 
-.flex-cell {
+.flex-item {
   @extend %mobile-first;
 }
 
-.flex-cells {
-  & > .flex-cell {
+.flex-items {
+  & > .flex-item {
     @include display(flex);
   }
 }
@@ -49,15 +49,15 @@
   @include justify-content(center);
 }
 
-.flex-cell-top {
+.flex-item-top {
   @include align-self(flex-start);
 }
 
-.flex-cell-bottom {
+.flex-item-bottom {
   @include align-self(flex-end);
 }
 
-.flex-cell-center {
+.flex-item-center {
   @include align-self(center);
 }
 
@@ -72,22 +72,22 @@
   } @else {
     $name: "";
   }
-  .flex#{$name}-fit > .flex-cell,
-  .flex-cell.flex#{$name}-fit {
+  .flex#{$name}-fit > .flex-item,
+  .flex-item.flex#{$name}-fit {
     @include flex(1);
   }
   @each $part in 2, 3, 4 {
-    .flex-cell.flex#{$name}-#{$part} {
+    .flex-item.flex#{$name}-#{$part} {
       @include flex($part);
     }
   }
-  .flex#{$name}-full > .flex-cell,
-  .flex-cell.flex#{$name}-full {
+  .flex#{$name}-full > .flex-item,
+  .flex-item.flex#{$name}-full {
     width: 100%;
   }
   @each $part in 2, 3, 4 {
-    .flex#{$name}-1of#{$part} > .flex-cell,
-    .flex-cell.flex#{$name}-1of#{$part} {
+    .flex#{$name}-1of#{$part} > .flex-item,
+    .flex-item.flex#{$name}-1of#{$part} {
       width: percentage(1 / $part);
     }
   }
@@ -142,7 +142,7 @@
   }
   .flex#{$name}-gutters {
     margin-left: -0.5rem;
-    & > .flex-cell {
+    & > .flex-item {
       padding-left: 0.5rem;
     }
   }
@@ -155,7 +155,7 @@
     }
     .flex#{$name}-gutters-wide#{$r} {
       margin-left: -1rem * $part;
-      & > .flex-cell {
+      & > .flex-item {
         padding-left: 1rem * $part;
       }
     }

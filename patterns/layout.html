@@ -22,54 +22,54 @@
 </p>
 <h4>Without an specifications, flex-full is employed</h4>
 <div class="flex-container flex-gutters t-demo">
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Full</div>
   </div>
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Full</div>
   </div>
 </div>
 
 <h4>Fit with with <code>flex-fit</code></h4>
 <div class="flex-container flex-fit flex-gutters t-demo">
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Fit</div>
   </div>
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Fit</div>
   </div>
 </div>
 
 <h4>Default: Full, evenly spaced fit at md with <code>flex-md-fit</code></h4>
 <div class="flex-container flex-md-fit flex-gutters t-demo">
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
   </div>
-  <div class="flex-cell">
+  <div class="flex-item">
     <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
   </div>
 </div>
 
 <p>
-  The contains also have a gutter class assigned: <code>.flex-gutters</code>. This gives 0.5rem (8px) of padding between each cell.
+  The contains also have a gutter class assigned: <code>.flex-gutters</code>. This gives 0.5rem (8px) of padding between each item.
 </p>
 <p>
   There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
 </p>
 
-<h4>Individual Cell Spacing, fit with md break using <code>flex-md-fit</code></h4>
+<h4>Individual Item Spacing, fit with md break using <code>flex-md-fit</code></h4>
 <div class="flex-container flex-md-fit flex-gutters t-demo">
-  <div class="flex-cell flex-md-2">
-    <div class="t-demo"><code>flex-cell flex-md-2</code></div>
+  <div class="flex-item flex-md-2">
+    <div class="t-demo"><code>flex-item flex-md-2</code></div>
   </div>
-  <div class="flex-cell">
-    <div class="t-demo"><code>flex-cell</code></div>
+  <div class="flex-item">
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
-  <div class="flex-cell flex-md-3">
-    <div class="t-demo"><code>flex-cell flex-md-3</code></div>
+  <div class="flex-item flex-md-3">
+    <div class="t-demo"><code>flex-item flex-md-3</code></div>
   </div>
-  <div class="flex-cell">
-    <div class="t-demo"><code>flex-cell</code></div>
+  <div class="flex-item">
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
 </div>
 
@@ -82,14 +82,14 @@
   <dt><code>flex-container</code></dt>
   <dd>Identifies an element that will act as the grid container.</dd>
 
-  <dt><code>flex-cell</code></dt>
-  <dd>Identifies an element as a cell of the grid.</dd>
+  <dt><code>flex-item</code></dt>
+  <dd>Identifies an element as a item of the grid.</dd>
 </dl>
 
 <h4>Gutters</h4>
 <dl>
   <dt><code>flex-*gutters</code></dt>
-  <dd>Creates a gutter, to the left, of each grid cell of 0.5rem (8px)</dd>
+  <dd>Creates a gutter, to the left, of each item of 0.5rem (8px)</dd>
 
   <dt><code>flex-*gutters-wide</code></dt>
   <dd>Creates a larger gutter of 1rem (16px)</dd>
@@ -110,22 +110,22 @@
   <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
 
   <dt><code>flex-*1of2</code></dt>
-  <dd>A cell that is 50% of the total width of the grid.</dd>
+  <dd>An item that is 50% of the total width of the grid.</dd>
 
   <dt><code>flex-*1of3</code></dt>
-  <dd>A cell that is 33% of the total width of the grid.</dd>
+  <dd>An item that is 33% of the total width of the grid.</dd>
 
   <dt><code>flex-*1of4</code></dt>
-  <dd>A cell that is 25% of the total width of the grid.</dd>
+  <dd>An item that is 25% of the total width of the grid.</dd>
 
   <dt><code>flex-*2</code></dt>
-  <dd>A cell that takes twice the space of a normal cell.</dd>
+  <dd>An item that takes twice the space of a normal cell.</dd>
 
   <dt><code>flex-*3</code></dt>
-  <dd>A cell that takes three times the space of a normal cell.</dd>
+  <dd>An item that takes three times the space of a normal cell.</dd>
 
   <dt><code>flex-*4</code></dt>
-  <dd>A cell that takes four times the space of a normal cell.</dd>
+  <dd>An item that takes four times the space of a normal cell.</dd>
 
 </dl>
 
