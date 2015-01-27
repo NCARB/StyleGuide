@@ -1,133 +1,184 @@
 <h1>Layout</h1>
 <p>
-  We have implemented a <a href="">flexbox-based responsive grid system</a>, adopting it to our class name syntax. The grid works by adding classes that align to specific breakpoints to the grid cells or containers. When those classes match their corresponding breakpoint the grids adjust accordingly.
+  Flex-box layout with bootstrap compatability, with bootstrap-tech fall-back for IE9-.
 </p>
-<p>
-  For example, the grid below consists of two containers, both share the same CSS class names. The first container holds 2 columns. The second container holds 3 columns. Each container has two "media classes" assigned to it:
-</p>
-<ol class="l-list-ordered">
-  <li><code>.flex-full</code></li>
-  <li><code>.flex-md-fit</code></li>
-</ol>
-<p>
-  The class names can be parsed as follows:
-</p>
-<ul class="l-list-bullet">
-  <li><code>sm</code> is a breakpoint sizes that corresponds to bootstrap sm of <code>750px</code>.</li>
-  <li><code>full</code> will make the columns full width.</li>
-  <li><code>fit</code> will make the columns fit inside their container.</li>
-</ul>
-<p>
-  Resize your browser window to see how the grid behaves.
-</p>
-<h4>Without an specifications, flex-full is employed</h4>
-<div class="flex-container flex-gutters t-demo">
-  <div class="flex-item">
-    <div class="t-demo">Full</div>
-  </div>
-  <div class="flex-item">
-    <div class="t-demo">Full</div>
-  </div>
-</div>
-
-<h4>Fit with with <code>flex-fit</code></h4>
-<div class="flex-container flex-fit flex-gutters t-demo">
-  <div class="flex-item">
-    <div class="t-demo">Fit</div>
-  </div>
-  <div class="flex-item">
-    <div class="t-demo">Fit</div>
-  </div>
-</div>
-
-<h4>Default: Full, evenly spaced fit at md with <code>flex-md-fit</code></h4>
-<div class="flex-container flex-md-fit flex-gutters t-demo">
-  <div class="flex-item">
-    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
-  </div>
-  <div class="flex-item">
-    <div class="t-demo">Full <span class="fa fa-long-arrow-right"></span> Halves</div>
-  </div>
-</div>
-
-<p>
-  The contains also have a gutter class assigned: <code>.flex-gutters</code>. This gives 0.5rem (8px) of padding between each item.
-</p>
-<p>
-  There are also classes for implicitly specifying that cells take up half, a third, our a fourth of their container. Those classes are <a href="#grid-classes">detailed below</a>.
-</p>
-
-<h4>Individual Item Spacing, fit with md break using <code>flex-md-fit</code></h4>
-<div class="flex-container flex-md-fit flex-gutters t-demo">
-  <div class="flex-item flex-md-2">
-    <div class="t-demo"><code>flex-item flex-md-2</code></div>
-  </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
-  </div>
-  <div class="flex-item flex-md-3">
-    <div class="t-demo"><code>flex-item flex-md-3</code></div>
-  </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
-  </div>
-</div>
-
-<h3 id="grid-classes">Grid classes</h3>
-<p>
-  The full explanation of each grid class and what it controls is below:
-</p>
-<h4>Basic</h4>
+<h2 id="grid-classes">Grid classes</h2>
+<h3>Basics</h3>
 <dl>
-  <dt><code>flex-container</code></dt>
-  <dd>Identifies an element that will act as the grid container.</dd>
+  <dt><code>.flex-container</code></dt>
+  <dd>Required: identifies an element that will act as the grid container.</dd>
 
-  <dt><code>flex-item</code></dt>
-  <dd>Identifies an element as a item of the grid.</dd>
+  <dt><code>.flex-item</code></dt>
+  <dd>Required: identifies an element as a item of the grid.</dd>
+
+
+  <dt>breakpoints <code>sm</code>, <code>md</code>, <code>lg</code></dt>
+  <dd>optionally inserted after the flex prefix in the classes below specify layout breakpoints</dd>
+</dl>
+
+<h3>Container Classes</h3>
+
+<h4>Fitting</h4>
+<dl>
+  <dt><code>.flex-2</code></dt>
+  <dd>Expects 2 item-units, evenly spacing 2 normal items; this unbreakpointed class is required for IE9- support. 
+    Caveats: For modern browsers, this class is unnecessary and items are evenly spaced across one row of the container; for IE9-, each item will be at 50% width; 3+ items wrapping to extra rows.</dd>
+
+  <dt><code>.flex-md-4</code></dt>
+  <dd>Spaces items 4 per row when the browser is regular desktop size or greater.</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-[2-12]</code></dt>
+  <dd>Pattern</dd>
+</dl>
+
+<h4>Wrapping</h4>
+<dl>
+  <dt><code>.flex-1of2</code></dt>
+  <dd>Spaces items at 50%; not required if using similar classes on all flex-items</dd>
+
+  <dt><code>.flex-md-1of3</code></dt>
+  <dd>Spaces items at 33% when the browser is regular desktop size or greater</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-1of(2|3|4|6|8|12)</code></dt>
+  <dd>Pattern</dd>
 </dl>
 
 <h4>Gutters</h4>
 <dl>
-  <dt><code>flex-*gutters</code></dt>
-  <dd>Creates a gutter, to the left, of each item of 0.5rem (8px)</dd>
+  <dt><code>.flex-gutters</code></dt>
+  <dd>Creates a  0.5rem (8px) gutter between each item</dd>
 
-  <dt><code>flex-*gutters-wide</code></dt>
-  <dd>Creates a larger gutter of 1rem (16px)</dd>
+  <dt><code>.flex-sm-gutters-wide</code></dt>
+  <dd>1rem (16px) for devices tablet-sized or greater</dd>
 
-  <dt><code>flex-*gutters-wider</code></dt>
-  <dd>Creates a larger gutter of 2rem (32px)</dd>
+  <dt><code>.flex-gutters-wider</code></dt>
+  <dd>2rem (32px)</dd>
 
-  <dt><code>flex-*gutters-widest</code></dt>
-  <dd>Creates a very large gutter of 3rem (48px)</dd>
+  <dt><code>.flex-gutters-widest</code></dt>
+  <dd>3rem (48px)</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-gutters(-wide(r|st)?)?</code></dt>
+  <dd>Pattern</dd>  
 </dl>
 
-<h4>Cells</h4>
+<h3>Items</h3>
+<h4>Fitting</h4>
+<p>
+  Used in conjuction with a container fitting class like <code>.flex-3</code>
+</p>
 <dl>
-  <dt><code>flex-*full</code></dt>
-  <dd>Creates full width cells at the specified breakpoint.</dd>
+  <dt><code>.flex-item</code> only</dt>
+  <dd>An item that takes one unit of space indicated by the container number class.</dd>
 
-  <dt><code>flex-*fit</code></dt>
-  <dd>Creates cells that flex to be equal size with the other cells in the grid.</dd>
+  <dt><code>.flex-3</code></dt>
+  <dd>An item that takes three units of space of a normal item.</dd>
 
-  <dt><code>flex-*1of2</code></dt>
-  <dd>An item that is 50% of the total width of the grid.</dd>
+  <dt><code>.flex-sm-3</code></dt>
+  <dd>An item that takes three units of space of a normal item on a device tablet-size or larger.</dd>
 
-  <dt><code>flex-*1of3</code></dt>
-  <dd>An item that is 33% of the total width of the grid.</dd>
+  <dt><code>.flex-full</code></dt>
+  <dd>An exception to fitting: item 100% the width of the container on its own row.</dd>
 
-  <dt><code>flex-*1of4</code></dt>
-  <dd>An item that is 25% of the total width of the grid.</dd>
-
-  <dt><code>flex-*2</code></dt>
-  <dd>An item that takes twice the space of a normal cell.</dd>
-
-  <dt><code>flex-*3</code></dt>
-  <dd>An item that takes three times the space of a normal cell.</dd>
-
-  <dt><code>flex-*4</code></dt>
-  <dd>An item that takes four times the space of a normal cell.</dd>
-
+  <dt><code>.flex(-sm|-md|-lg)?-([2-12]|full)</code></dt>
+  <dd>Pattern</dd> 
 </dl>
+
+<h4>Wrapping</h4>
+<p>
+  Used in conjuction with a container wrapping class like <code>.flex-1of2</code>
+</p>
+<dl>
+  <dt><code>.flex-1of2</code></dt>
+  <dd>An item 50% the width of the container.</dd>
+
+  <dt><code>.flex-sm-2of3</code></dt>
+  <dd>An item 66.66% the width of the container on a device tablet-size or larger.</dd>
+
+  <dt><code>.flex-md-full</code></dt>
+  <dd>An item 100% the width of the container on a browser of a regular screen or larger.</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-(full|1of(2|3|4|6|8|12)|{n-1}of(3|4|6|8|12))</code></dt>
+  <dd>Pattern</dd>
+</dl>
+
+<h2>Examples</h2>
+<p>
+  Resize your browser window to see how the grid behaves.
+</p>
+<h4><code>.flex-container</code></h4>
+<div class="flex-container t-demo">
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Full</div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Full</div>
+  </div>
+</div>
+
+<h4><code>.flex-container .flex-2 .flex-gutters</code></h4>
+<div class="flex-container flex-2 flex-gutters t-demo">
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Half</div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Half</div>
+  </div>
+</div>
+
+<h4><code>.flex-container .flex-md-2 .flex-md-gutters-wide</code></h4>
+<div class="flex-container flex-md-2 flex-gutters-wide t-demo">
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+  </div>
+</div>
+
+<h4><code>.flex-container .flex-md-7 .flex-gutters</code></h4>
+<div class="flex-container flex-md-7 flex-gutters t-demo">
+  <div class="flex-item flex-md-2">
+    <div class="t-demo"><code>.flex-item .flex-md-2</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code></div>
+  </div>
+  <div class="flex-item flex-md-3">
+    <div class="t-demo"><code>.flex-item .flex-md-3</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code></div>
+  </div>
+  <div class="flex-item flex-full">
+    <div class="t-demo"><code>.flex-item .flex-full</code></div>
+  </div>
+</div>
+
+<h4><code>.flex-container .flex-gutters</code></h4>
+<div class="flex-container flex-gutters t-demo">
+  <div class="flex-item flex-md-2of3">
+    <div class="t-demo"><code>.flex-item .flex-md-2of3</code></div>
+  </div>
+  <div class="flex-item flex-md-1of3">
+    <div class="t-demo"><code>.flex-item .flex-md-1of3</code></div>
+  </div>
+</div>
+
+<h4><code>.flex-container .flex-md-1of4 .flex-gutters</code></h4>
+<div class="flex-container flex-md-1of4 flex-gutters t-demo">
+  <div class="flex-item flex-md-1of2">
+    <div class="t-demo"><code>.flex-item flex-md-1of2</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>.flex-item</code></div>
+  </div>
+  <div class="flex-item ">
+    <div class="t-demo"><code>.flex-item</code></div>
+  </div> 
+  <div class="flex-item flex-full">
+    <div class="t-demo"><code>.flex-item .flex-full</code></div>
+  </div>
+</div>
 
 <h4>More</h4>
 <p>For more on the Flexbox grid see the <a href="http://philipwalton.github.io/solved-by-flexbox/demos/grids/">Solved by Flexbox</a> documentation.</p>

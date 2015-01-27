@@ -1,19 +1,18 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
+%mobile-first {
+  width: 100%;
+}
+
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
-  align-items: stretch;
   -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-%mobile-first {
-  width: 100%;
 }
 
 .flex-item {
@@ -63,41 +62,34 @@
 }
 
 // Examples:
-//  .flex-sm-4 .flex-sm-2
-//  .flex-md-2
-//  .flex-lg-3
+//  .flex-full
+//  .flex-sm-fit
+//  .flex-md-1of2
+//  .flex-lg-1of3
 @mixin grid-sizing($name: "") {
   @if $name != "" and $name != "xs" {
     $name: "-#{$name}";
   } @else {
     $name: "";
   }
-  %flex-1#{$name} {
+  .flex#{$name}-fit > .flex-item,
+  .flex-item.flex#{$name}-fit {
     @include flex(1);
   }
-  @each $item in 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
-    .flex#{$name}-#{$item} > .flex-item {
-        @extend %flex-1#{$name};
-      }
-    .flex-item.flex#{$name}-#{$item} {
-      @include flex($item);
+  @each $part in 2, 3, 4 {
+    .flex-item.flex#{$name}-#{$part} {
+      @include flex($part);
     }
   }
-  @each $part in 2, 3, 4, 6, 8, 12 {
+  .flex#{$name}-full > .flex-item,
+  .flex-item.flex#{$name}-full {
+    width: 100%;
+  }
+  @each $part in 2, 3, 4 {
     .flex#{$name}-1of#{$part} > .flex-item,
-    .flex-container > .flex-item.flex#{$name}-1of#{$part} {
+    .flex-item.flex#{$name}-1of#{$part} {
       width: percentage(1 / $part);
     }
-    $i: $part - 1;
-    @if $i > 1 {
-      .flex-item.flex#{$name}-#{$i}of#{$part} {
-        width: percentage($i / $part);
-      }
-    }
-  }
-  .flex-container > .flex-item.flex#{$name}-full {
-    width: 100%;
-    @include flex(none);
   }
   @if $name == "" {
     $name: "-xs";
@@ -111,16 +103,13 @@
       }
     }
   }
-  %relative#{$name} {
-    position: relative;
-  }
   $i: 0;
   .col#{$name}-push-0 {
-    @extend %relative#{$name};
+    position: relative;
     left: auto;
   }
   .col#{$name}-pull-0 {
-    @extend %relative#{$name};
+    position: relative;
     right: auto;
   }
   @while $i < 12 {
@@ -132,15 +121,16 @@
       margin-left: percentage($i / 12);
     }
     .col#{$name}-push-#{$i} {
-      @extend %relative#{$name};
+      position: relative;
       left: percentage($i / 12);
     }
     .col#{$name}-pull-#{$i} {
-      @extend %relative#{$name};
+      position: relative;
       right: percentage($i / 12);
     }
   }
 }
+
 
 // Examples:
 //    .flex-gutters
