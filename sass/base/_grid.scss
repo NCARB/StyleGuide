@@ -4,12 +4,17 @@
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
-  align-items: stretch;
   -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.lt-ie10 {
+.flex-container, .row {
+    @include clearfix;
+  }
 }
 
 %mobile-first {
@@ -18,6 +23,7 @@
 
 .flex-item {
   @extend %mobile-first;
+  @include box-sizing(border-box);
 }
 
 .flex-items {
@@ -63,42 +69,54 @@
 }
 
 // Examples:
-//  .flex-sm-4 .flex-sm-2
-//  .flex-md-2
-//  .flex-lg-3
+//  .flex-3 > .flex-2
+//  .flex-full
+//  .flex-1of2
+//  .flex-md-3 > .flex-md-2
+//  .flex-md-3 > .flex-2
+//  .flex-md-1of2
 @mixin grid-sizing($name: "") {
   @if $name != "" and $name != "xs" {
     $name: "-#{$name}";
   } @else {
     $name: "";
   }
-  %flex-1#{$name} {
-    @include flex(1);
-  }
-  @each $item in 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 {
-    .flex#{$name}-#{$item} > .flex-item {
-        @extend %flex-1#{$name};
+  $percents: ();
+  $ofs: ();
+  $i: 1;
+  @while $i < 12 {
+    $i: $i + 1;
+    $j: 1;
+    @while $j <= $i {
+      $percent-key: round(100 * $j / $i);
+      @if not map-has-key($percents, $percent-key) {
+        $percents: map-merge($percents, ($percent-key: true));
+        %percent#{$name}#{$percent_key} {
+            width: percentage($j / $i);
+        }
       }
-    .flex-item.flex#{$name}-#{$item} {
-      @include flex($item);
-    }
-  }
-  @each $part in 2, 3, 4, 6, 8, 12 {
-    .flex#{$name}-1of#{$part} > .flex-item,
-    .flex-container > .flex-item.flex#{$name}-1of#{$part} {
-      width: percentage(1 / $part);
-    }
-    $i: $part - 1;
-    @if $i > 1 {
-      .flex-item.flex#{$name}-#{$i}of#{$part} {
-        width: percentage($i / $part);
+      @if $j == 1 {
+        .flex#{$name}-#{$i} > .flex-item {
+          @extend %percent#{$name}#{$percent-key};
+        }
+      } @else {
+        .flex#{$name}-#{$i} > .flex-item.flex-#{$j},
+        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
+          @extend %percent#{$name}#{$percent-key};
+        }
       }
+      @if $j < $i {
+        .flex-container > .flex-item.flex#{$name}-#{$j}of#{$i} {
+          @extend %percent#{$name}#{$percent-key};
+        }
+      }
+      $j: $j + 1;
     }
   }
   .flex-container > .flex-item.flex#{$name}-full {
-    width: 100%;
-    @include flex(none);
+    @extend %percent#{$name}100;
   }
+  $name_: $name;
   @if $name == "" {
     $name: "-xs";
     @each $breakpoint, $min-width in $breakpoints {
@@ -125,8 +143,9 @@
   }
   @while $i < 12 {
     $i: $i + 1;
+    $percent-key: round(100 * $i / 12);
     .col#{$name}-#{$i} {
-      width: percentage($i / 12);
+      @extend %percent#{$name_}#{$percent-key};
     }    
     .col#{$name}-offset-#{$i} {
       margin-left: percentage($i / 12);
@@ -138,6 +157,25 @@
     .col#{$name}-pull-#{$i} {
       @extend %relative#{$name};
       right: percentage($i / 12);
+    }
+  }
+}
+
+%col {
+  float: left;
+  min-height: 1px;
+}
+.lt-ie10 {
+  .flex-item {
+    @extend %col;
+  }
+  @each $name, $min-width in $breakpoints {
+    $i: 0;
+    @while $i < 12 {
+      $i: $i + 1;
+      .col#{$name}-#{$i} {
+        @extend %col;
+      }
     }
   }
 }
@@ -182,3 +220,4 @@
     @include grid-gutters($breakpoint); 
   }
 }
+

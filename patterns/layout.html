@@ -1,6 +1,6 @@
 <h1>Layout</h1>
 <p>
-  Flex-box layout with bootstrap compatability, with bootstrap-tech fall-back for IE9-.
+ flex-box layout with bootstrap compatability, with bootstrap-tech fall-back for IE9.
 </p>
 <h2 id="grid-classes">Grid classes</h2>
 <h3>Basics</h3>
@@ -17,29 +17,14 @@
 </dl>
 
 <h3>Container Classes</h3>
-
-<h4>Fitting</h4>
 <dl>
   <dt><code>.flex-2</code></dt>
-  <dd>Expects 2 item-units, evenly spacing 2 normal items; this unbreakpointed class is required for IE9- support. 
-    Caveats: For modern browsers, this class is unnecessary and items are evenly spaced across one row of the container; for IE9-, each item will be at 50% width; 3+ items wrapping to extra rows.</dd>
+  <dd>Spaces items at 50%; not required if using <code>XofN</code> classes on all flex-items</dd>
 
-  <dt><code>.flex-md-4</code></dt>
-  <dd>Spaces items 4 per row when the browser is regular desktop size or greater.</dd>
-
-  <dt><code>.flex(-sm|-md|-lg)?-[2-12]</code></dt>
-  <dd>Pattern</dd>
-</dl>
-
-<h4>Wrapping</h4>
-<dl>
-  <dt><code>.flex-1of2</code></dt>
-  <dd>Spaces items at 50%; not required if using similar classes on all flex-items</dd>
-
-  <dt><code>.flex-md-1of3</code></dt>
+  <dt><code>.flex-md-3</code></dt>
   <dd>Spaces items at 33% when the browser is regular desktop size or greater</dd>
 
-  <dt><code>.flex(-sm|-md|-lg)?-1of(2|3|4|6|8|12)</code></dt>
+  <dt><code>.flex(-sm|-md|-lg)?-[2-12]</code></dt>
   <dd>Pattern</dd>
 </dl>
 
@@ -62,33 +47,14 @@
 </dl>
 
 <h3>Items</h3>
-<h4>Fitting</h4>
 <p>
-  Used in conjuction with a container fitting class like <code>.flex-3</code>
+  Used in conjuction with a container class like <code>.flex-4</code>; such a container class is not needed if every item is specified with an <code>XofN</code> class. 
 </p>
 <dl>
-  <dt><code>.flex-item</code> only</dt>
-  <dd>An item that takes one unit of space indicated by the container number class.</dd>
+  <dt><code>.flex-4 &gt;</code> just <code>.flex-item</code></dt>
+  <dd>An item one part the width of the container; here it&#8217;s 25%.</dd>
 
-  <dt><code>.flex-3</code></dt>
-  <dd>An item that takes three units of space of a normal item.</dd>
-
-  <dt><code>.flex-sm-3</code></dt>
-  <dd>An item that takes three units of space of a normal item on a device tablet-size or larger.</dd>
-
-  <dt><code>.flex-full</code></dt>
-  <dd>An exception to fitting: item 100% the width of the container on its own row.</dd>
-
-  <dt><code>.flex(-sm|-md|-lg)?-([2-12]|full)</code></dt>
-  <dd>Pattern</dd> 
-</dl>
-
-<h4>Wrapping</h4>
-<p>
-  Used in conjuction with a container wrapping class like <code>.flex-1of2</code>
-</p>
-<dl>
-  <dt><code>.flex-1of2</code></dt>
+  <dt><code>.flex-4 &gt; .flex-2</code></dt>
   <dd>An item 50% the width of the container.</dd>
 
   <dt><code>.flex-sm-2of3</code></dt>
@@ -97,7 +63,7 @@
   <dt><code>.flex-md-full</code></dt>
   <dd>An item 100% the width of the container on a browser of a regular screen or larger.</dd>
 
-  <dt><code>.flex(-sm|-md|-lg)?-(full|1of(2|3|4|6|8|12)|{n-1}of(3|4|6|8|12))</code></dt>
+  <dt><code>.flex(-sm|-md|-lg)?-(full|([1-12]of)?[2-12])</code></dt>
   <dd>Pattern</dd>
 </dl>
 
@@ -105,78 +71,112 @@
 <p>
   Resize your browser window to see how the grid behaves.
 </p>
-<h4><code>.flex-container</code></h4>
+<h4><code>flex-container</code></h4>
 <div class="flex-container t-demo">
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Full</div>
+    <div class="t-demo"><code>flex-item</code> Full</div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Full</div>
+    <div class="t-demo"><code>flex-item</code> Full</div>
   </div>
 </div>
 
-<h4><code>.flex-container .flex-2 .flex-gutters</code></h4>
+<h4><code>flex-container flex-2 flex-gutters</code></h4>
 <div class="flex-container flex-2 flex-gutters t-demo">
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Half</div>
+    <div class="t-demo"><code>flex-item</code> Half</div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Half</div>
+    <div class="t-demo"><code>flex-item</code> Half</div>
   </div>
 </div>
 
-<h4><code>.flex-container .flex-md-2 .flex-md-gutters-wide</code></h4>
+<h4><code>flex-container flex-md-2 flex-md-gutters-wide</code></h4>
 <div class="flex-container flex-md-2 flex-gutters-wide t-demo">
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+    <div class="t-demo"><code>flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+    <div class="t-demo"><code>flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
   </div>
 </div>
 
-<h4><code>.flex-container .flex-md-7 .flex-gutters</code></h4>
+<h4><code>flex-container flex-md-7 flex-gutters</code></h4>
 <div class="flex-container flex-md-7 flex-gutters t-demo">
   <div class="flex-item flex-md-2">
-    <div class="t-demo"><code>.flex-item .flex-md-2</code></div>
+    <div class="t-demo"><code>flex-item flex-md-2</code></div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code></div>
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
   <div class="flex-item flex-md-3">
-    <div class="t-demo"><code>.flex-item .flex-md-3</code></div>
+    <div class="t-demo"><code>flex-item flex-md-3</code></div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code></div>
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
   <div class="flex-item flex-full">
-    <div class="t-demo"><code>.flex-item .flex-full</code></div>
+    <div class="t-demo"><code>flex-item flex-full</code></div>
   </div>
 </div>
 
-<h4><code>.flex-container .flex-gutters</code></h4>
-<div class="flex-container flex-gutters t-demo">
-  <div class="flex-item flex-md-2of3">
-    <div class="t-demo"><code>.flex-item .flex-md-2of3</code></div>
-  </div>
-  <div class="flex-item flex-md-1of3">
-    <div class="t-demo"><code>.flex-item .flex-md-1of3</code></div>
-  </div>
-</div>
-
-<h4><code>.flex-container .flex-md-1of4 .flex-gutters</code></h4>
-<div class="flex-container flex-md-1of4 flex-gutters t-demo">
-  <div class="flex-item flex-md-1of2">
-    <div class="t-demo"><code>.flex-item flex-md-1of2</code></div>
+<h4><code>flex-container flex-md-4 flex-gutters</code></h4>
+<div class="flex-container flex-md-4 flex-gutters t-demo">
+  <div class="flex-item flex-md-2">
+    <div class="t-demo"><code>flex-item flex-md-2</code></div>
   </div>
   <div class="flex-item">
-    <div class="t-demo"><code>.flex-item</code></div>
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
   <div class="flex-item ">
-    <div class="t-demo"><code>.flex-item</code></div>
+    <div class="t-demo"><code>flex-item</code></div>
   </div> 
   <div class="flex-item flex-full">
-    <div class="t-demo"><code>.flex-item .flex-full</code></div>
+    <div class="t-demo"><code>flex-item flex-full</code></div>
+  </div>
+</div>
+
+<h4><code>flex-container flex-gutters</code></h4>
+<div class="flex-container flex-gutters t-demo">
+  <div class="flex-item flex-md-2of3">
+    <div class="t-demo"><code>flex-item flex-md-2of3</code></div>
+  </div>
+  <div class="flex-item flex-md-1of3">
+    <div class="t-demo"><code>flex-item flex-md-1of3</code></div>
+  </div>
+  <div class="flex-item flex-md-1of4">
+    <div class="t-demo"><code>flex-item flex-md-1of4</code></div>
+  </div>
+  <div class="flex-item flex-md-1of2">
+    <div class="t-demo"><code>flex-item flex-md-1of2</code></div>
+  </div>
+  <div class="flex-item flex-md-1of8">
+    <div class="t-demo"><code>flex-item flex-md-1of8</code></div>
+  </div>
+  <div class="flex-item flex-md-1of8">
+    <div class="t-demo"><code>flex-item flex-md-1of8</code></div>
+  </div>
+</div>
+
+<h4><code>flex-container flex-2 flex-sm-4 flex-md-6 flex-lg-9 flex-gutters</code></h4>
+<div class="flex-container flex-2 flex-sm-4 flex-md-6 flex-lg-9 flex-gutters t-demo">
+  <div class="flex-item flex-2">
+    <div class="t-demo"><code>flex-item flex-2</code></div>
+  </div>
+  <div class="flex-item flex-md-2of3">
+    <div class="t-demo"><code>flex-item flex-md-2of3</code></div>
+  </div>
+  <div class="flex-item ">
+    <div class="t-demo"><code>flex-item</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>flex-item</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>flex-item</code></div>
+  </div>
+  <div class="flex-item">
+    <div class="t-demo"><code>flex-item</code></div>
   </div>
 </div>
 
