@@ -419,6 +419,7 @@ img {
   -webkit-flex-flow: row wrap;
   -moz-flex-flow: row wrap;
   flex-flow: row wrap;
+  -ms-flex-wrap: wrap;
   -webkit-flex-basis: 16px;
   -moz-flex-basis: 16px;
   flex-basis: 16px;
