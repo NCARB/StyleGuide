@@ -1,22 +1,26 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
+%mobile-first {
+  width: 100%;
+}
+
 .flex-container, .row {
   @include display(flex);
   @include flex-flow(row wrap);
+  -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.flex-cell {
-  @include flex(none);
-  width: 100%;
+.flex-item {
+  @extend %mobile-first;
 }
 
-.flex-cells {
-  & > .flex-cell {
+.flex-items {
+  & > .flex-item {
     @include display(flex);
   }
 }
@@ -45,15 +49,15 @@
   @include justify-content(center);
 }
 
-.flex-cell-top {
+.flex-item-top {
   @include align-self(flex-start);
 }
 
-.flex-cell-bottom {
+.flex-item-bottom {
   @include align-self(flex-end);
 }
 
-.flex-cell-center {
+.flex-item-center {
   @include align-self(center);
 }
 
@@ -68,44 +72,62 @@
   } @else {
     $name: "";
   }
-  .flex#{$name}-fit > .flex-cell,
-  .flex-cell.flex#{$name}-fit {
+  .flex#{$name}-fit > .flex-item,
+  .flex-item.flex#{$name}-fit {
     @include flex(1);
   }
   @each $part in 2, 3, 4 {
-    .flex-cell.flex#{$name}-#{$part} {
+    .flex-item.flex#{$name}-#{$part} {
       @include flex($part);
     }
   }
-  .flex#{$name}-full > .flex-cell,
-  .flex-cell.flex#{$name}-full {
+  .flex#{$name}-full > .flex-item,
+  .flex-item.flex#{$name}-full {
     width: 100%;
   }
   @each $part in 2, 3, 4 {
-    .flex#{$name}-1of#{$part} > .flex-cell,
-    .flex-cell.flex#{$name}-1of#{$part} {
-      width: 100% / $part;
+    .flex#{$name}-1of#{$part} > .flex-item,
+    .flex-item.flex#{$name}-1of#{$part} {
+      width: percentage(1 / $part);
     }
   }
   @if $name == "" {
     $name: "-xs";
+    @each $breakpoint, $min-width in $breakpoints {
+      $i: 0;
+      @while $i < 12 {
+        $i: $i + 1;
+        .col-#{$breakpoint}-#{$i} {
+          @extend %mobile-first;
+        }
+      }
+    }
   }
   $i: 0;
+  .col#{$name}-push-0 {
+    position: relative;
+    left: auto;
+  }
+  .col#{$name}-pull-0 {
+    position: relative;
+    right: auto;
+  }
   @while $i < 12 {
     $i: $i + 1;
     .col#{$name}-#{$i} {
-      width: 100% * $i / 12;
+      width: percentage($i / 12);
+    }    
+    .col#{$name}-offset-#{$i} {
+      margin-left: percentage($i / 12);
     }
-  }
-}
-
-// create the default grid-sizing modifiers
-@include grid-sizing();
-
-// create grid-sizing modifiers for each breakpoint
-@each $breakpoint, $min-width in $breakpoints {
-  @include breakpoint($breakpoint) {
-    @include grid-sizing($breakpoint);
+    .col#{$name}-push-#{$i} {
+      position: relative;
+      left: percentage($i / 12);
+    }
+    .col#{$name}-pull-#{$i} {
+      position: relative;
+      right: percentage($i / 12);
+    }
   }
 }
 
@@ -120,7 +142,7 @@
   }
   .flex#{$name}-gutters {
     margin-left: -0.5rem;
-    & > .flex-cell {
+    & > .flex-item {
       padding-left: 0.5rem;
     }
   }
@@ -128,24 +150,24 @@
     $r: "";
     @if $part > 1 {
       $r: "r";
-    } else {
+    } @else if $part > 2 {
       $r: "st";
     }
     .flex#{$name}-gutters-wide#{$r} {
       margin-left: -1rem * $part;
-      & > .flex-cell {
+      & > .flex-item {
         padding-left: 1rem * $part;
       }
     }
   }
 }
 
-// create the default grid-gutters modifiers
+@include grid-sizing();
 @include grid-gutters();
 
-// create grid-gutters modifiers for each breakpoint
 @each $breakpoint, $min-width in $breakpoints {
   @include breakpoint($breakpoint) {
-    @include grid-gutters($breakpoint);
+    @include grid-sizing($breakpoint);
+    @include grid-gutters($breakpoint); 
   }
 }

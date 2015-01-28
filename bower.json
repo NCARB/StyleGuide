@@ -6,7 +6,7 @@
     "Kenji Bohlin <kbohlin@ncarb.org>",
     "Dave Anderson <danderson@ncarb.org>"
   ],
-  "description": "Ncarb Design System",
+  "description": "NCARB Style Guide",
   "license": "MIT",
   "private": true,
   "ignore": [

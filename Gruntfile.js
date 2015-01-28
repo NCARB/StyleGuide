@@ -110,13 +110,19 @@ module.exports = function(grunt) {
       base_styles: {
         files: [
           'sass/base.scss',
-          'sass/*/*.scss',
+          'sass/**/*.scss',
         ],
         tasks: ['sass', 'cssmin']
       },
       component_styles: {
         files: [
-          'components/*/*.scss'
+          'components/*/*.*'
+        ],
+        tasks: ['sass', 'cssmin']
+      },
+      patterns: {
+        files: [
+          'patterns/*'
         ],
         tasks: ['sass', 'cssmin']
       }
