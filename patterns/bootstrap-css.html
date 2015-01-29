@@ -1488,6 +1488,54 @@ To edit settings, press <span class="nt">&lt;kbd&gt;&lt;kbd&gt;</span>ctrl<span 
 <span class="nt">&lt;/div&gt;</span></code></pre></div>
 </div>
 
+<h2 id="tables-example">Sorting </h2>
+  <p>To add sorting widgets add <code>.table-sort</code> to any <code>&lt;table&gt;</code> and use <code>sort-asc</code> and <code>sort-desc</code> on the relivant <code>&lt;th&gt;</code>.</p>
+  <div class="bs-example" data-example-id="simple-table">
+    <table class="table table-sort">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th><a href="#">First Name</a></th>
+          <th class="sort-asc"><a href="#">Last Name</a></th>
+          <th class="sort-desc"><a href="#">Username</a></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>Mark</td>
+          <td>Otto</td>
+          <td>@mdo</td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>Jacob</td>
+          <td>Thornton</td>
+          <td>@fat</td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>Larry</td>
+          <td>the Bird</td>
+          <td>@twitter</td>
+        </tr>
+      </tbody>
+    </table>
+  </div><!-- /example -->
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table table-sort"</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;thead&gt;
+    &lt;tr&gt;
+      ...
+      &lt;th <span class="na">class=</span><span class="s">"sort-asc"</span><span class="nt">&gt;&lt;a href=""&gt;Field&lt;/a&gt;&lt;/th&gt;
+      &lt;th&gt;&lt;a href=""&gt;Field&lt;/a&gt;&lt;/th&gt;
+      ...
+    &lt;/tr&gt;
+  &lt;/thead&gt;</span>
+  ...
+<span class="nt">&lt;/table&gt;</span></code></pre></div>
+
+
 <div class="bs-docs-section">
   <h1 id="forms" class="page-header">Forms</h1>
 

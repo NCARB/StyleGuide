@@ -61,7 +61,7 @@ module.exports = function(grunt) {
     cssmin: {
       minify: {
         src: [
-          'css/base.css',
+          //'css/base.css',
           'css/components/*/*.css'
         ],
         dest: 'css/ncarb-design-library-<%= pkg.version %>.min.css'

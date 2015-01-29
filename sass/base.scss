@@ -6,6 +6,7 @@
 @import "bourbon/bourbon";
 
 // Base
+@import "base/normalize";
 @import "base/colors";
 @import "base/color_shortcuts";
 @import "base/fonts";
@@ -22,6 +23,7 @@
 @import "base/buttons";
 @import "base/lists";
 @import "base/forms";
+@import "base/tables";
 @import "base/message";
 @import "base/bootstrap";
 

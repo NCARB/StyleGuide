@@ -1,0 +1,40 @@
+.table-hover, .table-hover-pointer {
+  > tbody > tr:hover {
+    cursor: pointer;
+  }
+}
+
+.table-sort > thead {
+  th > a:first-child {
+    position: relative;
+    padding-right: .8em;
+
+    &:after {
+      content: "\f0dc"; // fa-sort
+      font: normal normal normal 14px/1 FontAwesome;
+      position: absolute;
+      right: 2px;
+      bottom: 2px;
+      color: #000;
+      font-size: 80%;
+    }
+  }
+
+  th.sort-asc > a:first-child:after {
+  	content: "\f0de"; // fa-sort-asc
+  }
+
+  th.sort-desc > a:first-child:after {
+  	content: "\f0dd"; // fa-sort-desc
+  }
+}
+
+@media screen and (-moz-images-in-menus:0) {
+  .table-sort > thead {
+  	th > a:first-child:after {
+      display: inline-block;
+      bottom: 3px;
+    }
+  }
+}
+
