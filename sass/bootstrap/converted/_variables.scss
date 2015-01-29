@@ -497,22 +497,25 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-text:             $color-gray-6; //#3c763d !default;
+$state-success-bg:               $color-green-1; //#dff0d8 !default;
+$state-success-border:           $color-green-4; //darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-close: 			 $color-gray-4;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-text:                $color-blue-4; // #31708f !default;
+$state-info-bg:                  $color-blue-1; // #d9edf7 !default;
+$state-info-border:              $color-blue-2; // darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-close: 				 $color-blue-3;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-text:             $color-yellow-5; // #8a6d3b !default;
+$state-warning-bg:               $color-yellow-1; // #fcf8e3 !default;
+$state-warning-border:           $color-yellow-2; // darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-close:			 $color-yellow-4;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
-
+$state-danger-text:              $color-red-5; // #a94442 !default;
+$state-danger-bg:                $color-red-3; // #f2dede !default;
+$state-danger-border:            $color-red-2; // darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-danger-close:			 $color-red-4;
 
 //== Tooltips
 //
@@ -628,18 +631,22 @@ $alert-link-font-weight:      bold !default;
 $alert-success-bg:            $state-success-bg !default;
 $alert-success-text:          $state-success-text !default;
 $alert-success-border:        $state-success-border !default;
+$alert-success-close:         $state-success-close !default;
 
 $alert-info-bg:               $state-info-bg !default;
 $alert-info-text:             $state-info-text !default;
 $alert-info-border:           $state-info-border !default;
+$alert-info-close:            $state-info-close !default;
 
 $alert-warning-bg:            $state-warning-bg !default;
 $alert-warning-text:          $state-warning-text !default;
 $alert-warning-border:        $state-warning-border !default;
+$alert-warning-close:         $state-warning-close !default;
 
 $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
-$alert-danger-border:         $state-danger-border !default;
+$alert-danger-border:         $state-danger-close !default;
+$alert-danger-close:          $state-danger-close !default;
 
 
 //== Progress bars
