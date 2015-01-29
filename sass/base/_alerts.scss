@@ -31,8 +31,6 @@
 
   .close {
     float: right;
-    margin: 0;
-    padding: 0;
     background: none;
     line-height: 1;
     text-transform: none;
@@ -70,20 +68,45 @@
     margin: 0 0 0 1.25rem;
     padding: 0;
   }
+
+  &.alert-icon {
+    padding-left: 40px;
+
+    &:before {
+      @include fa-icon();
+      position: absolute;
+      top: 18px;
+      left: 14px;
+    }
+  }
+
+  &.alert-success {
+    @include messageColors($color-gray-6, $color-green-1, $color-green-4, $color-gray-4);
+    &.alert-icon:before {
+      content: $fa-var-check-circle;
+      color: $color-green-4;
+    }
+  }
+
+  &.alert-warning {
+    @include messageColors($color-yellow-5, $color-yellow-1, $color-yellow-2, $color-yellow-4);
+    &.alert-icon:before {
+      content: $fa-var-exclamation-circle;
+    }
+  }
+
+  &.alert-danger {
+    @include messageColors($color-red-5, $color-red-3, $color-red-2, $color-red-4);
+    &.alert-icon:before {
+      content: $fa-var-exclamation-triangle;
+    }
+  }
+
+  &.alert-info {
+    @include messageColors($color-blue-4, $color-blue-1, $color-blue-2, $color-blue-3);
+      &.alert-icon:before {
+      content: $fa-var-info-circle;
+    }
+  }
 }
 
-.alert.alert-success {
-  @include messageColors($color-gray-6, $color-green-1, $color-green-4, $color-gray-4);
-}
-
-.alert.alert-warning {
-  @include messageColors($color-yellow-5, $color-yellow-1, $color-yellow-2, $color-yellow-4);
-}
-
-.alert.alert-danger {
-  @include messageColors($color-red-5, $color-red-3, $color-red-2, $color-red-4);
-}
-
-.alert.alert-info {
-  @include messageColors($color-blue-4, $color-blue-1, $color-blue-2, $color-blue-3);
-}
