@@ -1,43 +1,43 @@
 @import "../bootstrap/mixins";
 @import "../bootstrap/converted/variables";        // adds serif and monospaced fonts
 @import "../bootstrap/converted/type";             // a surprizing number of basic element stylings
-//@import "../bootstrap/_alerts";				   folded into base/_alerts
-//@import "../bootstrap/_badges";
-//@import "../bootstrap/_breadcrumbs";
+//@import "../bootstrap/alerts";				   folded into base/alerts
+//@import "../bootstrap/badges";
+//@import "../bootstrap/breadcrumbs";
 @import "../bootstrap/converted/button-groups";    // 
 @import "../bootstrap/converted/buttons";	       // color contexts in base/buttons proper
 											       //   adds button-link, button sizes, button-block
-//@import "../bootstrap/_carousel";
-//@import "../bootstrap/_close";
-//@import "../bootstrap/_code";
-//@import "../bootstrap/_component-animations";
-//@import "../bootstrap/_dropdowns";
-//@import "../bootstrap/_forms";
+//@import "../bootstrap/carousel";
+@import "../bootstrap/converted/close";            // font-awesome close icon
+//@import "../bootstrap/code";
+//@import "../bootstrap/component-animations";
+//@import "../bootstrap/dropdowns";
+//@import "../bootstrap/forms";
 @import "../bootstrap/converted/glyphicons";       // uses font-awesome
-//@import "../bootstrap/_grid";
-//@import "../bootstrap/_input-groups";
-//@import "../bootstrap/_jumbotron";
-//@import "../bootstrap/_labels";
-//@import "../bootstrap/_list-group";
-//@import "../bootstrap/_media";
-//@import "../bootstrap/_mixins";
-//@import "../bootstrap/_modals";
-//@import "../bootstrap/_navbar";
-//@import "../bootstrap/_navs";
-//@import "../bootstrap/_normalize"; // we already have this. Actually, our normalize has more stuff in it
-//@import "../bootstrap/_pager";
-//@import "../bootstrap/_pagination";
-//@import "../bootstrap/_panels";
-//@import "../bootstrap/_popovers";
-//@import "../bootstrap/_print";
-//@import "../bootstrap/_progress-bars";
-//@import "../bootstrap/_responsive-embed";
-//@import "../bootstrap/_responsive-utilities";
-//@import "../bootstrap/_scaffolding";
-@import "../bootstrap/tables";
-//@import "../bootstrap/_theme";
-//@import "../bootstrap/_thumbnails";
-//@import "../bootstrap/_tooltip";
-//@import "../bootstrap/_type";
-//@import "../bootstrap/_utilities";
-//@import "../bootstrap/_wells";
+//@import "../bootstrap/grid";                     completely reimplimented in base
+//@import "../bootstrap/input-groups";
+//@import "../bootstrap/jumbotron";
+//@import "../bootstrap/labels";
+//@import "../bootstrap/list-group";
+//@import "../bootstrap/media";
+//@import "../bootstrap/mixins";
+//@import "../bootstrap/modals";
+//@import "../bootstrap/navbar";
+@import "../bootstrap/converted/navs";
+//@import "../bootstrap/normalize"; // we already have this. Actually, our normalize has more stuff in it
+//@import "../bootstrap/pager";
+//@import "../bootstrap/pagination";
+//@import "../bootstrap/panels";
+//@import "../bootstrap/popovers";
+//@import "../bootstrap/print";
+//@import "../bootstrap/progress-bars";
+//@import "../bootstrap/responsive-embed";
+//@import "../bootstrap/responsive-utilities";
+//@import "../bootstrap/scaffolding";
+@import "../bootstrap/converted/tables";
+//@import "../bootstrap/theme";
+//@import "../bootstrap/thumbnails";
+//@import "../bootstrap/tooltip";
+//@import "../bootstrap/type";
+//@import "../bootstrap/utilities";
+//@import "../bootstrap/wells";

@@ -1,3 +1,5 @@
+@import "../tables";
+
 .table-hover, .table-hover-pointer {
   > tbody > tr:hover {
     cursor: pointer;

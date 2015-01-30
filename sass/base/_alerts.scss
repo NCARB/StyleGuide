@@ -29,27 +29,6 @@
     display: none;
   }
 
-  .close {
-    float: right;
-    background: none;
-    line-height: 1;
-    text-transform: none;
-    border: 0;
-    cursor: pointer;
-
-    & > span[aria-hidden] {
-      display: none;
-    }
-    &:after {
-      position: absolute;
-      right: 15px;
-      @include fa-icon();
-      @include fontSize(20px);
-      content: $fa-var-close;
-      color: $color-gray;
-    }
-  }
-
   // Headings for larger alerts
   h4 {
     @include type-body();
