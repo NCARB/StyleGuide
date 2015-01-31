@@ -4,8 +4,8 @@
 //@import "../bootstrap/alerts";                   folded into base/alerts
 //@import "../bootstrap/badges";
 //@import "../bootstrap/breadcrumbs";
-@import "../bootstrap/converted/button-groups";    // adds button-groups modified to add sliver between btns
-@import "../bootstrap/converted/buttons";          // color contexts in base/buttons proper
+@import "../bootstrap/converted/button-groups";    // modified to add sliver between btns
+@import "../bootstrap/converted/buttons";          // we have btn and color contexts in base/buttons proper
                                                    //   adds button-link, button sizes, button-block
 //@import "../bootstrap/carousel";
 @import "../bootstrap/converted/close";            // font-awesome close icon
@@ -34,10 +34,10 @@
 //@import "../bootstrap/responsive-embed";
 //@import "../bootstrap/responsive-utilities";
 //@import "../bootstrap/converted/scaffolding";    due to core stylings, imported at top of base directly
-@import "../bootstrap/converted/tables";
+@import "../bootstrap/converted/tables";           // adds table-sort and table-hover-pointer
 //@import "../bootstrap/theme";
 //@import "../bootstrap/thumbnails";
 //@import "../bootstrap/tooltip";
-//@import "../bootstrap/type";
-@import "../bootstrap/converted/utilities";        //bourbon clearfix
+@import "../bootstrap/converted/type";             // we already have the header elements defined
+@import "../bootstrap/converted/utilities";        // uses bourbon clearfix
 @import "../bootstrap/wells";

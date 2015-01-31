@@ -3223,7 +3223,7 @@ mark,
   text-transform: capitalize; }
 
 .text-muted {
-  color: #E2E2E2; }
+  color: #999999; }
 
 .text-primary {
   color: #00A4E3; }
@@ -3291,7 +3291,7 @@ a.bg-danger:hover {
 .page-header {
   padding-bottom: 9px;
   margin: 40px 0 20px;
-  border-bottom: 1px solid #F4F4F2; }
+  border-bottom: 1px solid #E2E2E2; }
 
 ul,
 ol {
@@ -3350,7 +3350,7 @@ dd {
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted #E2E2E2; }
+  border-bottom: 1px dotted #999999; }
 
 .initialism {
   font-size: 90%;
@@ -3360,7 +3360,7 @@ blockquote {
   padding: 10px 20px;
   margin: 0 0 20px;
   font-size: 20px;
-  border-left: 5px solid #F4F4F2; }
+  border-left: 5px solid #E2E2E2; }
   blockquote p:last-child,
   blockquote ul:last-child,
   blockquote ol:last-child {
@@ -3371,7 +3371,7 @@ blockquote {
     display: block;
     font-size: 80%;
     line-height: 1.25;
-    color: #E2E2E2; }
+    color: #999999; }
     blockquote footer:before,
     blockquote small:before,
     blockquote .small:before {
@@ -3381,7 +3381,7 @@ blockquote {
 blockquote.pull-right {
   padding-right: 15px;
   padding-left: 0;
-  border-right: 5px solid #F4F4F2;
+  border-right: 5px solid #E2E2E2;
   border-left: 0;
   text-align: right; }
   .blockquote-reverse footer:before,
@@ -3593,7 +3593,7 @@ address {
     text-decoration: underline;
     background-color: transparent; }
   .btn-link[disabled]:hover, .btn-link[disabled]:focus, fieldset[disabled] .btn-link:hover, fieldset[disabled] .btn-link:focus {
-    color: #E2E2E2;
+    color: #999999;
     text-decoration: none; }
 
 .btn-lg, .btn-group-lg > .btn {
@@ -3687,7 +3687,7 @@ pre {
   line-height: 1.25;
   word-break: break-all;
   word-wrap: break-word;
-  color: #666666;
+  color: #444444;
   background-color: #f5f5f5;
   border: 1px solid #ccc;
   border-radius: 0; }
@@ -3753,12 +3753,12 @@ pre {
     clear: both;
     font-weight: normal;
     line-height: 1.25;
-    color: #666666;
+    color: #444444;
     white-space: nowrap; }
 
 .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
   text-decoration: none;
-  color: #595959;
+  color: #373737;
   background-color: #f5f5f5; }
 
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
@@ -3768,7 +3768,7 @@ pre {
   background-color: #00A4E3; }
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
-  color: #E2E2E2; }
+  color: #999999; }
 .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
   text-decoration: none;
   background-color: transparent;
@@ -3794,7 +3794,7 @@ pre {
   padding: 3px 20px;
   font-size: 14px;
   line-height: 1.25;
-  color: #E2E2E2;
+  color: #999999;
   white-space: nowrap; }
 
 .dropdown-backdrop {
@@ -4505,16 +4505,16 @@ pre {
       padding: 10px 15px; }
       .nav > li > a:hover, .nav > li > a:focus, nav > ul > li > a:hover, nav > ul > li > a:focus, nav > ol > li > a:hover, nav > ol > li > a:focus {
         text-decoration: none;
-        background-color: #F4F4F2; }
+        background-color: #E2E2E2; }
     .nav > li.disabled > a, nav > ul > li.disabled > a, nav > ol > li.disabled > a {
-      color: #E2E2E2; }
+      color: #999999; }
       .nav > li.disabled > a:hover, .nav > li.disabled > a:focus, nav > ul > li.disabled > a:hover, nav > ul > li.disabled > a:focus, nav > ol > li.disabled > a:hover, nav > ol > li.disabled > a:focus {
-        color: #E2E2E2;
+        color: #999999;
         text-decoration: none;
         background-color: transparent;
         cursor: not-allowed; }
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, nav > ul .open > a, nav > ul .open > a:hover, nav > ul .open > a:focus, nav > ol .open > a, nav > ol .open > a:hover, nav > ol .open > a:focus {
-    background-color: #F4F4F2;
+    background-color: #E2E2E2;
     border-color: #00A4E3; }
   .nav .nav-divider, nav > ul .nav-divider, nav > ol .nav-divider {
     height: 1px;
@@ -4668,7 +4668,7 @@ table {
 caption {
   padding-top: 8px;
   padding-bottom: 8px;
-  color: #E2E2E2;
+  color: #999999;
   text-align: left; }
 
 th {
@@ -4885,6 +4885,226 @@ table th[class*="col-"] {
   .table-sort > thead th > a:first-child:after {
     display: inline-block;
     bottom: 3px; } }
+.lead {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4; }
+  @media (min-width: 768px) {
+    .lead {
+      font-size: 24px; } }
+
+mark,
+.mark {
+  background-color: #FFE8AF;
+  padding: .2em; }
+
+.text-left {
+  text-align: left; }
+
+.text-right {
+  text-align: right; }
+
+.text-center {
+  text-align: center; }
+
+.text-justify {
+  text-align: justify; }
+
+.text-nowrap {
+  white-space: nowrap; }
+
+.text-lowercase {
+  text-transform: lowercase; }
+
+.text-uppercase {
+  text-transform: uppercase; }
+
+.text-capitalize {
+  text-transform: capitalize; }
+
+.text-muted {
+  color: #999999; }
+
+.text-primary {
+  color: #00A4E3; }
+
+a.text-primary:hover {
+  color: #007fb0; }
+
+.text-success {
+  color: #444444; }
+
+a.text-success:hover {
+  color: #2b2b2b; }
+
+.text-info {
+  color: #00719d; }
+
+a.text-info:hover {
+  color: #004c6a; }
+
+.text-warning {
+  color: #7E6206; }
+
+a.text-warning:hover {
+  color: #4d3c04; }
+
+.text-danger {
+  color: #9C1A20; }
+
+a.text-danger:hover {
+  color: #701317; }
+
+.bg-primary {
+  color: #fff; }
+
+.bg-primary {
+  background-color: #00A4E3; }
+
+a.bg-primary:hover {
+  background-color: #007fb0; }
+
+.bg-success {
+  background-color: #EAF9D4; }
+
+a.bg-success:hover {
+  background-color: #d4f3a7; }
+
+.bg-info {
+  background-color: #ABEAFF; }
+
+a.bg-info:hover {
+  background-color: #78ddff; }
+
+.bg-warning {
+  background-color: #FFE8AF; }
+
+a.bg-warning:hover {
+  background-color: #ffd97c; }
+
+.bg-danger {
+  background-color: #F1BDC0; }
+
+a.bg-danger:hover {
+  background-color: #e89398; }
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 40px 0 20px;
+  border-bottom: 1px solid #E2E2E2; }
+
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px; }
+  ul ul,
+  ul ol,
+  ol ul,
+  ol ol {
+    margin-bottom: 0; }
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none; }
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+  margin-left: -5px; }
+  .list-inline > li {
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px; }
+
+dl {
+  margin-top: 0;
+  margin-bottom: 20px; }
+
+dt,
+dd {
+  line-height: 1.25; }
+
+dt {
+  font-weight: bold; }
+
+dd {
+  margin-left: 0; }
+
+.dl-horizontal dd:before, .dl-horizontal dd:after {
+  content: " ";
+  display: table; }
+.dl-horizontal dd:after {
+  clear: both; }
+@media (min-width: 768px) {
+  .dl-horizontal dt {
+    float: left;
+    width: 160px;
+    clear: left;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .dl-horizontal dd {
+    margin-left: 180px; } }
+
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted #999999; }
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase; }
+
+blockquote {
+  padding: 10px 20px;
+  margin: 0 0 20px;
+  font-size: 20px;
+  border-left: 5px solid #E2E2E2; }
+  blockquote p:last-child,
+  blockquote ul:last-child,
+  blockquote ol:last-child {
+    margin-bottom: 0; }
+  blockquote footer,
+  blockquote small,
+  blockquote .small {
+    display: block;
+    font-size: 80%;
+    line-height: 1.25;
+    color: #999999; }
+    blockquote footer:before,
+    blockquote small:before,
+    blockquote .small:before {
+      content: '\2014 \00A0'; }
+
+.blockquote-reverse,
+blockquote.pull-right {
+  padding-right: 15px;
+  padding-left: 0;
+  border-right: 5px solid #E2E2E2;
+  border-left: 0;
+  text-align: right; }
+  .blockquote-reverse footer:before,
+  .blockquote-reverse small:before,
+  .blockquote-reverse .small:before,
+  blockquote.pull-right footer:before,
+  blockquote.pull-right small:before,
+  blockquote.pull-right .small:before {
+    content: ''; }
+  .blockquote-reverse footer:after,
+  .blockquote-reverse small:after,
+  .blockquote-reverse .small:after,
+  blockquote.pull-right footer:after,
+  blockquote.pull-right small:after,
+  blockquote.pull-right .small:after {
+    content: '\00A0 \2014'; }
+
+address {
+  margin-bottom: 20px;
+  font-style: normal;
+  line-height: 1.25; }
+
 .clearfix:after {
   content: "";
   display: table;
