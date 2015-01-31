@@ -2637,11 +2637,6 @@ ol {
 details summary::-webkit-details-marker {
   color: #00A4E3; }
 
-/*////////////////////////////////////////////////////////*/
-/*//                                                    //*/
-/*//    Forms                                           //*/
-/*//                                                    //*/
-/*////////////////////////////////////////////////////////*/
 textarea:focus, textarea:active,
 input[type="date"]:focus,
 input[type="date"]:active,
@@ -2901,177 +2896,98 @@ input[type="checkbox"] {
   background-image: -webkit-linear-gradient(bottom, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 49.51%, rgba(255, 255, 255, 0.05) 50.24%, rgba(255, 255, 255, 0.05) 100%);
   background-image: linear-gradient(to top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.05) 49.51%, rgba(255, 255, 255, 0.05) 50.24%, rgba(255, 255, 255, 0.05) 100%); }
 
-.l-radios,
-.l-checkboxes {
+.radio-group,
+.checkbox-group {
   clear: both;
   width: 100%;
   border: 0; }
-  .l-radios:after,
-  .l-checkboxes:after {
+  .radio-group:after,
+  .checkbox-group:after {
     content: "";
     display: table;
     clear: both; }
-  .l-radios .l-radio,
-  .l-radios .l-checkbox,
-  .l-checkboxes .l-radio,
-  .l-checkboxes .l-checkbox {
-    float: left;
-    margin-right: 1.5rem; }
-
-.l-checkbox,
-.l-radio {
-  display: block;
-  min-height: 20px;
-  margin: 0 0 5px;
-  padding-bottom: 1rem; }
-  .l-checkbox label,
-  .l-radio label {
-    display: block;
-    float: left;
-    vertical-align: middle;
-    margin-top: 2px;
-    padding-left: 0; }
-  .l-checkbox input[type="checkbox"],
-  .l-checkbox input[type="radio"],
-  .l-radio input[type="checkbox"],
-  .l-radio input[type="radio"] {
+  .radio-group input[type="checkbox"],
+  .radio-group input[type="radio"],
+  .checkbox-group input[type="checkbox"],
+  .checkbox-group input[type="radio"] {
     position: absolute;
-    left: -1000em;
-    /* Unfinished
-    &.focus + label::before,
-    &:focus + label::before {
-      color: $color-gray-4;
-    }
-    &:active + label::before,
-    &:checked:focus + label::before,
-    &.focus:checked + label::before {
-      color: $color-blue;
-    }
-    &:disabled:focus + label::before {
-    }
-    &:checked:disabled:focus + label::before {
-    }
-    */ }
-    .l-checkbox input[type="checkbox"] + label::before,
-    .l-checkbox input[type="radio"] + label::before,
-    .l-radio input[type="checkbox"] + label::before,
-    .l-radio input[type="radio"] + label::before {
-      content: "";
-      position: relative;
-      display: inline-block;
-      margin-right: 5px;
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      vertical-align: middle; }
-    .l-checkbox input[type="checkbox"]:checked, .l-checkbox input[type="checkbox"]:focus,
-    .l-checkbox input[type="radio"]:checked,
-    .l-checkbox input[type="radio"]:focus,
-    .l-radio input[type="checkbox"]:checked,
-    .l-radio input[type="checkbox"]:focus,
-    .l-radio input[type="radio"]:checked,
-    .l-radio input[type="radio"]:focus {
+    left: -1000em; }
+    .ltie9 .radio-group input[type="checkbox"], .ltie9
+    .radio-group input[type="radio"], .ltie9
+    .checkbox-group input[type="checkbox"], .ltie9
+    .checkbox-group input[type="radio"] {
+      position: static; }
+    .radio-group input[type="checkbox"] + label,
+    .radio-group input[type="radio"] + label,
+    .checkbox-group input[type="checkbox"] + label,
+    .checkbox-group input[type="radio"] + label {
+      margin-right: 1.2rem; }
+      .radio-group input[type="checkbox"] + label::before,
+      .radio-group input[type="radio"] + label::before,
+      .checkbox-group input[type="checkbox"] + label::before,
+      .checkbox-group input[type="radio"] + label::before {
+        display: inline-block;
+        font: normal normal normal 14px/1 FontAwesome;
+        font-size: inherit;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        color: #CCCCCC;
+        font-weight: bold;
+        font-size: 21px;
+        vertical-align: middle; }
+    .radio-group input[type="checkbox"]:checked, .radio-group input[type="checkbox"]:focus,
+    .radio-group input[type="radio"]:checked,
+    .radio-group input[type="radio"]:focus,
+    .checkbox-group input[type="checkbox"]:checked,
+    .checkbox-group input[type="checkbox"]:focus,
+    .checkbox-group input[type="radio"]:checked,
+    .checkbox-group input[type="radio"]:focus {
       outline: none !important; }
-  .l-checkbox input[type="radio"] + label::before,
-  .l-radio input[type="radio"] + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #CCCCCC; }
-  .l-checkbox input[type="radio"]:checked + label::before,
-  .l-radio input[type="radio"]:checked + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #00A4E3; }
-  .l-checkbox input[type="radio"]:disabled + label::before,
-  .l-radio input[type="radio"]:disabled + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #CCCCCC;
-    opacity: 0.5; }
-  .l-checkbox input[type="radio"]:checked:disabled + label::before,
-  .l-radio input[type="radio"]:checked:disabled + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #00A4E3;
-    opacity: 0.5; }
-  .l-checkbox input[type="checkbox"] + label::before,
-  .l-radio input[type="checkbox"] + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #CCCCCC; }
-  .l-checkbox input[type="checkbox"]:checked + label::before,
-  .l-radio input[type="checkbox"]:checked + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #00A4E3; }
-  .l-checkbox input[type="checkbox"]:disabled + label::before,
-  .l-radio input[type="checkbox"]:disabled + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #CCCCCC;
-    color: #CCCCCC;
-    opacity: 0.7; }
-  .l-checkbox input[type="checkbox"]:checked:disabled + label::before,
-  .l-radio input[type="checkbox"]:checked:disabled + label::before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    content: "";
-    font-size: 21px;
-    font-weight: bold;
-    color: #00A4E3;
-    color: #CCCCCC; }
+    .radio-group input[type="checkbox"]:focus + label,
+    .radio-group input[type="radio"]:focus + label,
+    .checkbox-group input[type="checkbox"]:focus + label,
+    .checkbox-group input[type="radio"]:focus + label {
+      color: #000; }
+      .radio-group input[type="checkbox"]:focus + label::before,
+      .radio-group input[type="radio"]:focus + label::before,
+      .checkbox-group input[type="checkbox"]:focus + label::before,
+      .checkbox-group input[type="radio"]:focus + label::before {
+        color: #999999; }
+    .radio-group input[type="checkbox"]:active + label::before, .radio-group input[type="checkbox"]:focus:active + label::before, .radio-group input[type="checkbox"]:checked + label::before,
+    .radio-group input[type="radio"]:active + label::before,
+    .radio-group input[type="radio"]:focus:active + label::before,
+    .radio-group input[type="radio"]:checked + label::before,
+    .checkbox-group input[type="checkbox"]:active + label::before,
+    .checkbox-group input[type="checkbox"]:focus:active + label::before,
+    .checkbox-group input[type="checkbox"]:checked + label::before,
+    .checkbox-group input[type="radio"]:active + label::before,
+    .checkbox-group input[type="radio"]:focus:active + label::before,
+    .checkbox-group input[type="radio"]:checked + label::before {
+      color: #00A4E3; }
+    .radio-group input[type="checkbox"]:disabled + label::before,
+    .radio-group input[type="radio"]:disabled + label::before,
+    .checkbox-group input[type="checkbox"]:disabled + label::before,
+    .checkbox-group input[type="radio"]:disabled + label::before {
+      color: #CCCCCC !important;
+      opacity: 0.5; }
+
+.radio-group input[type="radio"] + label::before {
+  margin-right: 5px;
+  content: ""; }
+.radio-group input[type="radio"]:checked + label::before {
+  content: ""; }
+
+.checkbox-group input[type="checkbox"] + label::before {
+  margin-right: 6px;
+  content: "";
+  padding-right: 1.5px; }
+.checkbox-group input[type="checkbox"]:checked + label::before {
+  content: "";
+  padding-right: 0;
+  top: -1px;
+  left: -1px;
+  position: relative; }
 
 legend {
   font-family: Arial, Helvetica, sans-serif;
