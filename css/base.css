@@ -3506,15 +3506,15 @@ address {
   pointer-events: none; }
 
 .btn-group > .btn + .btn,
-.btn-group > .btn + .btn-group,
+.btn-group > .btn + .btn-group > .btn,
 .btn-group > .btn-group + .btn,
-.btn-group > .btn-group + .btn-group {
+.btn-group > .btn-group + .btn-group > .btn {
   border-left-width: 1px; }
 
 .btn-group-vertical > .btn + .btn,
-.btn-group-vertical > .btn + .btn-group,
+.btn-group-vertical > .btn + .btn-group > .btn,
 .btn-group-vertical > .btn-group + .btn,
-.btn-group-vertical > .btn-group + .btn-group {
+.btn-group-vertical > .btn-group + .btn-group > .btn {
   border-top-width: 1px; }
 
 .btn-link {
