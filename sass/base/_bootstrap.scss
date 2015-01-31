@@ -4,12 +4,12 @@
 //@import "../bootstrap/alerts";                   folded into base/alerts
 //@import "../bootstrap/badges";
 //@import "../bootstrap/breadcrumbs";
-@import "../bootstrap/converted/button-groups";    // 
+@import "../bootstrap/converted/button-groups";    // adds button-groups modified to add sliver between btns
 @import "../bootstrap/converted/buttons";          // color contexts in base/buttons proper
                                                    //   adds button-link, button sizes, button-block
 //@import "../bootstrap/carousel";
 @import "../bootstrap/converted/close";            // font-awesome close icon
-//@import "../bootstrap/code";
+@import "../bootstrap/code";
 //@import "../bootstrap/component-animations";
 @import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
 //@import "../bootstrap/forms";
