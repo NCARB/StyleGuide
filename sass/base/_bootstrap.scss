@@ -1,17 +1,17 @@
 @import "../bootstrap/mixins";
 @import "../bootstrap/converted/variables";        // adds serif and monospaced fonts
 @import "../bootstrap/converted/type";             // a surprizing number of basic element stylings
-//@import "../bootstrap/alerts";				   folded into base/alerts
+//@import "../bootstrap/alerts";                   folded into base/alerts
 //@import "../bootstrap/badges";
 //@import "../bootstrap/breadcrumbs";
 @import "../bootstrap/converted/button-groups";    // 
-@import "../bootstrap/converted/buttons";	       // color contexts in base/buttons proper
-											       //   adds button-link, button sizes, button-block
+@import "../bootstrap/converted/buttons";          // color contexts in base/buttons proper
+                                                   //   adds button-link, button sizes, button-block
 //@import "../bootstrap/carousel";
 @import "../bootstrap/converted/close";            // font-awesome close icon
 //@import "../bootstrap/code";
 //@import "../bootstrap/component-animations";
-//@import "../bootstrap/dropdowns";
+@import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
 //@import "../bootstrap/forms";
 @import "../bootstrap/converted/glyphicons";       // uses font-awesome
 //@import "../bootstrap/grid";                     completely reimplimented in base
@@ -24,7 +24,7 @@
 //@import "../bootstrap/modals";
 //@import "../bootstrap/navbar";
 @import "../bootstrap/converted/navs";
-//@import "../bootstrap/normalize"; // we already have this. Actually, our normalize has more stuff in it
+//@import "../bootstrap/normalize";                we already have this; our normalize has more stuff in it
 //@import "../bootstrap/pager";
 //@import "../bootstrap/pagination";
 //@import "../bootstrap/panels";

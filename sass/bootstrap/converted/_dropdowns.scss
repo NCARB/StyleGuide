@@ -1,0 +1,22 @@
+@import "../dropdowns";
+
+.caret {
+  border: none;
+  display: inline;
+  vertical-align: inherit;
+  &:before {
+    @include fa-icon();
+    content: $fa-var-caret-down;
+  }
+}
+
+.dropup,
+.navbar-fixed-bottom .dropdown {
+  // Reverse the caret
+  .caret {
+    border: none;
+    &:before {
+      content: $fa-var-caret-up;
+    }
+  }
+}
