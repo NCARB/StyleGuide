@@ -2,6 +2,12 @@
 /**
  * Copyright (C) 2014 NCARB, National Council of Architectural Registration Boards
  */
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -178,6 +184,247 @@ td,
 th {
   padding: 0; }
 
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
+img {
+  vertical-align: middle; }
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto; }
+
+.img-rounded {
+  border-radius: 0; }
+
+.img-thumbnail {
+  padding: 4px;
+  line-height: 1.25;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  display: inline-block;
+  max-width: 100%;
+  height: auto; }
+
+.img-circle {
+  border-radius: 50%; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0; }
+
+.sr-only-focusable:active, .sr-only-focusable:focus {
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  clip: auto; }
+
+html {
+  position: relative;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  color: #444444;
+  background-color: #00A4E3;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent; }
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 100%;
+  line-height: 1.25;
+  color: #444444; }
+
+:focus {
+  outline: none; }
+
+.strip-top {
+  width: 100%;
+  height: 4px;
+  background: #00A4E3; }
+  @media (min-width: 768px) {
+    .strip-top {
+      height: 8px; } }
+
+.js .skip {
+  /* Accessible hide */
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  z-index: 2; }
+  .js .skip:focus {
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    background-color: #444444;
+    padding: 10px;
+    line-height: 1;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    clip: auto !important;
+    overflow: visible; }
+
+.no-js .skip {
+  display: block;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 24px;
+  line-height: 1.5rem;
+  letter-spacing: 0.008rem;
+  margin: 0;
+  padding: 0.9375rem 0 0.625rem;
+  background-color: #fff;
+  padding: 20px 20px 0;
+  text-align: center; }
+
+.canvas {
+  background-color: #fff;
+  -webkit-transform: none;
+  -moz-transform: none;
+  -ms-transform: none;
+  -o-transform: none;
+  transform: none;
+  -webkit-transition: all 0.33s ease-out;
+  -moz-transition: all 0.33s ease-out;
+  transition: all 0.33s ease-out; }
+  .canvas.is-pushed {
+    -webkit-transform: translate3d(16em, 0, 0);
+    -moz-transform: translate3d(16em, 0, 0);
+    -ms-transform: translate3d(16em, 0, 0);
+    -o-transform: translate3d(16em, 0, 0);
+    transform: translate3d(16em, 0, 0); }
+
+.canvas * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+.canvas-blackout {
+  display: none;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: transparent;
+  z-index: 888; }
+  .canvas.is-pushed .canvas-blackout {
+    display: block; }
+    .canvas.is-pushed .canvas-blackout:active ~ .header .off-canvas {
+      background-color: #97958C; }
+
+.canvas-is-pushed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible; }
+
+main {
+  display: block;
+  padding: 20px;
+  background: url(i/mainbg.gif) repeat-x;
+  *zoom: 1; }
+  main:before, main:after {
+    content: "";
+    display: table; }
+  main:after {
+    clear: both; }
+  main .main-well {
+    margin-bottom: 25px; }
+
+/* Device Adaption
+   (throwing a bone to IE10 which ignores the
+    meta viewport tag in favor of this)
+---------------------------------------- */
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom; }
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom; }
+.clear {
+  *zoom: 1; }
+  .clear:before, .clear:after {
+    content: "";
+    display: table; }
+  .clear:after {
+    clear: both; }
+
+@media (min-width: 768px) {
+  .canvas {
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none; }
+    .canvas.is-pushed {
+      -webkit-transform: translate3d(0, 0, 0);
+      -moz-transform: translate3d(0, 0, 0);
+      -ms-transform: translate3d(0, 0, 0);
+      -o-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0); }
+
+  .canvas-blackout {
+    display: none;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: transparent; }
+
+  html {
+    background-color: #EEEAE3; }
+
+  main {
+    position: relative; } }
+@media (min-width: 1260px) {
+  .canvas {
+    margin: 0 auto;
+    width: 1000px; }
+
+  main {
+    position: relative; } }
 /* Color Shortcuts
  * -------------------------- */
 .white {
@@ -413,12 +660,6 @@ th {
 
 .green-bg {
   background-color: #39B549; }
-
-.body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
-  margin-bottom: 10px;
-  color: #444444; }
 
 /*  Typography
 ---------------------------------------- */
@@ -2008,186 +2249,6 @@ img {
     margin-left: -3rem; }
     .flex-lg-gutters-wider > .flex-item {
       padding-left: 3rem; } }
-html {
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  color: #444444;
-  background-color: #00A4E3;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-smoothing: antialiased;
-  -webkit-tap-highlight-color: transparent; }
-
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 100%;
-  line-height: 1.25;
-  color: #444444; }
-
-:focus {
-  outline: none; }
-
-.strip-top {
-  width: 100%;
-  height: 4px;
-  background: #00A4E3; }
-  @media (min-width: 768px) {
-    .strip-top {
-      height: 8px; } }
-
-.js .skip {
-  /* Accessible hide */
-  position: absolute;
-  clip: rect(1px 1px 1px 1px);
-  /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  padding: 0;
-  margin: 0;
-  border: 0;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  z-index: 2; }
-  .js .skip:focus {
-    height: auto;
-    width: auto;
-    top: 0;
-    left: 50%;
-    margin-left: -80px;
-    background-color: #444444;
-    padding: 10px;
-    line-height: 1;
-    color: #fff;
-    font-weight: bold;
-    font-size: 16px;
-    clip: auto !important;
-    overflow: visible; }
-
-.no-js .skip {
-  display: block;
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.9375rem 0 0.625rem;
-  background-color: #fff;
-  padding: 20px 20px 0;
-  text-align: center; }
-
-.canvas {
-  background-color: #fff;
-  -webkit-transform: none;
-  -moz-transform: none;
-  -ms-transform: none;
-  -o-transform: none;
-  transform: none;
-  -webkit-transition: all 0.33s ease-out;
-  -moz-transition: all 0.33s ease-out;
-  transition: all 0.33s ease-out; }
-  .canvas.is-pushed {
-    -webkit-transform: translate3d(16em, 0, 0);
-    -moz-transform: translate3d(16em, 0, 0);
-    -ms-transform: translate3d(16em, 0, 0);
-    -o-transform: translate3d(16em, 0, 0);
-    transform: translate3d(16em, 0, 0); }
-
-.canvas * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-.canvas-blackout {
-  display: none;
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  background-color: transparent;
-  z-index: 888; }
-  .canvas.is-pushed .canvas-blackout {
-    display: block; }
-    .canvas.is-pushed .canvas-blackout:active ~ .header .off-canvas {
-      background-color: #97958C; }
-
-.canvas-is-pushed {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  overflow: visible; }
-
-main {
-  display: block;
-  padding: 20px;
-  background: url(i/mainbg.gif) repeat-x;
-  *zoom: 1; }
-  main:before, main:after {
-    content: "";
-    display: table; }
-  main:after {
-    clear: both; }
-  main .main-well {
-    margin-bottom: 25px; }
-
-/* Device Adaption
-   (throwing a bone to IE10 which ignores the
-    meta viewport tag in favor of this)
----------------------------------------- */
-@viewport {
-  zoom: 1.0;
-  width: extend-to-zoom; }
-@-ms-viewport {
-  zoom: 1.0;
-  width: extend-to-zoom; }
-.clear {
-  *zoom: 1; }
-  .clear:before, .clear:after {
-    content: "";
-    display: table; }
-  .clear:after {
-    clear: both; }
-
-@media (min-width: 768px) {
-  .canvas {
-    -webkit-transition: none;
-    -moz-transition: none;
-    transition: none; }
-    .canvas.is-pushed {
-      -webkit-transform: translate3d(0, 0, 0);
-      -moz-transform: translate3d(0, 0, 0);
-      -ms-transform: translate3d(0, 0, 0);
-      -o-transform: translate3d(0, 0, 0);
-      transform: translate3d(0, 0, 0); }
-
-  .canvas-blackout {
-    display: none;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: transparent; }
-
-  html {
-    background-color: #EEEAE3; }
-
-  main {
-    position: relative; } }
-@media (min-width: 1260px) {
-  .canvas {
-    margin: 0 auto;
-    width: 1000px; }
-
-  main {
-    position: relative; } }
 /* Links
 ---------------------------------------- */
 a {

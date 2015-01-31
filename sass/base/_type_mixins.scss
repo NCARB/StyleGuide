@@ -1,3 +1,5 @@
+@import "type_sizes";
+@import "colors";
 // https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_fontSize.scss
 // Function for converting a px based font-size to rem.
 @function calculateRem($size) {

@@ -6,18 +6,19 @@
 @import "bourbon/bourbon";
 
 // Base
-@import "base/normalize";
 @import "base/colors";
+@import "base/type_sizes";
+@import "base/type_mixins";
+@import "base/breakpoints";
+@import "base/normalize";
+@import "bootstrap/converted/scaffolding";
+@import "base/shell";
 @import "base/color_shortcuts";
 @import "base/fonts";
 @import "base/functions";
-@import "base/breakpoints";
-@import "base/type_sizes";
-@import "base/type_mixins";
 @import "base/typography";
 @import "base/images";
 @import "base/grid";
-@import "base/shell";
 
 @import "base/links";
 @import "base/buttons";
