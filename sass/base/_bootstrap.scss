@@ -33,11 +33,11 @@
 //@import "../bootstrap/progress-bars";
 //@import "../bootstrap/responsive-embed";
 //@import "../bootstrap/responsive-utilities";
-//@import "../bootstrap/converted/scaffolding";             due to core stylings, imported at top of base directly
+//@import "../bootstrap/converted/scaffolding";    due to core stylings, imported at top of base directly
 @import "../bootstrap/converted/tables";
 //@import "../bootstrap/theme";
 //@import "../bootstrap/thumbnails";
 //@import "../bootstrap/tooltip";
 //@import "../bootstrap/type";
-//@import "../bootstrap/utilities";
+@import "../bootstrap/converted/utilities";        //bourbon clearfix
 @import "../bootstrap/wells";
