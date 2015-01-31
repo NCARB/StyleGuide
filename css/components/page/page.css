@@ -437,7 +437,7 @@ a.level-one:hover {
     font-weight: normal; }
 
 @media (min-width: 768px) {
-  .well {
+  .main-well {
     float: left;
     width: 67%;
     margin-bottom: 45px; }
@@ -576,7 +576,7 @@ a.level-one:hover {
       .copyright a:hover {
         text-decoration: underline; } }
 @media (min-width: 960px) {
-  .well {
+  .main-well {
     width: 73%; }
 
   .rail {

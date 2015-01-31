@@ -543,7 +543,7 @@ a.level-one:hover {
 }
 
 @include breakpoint(sm) {
-    .well {
+    .main-well {
         float:left;
         width:67%;
         margin-bottom:45px;
@@ -721,7 +721,7 @@ a.level-one:hover {
 }
 
 @include breakpoint(md) {
-    .well {
+    .main-well {
         width:73%;
     }
     .rail {
