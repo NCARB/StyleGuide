@@ -70,6 +70,7 @@
 
 // Examples:
 //  .flex-3 > .flex-2
+//  .flex-full
 //  .flex-1of2
 //  .flex-md-3 > .flex-md-2
 //  .flex-md-3 > .flex-2
@@ -94,41 +95,32 @@
             width: percentage($j / $i);
         }
       }
-      .flex#{$name}-#{$i} > .flex-item.flex-#{$j} {
+      $number_name: ".flex-#{$j}";
+      @if $j == 1 {
+        $number_name: "";
+      }
+      .flex#{$name}-#{$i} > .flex-item#{$number_name} {
         @extend %percent#{$name}#{$percent-key};
+      }
+      @if(not($name == "")) {  
+        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
+          @extend %percent#{$name}#{$percent-key};
+        }
       }
       @if $j < $i and not map-has-key($ofs, $percent-key) {
         $ofs: map-merge($ofs, ($percent-key: true));
-        .flex#{$name}-#{$j}of#{$i} {
-          width: percentage($j / $i) !important;
+        .flex-container > .flex-item.flex#{$name}-#{$j}of#{$i} {
+          @extend %percent#{$name}#{$percent-key};
         }
       }
       $j: $j + 1;
     }
   }
-  @if(not($name == "")) {  
-    $percents-named: ();
-    $i: 1;
-    @while $i < 12 {
-      $i: $i + 1;
-      $j: 1;
-      @while $j < $i {
-        $percent-key: round(100 * $j / $i);
-        @if not map-has-key($percents-named, $percent-key) {
-          $percents-named: map-merge($percents-named, ($percent-key: true));
-          %percent#{$name}#{$percent_key}-named {
-              width: percentage($j / $i);
-          }
-        }
-        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
-          @extend %percent#{$name}#{$percent-key}-named;
-        }
-        $j: $j + 1;
-      }
-    }
-    .flex-item.flex#{$name}-full {
-      width: 100% !important;
-    }
+  %width100#{$name} {
+    width: 100%;
+  }
+  .flex-container > .flex-item.flex#{$name}-full {
+    @extend %width100#{$name};
   }
   $name_: $name;
   @if $name == "" {
@@ -146,7 +138,6 @@
   %relative#{$name} {
     position: relative;
   }
-  $i: 0;
   .col#{$name}-push-0 {
     @extend %relative#{$name};
     left: auto;
@@ -155,6 +146,7 @@
     @extend %relative#{$name};
     right: auto;
   }
+  $i: 0;
   @while $i < 12 {
     $i: $i + 1;
     $percent-key: round(100 * $i / 12);
@@ -164,7 +156,7 @@
       }
     } @else {
        .col#{$name}-#{$i} {
-        width: 100%;
+        @extend %width100#{$name_};
       }
     }
 
