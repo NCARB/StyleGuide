@@ -33,7 +33,7 @@ ol {
   @extend %list;
 }
 
-.l-list-bullet {
+.list-bullet {
   @extend %list;
   margin-bottom: $margin-bottom-default;
 
@@ -43,7 +43,7 @@ ol {
   }
 }
 
-.l-list-ordered {
+.list-ordered {
   margin-bottom: $margin-bottom-default;
 
   > li {
@@ -55,7 +55,7 @@ ol {
 
 
 // INLINE
-.l-list-inline {
+.list-inline {
   @extend %list;
   margin-bottom: $margin-bottom-default;
 
@@ -65,7 +65,7 @@ ol {
 }
 
 // COMMA
-.l-list-comma {
+.list-comma {
   @extend %list;
 
   > li {
@@ -76,7 +76,7 @@ ol {
 }
 
 // MEDIA OBJECT
-.l-list-media-object {
+.list-media-object {
   @include display(flex);
   @include flex-flow(row wrap);
   @include align-items(flex-start);
@@ -107,7 +107,7 @@ ol {
 }
 
 // MEDIA
-.l-list-media {
+.list-media {
   .header {
     @include type-5();
     color: $color-blue;

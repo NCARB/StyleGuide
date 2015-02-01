@@ -4,16 +4,16 @@
   margin-bottom: 10px;
   color: #444444; }
 
-.l-nav.nav-menu-01 {
+.nav.nav-menu-01 {
   background-color: #00A4E3; }
-  .l-nav.nav-menu-01 > ul {
+  .nav.nav-menu-01 > ul {
     list-style: none;
     margin: 0;
     padding: 0; }
-  .l-nav.nav-menu-01 > ul > li {
+  .nav.nav-menu-01 > ul > li {
     position: relative;
     border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-  .js .l-nav.nav-menu-01 {
+  .js .nav.nav-menu-01 {
     position: absolute;
     top: 0px;
     bottom: 0px;
@@ -21,7 +21,7 @@
     width: 16em;
     z-index: 0;
     box-shadow: -7px 0 15px -7px rgba(0, 0, 0, 0.25) inset; }
-  .l-nav.nav-menu-01 .level-one {
+  .nav.nav-menu-01 .level-one {
     position: relative;
     display: block;
     text-decoration: none;
@@ -30,32 +30,32 @@
     padding: 13px 10px 12px 45px;
     font-weight: bold;
     font-size: 16px; }
-  .l-nav.nav-menu-01 a.level-one:hover {
+  .nav.nav-menu-01 a.level-one:hover {
     color: #fff;
     background-color: #007fb0;
     text-decoration: none; }
   @media (min-width: 960px) {
-    .l-nav.nav-menu-01 > ul {
+    .nav.nav-menu-01 > ul {
       display: table;
       width: auto;
       margin-left: 10px;
       margin-right: 5px; }
-    .l-nav.nav-menu-01 > ul > li {
+    .nav.nav-menu-01 > ul > li {
       display: table-cell;
       width: auto;
       float: none; }
-      .lt-ie8 .l-nav.nav-menu-01 > ul > li {
+      .lt-ie8 .nav.nav-menu-01 > ul > li {
         display: block;
         float: left;
         width: 120px; }
-    .l-nav.nav-menu-01 .level-one {
+    .nav.nav-menu-01 .level-one {
       padding-right: 5px;
       font-size: 16px;
       font-weight: normal;
       text-transform: none;
       text-align: left;
       border: 0; }
-      .l-nav.nav-menu-01 .level-one:hover:before {
+      .nav.nav-menu-01 .level-one:hover:before {
         content: '';
         position: absolute;
         top: -2px;
