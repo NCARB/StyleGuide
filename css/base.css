@@ -4586,24 +4586,22 @@ output {
   vertical-align: middle; }
 
 .input-group-addon {
-  padding: 10px 15px;
+  padding: 10px 0.5em;
   font-size: 16px;
-  font-weight: normal;
+  font-weight: bold;
   line-height: 1;
-  color: #fff;
   text-align: center;
-  background-color: #E2E2E2;
   border-radius: 0; }
   .input-group-addon.input-sm,
   .input-group-sm > .input-group-addon,
   .input-group-sm > .input-group-btn > .input-group-addon.btn {
-    padding: 6px 5px;
+    padding: 6px 0.5em;
     font-size: 14px;
     border-radius: 0; }
   .input-group-addon.input-lg,
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
-    padding: 10px 16px;
+    padding: 10px 0.5em;
     font-size: 18px;
     border-radius: 0; }
   .input-group-addon input[type="radio"],
