@@ -154,6 +154,17 @@ output {
 //   height: auto;
 // }
 
+select,
+textarea,
+input {
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    background-color: $input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
+}
 
 // Search inputs in iOS
 //
@@ -517,7 +528,7 @@ output {
     .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding-top: ($padding-base-vertical + 1); // Default padding plus a border
+      padding: ($padding-base-vertical + 1); // Default padding plus a border
     }
   }
 
@@ -536,14 +547,14 @@ output {
   .form-group-lg {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding-top: (($padding-large-vertical * $line-height-large) + 1);
+        padding: (($padding-large-vertical * $line-height-large) + 1);
       }
     }
   }
   .form-group-sm {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding-top: ($padding-small-vertical + 1);
+        padding: ($padding-small-vertical + 1);
       }
     }
   }

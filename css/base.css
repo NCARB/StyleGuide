@@ -4485,6 +4485,17 @@ output {
   line-height: 1.25;
   color: #fff; }
 
+select[disabled], select[readonly], fieldset[disabled] select,
+textarea[disabled],
+textarea[readonly], fieldset[disabled]
+textarea,
+input[disabled],
+input[readonly], fieldset[disabled]
+input {
+  cursor: not-allowed;
+  background-color: #E2E2E2;
+  opacity: 1; }
+
 .form-group {
   margin-bottom: 15px; }
   .form-group + .btn, .form-group > .btn {
@@ -4653,15 +4664,15 @@ output {
   .form-horizontal .control-label {
     text-align: right;
     margin-bottom: 0;
-    padding-top: 11px; } }
+    padding: 11px; } }
 .form-horizontal .has-feedback .form-control-feedback {
   right: 15px; }
 @media (min-width: 768px) {
   .form-horizontal .form-group-lg .control-label {
-    padding-top: 14.3px; } }
+    padding: 14.3px; } }
 @media (min-width: 768px) {
   .form-horizontal .form-group-sm .control-label {
-    padding-top: 7px; } }
+    padding: 7px; } }
 
 .glyphicon {
   position: relative;
