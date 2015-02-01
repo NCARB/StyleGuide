@@ -120,7 +120,7 @@
   letter-spacing: 0.008rem;
   text-transform: uppercase;
   margin: 0;
-  padding: calculateRem(20px) 0 calculateRem(10px);
+  padding: calculateRem(10px) 0 ;
 }
 
 @mixin sub-section-title() {

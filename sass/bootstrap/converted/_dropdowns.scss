@@ -3,10 +3,12 @@
 .caret {
   border: none;
   display: inline;
-  vertical-align: inherit;
+  vertical-align: baseline;
   &:before {
     @include fa-icon();
     content: $fa-var-caret-down;
+    position: relative;
+    top: 3px;
   }
 }
 
@@ -17,6 +19,7 @@
     border: none;
     &:before {
       content: $fa-var-caret-up;
+      top: -3px;
     }
   }
 }

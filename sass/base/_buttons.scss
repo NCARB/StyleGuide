@@ -20,7 +20,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 @mixin button-colors($bgcolor, $color: tint($bgcolor, 90%)) {
   background: $bgcolor no-repeat 100% center;
   color: $color;
-  border-color: darken($bgcolor, 10%); // btn-group support
+  border-color: darken($bgcolor, 5%); // btn-group support
   border-style: solid;
 
   &:focus,
@@ -48,6 +48,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   text-align: center;
+  vertical-align: middle;
   border: 0;
   cursor: pointer;
   background-image: none;
@@ -80,7 +81,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   }
   &.btn-continue:after {
     font-weight: bold;
-      content: $fa-var-angle-right;
+    content: $fa-var-angle-right;
   }
   &.btn-plus:after {
     content: $fa-var-plus;

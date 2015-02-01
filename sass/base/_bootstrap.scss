@@ -12,10 +12,10 @@
 @import "../bootstrap/code";
 //@import "../bootstrap/component-animations";
 @import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
-//@import "../bootstrap/forms";
+@import "../bootstrap/converted/forms";
 @import "../bootstrap/converted/glyphicons";       // uses font-awesome
 //@import "../bootstrap/grid";                     completely reimplimented in base
-//@import "../bootstrap/input-groups";
+@import "../bootstrap/converted/input-groups";
 //@import "../bootstrap/jumbotron";
 //@import "../bootstrap/labels";
 //@import "../bootstrap/list-group";
