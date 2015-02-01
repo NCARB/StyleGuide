@@ -2463,13 +2463,8 @@ input[type="submit"].btn-inline {
   ::-moz-focus-inner {
     border: 0;
     padding: 0; } }
-/*////////////////////////////////////////////////////////*/
-/*//                                                    //*/
-/*//    Lists                                           //*/
-/*//                                                    //*/
-/*////////////////////////////////////////////////////////*/
 ul,
-ol, .list-bullet, .list-inline, .list-comma {
+ol, .list-bullet, .list-ordered, .list-inline, .list-comma {
   list-style: none;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
@@ -2478,36 +2473,44 @@ ol, .list-bullet, .list-inline, .list-comma {
   line-height: 1.25rem;
   margin: 0;
   padding: 0 0 1rem;
-  margin: 0;
+  margin: 0 0 0 1rem;
   padding: 0; }
   ul > li,
-  ol > li, .list-bullet > li, .list-inline > li, .list-comma > li {
+  ol > li, .list-bullet > li, .list-ordered > li, .list-inline > li, .list-comma > li {
     line-height: 1.25;
     list-style-type: none;
     margin: 0;
     padding: 0;
     zoom: 1; }
 
-.list-bullet {
-  margin-bottom: 1rem; }
-  .list-bullet > li {
-    list-style-type: disc;
-    margin-left: 1.25rem; }
+.list-bullet > li, .list-ordered > li {
+  list-style-type: disc;
+  margin-left: 1.25rem; }
+  .list-bullet > li li, .list-ordered > li li {
+    margin-left: 0; }
 
-.list-ordered {
-  margin-bottom: 1rem; }
-  .list-ordered > li {
-    list-style-type: decimal;
-    margin-left: 1.25rem;
-    line-height: 1.25; }
+.list-bullet > li {
+  list-style-type: disc; }
+
+.list-ordered > li {
+  list-style-type: decimal; }
 
 .list-inline {
-  margin-bottom: 1rem; }
+  margin-left: -5px; }
   .list-inline > li {
-    display: inline; }
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px; }
 
-.list-comma > li:after {
-  content: ", "; }
+.list-comma {
+  margin-right: -4px;
+  display: inline; }
+  .list-comma > li {
+    display: inline; }
+    .list-comma > li:after {
+      content: ', '; }
+    .list-comma > li:last-child:after {
+      content: ''; }
 
 .list-media-object {
   display: -webkit-box;
