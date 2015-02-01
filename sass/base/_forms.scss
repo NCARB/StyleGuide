@@ -47,8 +47,7 @@ input[type="week"] {
   @include placeholder {
     font-family: $font_light;
     @include fontSize($type-M);
-    line-height: normal;
-    padding-top: 2px;
+    line-height: 1;
   }
 
   &.sized {

@@ -2275,15 +2275,6 @@ button.btn {
   -o-appearance: none;
   appearance: none; }
 
-input {
-  font-family: 16px; }
-
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none; }
-
 /* Hide inner focus effect in Firefox */
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -2732,8 +2723,7 @@ input[type="week"] {
     font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-size: 1rem;
-    line-height: normal;
-    padding-top: 2px; }
+    line-height: 1; }
   select::-moz-placeholder,
   textarea::-moz-placeholder,
   input[type="date"]::-moz-placeholder,
@@ -2752,8 +2742,7 @@ input[type="week"] {
     font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-size: 1rem;
-    line-height: normal;
-    padding-top: 2px; }
+    line-height: 1; }
   select:-moz-placeholder,
   textarea:-moz-placeholder,
   input[type="date"]:-moz-placeholder,
@@ -2772,8 +2761,7 @@ input[type="week"] {
     font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-size: 1rem;
-    line-height: normal;
-    padding-top: 2px; }
+    line-height: 1; }
   select:-ms-input-placeholder,
   textarea:-ms-input-placeholder,
   input[type="date"]:-ms-input-placeholder,
@@ -2792,8 +2780,7 @@ input[type="week"] {
     font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-size: 1rem;
-    line-height: normal;
-    padding-top: 2px; }
+    line-height: 1; }
   select.sized,
   textarea.sized,
   input[type="date"].sized,
