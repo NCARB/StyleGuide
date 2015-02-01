@@ -52,6 +52,9 @@
 </p>
 <dl>
   <dt><code>.flex-4 &gt;</code> just <code>.flex-item</code></dt>
+  <dd>An item the whole width of the container.</dd>
+
+  <dt><code>.flex-4 &gt; .flex-item</code></dt>
   <dd>An item one part the width of the container; here it&#8217;s 25%.</dd>
 
   <dt><code>.flex-4 &gt; .flex-2</code></dt>
@@ -60,10 +63,10 @@
   <dt><code>.flex-sm-2of3</code></dt>
   <dd>An item 66.66% the width of the container on a device tablet-size or larger.</dd>
 
-  <dt><code>.flex-md-full</code></dt>
-  <dd>An item 100% the width of the container on a browser of a regular screen or larger.</dd>
+  <dt><code>.flex-sm-2 .flex-md-full</code></dt>
+  <dd>An item two units wide on a device tablet-size and 100% the width of the container when the browser is regular desktop size or greater</dd>
 
-  <dt><code>.flex(-sm|-md|-lg)?-(full|([1-12]of)?[2-12])</code></dt>
+  <dt><code>.flex(-sm|-md|-lg)?-(full|([1-11]of)?[1-12])</code></dt>
   <dd>Pattern</dd>
 </dl>
 
@@ -83,21 +86,21 @@
 
 <h4><code>flex-container flex-2 flex-gutters</code></h4>
 <div class="flex-container flex-2 flex-gutters t-demo">
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code> Half</div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code> Half</div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code> Half</div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code> Half</div>
   </div>
 </div>
 
 <h4><code>flex-container flex-md-2 flex-md-gutters-wide</code></h4>
 <div class="flex-container flex-md-2 flex-gutters-wide t-demo">
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+  <div class="flex-item flex-md-1">
+    <div class="t-demo"><code>flex-item flex-md-1</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
+  <div class="flex-item flex-md-1">
+    <div class="t-demo"><code>flex-item flex-md-1</code> Full <span class="fa fa-long-arrow-right"></span> Half</div>
   </div>
 </div>
 
@@ -106,33 +109,17 @@
   <div class="flex-item flex-md-2">
     <div class="t-demo"><code>flex-item flex-md-2</code></div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
+  <div class="flex-item flex-md-1">
+    <div class="t-demo"><code>flex-item flex-md-1</code></div>
   </div>
   <div class="flex-item flex-md-3">
     <div class="t-demo"><code>flex-item flex-md-3</code></div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
-  </div>
-  <div class="flex-item flex-full">
-    <div class="t-demo"><code>flex-item flex-full</code></div>
-  </div>
-</div>
-
-<h4><code>flex-container flex-md-4 flex-gutters</code></h4>
-<div class="flex-container flex-md-4 flex-gutters t-demo">
-  <div class="flex-item flex-md-2">
-    <div class="t-demo"><code>flex-item flex-md-2</code></div>
+  <div class="flex-item flex-md-1">
+    <div class="t-demo"><code>flex-item flex-md-1</code></div>
   </div>
   <div class="flex-item">
     <div class="t-demo"><code>flex-item</code></div>
-  </div>
-  <div class="flex-item ">
-    <div class="t-demo"><code>flex-item</code></div>
-  </div> 
-  <div class="flex-item flex-full">
-    <div class="t-demo"><code>flex-item flex-full</code></div>
   </div>
 </div>
 
@@ -160,23 +147,23 @@
 
 <h4><code>flex-container flex-2 flex-sm-4 flex-md-6 flex-lg-9 flex-gutters</code></h4>
 <div class="flex-container flex-2 flex-sm-4 flex-md-6 flex-lg-9 flex-gutters t-demo">
-  <div class="flex-item flex-2">
-    <div class="t-demo"><code>flex-item flex-2</code></div>
+  <div class="flex-item flex-2 flex-sm-1">
+    <div class="t-demo"><code>flex-item flex-2 flex-sm-1</code></div>
   </div>
-  <div class="flex-item flex-md-2of3">
-    <div class="t-demo"><code>flex-item flex-md-2of3</code></div>
+  <div class="flex-item flex-sm-3 flex-md-2of3">
+    <div class="t-demo"><code>flex-item flex-sm-3 flex-md-2of3</code></div>
   </div>
-  <div class="flex-item ">
-    <div class="t-demo"><code>flex-item</code></div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code></div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code></div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code></div>
   </div>
-  <div class="flex-item">
-    <div class="t-demo"><code>flex-item</code></div>
+  <div class="flex-item flex-1">
+    <div class="t-demo"><code>flex-item flex-1</code></div>
   </div>
 </div>
 

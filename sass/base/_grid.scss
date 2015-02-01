@@ -1,7 +1,7 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
-.flex-container, .row {
+.flex-container, .row, .form-group {
   @include display(flex);
   @include flex-flow(row wrap);
   -ms-flex-wrap: wrap;  // IE10
@@ -12,9 +12,9 @@
 }
 
 .lt-ie10 {
-.flex-container, .row {
-    @include clearfix;
-  }
+  .flex-container, .row, .form-group {
+      @include clearfix;
+    }
 }
 
 %mobile-first {
@@ -70,7 +70,6 @@
 
 // Examples:
 //  .flex-3 > .flex-2
-//  .flex-full
 //  .flex-1of2
 //  .flex-md-3 > .flex-md-2
 //  .flex-md-3 > .flex-2
@@ -87,7 +86,7 @@
   @while $i < 12 {
     $i: $i + 1;
     $j: 1;
-    @while $j <= $i {
+    @while $j < $i {
       $percent-key: round(100 * $j / $i);
       @if not map-has-key($percents, $percent-key) {
         $percents: map-merge($percents, ($percent-key: true));
@@ -95,26 +94,41 @@
             width: percentage($j / $i);
         }
       }
-      @if $j == 1 {
-        .flex#{$name}-#{$i} > .flex-item {
-          @extend %percent#{$name}#{$percent-key};
-        }
-      } @else {
-        .flex#{$name}-#{$i} > .flex-item.flex-#{$j},
-        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
-          @extend %percent#{$name}#{$percent-key};
-        }
+      .flex#{$name}-#{$i} > .flex-item.flex-#{$j} {
+        @extend %percent#{$name}#{$percent-key};
       }
-      @if $j < $i {
-        .flex-container > .flex-item.flex#{$name}-#{$j}of#{$i} {
-          @extend %percent#{$name}#{$percent-key};
+      @if $j < $i and not map-has-key($ofs, $percent-key) {
+        $ofs: map-merge($ofs, ($percent-key: true));
+        .flex#{$name}-#{$j}of#{$i} {
+          width: percentage($j / $i) !important;
         }
       }
       $j: $j + 1;
     }
   }
-  .flex-container > .flex-item.flex#{$name}-full {
-    @extend %percent#{$name}100;
+  @if(not($name == "")) {  
+    $percents-named: ();
+    $i: 1;
+    @while $i < 12 {
+      $i: $i + 1;
+      $j: 1;
+      @while $j < $i {
+        $percent-key: round(100 * $j / $i);
+        @if not map-has-key($percents-named, $percent-key) {
+          $percents-named: map-merge($percents-named, ($percent-key: true));
+          %percent#{$name}#{$percent_key}-named {
+              width: percentage($j / $i);
+          }
+        }
+        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
+          @extend %percent#{$name}#{$percent-key}-named;
+        }
+        $j: $j + 1;
+      }
+    }
+    .flex-item.flex#{$name}-full {
+      width: 100% !important;
+    }
   }
   $name_: $name;
   @if $name == "" {
@@ -144,9 +158,16 @@
   @while $i < 12 {
     $i: $i + 1;
     $percent-key: round(100 * $i / 12);
-    .col#{$name}-#{$i} {
-      @extend %percent#{$name_}#{$percent-key};
-    }    
+    @if($i < 12) { 
+      .col#{$name}-#{$i} {
+        @extend %percent#{$name_}#{$percent-key};
+      }
+    } @else {
+       .col#{$name}-#{$i} {
+        width: 100%;
+      }
+    }
+
     .col#{$name}-offset-#{$i} {
       margin-left: percentage($i / 12);
     }
@@ -173,7 +194,7 @@
     $i: 0;
     @while $i < 12 {
       $i: $i + 1;
-      .col#{$name}-#{$i} {
+      .col-#{$name}-#{$i} {
         @extend %col;
       }
     }
