@@ -63,7 +63,13 @@
   <dt><code>.flex-md-full</code></dt>
   <dd>An item 100% the width of the container on a browser of a regular screen or larger.</dd>
 
-  <dt><code>.flex(-sm|-md|-lg)?-(full|([1-12]of)?[2-12])</code></dt>
+  <dt><code>.flex-hide</code></dt>
+  <dd>An item hidden until a show breakpoint is hit.</dd>
+
+  <dt><code>.flex-md-show</code></dt>
+  <dd>An item shown on a browser of a regular screen or larger.</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-(full|show|hide|([1-12]of)?[2-12])</code></dt>
   <dd>Pattern</dd>
 </dl>
 
@@ -161,6 +167,16 @@
   </div>
   <div class="flex-item">
     <div class="t-demo"><code>flex-item</code></div>
+  </div>
+</div>
+
+<h4><code>flex-container flex-2 flex-md-3 flex-gutters</code></h4>
+<div class="flex-container flex-2 flex-md-3 flex-gutters t-demo">
+  <div class="flex-item flex-2">
+    <div class="t-demo"><code>flex-item flex-2</code></div>
+  </div>
+  <div class="flex-item flex-hide flex-md-show">
+    <div class="t-demo"><code>flex-item flex-hide flex-md-show</code></div>
   </div>
 </div>
 

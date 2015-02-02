@@ -89,7 +89,7 @@
   @while $i < 12 {
     $i: $i + 1;
     $j: 1;
-    @while $j < $i {
+    @while $j <= $i {
       $percent-key: round(100 * $j / $i);
       @if not map-has-key($percents, $percent-key) {
         $percents: map-merge($percents, ($percent-key: true));
@@ -117,6 +117,12 @@
       }
       $j: $j + 1;
     }
+  }
+  .flex#{$name}-hide {
+    display: none;
+  }
+  .flex#{$name}-show {
+    display: block;
   }
   %width100#{$name} {
     width: 100%;
