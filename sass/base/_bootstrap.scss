@@ -9,15 +9,16 @@
                                                    //   adds button-link, button sizes, button-block
 //@import "../bootstrap/carousel";
 @import "../bootstrap/converted/close";            // font-awesome close icon
-@import "../bootstrap/code";                       // some basic element styling for code, pre, etc
+@import "../bootstrap/code";
 //@import "../bootstrap/component-animations";
 @import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
-@import "../bootstrap/converted/forms";
+@import "../bootstrap/converted/forms";            // form-control optional, control-label optional
+														// feedback-control-icon automatically iconed
 @import "../bootstrap/converted/glyphicons";       // uses font-awesome
 //@import "../bootstrap/grid";                     completely reimplimented in base
-@import "../bootstrap/converted/input-groups";
+@import "../bootstrap/converted/input-groups";     // tweaked the input-group-addon styles
 //@import "../bootstrap/jumbotron";
-//@import "../bootstrap/labels";
+@import "../bootstrap/converted/labels";           // use-text color, shape out better lower sized fonts
 //@import "../bootstrap/list-group";
 //@import "../bootstrap/media";
 //@import "../bootstrap/mixins";
@@ -26,7 +27,7 @@
 @import "../bootstrap/converted/navs";
 //@import "../bootstrap/normalize";                we already have this; our normalize has more stuff in it
 //@import "../bootstrap/pager";
-@import "../bootstrap/converted/pagination";
+@import "../bootstrap/converted/pagination";       // the blue bar on top effect
 //@import "../bootstrap/panels";
 //@import "../bootstrap/popovers";
 //@import "../bootstrap/print";

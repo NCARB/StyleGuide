@@ -1,0 +1,82 @@
+//
+// Labels
+// --------------------------------------------------
+
+.label {
+  display: inline;
+  padding: .15em .3em .2em;
+  font-size: 75%;
+  font-weight: bold;
+  line-height: 1;
+  color: $label-color;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  border: 2px solid transparent;
+  border-width: 2px 3px;
+  // [converter] extracted a& to a.label
+
+  // Empty labels collapse automatically (not available in IE8)
+  &:empty {
+    display: none;
+  }
+
+  // Quick fix for labels in buttons
+  .btn & {
+    position: relative;
+    top: -1px;
+  }
+}
+
+// Add hover effects, but only for links
+// a.label {
+//   &:hover,
+//   &:focus {
+//     color: $label-link-hover-color;
+//     text-decoration: none;
+//     cursor: pointer;
+//   }
+// }
+
+@mixin label-variant-custom($color, $background-color) {
+  color: $color;
+  background-color: $background-color;
+  border-color: $background-color;
+  &[href] {
+    &:hover,
+    &:focus {
+      color: $color;
+      background-color: darken($background-color, 10%);
+      border-color: darken($background-color, 10%);
+      text-decoration: none;
+    }
+  }
+}
+
+// Colors
+// Contextual variations (linked labels get darker on :hover)
+
+.label-default {
+  @include label-variant-custom($btn-default-color, $btn-default-bg);
+}
+
+.label-primary {
+  @include label-variant-custom($btn-primary-color, $btn-primary-bg);
+}
+
+.label-success {
+  @include label-variant-custom($state-success-text, $state-success-bg);
+}
+
+.label-info {
+  @include label-variant-custom($state-info-text, $state-info-bg);
+}
+
+.label-warning {
+  @include label-variant-custom($state-warning-text, $state-warning-bg);
+}
+
+.label-danger {
+  @include label-variant-custom($state-danger-text, $state-danger-bg);
+}

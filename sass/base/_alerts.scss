@@ -60,7 +60,7 @@
   }
 
   &.alert-success {
-    @include messageColors($color-gray-6, $color-green-1, $color-green-4, $color-gray-4);
+    @include messageColors($alert-success-text, $alert-success-bg, $alert-success-border, $alert-success-close);
     &.alert-icon:before {
       content: $fa-var-check-circle;
       color: $color-green-4;
@@ -68,21 +68,21 @@
   }
 
   &.alert-warning {
-    @include messageColors($color-yellow-5, $color-yellow-1, $color-yellow-2, $color-yellow-4);
+    @include messageColors($alert-warning-text, $alert-warning-bg, $alert-warning-border, $alert-warning-close);
     &.alert-icon:before {
       content: $fa-var-exclamation-circle;
     }
   }
 
   &.alert-danger {
-    @include messageColors($color-red-5, $color-red-3, $color-red-2, $color-red-4);
+    @include messageColors($alert-danger-text, $alert-danger-bg, $alert-danger-border, $alert-danger-close);
     &.alert-icon:before {
       content: $fa-var-exclamation-triangle;
     }
   }
 
   &.alert-info {
-    @include messageColors($color-blue-4, $color-blue-1, $color-blue-2, $color-blue-3);
+    @include messageColors($alert-info-text, $alert-info-bg, $alert-info-border, $alert-info-close);
       &.alert-icon:before {
       content: $fa-var-info-circle;
     }
