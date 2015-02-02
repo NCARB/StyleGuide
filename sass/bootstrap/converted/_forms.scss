@@ -391,30 +391,33 @@ output {
   .form-control {
     padding-right: 2.5em;
   }
+}
+// Feedback icon (requires .glyphicon classes)
+.form-control-feedback {
+  position: absolute !important;
+  top: 13px;
+  right: 29px;
+  z-index: 2; // Ensure icon is above input groups
+  //display: block;
+  //width: $input-height-base;
+  //height: $input-height-base;
+  //line-height: $input-height-base;
+  //text-align: center;
+  pointer-events: none;
+
+  &:before {
+    content: "" !important;
+  }
 
   &:after {
     @include fa-icon();
     position: absolute;
   }
 }
-// Feedback icon (requires .glyphicon classes)
-.form-control-feedback {
-  display: none !important;
-  position: absolute !important;
-  top: 13px;
-  right: 15px;
-  z-index: 2; // Ensure icon is above input groups
-  //display: block;
-  //width: $input-height-base;
-  //height: $input-height-base;
-  //line-height: $input-height-base;
-  text-align: center;
-  pointer-events: none;
-}
-.input-lg + .form-control-feedback, .has-feedback:after {
+.input-lg + .form-control-feedback {
   top: 16px;
 }
-.input-sm + .form-control-feedback, .has-feedback:after {
+.input-sm + .form-control-feedback {
   top: 10px;
 }
 
@@ -451,15 +454,11 @@ output {
   // Optional feedback icon
   .form-control-feedback {
     color: $text-color;
-  }
 
-  &:after {
-    position: absolute;
-    content: $icon;
-    color: $text-color;
-    top: 46px;
-    right: 12px;
-    z-index: 2;
+    &:after {
+      content: $icon;
+      color: $text-color;
+    }
   }
 }
 
@@ -479,7 +478,7 @@ output {
 .has-feedback label {
 
   & ~ .form-control-feedback {
-     top: 45px; // Height of the `label` and its margin
+     top: 46px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-control-feedback {
      top: 12px;
@@ -577,7 +576,7 @@ output {
     }
 
     // Re-override the feedback icon.
-    .has-feedback .form-control-feedback, .has-feedback:after {
+    .has-feedback .form-control-feedback {
       top: 13px;
     }
   }
@@ -633,14 +632,14 @@ output {
   //
   // Reposition the icon because it's now within a grid column and columns have
   // `position: relative;` on them. Also accounts for the grid gutter padding.
-  .has-feedback .form-control-feedback {
-    right: ($grid-gutter-width / 2);
-  }
-
-  // Re-override the feedback icon.
-  .has-feedback:after {
-    top: 13px;
-  }
+  // .has-feedback .form-control-feedback {
+  //   right: ($grid-gutter-width / 2);
+  // }
+// 
+  // // Re-override the feedback icon.
+  // .has-feedback .form-control-feedback {
+  //   top: 13px;
+  // }
 
   // Form group sizes
   //

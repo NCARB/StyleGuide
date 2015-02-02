@@ -1,24 +1,26 @@
 @import "breakpoints";
 @import "bourbon/bourbon";
 
-.flex-container, .row, .form-group {
+.flex-container, .row, .form-horizontal .form-group {
   @include display(flex);
   @include flex-flow(row wrap);
   -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
-  margin: 0;
-  padding: 0;
 }
 
 .lt-ie10 {
-  .flex-container, .row, .form-group {
+  .flex-container, .row, .form-horizontal .form-group {
       @include clearfix;
     }
 }
 
 %mobile-first {
   width: 100%;
+}
+
+%relative {
+  position: relative;
 }
 
 .flex-item {
@@ -131,19 +133,15 @@
         $i: $i + 1;
         .col-#{$breakpoint}-#{$i} {
           @extend %mobile-first;
+          @extend %relative;
         }
       }
     }
   }
-  %relative#{$name} {
-    position: relative;
-  }
   .col#{$name}-push-0 {
-    @extend %relative#{$name};
     left: auto;
   }
   .col#{$name}-pull-0 {
-    @extend %relative#{$name};
     right: auto;
   }
   $i: 0;
@@ -164,11 +162,9 @@
       margin-left: percentage($i / 12);
     }
     .col#{$name}-push-#{$i} {
-      @extend %relative#{$name};
       left: percentage($i / 12);
     }
     .col#{$name}-pull-#{$i} {
-      @extend %relative#{$name};
       right: percentage($i / 12);
     }
   }
