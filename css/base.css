@@ -3720,6 +3720,12 @@ input.input-lg:not([type]),
   line-height: 1.33;
   border-radius: 0; }
 
+.form-group-lg select.form-control, .form-group-lg select, select.input-lg.form-control, select.input-lg, .input-group-lg > select.form-control,
+.input-group-lg > select.input-group-addon,
+.input-group-lg > .input-group-btn > select.btn, .input-group-lg > select {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important; }
+
 .form-group-lg [placeholder]::-webkit-input-placeholder, .input-lg[placeholder]::-webkit-input-placeholder, .input-group-lg > [placeholder].form-control::-webkit-input-placeholder, .input-group-lg > select[placeholder]::-webkit-input-placeholder,
 .input-group-lg > textarea[placeholder]::-webkit-input-placeholder,
 .input-group-lg > input[placeholder][type="text"]::-webkit-input-placeholder,

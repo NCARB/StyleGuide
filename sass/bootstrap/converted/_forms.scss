@@ -350,6 +350,11 @@ output {
 
 @include input-size-custom('.input-lg.form-control, .form-group-lg .form-control', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
 
+.form-group-lg select.form-control, select.input-lg.form-control {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
 @mixin bourbon-placeholder {
   $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
   @each $placeholder in $placeholders {
