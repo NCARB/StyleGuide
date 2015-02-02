@@ -3024,6 +3024,21 @@ a.badge:hover, a.badge:focus {
   color: #00A4E3;
   background-color: white; }
 
+.breadcrumb {
+  padding: 8px 15px;
+  margin-bottom: 20px;
+  list-style: none;
+  background-color: #f5f5f5;
+  border-radius: 0; }
+  .breadcrumb > li {
+    display: inline-block; }
+    .breadcrumb > li + li:before {
+      content: "/ ";
+      padding: 0 5px;
+      color: #ccc; }
+  .breadcrumb > .active {
+    color: #999999; }
+
 .btn-group,
 .btn-group-vertical {
   position: relative;
