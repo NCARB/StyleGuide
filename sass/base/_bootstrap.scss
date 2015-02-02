@@ -2,7 +2,7 @@
 @import "../bootstrap/converted/variables";        // adds serif and monospaced fonts
 @import "../bootstrap/converted/type";             // a surprizing number of basic element stylings
 //@import "../bootstrap/alerts";                   folded into base/alerts
-//@import "../bootstrap/badges";
+@import "../bootstrap/converted/badges";           // customized colors in context
 //@import "../bootstrap/breadcrumbs";
 @import "../bootstrap/converted/button-groups";    // modified to add sliver between btns
 @import "../bootstrap/converted/buttons";          // we have btn and color contexts in base/buttons proper

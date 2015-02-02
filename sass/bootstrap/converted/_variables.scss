@@ -775,10 +775,10 @@ $well-border:                 darken($well-bg, 7%) !default;
 //
 //##
 
-$badge-color:                 #fff !default;
+$badge-color:                 $link-color; // #fff !default;
 //** Linked badge text color on hover
-$badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
+$badge-link-hover-color:      $link-color; // #fff !default;
+$badge-bg:                    #fff; // $gray-light !default;
 
 //** Badge text color in active nav link
 $badge-active-color:          $link-color !default;
