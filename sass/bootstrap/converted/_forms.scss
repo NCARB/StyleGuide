@@ -90,6 +90,31 @@ output {
 }
 
 
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"],
+  input:not([type]) {
+    @extend .form-control;
+  }
+
+  label {
+    @extend .control-label;
+  }
+
+
 // Common form controls
 //
 // Shared size and type resets for form controls. Apply `.form-control` to any
@@ -112,7 +137,7 @@ output {
 // input[type="tel"]
 // input[type="color"]
 
-//.form-control {
+.form-control {
 //  display: block;
 //  width: 100%;
 //  height: $input-height-base; // Make inputs at least the height of their button counterpart (base line-height + padding + border)
@@ -138,13 +163,13 @@ output {
 //  // HTML5 says that controls under a fieldset > legend:first-child won't be
 //  // disabled if the fieldset is disabled. Due to implementation difficulty, we
 //  // don't honor that edge case; we style them as disabled anyway.
-//  &[disabled],
-//  &[readonly],
-//  fieldset[disabled] & {
-//    cursor: $cursor-disabled;
-//    background-color: $input-bg-disabled;
-//    opacity: 1; // iOS fix for unreadable disabled content
-//  }
+  &[disabled],
+  &[readonly],
+  fieldset[disabled] & {
+    cursor: $cursor-disabled;
+    background-color: $input-bg-disabled;
+    opacity: 1; // iOS fix for unreadable disabled content
+  }
 //
 //  // [converter] extracted textarea& to textarea.form-control
 //}
@@ -153,18 +178,6 @@ output {
 // textarea.form-control {
 //   height: auto;
 // }
-
-select,
-textarea,
-input {
-  &[disabled],
-  &[readonly],
-  fieldset[disabled] & {
-    cursor: $cursor-disabled;
-    background-color: $input-bg-disabled;
-    opacity: 1; // iOS fix for unreadable disabled content
-  }
-}
 
 // Search inputs in iOS
 //
@@ -204,7 +217,7 @@ input {
 //   input[type="month"].input-lg {
 //     line-height: $input-height-large;
 //   }
-// }
+}
 
 
 // Form groups
@@ -319,16 +332,52 @@ input {
   }
 }
 
+@mixin input-size-custom($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
+  #{$parent} {
+    padding: $padding-vertical $padding-horizontal;
+    font-size: $font-size;
+    line-height: $line-height;
+    border-radius: $border-radius;
+  }
+}
 
 // Form control sizing
 //
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 
-// @include input-size('.input-sm, .form-group-sm .form-control', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
-// 
-// @include input-size('.input-lg, .form-group-lg .form-control', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
+@include input-size-custom('.input-sm.form-control, .form-group-sm .form-control', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
 
+@include input-size-custom('.input-lg.form-control, .form-group-lg .form-control', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
+
+@mixin bourbon-placeholder {
+  $placeholders: ":-webkit-input" ":-moz" "-moz" "-ms-input";
+  @each $placeholder in $placeholders {
+    &:#{$placeholder}-placeholder {
+      @content;
+    }
+  }
+}
+
+.form-group-lg [placeholder], .input-lg[placeholder] {
+  @include bourbon-placeholder {
+    @include fontSize($type-L);
+    padding-top: 2px;
+  }
+}
+.form-group-sm [placeholder], .input-sm[placeholder] {
+  @include bourbon-placeholder {
+    @include fontSize($type-S);
+    padding-top: 4px;
+  }
+}
+
+.form-group-lg .control-label {
+  @include fontSize($type-L);
+}
+.form-group-sm .control-label {
+  @include fontSize($type-S);
+}
 
 // Form control feedback states
 //
@@ -340,52 +389,100 @@ input {
 
   // Ensure icons don't overlap text
   .form-control {
-    padding-right: ($input-height-base * 1.25);
+    padding-right: 2.5em;
+  }
+
+  &:after {
+    @include fa-icon();
+    position: absolute;
   }
 }
 // Feedback icon (requires .glyphicon classes)
 .form-control-feedback {
-  position: absolute;
-  top: 0;
-  right: 0;
+  display: none !important;
+  position: absolute !important;
+  top: 13px;
+  right: 15px;
   z-index: 2; // Ensure icon is above input groups
-  display: block;
-  width: $input-height-base;
-  height: $input-height-base;
-  line-height: $input-height-base;
+  //display: block;
+  //width: $input-height-base;
+  //height: $input-height-base;
+  //line-height: $input-height-base;
   text-align: center;
   pointer-events: none;
 }
-.input-lg + .form-control-feedback {
-  width: $input-height-large;
-  height: $input-height-large;
-  line-height: $input-height-large;
+.input-lg + .form-control-feedback, .has-feedback:after {
+  top: 16px;
 }
-.input-sm + .form-control-feedback {
-  width: $input-height-small;
-  height: $input-height-small;
-  line-height: $input-height-small;
+.input-sm + .form-control-feedback, .has-feedback:after {
+  top: 10px;
 }
+
+@mixin custom-form-control-validation($text-color: #555, $border-color: #ccc, $background-color: #f5f5f5, $icon: $fa-var-check) {
+  // Color the label and help text
+  .help-block,
+  .control-label,
+  .radio,
+  .checkbox,
+  .radio-inline,
+  .checkbox-inline,
+  &.radio label,
+  &.checkbox label,
+  &.radio-inline label,
+  &.checkbox-inline label  {
+    color: $text-color;
+  }
+  // Set the border and box shadow on specific inputs to match
+  .form-control {
+    border-color: $border-color;
+    //@include box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: shade($border-color, 10%);
+      $shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px tint($border-color, 20%);
+      @include box-shadow($shadow);
+    }
+  }
+  // Set validation states also for addons
+  .input-group-addon {
+    color: $text-color;
+    //border-color: $border-color;
+    //background-color: $background-color;
+  }
+  // Optional feedback icon
+  .form-control-feedback {
+    color: $text-color;
+  }
+
+  &:after {
+    position: absolute;
+    content: $icon;
+    color: $text-color;
+    top: 46px;
+    right: 12px;
+    z-index: 2;
+  }
+}
+
 
 // Feedback states
 .has-success {
-  @include form-control-validation($state-success-text, $state-success-text, $state-success-bg);
+  @include custom-form-control-validation($state-success-text, $state-success-text, $state-success-bg, $fa-var-check);
 }
 .has-warning {
-  @include form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg);
+  @include custom-form-control-validation($state-warning-text, $state-warning-text, $state-warning-bg, $fa-var-exclamation-triangle);
 }
 .has-error {
-  @include form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg);
+  @include custom-form-control-validation($state-danger-text, $state-danger-text, $state-danger-bg, $fa-var-times);
 }
 
 // Reposition feedback icon if input has visible label above
 .has-feedback label {
 
   & ~ .form-control-feedback {
-     top: ($line-height-computed + 5); // Height of the `label` and its margin
+     top: 45px; // Height of the `label` and its margin
   }
   &.sr-only ~ .form-control-feedback {
-     top: 0;
+     top: 12px;
   }
 }
 
@@ -399,7 +496,7 @@ input {
   display: block; // account for any element using help-block
   margin-top: 5px;
   margin-bottom: 10px;
-  color: lighten($text-color, 25%); // lighten the text some for contrast
+  color: tint($text-color, 25%); // lighten the text some for contrast
 }
 
 
@@ -480,8 +577,8 @@ input {
     }
 
     // Re-override the feedback icon.
-    .has-feedback .form-control-feedback {
-      top: 0;
+    .has-feedback .form-control-feedback, .has-feedback:after {
+      top: 13px;
     }
   }
 }
@@ -528,7 +625,7 @@ input {
     .control-label {
       text-align: right;
       margin-bottom: 0;
-      padding: ($padding-base-vertical + 1); // Default padding plus a border
+      padding: 13px; // Default padding plus a border
     }
   }
 
@@ -540,6 +637,11 @@ input {
     right: ($grid-gutter-width / 2);
   }
 
+  // Re-override the feedback icon.
+  .has-feedback:after {
+    top: 13px;
+  }
+
   // Form group sizes
   //
   // Quick utility class for applying `.input-lg` and `.input-sm` styles to the
@@ -547,15 +649,17 @@ input {
   .form-group-lg {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding: (($padding-large-vertical * $line-height-large) + 1);
+        padding: 16px 11px 0 0;
+
       }
     }
   }
   .form-group-sm {
     @media (min-width: $screen-sm-min) {
       .control-label {
-        padding: ($padding-small-vertical + 1);
+        padding: 11px 11px 0 0;
       }
     }
   }
 }
+
