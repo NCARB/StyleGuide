@@ -320,8 +320,8 @@ output {
 
 .form-control-static {
   // Size it appropriately next to real form controls
-  padding-top: ($padding-base-vertical + 1);
-  padding-bottom: ($padding-base-vertical + 1);
+  padding-top: 11px;
+  padding-bottom: 11px;
   // Remove default margin from `p`
   margin-bottom: 0;
 
@@ -346,9 +346,9 @@ output {
 // Build on `.form-control` with modifier classes to decrease or increase the
 // height and font-size of form controls.
 
-@include input-size-custom('.input-sm.form-control, .form-group-sm .form-control', $input-height-small, $padding-small-vertical, $padding-small-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
+@include input-size-custom('.input-sm.form-control, .form-group-sm .form-control', $input-height-small, $padding-small-vertical, $padding-input-horizontal, $font-size-small, $line-height-small, $input-border-radius-small);
 
-@include input-size-custom('.input-lg.form-control, .form-group-lg .form-control', $input-height-large, $padding-large-vertical, $padding-large-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
+@include input-size-custom('.input-lg.form-control, .form-group-lg .form-control', $input-height-large, $padding-large-vertical, $padding-input-horizontal, $font-size-large, $line-height-large, $input-border-radius-large);
 
 .form-group-lg select.form-control, select.input-lg.form-control {
   padding-top: 0 !important;
@@ -366,22 +366,22 @@ output {
 
 .form-group-lg [placeholder], .input-lg[placeholder] {
   @include bourbon-placeholder {
-    @include fontSize($type-L);
+    font-size: $type-L;
     padding-top: 2px;
   }
 }
 .form-group-sm [placeholder], .input-sm[placeholder] {
   @include bourbon-placeholder {
-    @include fontSize($type-S);
+    font-size: $type-S;
     padding-top: 4px;
   }
 }
 
 .form-group-lg .control-label {
-  @include fontSize($type-L);
+  font-size: $type-L;
 }
 .form-group-sm .control-label {
-  @include fontSize($type-S);
+  font-size: $type-S;
 }
 
 // Form control feedback states
