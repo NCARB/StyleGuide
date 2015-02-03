@@ -17,3 +17,7 @@
   	border-top-width: 1px;
   }
 }
+
+.btn-group > .btn + .dropdown-toggle .caret:before {
+  display: block;  // android
+}

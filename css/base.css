@@ -3249,6 +3249,9 @@ a.badge:hover, a.badge:focus {
 .btn-group-vertical > .btn-group + .btn-group > .btn {
   border-top-width: 1px; }
 
+.btn-group > .btn + .dropdown-toggle .caret:before {
+  display: block; }
+
 .btn-link {
   color: #00A4E3;
   font-weight: normal;
