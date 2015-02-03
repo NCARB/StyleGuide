@@ -11,13 +11,11 @@
   <meta name="MobileOptimized" content="320" />
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
   <title>NCARB Style Guide</title>
-
   <link rel="stylesheet" href="//cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/base.css" />
-  <link rel="stylesheet" href="css/ncarb-design-library-1.0.0.min.css" />
+  <link rel="stylesheet" href="css/ncarb-design-components-1.0.0.min.css" />
   <link rel="stylesheet" href="css/layouts/library.css" media="all" />
-
   <script src="bower_components/jquery/dist/jquery.min.js"></script>
   <script>
     $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
@@ -26,9 +24,9 @@
   <script src="bower_components/respond/dest/respond.min.js"></script>
   <script src="bower_components/angular/angular.min.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="js/ncarb-design-library-1.0.0.min.js"></script> <!-- warning: this breaks jquery plugins, TODO fix -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
   <script src="js/app.js"></script>
-  <script src="js/ncarb-design-library-1.0.0.min.js"></script>
   <script src="js/jquery.details.min.js"></script>
   <script src="js/jquery.placeholder.min.js"></script>
   <script>
@@ -101,6 +99,9 @@
               </li>
               <li>
                 <a ui-sref="bootstrap-components" ui-sref-active="active" class="level-one">Bootstrap Components</a>
+              </li>
+              <li>
+                <a ui-sref="bootstrap-javascript" ui-sref-active="active" class="level-one">Bootstrap Javascript</a>
               </li>
             </ul>
             <ul class="other">

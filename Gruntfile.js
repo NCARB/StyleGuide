@@ -61,10 +61,25 @@ module.exports = function(grunt) {
     cssmin: {
       minify: {
         src: [
-          //'css/base.css',
+          'css/base.css',
           'css/components/*/*.css'
         ],
         dest: 'css/ncarb-design-library-<%= pkg.version %>.min.css'
+      },
+      base: {
+        // TODO: move bootstrap components to components
+        // by creating a seperate components css
+        // to include with all these component files
+        src: [
+          'css/base.css',
+        ],
+        dest: 'css/ncarb-design-base-<%= pkg.version %>.min.css'
+      },
+      components: {
+        src: [
+          'css/components/*/*.css'
+        ],
+        dest: 'css/ncarb-design-components-<%= pkg.version %>.min.css'
       }
     },
     jshint: {
