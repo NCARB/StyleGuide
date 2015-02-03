@@ -30,10 +30,10 @@
 @import "../bootstrap/converted/pagination";       // the blue bar on top effect
 //@import "../bootstrap/panels";
 //@import "../bootstrap/popovers";
-//@import "../bootstrap/print";
+@import "../bootstrap/print";
 @import "../bootstrap/converted/progress-bars";    // bold
-//@import "../bootstrap/responsive-embed";
-//@import "../bootstrap/responsive-utilities";
+@import "../bootstrap/responsive-embed";
+@import "../bootstrap/responsive-utilities";
 //@import "../bootstrap/converted/scaffolding";    due to core stylings, imported at top of base directly
 @import "../bootstrap/converted/tables";           // adds table-sort and table-hover-pointer
 //@import "../bootstrap/theme";
