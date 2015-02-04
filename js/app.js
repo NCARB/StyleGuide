@@ -4,7 +4,21 @@ angular.module('designSystem.controllers', [])
     $('[data-toggle="popover"]').popover();
   }]);
 
-angular.module('designSystem', ['ui.router', 'designSystem.controllers'])
+angular.module('designSystem.directives', [])
+  .directive('a', function () {
+      return {
+          restrict: 'E',
+          link: function (scope, elem, attrs) {
+              if (attrs.href && attrs.href.indexOf('#') == 0 && !attrs.uiSref) {
+                  elem.on('click', function (e) {
+                      e.preventDefault();
+                  });
+              }
+          }
+      };
+  }); 
+
+angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives'])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
 
