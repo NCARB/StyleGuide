@@ -163,6 +163,13 @@
       }
     }
   }
+  .open > a {
+    &,
+    &:hover,
+    &:focus {
+      background-color: $nav-pills-active-link-hover-bg;
+    }
+  }  
   > li {
     float: left;
     + li {
