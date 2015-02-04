@@ -1,8 +1,3 @@
-    /*////////////////////////////////////////////////////////*/
-   /*//                                                    //*/
-  /*//    Lists                                           //*/
- /*//                                                    //*/
-/*////////////////////////////////////////////////////////*/
 @import "bourbon/bourbon";
 @import 'icons';
 
@@ -18,62 +13,74 @@
     margin: 0;
     padding: 0;
     zoom: 1;
+    > ul, ol {
+      margin-left: 1em;
+    }
   }
 }
 
-$margin-bottom-default: 1rem;
-
+%list {
+  @include defaultList();
+}
 
 // UNORDERED, ORDERED
 ul,
 ol {
-  @include defaultList();
+  @extend %list;
 }
 
-.l-list-bullet {
-  @include defaultList();
-  margin-bottom: $margin-bottom-default;
-
+%list-with-margins {
   > li {
     list-style-type: disc;
     margin-left: 1.25rem;
+    & li {
+      margin-left: 0;
+    }
   }
 }
 
-.l-list-ordered {
-  margin-bottom: $margin-bottom-default;
+.list-bullet {
+  @extend %list-with-margins;
+  > li {
+    list-style-type: disc;
+  }
+}
 
+.list-ordered {
+  @extend %list-with-margins;
   > li {
     list-style-type: decimal;
-    margin-left: 1.25rem;
-    line-height: $base-line-height;
   }
 }
 
 
 // INLINE
-.l-list-inline {
-  @include defaultList();
-  margin-bottom: $margin-bottom-default;
-
+.list-inline {
+  margin-left: -5px;
   > li {
-    display: inline;
+    display: inline-block;
+    padding-left: 5px;
+    padding-right: 5px;
   }
 }
 
 // COMMA
-.l-list-comma {
-  @include defaultList();
-
+.list-comma {
+  margin-right: -4px;
+  display: inline;
   > li {
+    display: inline;
     &:after {
-      content:', '
+      content:', ';
+    }
+    &:last-child:after {
+      content: '';
     }
   }
 }
 
 // MEDIA OBJECT
-.l-list-media-object {
+.list-media-object {
   @include display(flex);
   @include flex-flow(row wrap);
   @include align-items(flex-start);
@@ -104,7 +111,7 @@ ol {
 }
 
 // MEDIA
-.l-list-media {
+.list-media {
   .header {
     @include type-5();
     color: $color-blue;

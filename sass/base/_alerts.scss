@@ -1,0 +1,91 @@
+// Message
+
+@mixin messageColors($text, $background, $border, $close) {
+  border-color: $border;
+  background-color: tint($background, 75%);
+  color: $text;
+
+  .close:after {
+    color: $close;
+  }
+
+  hr {
+    border-top-color: shade($border, 5%);
+  }
+  a, .alert-link {
+    color: shade($text, 10%);
+    text-decoration: underline;
+  }
+}
+
+.alert {
+  position: relative;
+  margin: 0.8rem;
+  padding: 1rem;
+  color: $color-gray;
+  border: 1px solid transparent;
+
+  &[data-state="is-hidden"] {
+    display: none;
+  }
+
+  // Headings for larger alerts
+  h4 {
+    @include type-body();
+    margin-top: 0;
+    font-weight: bold;
+    // Specified for the h4 to prevent conflicts of changing $headings-color
+    color: inherit;
+  }
+  // Provide class for links that match alerts
+  a, .alert-link {
+    font-weight: $alert-link-font-weight;
+  }
+
+  ul,
+  ol {
+    margin: 0 0 0 1.25rem;
+    padding: 0;
+  }
+
+  &.alert-icon {
+    padding-left: 40px;
+
+    &:before {
+      @include fa-icon();
+      position: absolute;
+      top: 18px;
+      left: 14px;
+    }
+  }
+
+  &.alert-success {
+    @include messageColors($alert-success-text, $alert-success-bg, $alert-success-border, $alert-success-close);
+    &.alert-icon:before {
+      content: $fa-var-check-circle;
+      color: $color-green-4;
+    }
+  }
+
+  &.alert-warning {
+    @include messageColors($alert-warning-text, $alert-warning-bg, $alert-warning-border, $alert-warning-close);
+    &.alert-icon:before {
+      content: $fa-var-exclamation-circle;
+    }
+  }
+
+  &.alert-danger {
+    @include messageColors($alert-danger-text, $alert-danger-bg, $alert-danger-border, $alert-danger-close);
+    &.alert-icon:before {
+      content: $fa-var-exclamation-triangle;
+    }
+  }
+
+  &.alert-info {
+    @include messageColors($alert-info-text, $alert-info-bg, $alert-info-border, $alert-info-close);
+      &.alert-icon:before {
+      content: $fa-var-info-circle;
+    }
+  }
+}
+

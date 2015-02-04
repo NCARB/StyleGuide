@@ -5,7 +5,7 @@
   All buttons are text and/or an icon enclosed in a rectangular shape. NCARB blue is used as the primary call-to-action button and secondary buttons can be light yellow, dark grey, green or beige.
 </p>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
     <summary class="small header">.btn</summary>
     <div class="flex-container flex-sm-gutters">
@@ -32,7 +32,7 @@ Button
       </div>
     </div>
   </details>
-  <div class="l-button-examples">
+  <div class="button-examples">
     <button class="btn" type="button">Button</button>
     <a href="#form_elements" class="btn">Link button</a>
     <input type="button" class="btn" value ="Input button" />
@@ -40,7 +40,7 @@ Button
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
     <summary class="small header">.btn .btn-block</summary>
     <div class="flex-container flex-sm-gutters">
@@ -52,7 +52,7 @@ Button
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
-        <div class="l-usage">
+        <div class="usage">
           <p>Usage:</p>
           <p>
             The <code>.btn-block</code> class gives the button 100% width.
@@ -61,12 +61,12 @@ Button
       </div>
     </div>
   </details>
-  <div class="l-button-examples">
+  <div class="button-examples">
     <button class="btn btn-block">Block</button>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
     <summary class="small header">.btn .btn-primary</summary>
     <div class="flex-container flex-sm-gutters">
@@ -93,13 +93,13 @@ Link button
       </div>
     </div>
   </details>
-  <div class="l-button-examples">
+  <div class="button-examples">
     <button type="button" class="btn btn-primary">Button Title</button>
     <a href="#form_elements" class="btn btn-primary btn-continue">Link button</a>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
     <summary class="small header">.btn .btn-secondary</summary>
     <div class="flex-container flex-sm-gutters">
@@ -116,7 +116,7 @@ Secondary w/Plus
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
-        <div class="l-usage">
+        <div class="usage">
           <p>Usage:</p>
           <p>
             The <code>.btn-secondary</code> class will apply the secondary button styles and allow the secondary color palette. The default color is <code>$color-gray</code>.
@@ -125,13 +125,13 @@ Secondary w/Plus
       </div>
     </div>
   </details>
-  <div class="l-button-examples">
+  <div class="button-examples">
     <button type="button" class="btn btn-secondary">Secondary</button>
     <button class="btn btn-secondary plus" type="button">Secondary w/Plus</button>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
     <summary class="small header">.btn .btn-success, .btn .btn-warning, .btn .btn-info, .btn .btn-danger</summary>
     <div class="flex-container flex-sm-gutters">
@@ -146,7 +146,7 @@ Secondary w/Plus
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
-        <div class="l-usage">
+        <div class="usage">
           <p>Usage:</p>
           <p>
             Bootstrap color contexts.
@@ -155,7 +155,7 @@ Secondary w/Plus
       </div>
     </div>
   </details>
-  <div class="l-button-examples">
+  <div class="button-examples">
     <button class="btn btn-warning">Warning</button>
     <a href="#form_elements" class="btn btn-success">Success</a>
     <a href="#form_elements" class="btn btn-info">Info</a>
@@ -163,9 +163,9 @@ Secondary w/Plus
   </div>
 </div>
 
-<div class="l-form-fields">
+<div class="form-fields">
   <h2>Labels</h2>
-  <div class="l-system-element first">
+  <div class="system-element first">
     <details>
       <summary class="small header">label</summary>
       <pre class="prettyprint">
@@ -180,7 +180,7 @@ Secondary w/Plus
 
   <h2>Input Fields</h2>
 
-  <div class="l-system-element first l-text-input">
+  <div class="system-element first l-text-input">
     <details>
       <summary class="small header">input[type="text"]</summary>
       <pre class="prettyprint">
@@ -194,7 +194,7 @@ Secondary w/Plus
     <input type="text" id="card_number" name="card_number" value="123456789" />
   </div>
 
-  <div class="l-system-element l-text-input">
+  <div class="system-element l-text-input">
     <details>
       <summary class="small header">input[type="date"]</summary>
       <pre class="prettyprint">
@@ -209,12 +209,12 @@ Secondary w/Plus
   </div>
 
   <h2>Search Field</h2>
-  <div class="l-system-element first l-text-input">
+  <div class="system-element first l-text-input">
     <details>
       <summary class="small header">input[type="search"]</summary>
       <pre class="prettyprint">
         <xmp>
-<div class="l-search-box" role="search">
+<div class="search-box" role="search">
 <fieldset>
 <input name="SearchBox" type="search"
 placeholder="SEARCH" autocomplete="off" class="search-box">
@@ -225,7 +225,7 @@ value="Submit" class="search-submit">
         </xmp>
       </pre>
     </details>
-    <div class="l-search-box" role="search">
+    <div class="search-box" role="search">
       <fieldset>
         <input name="headercontent_1$SearchBox" type="search" placeholder="SEARCH" autocomplete="off" class="search-box">
         <input type="submit" name="headercontent_1$SearchButton" value="Submit" class="search-submit">
@@ -234,7 +234,7 @@ value="Submit" class="search-submit">
   </div>
 
   <h2>Select Menus</h2>
-  <div class="l-system-element first">
+  <div class="system-element first">
     <details>
       <summary class="small header">select</summary>
       <pre class="prettyprint">
@@ -352,240 +352,174 @@ value="Submit" class="search-submit">
   </div>
 
   <h2>Radio Buttons &amp; Checkboxes</h2>
-  <div class="l-system-element first">
+  <div class="system-element first">
     <details>
       <summary class="small header">input[type="radio"]</summary>
       <pre class="prettyprint">
         <xmp>
-<div class="l-radios">
-<div class="l-radio">
-<input type="radio" id="opt1" name="radio-exp"
-value="option 1" checked="checked">
-<label for="opt1">
-Option 1
-</label>
-</div>
-<div class="l-radio">
-<input type="radio" id="opt2" name="radio-exp"
-value="option 2">
-<label for="opt2">
-Option 2
-</label>
-</div>
-</div>
+  <div class="radio-group">
+  <input type="radio" id="opt1" name="radio-exp"
+  value="option 1" checked="checked">
+  <label for="opt1">
+  Option 1
+  </label>
+  <input type="radio" id="opt2" name="radio-exp"
+  value="option 2">
+  <label for="opt2">
+  Option 2
+  </label>
+  </div>
         </xmp>
       </pre>
     </details>
-    <div class="l-radios">
-      <div class="l-radio">
-        <input type="radio" id="opt1" name="radio-example" value="option 1" checked="checked">
-        <label for="opt1">
-          Option 1
-        </label>
-      </div>
-      <div class="l-radio">
-        <input type="radio" id="opt2" name="radio-example" value="option 2">
-        <label for="opt2">
-          Option 2
-        </label>
-      </div>
+    <div class="radio-group">
+    <input type="radio" id="opt1" name="radio-exp"
+    value="option 1" checked="checked">
+    <label for="opt1">
+    Option 1
+    </label>
+    <input type="radio" id="opt2" name="radio-exp"
+    value="option 2">
+    <label for="opt2">
+    Option 2
+    </label>
     </div>
   </div>
 
-  <div class="l-system-element">
+  <div class="system-element">
     <details>
       <summary class="small header">input[type="checkbox"]</summary>
       <pre class="prettyprint">
         <xmp>
-<fieldset class="l-checkboxes">
-<div class="l-checkbox">
-<input type="checkbox" value="one"
-id="checkbox_1" name="checkbox_1">
-<label for="checkbox_1">Unchecked</label>
-</div>
-<div class="l-checkbox">
-<input type="checkbox" value="two"
-id="checkbox_2" name="checkbox_2" checked="checked">
-<label for="checkbox_2">Checked</label>
-</div>
-<div class="l-checkbox">
-<input type="checkbox" value="three"
-id="checkbox_3" name="checkbox_3" disabled="disabled">
-<label for="checkbox_3">Disabled</label>
-</div>
-<div class="l-checkbox">
-<input type="checkbox" value="three"
-id="checkbox_3" name="checkbox_3"
-disabled="disabled" checked="checked">
-<label for="checkbox_3">Checked &amp; Disabled</label>
-</div>
-</fieldset>
+  <div class="checkboxes">
+  <input type="checkbox" value="one"
+  id="checkbox_1" name="checkbox_1">
+  <label for="checkbox_1">Unchecked</label>
+  <input type="checkbox" value="two"
+  id="checkbox_2" name="checkbox_2" checked="checked">
+  <label for="checkbox_2">Checked</label>
+  <input type="checkbox" value="three"
+  id="checkbox_3" name="checkbox_3" disabled="disabled">
+  <label for="checkbox_3">Disabled</label>
+  <input type="checkbox" value="three"
+  id="checkbox_3" name="checkbox_3"
+  disabled="disabled" checked="checked">
+  <label for="checkbox_3">Checked &amp; Disabled</label>
+  </div>
         </xmp>
       </pre>
     </details>
-    <fieldset class="l-checkboxes">
-      <div class="l-checkbox">
-        <input type="checkbox" value="one" id="checkbox_1" name="checkbox_1">
-        <label for="checkbox_1">Unchecked</label>
-      </div>
-      <div class="l-checkbox">
-        <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked="checked">
-        <label for="checkbox_2">Checked</label>
-      </div>
-      <div class="l-checkbox">
-        <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled">
-        <label for="checkbox_3">Disabled</label>
-      </div>
-      <div class="l-checkbox">
-        <input type="checkbox" value="three" id="checkbox_4" name="checkbox_4" disabled="disabled" checked="checked">
-        <label for="checkbox_4">Checked &amp; Disabled</label>
-      </div>
-    </fieldset>
+    <div class="checkbox-group">
+    <input type="checkbox" value="one"
+    id="checkbox_1" name="checkbox_1">
+    <label for="checkbox_1">Unchecked</label>
+    <input type="checkbox" value="two"
+    id="checkbox_2" name="checkbox_2" checked="checked">
+    <label for="checkbox_2">Checked</label>
+    <input type="checkbox" value="three"
+    id="checkbox_3" name="checkbox_3" disabled="disabled">
+    <label for="checkbox_3">Disabled</label>
+    <input type="checkbox" value="three"
+    id="checkbox_3" name="checkbox_3"
+    disabled="disabled" checked="checked">
+    <label for="checkbox_3">Checked &amp; Disabled</label>
+    </div>
   </div>
-</div>
 
-<h2>Status Messages</h2>
-<div class="l-system-element first">
+<h2>Alerts</h2>
+<div class="system-element first">
   <details>
-    <summary class="small header">.l-message.t-success</summary>
+    <summary class="small header">.alert.alert-success.alert-icon</summary>
       <pre class="prettyprint">
         <xmp>
-<div class="l-message t-success">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true" />
-<div class="msg-content">
-<div class="msg-header">
-<p class="alert-header">
-Success header
-</p>
-</div>
-<div class="msg-body">
-<p>This is the success message body!</p>
-</div>
-</div>
+<div class="alert alert-success alert-icon" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Success header
+    </h4>
+    <p>This is the success message body <a href="#">with link</a>.</p>
+  </div>
 </div>
       </xmp>
     </pre>
   </details>
-  <div class="l-message t-success">
+  <div class="alert alert-success alert-icon" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-    <div class="msg-content">
-      <div class="msg-header">
-        <p class="alert-header">
-          Success header
-        </p>
-      </div>
-      <div class="msg-body">
-        <p>This is the success message body!</p>
-      </div>
-    </div>
+    <h4>
+        Success header
+    </h4>
+    <p>This is the success message body <a href="#">with link</a>.</p>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
-    <summary class="small header">.l-message.t-error</summary>
+    <summary class="small header">.alert.alert-danger.alert-icon</summary>
     <pre class="prettyprint">
       <xmp>
-<div class="l-message t-error">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-<div class="msg-content">
-<div class="msg-header">
-<p class="alert-header">
-Error header
-</p>
-</p>
-</div>
-<div class="msg-body">
-<p>This is the error message body!</p>
-</div>
-</div>
-</div>
+  <div class="alert alert-danger alert-icon" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Danger header
+    </h4>
+    <p>This is the danger message body <a href="#">with link</a>.</p>
+  </div>
       </xmp>
     </pre>
   </details>
-  <div class="l-message t-error">
+  <div class="alert alert-danger alert-icon" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-    <div class="msg-content">
-      <div class="msg-header">
-        <p class="alert-header">
-          Error header
-        </p>
-      </div>
-      <div class="msg-body">
-        <p>This is the error message body!</p>
-      </div>
-    </div>
+    <h4>
+        Danger header
+    </h4>
+    <p>This is the danger message body <a href="#">with link</a>.</p>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
-    <summary class="small header">.l-message.t-warning</summary>
+    <summary class="small header">.alert.alert-warning.alert-icon</summary>
     <pre class="prettyprint">
       <xmp>
-<div class="l-message t-warning">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-<div class="msg-content">
-<div class="msg-header">
-<p class="alert-header">
-Warning header
-</p>
-</div>
-<div class="msg-body">
-<p>This is the warning message body!</p>
-</div>
-</div>
-</div>
+  <div class="alert alert-warning alert-icon" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Warning header
+    </h4>
+    <p>This is the warning message body <a href="#">with link</a>.</p>
+  </div>
       </xmp>
     </pre>
   </details>
-  <div class="l-message t-warning">
+  <div class="alert alert-warning alert-icon" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-    <div class="msg-content">
-      <div class="msg-header">
-        <p class="alert-header">
-          Warning header
-        </p>
-      </div>
-      <div class="msg-body">
-        <p>This is the warning message body!</p>
-      </div>
-    </div>
+    <h4>
+        Warning header
+    </h4>
+    <p>This is the warning message body <a href="#">with link</a>.</p>
   </div>
 </div>
 
-<div class="l-system-element">
+<div class="system-element">
   <details>
-    <summary class="small header">.l-message.t-info</summary>
+    <summary class="small header">.alert.alert-info.alert-icon</summary>
     <pre class="prettyprint">
       <xmp>
-<div class="l-message t-info">
-<button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-<div class="msg-content">
-<div class="msg-header">
-<p class="alert-header">
-Info header
-</p>
-</div>
-<div class="msg-body">
-<p>This is the informational message body.</p>
-</div>
-</div>
-</div>
+  <div class="alert alert-info alert-icon" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Info header
+    </h4>
+    <p>This is the info message body <a href="#">with link</a>.</p>
+  </div>
       </xmp>
     </pre>
   </details>
-  <div class="l-message t-info">
+  <div class="alert alert-info alert-icon" role="alert">
     <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
-    <div class="msg-content">
-      <div class="msg-header">
-        <p class="alert-header">
-          Info header
-        </p>
-      </div>
-      <div class="msg-body">
-        <p>This is the informational message body.</p>
-      </div>
-    </div>
+    <h4>
+        Info header
+    </h4>
+    <p>This is the info message body <a href="#">with link</a>.</p>
   </div>
 </div>

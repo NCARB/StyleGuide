@@ -7,7 +7,6 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 // Variables
 // --------------------------------------------------
 
-
 @import "../../base/type_sizes";
 @import "../../base/colors";
 
@@ -16,15 +15,15 @@ $bootstrap-sass-asset-helper: (twbs-font-path("") != unquote('twbs-font-path("")
 //## Gray and brand colors for use across Bootstrap.
 
 $gray-base:              #000 !default;
-$gray-darker:            $color-gray-6; // #444 !default; // #222
-$gray-dark:              $color-gray-5; // #666 !default;   // #333
-$gray:                   $color-gray-3; // #cccccc !default; // #555
-$gray-light:             $color-gray-2; // #e2e2e2 !default; // #777
-$gray-lighter:           $color-gray-1; // #f4f4f2 !default; // #eee
+$gray-darker:            $color-black;  // #000 !default; // #222
+$gray-dark:              $color-gray-6; // #444 !default;   // #333
+$gray:                   $color-gray-5; // #666 !default; // #555
+$gray-light:             $color-gray-4; // #999 !default; // #777
+$gray-lighter:           $color-gray-2; // #e2e2e2 !default; // #eee
 
 $brand-primary:         $color-blue;      // darken(#428bca, 6.5%) !default;
 $brand-success:         $color-green-4;   // #5cb85c !default;
-$brand-info:            $color-blue-3;  // #5bc0de !default;
+$brand-info:            $color-blue-3;    // #5bc0de !default;
 $brand-warning:         $color-yellow-2;  // #f0ad4e !default;
 $brand-danger:          $color-red-5;     // #d9534f !default;
 
@@ -99,14 +98,15 @@ $headings-color:          $color-black; //inherit !default;
 //
 //## Define common padding and border radius sizes and more. Values based on 14px text and 1.428 line-height (~20px to start).
 
-$padding-base-vertical:     10px; // 6px !default;
-$padding-base-horizontal:   15px; // 12px !default;
+$padding-base-vertical:     6px !default;
+$padding-base-horizontal:   12px !default;
+$padding-input-horizontal:  5px;               // we have an unusually narrow padding with form elements
 
 $padding-large-vertical:    10px !default;
 $padding-large-horizontal:  16px !default;
 
-$padding-small-vertical:    6px; // 5px !default;
-$padding-small-horizontal:  5px; // 10px !default;
+$padding-small-vertical:    5px !default;
+$padding-small-horizontal:  10px !default;
 
 $padding-xs-vertical:       1px !default;
 $padding-xs-horizontal:     5px !default;
@@ -214,9 +214,9 @@ $input-color-placeholder:        #999 !default;
 //** Default `.form-control` height
 $input-height-base:              ($line-height-computed + ($padding-base-vertical * 2) + 2) !default;
 //** Large `.form-control` height
-$input-height-large:             (ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
+$input-height-large:             $type-L; //(ceil($font-size-large * $line-height-large) + ($padding-large-vertical * 2) + 2) !default;
 //** Small `.form-control` height
-$input-height-small:             (floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
+$input-height-small:             $type-S; //(floor($font-size-small * $line-height-small) + ($padding-small-vertical * 2) + 2) !default;
 
 $legend-color:                   $gray-dark !default;
 $legend-border-color:            #e5e5e5 !default;
@@ -429,21 +429,21 @@ $nav-disabled-link-hover-color:             $gray-light !default;
 
 //== Tabs
 $nav-tabs-border-color:                     #ddd !default;
+$nav-tabs-link-color:          				#eee;
+$nav-tabs-link-hover-border-color:          tint(#5e5e5e, 10%); //$gray-lighter !default;
+$nav-tabs-link-hover-bg:          			#5e5e5e;
 
-$nav-tabs-link-hover-border-color:          $gray-lighter !default;
-
-$nav-tabs-active-link-hover-bg:             $body-bg !default;
-$nav-tabs-active-link-hover-color:          $gray !default;
-$nav-tabs-active-link-hover-border-color:   #ddd !default;
+$nav-tabs-active-link-hover-bg:             $color-white; // $body-bg !default;
+$nav-tabs-active-link-hover-color:          $color-black; // $gray !default;
+$nav-tabs-active-link-hover-border-color:   #d6d6d6; //#ddd !default;
 
 $nav-tabs-justified-link-border-color:            #ddd !default;
 $nav-tabs-justified-active-link-border-color:     $body-bg !default;
 
 //== Pills
 $nav-pills-border-radius:                   $border-radius-base !default;
-$nav-pills-active-link-hover-bg:            $component-active-bg !default;
-$nav-pills-active-link-hover-color:         $component-active-color !default;
-
+$nav-pills-active-link-hover-bg:            $color-white; // $component-active-bg !default;
+$nav-pills-active-link-hover-color:         $color-black; // $component-active-color !default;
 
 //== Pagination
 //
@@ -497,22 +497,25 @@ $jumbotron-font-size:            ceil(($font-size-base * 1.5)) !default;
 //
 //## Define colors for form feedback states and, by default, alerts.
 
-$state-success-text:             #3c763d !default;
-$state-success-bg:               #dff0d8 !default;
-$state-success-border:           darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-text:             shade($color-green-4, 30%); //#3c763d !default;
+$state-success-bg:               $color-green-1; //#dff0d8 !default;
+$state-success-border:           $color-green-4; //darken(adjust-hue($state-success-bg, -10), 5%) !default;
+$state-success-close: 			 $color-gray-4;
 
-$state-info-text:                #31708f !default;
-$state-info-bg:                  #d9edf7 !default;
-$state-info-border:              darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-text:                $color-blue-4; // #31708f !default;
+$state-info-bg:                  $color-blue-1; // #d9edf7 !default;
+$state-info-border:              $color-blue-2; // darken(adjust-hue($state-info-bg, -10), 7%) !default;
+$state-info-close: 				 $color-blue-3;
 
-$state-warning-text:             #8a6d3b !default;
-$state-warning-bg:               #fcf8e3 !default;
-$state-warning-border:           darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-text:             shade($color-yellow-2, 30%); // #8a6d3b !default;
+$state-warning-bg:               $color-yellow-1; // #fcf8e3 !default;
+$state-warning-border:           $color-yellow-2; // darken(adjust-hue($state-warning-bg, -10), 5%) !default;
+$state-warning-close:			 $color-yellow-4;
 
-$state-danger-text:              #a94442 !default;
-$state-danger-bg:                #f2dede !default;
-$state-danger-border:            darken(adjust-hue($state-danger-bg, -10), 5%) !default;
-
+$state-danger-text:              $color-red-5; // #a94442 !default;
+$state-danger-bg:                $color-red-3; // #f2dede !default;
+$state-danger-border:            $color-red-2; // darken(adjust-hue($state-danger-bg, -10), 5%) !default;
+$state-danger-close:			 $color-red-4;
 
 //== Tooltips
 //
@@ -626,20 +629,24 @@ $alert-border-radius:         $border-radius-base !default;
 $alert-link-font-weight:      bold !default;
 
 $alert-success-bg:            $state-success-bg !default;
-$alert-success-text:          $state-success-text !default;
+$alert-success-text:          $color-gray-6;// $state-success-text !default;
 $alert-success-border:        $state-success-border !default;
+$alert-success-close:         $state-success-close !default;
 
 $alert-info-bg:               $state-info-bg !default;
 $alert-info-text:             $state-info-text !default;
 $alert-info-border:           $state-info-border !default;
+$alert-info-close:            $state-info-close !default;
 
 $alert-warning-bg:            $state-warning-bg !default;
-$alert-warning-text:          $state-warning-text !default;
+$alert-warning-text:          $color-yellow-5; //$state-warning-text !default;
 $alert-warning-border:        $state-warning-border !default;
+$alert-warning-close:         $state-warning-close !default;
 
 $alert-danger-bg:             $state-danger-bg !default;
 $alert-danger-text:           $state-danger-text !default;
-$alert-danger-border:         $state-danger-border !default;
+$alert-danger-border:         $state-danger-close !default;
+$alert-danger-close:          $state-danger-close !default;
 
 
 //== Progress bars
@@ -769,10 +776,10 @@ $well-border:                 darken($well-bg, 7%) !default;
 //
 //##
 
-$badge-color:                 #fff !default;
+$badge-color:                 $link-color; // #fff !default;
 //** Linked badge text color on hover
-$badge-link-hover-color:      #fff !default;
-$badge-bg:                    $gray-light !default;
+$badge-link-hover-color:      $link-color; // #fff !default;
+$badge-bg:                    #fff; // $gray-light !default;
 
 //** Badge text color in active nav link
 $badge-active-color:          $link-color !default;
@@ -830,8 +837,8 @@ $close-text-shadow:           0 1px 0 #fff !default;
 //
 //##
 
-$code-color:                  #c7254e !default;
-$code-bg:                     #f9f2f4 !default;
+$code-color:                  inherit; // #c7254e !default;
+$code-bg:                     inherit; // #f9f2f4 !default;
 
 $kbd-color:                   #fff !default;
 $kbd-bg:                      #333 !default;
@@ -847,7 +854,7 @@ $pre-scrollable-max-height:   340px !default;
 //##
 
 //** Horizontal offset for forms and lists.
-$component-offset-horizontal: 180px !default;
+$component-offset-horizontal: 220px; // 180px !default;
 //** Text muted color
 $text-muted:                  $gray-light !default;
 //** Abbreviations and acronyms border color

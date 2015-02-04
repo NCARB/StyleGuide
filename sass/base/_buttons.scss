@@ -8,16 +8,6 @@ button.btn {
   @include appearance(none);
 }
 
-input {
-  font-family: $base-font-size;
-}
-input[type="search"]::-webkit-search-decoration,
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-results-button,
-input[type="search"]::-webkit-search-results-decoration {
-  display: none;
-}
-
 /* Hide inner focus effect in Firefox */
 button::-moz-focus-inner,
 input[type="reset"]::-moz-focus-inner,
@@ -30,7 +20,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 @mixin button-colors($bgcolor, $color: tint($bgcolor, 90%)) {
   background: $bgcolor no-repeat 100% center;
   color: $color;
-  border-color: darken($bgcolor, 10%); // btn-group support
+  border-color: darken($bgcolor, 5%); // btn-group support
   border-style: solid;
 
   &:focus,
@@ -40,7 +30,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     text-decoration: none;
     outline: 0;
   }
-  &:active {
+  &:active, &.active {
     background-color: darken($bgcolor, 10%);
   }
 }
@@ -58,6 +48,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   text-transform: uppercase;
   letter-spacing: 0.05rem;
   text-align: center;
+  vertical-align: middle;
   border: 0;
   cursor: pointer;
   background-image: none;
@@ -90,7 +81,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   }
   &.btn-continue:after {
     font-weight: bold;
-      content: $fa-var-angle-right;
+    content: $fa-var-angle-right;
   }
   &.btn-plus:after {
     content: $fa-var-plus;
@@ -121,38 +112,38 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   }
 }
 
-.btn-toggle {
-  font-family: $font_light;
-  font-weight: 800;
-  background-color: #f4f4f2;
-  background-image: none;
-  color: #97948b;
-  border: 1px solid #97958c; // stroke
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  text-shadow: 0 1px 0 #fff;
-  @include transition(all .2s ease-in-out);
-
-  &:focus,
-  &:hover {
-    background-color: darken(#f4f4f2, 5%);
-    text-decoration: none;
-    outline: 0;
-    color: darken(#97948b, 5%);
-  }
-  &:active {
-    background-color: darken(#f4f4f2, 20%);
-    color: $color_black;
-  }
-  &:after {
-    display: none;
-  }
-  &[data-state="is-active"] {
-    background-color: darken(#f4f4f2, 15%);
-    color: $color_black;
-    border: 1px solid darken(#97958c, 15%);
-  }
-}
+// .btn-toggle {
+//   font-family: $font_light;
+//   font-weight: 800;
+//   background-color: #f4f4f2;
+//   background-image: none;
+//   color: #97948b;
+//   border: 1px solid #97958c; // stroke
+//   font-size: 18px;
+//   letter-spacing: 0.05em;
+//   text-shadow: 0 1px 0 #fff;
+//   @include transition(all .2s ease-in-out);
+// 
+//   &:focus,
+//   &:hover {
+//     background-color: darken(#f4f4f2, 5%);
+//     text-decoration: none;
+//     outline: 0;
+//     color: darken(#97948b, 5%);
+//   }
+//   &:active {
+//     background-color: darken(#f4f4f2, 20%);
+//     color: $color_black;
+//   }
+//   &:after {
+//     display: none;
+//   }
+//   &[data-state="is-active"] {
+//     background-color: darken(#f4f4f2, 15%);
+//     color: $color_black;
+//     border: 1px solid darken(#97958c, 15%);
+//   }
+// }
 
 .btn-center {
   text-align:center;

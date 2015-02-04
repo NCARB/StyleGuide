@@ -12,7 +12,7 @@ section {
   margin: 90px 0 0 0px;
   padding: 1rem 0;
 
-  &.l-top {
+  &.top {
     margin-top: 5px;
   }
 }
@@ -30,7 +30,7 @@ section {
   min-width: 250px;
 }
 
-.l-box {
+.box {
   margin-bottom: 1.5rem;
 }
 
@@ -49,7 +49,7 @@ section {
   margin: 50px 0 30px;
 }
 
-.l-system-element {
+.system-element {
   position: relative;
 
   &.first .small.header {
@@ -67,7 +67,7 @@ ul.figure li a {
   color: rgba(19,79,143, 1) !important;
 }
 
-.l-dropdown {
+.dropdown {
   position: relative;
   display: block;
   top: auto;
@@ -75,7 +75,7 @@ ul.figure li a {
   margin-bottom: 1rem;
 }
 
-.l-main .l-inline-nav {
+.main .inline-nav {
   display: block;
   margin: 1rem 0;
   @include column-count(2);
@@ -118,7 +118,7 @@ ul.figure li a {
   }
 }
 
-.l-box-iconography {
+.box-iconography {
   p span {
     display: inline-block;
     border: 1px solid $color-gray-1;
@@ -159,7 +159,7 @@ ul.figure li a {
 }
 
 // --------------------------------------  COLORS -----------------------------
-.l-color-group {
+.color-group {
   margin-bottom: 2rem;
 }
 
@@ -236,7 +236,7 @@ ul.figure li a {
   margin: 50px 0 30px;
 }
 
-.l-fonts {
+.fonts {
   .t-agenda-light {
     font-family: $font_light;
     font-style: normal;
@@ -254,7 +254,7 @@ ul.figure li a {
 }
 
 // --------------------------------------  ICONOGRAPHY -----------------------------
-.l-services {
+.services {
   list-style: none;
   margin: 25px 0 0 0;
   padding: 0;
@@ -291,8 +291,8 @@ ul.figure li a {
 }
 
 // --------------------------------------  FORM ELEMENTS -----------------------------
-.l-form-fields {
-  .l-text-input {
+.form-fields {
+  .text-input {
     max-width: 500px;
   }
 
@@ -307,7 +307,7 @@ ul.figure li a {
   }
 }
 
-.l-button-examples {
+.button-examples {
   max-width: 500px;
 
   .btn,
@@ -319,7 +319,7 @@ ul.figure li a {
 
 // --------------------------------------  CONTENT -----------------------------
 // Imagery
-.l-img-box {
+.img-box {
   position: relative;
   margin: 0 0.5rem;
   background-color: $color-gray-3;
@@ -348,7 +348,7 @@ ul.figure li a {
   }
 }
 
-.l-imagery {
+.imagery {
   img {
     width: auto;
     max-width: inherit;

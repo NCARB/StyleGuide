@@ -1,33 +1,33 @@
-.l-header.header-01 {
+.header.header-01 {
   *zoom: 1; }
-  .l-header.header-01:before, .l-header.header-01:after {
+  .header.header-01:before, .header.header-01:after {
     content: "";
     display: table; }
-  .l-header.header-01:after {
+  .header.header-01:after {
     clear: both; }
-  .l-header.header-01 .logo {
+  .header.header-01 .logo {
     float: left;
     width: 100%;
     margin-bottom: 1rem; }
-    .js .l-header.header-01 .logo {
+    .js .header.header-01 .logo {
       margin: 0 auto .8rem auto;
       text-align: center; }
       @media (min-width: 42em) {
-        .js .l-header.header-01 .logo {
+        .js .header.header-01 .logo {
           float: left;
           margin: 0;
           text-align: left; } }
-    .l-header.header-01 .logo a {
+    .header.header-01 .logo a {
       display: block; }
-    .l-header.header-01 .logo img {
+    .header.header-01 .logo img {
       width: 124px;
       height: auto; }
       @media (min-width: 42em) {
-        .l-header.header-01 .logo img {
+        .header.header-01 .logo img {
           width: 100px; } }
   @media (min-width: 64em) {
-    .l-header.header-01 .header-brand,
-    .l-header.header-01 .header-strip {
+    .header.header-01 .header-brand,
+    .header.header-01 .header-strip {
       margin: 0 auto; } }
 
 .header-strip {
@@ -490,7 +490,7 @@ a.level-one:hover {
     font-weight: normal; }
 
 @media (min-width: 42em) {
-  .well {
+  .main-well {
     float: left;
     width: 67%;
     margin-bottom: 45px; }
@@ -629,7 +629,7 @@ a.level-one:hover {
       .copyright a:hover {
         text-decoration: underline; } }
 @media (min-width: 60em) {
-  .well {
+  .main-well {
     width: 73%; }
 
   .rail {

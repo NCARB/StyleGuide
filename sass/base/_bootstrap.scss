@@ -1,7 +1,44 @@
 @import "../bootstrap/mixins";
-@import "../bootstrap/converted/glyphicons";
-@import "../bootstrap/converted/variables";
-@import "../bootstrap/converted/type";
-@import "../bootstrap/converted/buttons";
-@import "../bootstrap/converted/button-groups";
-
+@import "../bootstrap/converted/variables";        // adds serif and monospaced fonts
+@import "../bootstrap/converted/type";             // a surprizing number of basic element stylings
+//@import "../bootstrap/alerts";                   folded into base/alerts
+@import "../bootstrap/converted/badges";           // customized colors in context
+@import "../bootstrap/breadcrumbs";                // TODO: consult with kenji if we want this and how
+@import "../bootstrap/converted/button-groups";    // modified to add sliver between btns
+@import "../bootstrap/converted/buttons";          // we have btn and color contexts in base/buttons proper
+                                                   //   adds button-link, button sizes, button-block
+@import "../bootstrap/carousel"; 
+@import "../bootstrap/converted/close";            // font-awesome close icon
+@import "../bootstrap/code";
+@import "../bootstrap/component-animations";
+@import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
+@import "../bootstrap/converted/forms";            // form-control optional, control-label optional
+														// feedback-control-icon automatically iconed
+@import "../bootstrap/converted/glyphicons";       // uses font-awesome
+//@import "../bootstrap/grid";                     completely reimplimented in base
+@import "../bootstrap/converted/input-groups";     // tweaked the input-group-addon styles
+@import "../bootstrap/jumbotron";				           // TODO style
+@import "../bootstrap/converted/labels";           // use-text color, shape out better lower sized fonts
+@import "../bootstrap/list-group";                 // TODO style and consider implementing drawers with this
+@import "../bootstrap/media";
+//@import "../bootstrap/mixins";
+@import "../bootstrap/modals";                     // TODO style
+@import "../bootstrap/navbar";                     // TODO style
+@import "../bootstrap/converted/navs";             // customized, adds nav-choices
+//@import "../bootstrap/normalize";                we already have this; our normalize has more stuff in it
+@import "../bootstrap/pager";                      // TODO style
+@import "../bootstrap/converted/pagination";       // the blue bar on top effect
+@import "../bootstrap/panels";
+@import "../bootstrap/popovers";                   // TODO style
+@import "../bootstrap/print";
+@import "../bootstrap/converted/progress-bars";    // bold
+@import "../bootstrap/responsive-embed";
+@import "../bootstrap/responsive-utilities";
+//@import "../bootstrap/converted/scaffolding";    due to core stylings, imported at top of base directly
+@import "../bootstrap/converted/tables";           // adds table-sort and table-hover-pointer
+//@import "../bootstrap/theme";
+@import "../bootstrap/thumbnails";                 // TODO style
+@import "../bootstrap/tooltip";                    // TODO style
+@import "../bootstrap/converted/type";             // we already have the header elements defined
+@import "../bootstrap/converted/utilities";        // uses bourbon clearfix
+@import "../bootstrap/wells";                      // TODO style
