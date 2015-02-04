@@ -2248,34 +2248,6 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   .btn-danger:active, .btn-danger.active {
     background-color: #701317; }
 
-.btn-toggle {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-weight: 800;
-  background-color: #f4f4f2;
-  background-image: none;
-  color: #97948b;
-  border: 1px solid #97958c;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  text-shadow: 0 1px 0 #fff;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out; }
-  .btn-toggle:focus, .btn-toggle:hover {
-    background-color: #e8e8e4;
-    text-decoration: none;
-    outline: 0;
-    color: #8b887e; }
-  .btn-toggle:active {
-    background-color: #c5c5bb;
-    color: #000; }
-  .btn-toggle:after {
-    display: none; }
-  .btn-toggle[data-state="is-active"] {
-    background-color: #d1d1c9;
-    color: #000;
-    border: 1px solid #716f66; }
-
 .btn-center {
   text-align: center; }
 
