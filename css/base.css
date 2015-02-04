@@ -6635,9 +6635,6 @@ a.list-group-item-danger {
         text-decoration: none;
         background-color: transparent;
         cursor: not-allowed; }
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus, nav > ul .open > a, nav > ul .open > a:hover, nav > ul .open > a:focus, nav > ol .open > a, nav > ol .open > a:hover, nav > ol .open > a:focus {
-    background-color: #E2E2E2;
-    border-color: #00A4E3; }
   .nav .nav-divider, nav > ul .nav-divider, nav > ol .nav-divider {
     height: 1px;
     margin: 9px 0;
