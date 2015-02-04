@@ -16,6 +16,11 @@
     padding-right: 0;
   }
 
+  & > .input-group-btn > .btn {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+
   .form-control {
     // Ensure that the input is always above the *appended* addon button for
     // proper border colors.
