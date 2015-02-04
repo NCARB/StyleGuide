@@ -20,14 +20,14 @@
 //  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $border-radius-base);
 //  @include user-select(none);
 //
-  &,
-  &:active,
-  &.active {
-    &:focus,
-    &.focus {
-      @include tab-focus;
-    }
-  }
+//  &,
+//  &:active,
+//  &.active {
+//    &:focus,
+//    &.focus {
+//      @include tab-focus;
+//    }
+//  }
 //
 //  &:hover,
 //  &:focus,
