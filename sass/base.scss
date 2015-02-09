@@ -5,26 +5,30 @@
 // Bourbon is a Sass mixin library: http://bourbon.io/
 @import "bourbon/bourbon";
 
-// Base
+// mixins
 @import "base/colors";
 @import "base/type_sizes";
 @import "base/type_mixins";
+@import "base/functions";
 @import "base/breakpoints";
+@import "base/fonts";
+
+// basics
 @import "base/normalize";
 @import "bootstrap/converted/scaffolding";
 @import "base/shell";
-@import "base/color_shortcuts";
-@import "base/fonts";
-@import "base/functions";
 @import "base/typography";
 @import "base/images";
-@import "base/grid";
 @import "base/links";
 @import "base/buttons";
 @import "base/lists";
 @import "base/forms";
+
+// components
+@import "base/grid";
 @import "base/alerts";
 @import "base/bootstrap";
+@import "base/color_shortcuts";
 
 // Grid Breakpoints to JS via body::after
 // @import "base/breakpoint_to_js";
