@@ -1,11 +1,5 @@
-*.swp
-*-ck.js
-.DS_Store
-.sass-cache
-.htaccess
-.htpasswd
-.bundle
-compass_app_log.txt
-*.sublime-*
 node_modules
+.tmp
+.sass-cache
 bower_components
+dist/
