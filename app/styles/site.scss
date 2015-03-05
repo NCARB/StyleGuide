@@ -1,0 +1,357 @@
+@import "base/fonts";
+@import "base/colors";
+@import "base/type_sizes";
+@import "base/type_mixins";
+@import "base/icons";
+@import "base/breakpoints";
+@import "base/bourbon";
+
+section {
+  clear: both;
+  // margin: 90px 0;
+  margin: 90px 0 0 0px;
+  padding: 1rem 0;
+
+  &.top {
+    margin-top: 5px;
+  }
+}
+
+@include breakpoint(sm) {
+  section {
+    margin: 0px 0 0 200px;
+  }
+}
+
+.intro-text {
+  min-width: 300px;
+}
+.project-examples {
+  min-width: 250px;
+}
+
+.box {
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  width: 50%;
+  margin-bottom: 45px;
+  padding-top: 80px;
+  text-transform: uppercase;
+  color: $color-orange;
+  border-bottom: 1px solid $color-gray-2;
+  clear: both;
+}
+
+.small.header {
+  font-weight: bold;
+  margin: 50px 0 30px;
+}
+
+.system-element {
+  position: relative;
+
+  &.first .small.header {
+    margin-top: 0;
+  }
+}
+
+
+ul.figure {
+  float: right;
+  padding: 2px 0 8px 0px;
+}
+
+ul.figure li a {
+  color: rgba(19,79,143, 1) !important;
+}
+
+.dropdown {
+  position: relative;
+  display: block;
+  top: auto;
+  left: auto;
+  margin-bottom: 1rem;
+}
+
+.main .inline-nav {
+  display: block;
+  margin: 1rem 0;
+  @include column-count(2);
+  @include column-gap(10px);
+
+  @include breakpoint(sm) {
+    @include column-count(3);
+    @include column-gap(20px);
+  }
+
+  a {
+    display: block;
+    padding: 0 0 .5rem 0;
+
+    &:before {
+      @include fa-arrow-icon();
+      padding-right: 5px;
+      // @include arrow-nav-icon();
+    }
+  }
+}
+
+/*
+.js [role="navigation"] {
+  top: 0;
+  position: static;
+}
+*/
+
+.t-box {
+  border: 1px solid rgba(210,210,210, 1);
+  padding: 8px;
+  margin-bottom: 16px;
+
+  &:after {
+    float: none;
+    clear: both;
+    content: " ";
+    display: table;
+  }
+}
+
+.box-iconography {
+  p span {
+    display: inline-block;
+    border: 1px solid $color-gray-1;
+    height: 40px;
+    width: 40px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    padding-top: 10px;
+
+    &:before {
+      color: $color-gray-6 !important;
+      font-size: 20px;
+      padding: 10px;
+    }
+  }
+}
+
+// --------------------------------------  GRID -----------------------------
+.flex-container {
+  &.t-demo {
+    padding-top: .5rem;
+  }
+  .t-demo {
+    width: 100%;
+    padding: .8rem 1rem 0;
+    margin-bottom: 1rem;
+    background: $color-blue-2;
+    color: $color-white;
+    border-radius: 3px;
+
+    &:after {
+      content: '';
+      display: block;
+      margin-top: .8rem;
+      height: 1px;
+    }
+  }
+}
+
+// --------------------------------------  COLORS -----------------------------
+.color-group {
+  margin-bottom: 2rem;
+}
+
+.t-box-color-swatch {
+  $swatch-min-height: 42px;
+  position: relative;
+  min-width: 145px;
+  min-height: $swatch-min-height;
+  padding: 5px;
+  color: $color-gray;
+
+  &.primary {
+    min-height: $swatch-min-height * 2;
+
+    .name,
+    .code,
+    .codename {
+      color: $color-white;
+    }
+
+    .code {
+      padding-top: 20px;
+    }
+  }
+
+  .name {
+    width: 100%;
+    text-align: left;
+  }
+
+  .code,
+  .codename {
+    margin: 0;
+    text-align: right;
+    @include type-xsmall;
+  }
+
+  @each $name, $color in $colors {
+    &.#{$name} {
+      background-color: $color;
+    }
+  }
+
+  &.yellow-3 {
+    .name,
+    .code,
+    .codename {
+      color: $color-gray;
+    }
+  }
+  &.white {
+    border: 1px solid $color-gray;
+  }
+
+  &.blue-3,
+  &.blue-4,
+  &.red-4,
+  &.red-5,
+  &.yellow-5,
+  &.gray-4,
+  &.gray-5,
+  &.gray-6 {
+    .name,
+    .code,
+    .codename {
+      color: $color-white;
+    }
+  }
+}
+
+// --------------------------------------  TYPOGRAPHY -----------------------------
+.small.type-header {
+  font-weight: bold;
+  margin: 50px 0 30px;
+}
+
+.fonts {
+  .t-agenda-light {
+    font-family: $font_light;
+    font-style: normal;
+    font-weight: normal;
+    @include fontSize(48px);
+    @include lineHeight(76px);
+  }
+  .t-arial-bold {
+    font-family: $font_regular;
+    font-style: normal;
+    font-weight: bold;
+    @include fontSize(48px);
+    @include lineHeight(76px);
+  }
+}
+
+// --------------------------------------  ICONOGRAPHY -----------------------------
+.services {
+  list-style: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+
+  li {
+    display: inline-block;
+    padding: 0;
+    height: 190px;
+    text-align: center;
+    vertical-align: top;
+
+    @include breakpoint(sm) {
+      padding: 0 15px;
+    }
+
+    &.mobility:before {
+      content: '';
+      @include mobility-icon();
+    }
+    &.monographs:before,
+    &.idp:before {
+      content: '';
+      @include monographs-icon();
+    }
+    &.record:before {
+      content: '';
+      @include record-icon();
+    }
+    &.cost:before {
+      content: '';
+      @include cost-icon();
+    }
+  }
+}
+
+// --------------------------------------  FORM ELEMENTS -----------------------------
+.form-fields {
+  .text-input {
+    max-width: 500px;
+  }
+
+  h2 {
+    padding-top: 4rem;
+  }
+
+  .focus {
+    outline: none;
+    border: 1px solid $color-blue-1;
+    box-shadow: 0 0 3px lighten($color-blue-1, 25%); // outer glow
+  }
+}
+
+.button-examples {
+  max-width: 500px;
+
+  .btn,
+  .btn-primary,
+  .btn-secondary {
+    margin: .5rem 0;
+  }
+}
+
+// --------------------------------------  CONTENT -----------------------------
+// Imagery
+.img-box {
+  position: relative;
+  margin: 0 0.5rem;
+  background-color: $color-gray-3;
+  color: $color-gray-6;
+  font-family: $font_regular;
+  @include fontSize($type-XXL);
+  text-align: center;
+
+  .desc {
+    display: block;
+    margin-top: 25%;
+    height: 50%;
+  }
+
+  &.one-to-one {
+    max-width: 100px;
+    height: 100px;
+  }
+  &.four-to-three {
+    max-width: 200px;
+    height: 150px;
+  }
+  &.homepage-feature {
+    max-width: 700px;
+    height: 327px;
+  }
+}
+
+.imagery {
+  img {
+    width: auto;
+    max-width: inherit;
+  }
+}
+
