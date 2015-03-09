@@ -1,0 +1,23 @@
+@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+
+.btn-group { 
+  > .btn + .btn,
+  > .btn + .btn-group > .btn,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group > .btn {
+  	border-left-width: 1px;
+  }
+}
+
+.btn-group-vertical {
+  > .btn + .btn,
+  > .btn + .btn-group > .btn,
+  > .btn-group + .btn,
+  > .btn-group + .btn-group > .btn {
+  	border-top-width: 1px;
+  }
+}
+
+.btn-group > .btn + .dropdown-toggle .caret:before {
+  display: block;  // android
+}

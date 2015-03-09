@@ -1,0 +1,184 @@
+// Shell
+$bodytopspacing: 4px;
+
+html {
+  position: relative;
+  font-family: $font_regular;
+  font-size: 100%;
+  color: $color_base;
+  background-color: $color-blue;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  margin: 0;
+  font-family: $font_regular;
+  font-size: 100%;
+  line-height: $base-line-height;
+  color: $color_base;
+}
+
+:focus {
+  outline: none;
+}
+
+.strip-top {
+  width: 100%;
+  height: $bodytopspacing;
+  background: $color-blue;
+
+  @include breakpoint(sm) {
+    height:($bodytopspacing + 4px);
+  }
+}
+
+.js .skip {
+  /* Accessible hide */
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  margin: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  z-index: 2;
+
+  &:focus {
+    height: auto;
+    width: auto;
+    top: 0;
+    left: 50%;
+    margin-left: -80px;
+    background-color: $color-gray-6;
+    padding: 10px;
+    line-height: 1;
+    color: #fff;
+    font-weight: bold;
+    font-size: $type-M;
+    clip: auto !important;
+    overflow: visible;
+  }
+}
+
+.no-js .skip {
+  display: block;
+  @include type-4();
+  background-color: $color-white;
+  padding: 20px 20px 0;
+  text-align: center;
+}
+
+div.canvas {
+  background-color: #fff;
+  @include transform(none);
+  @include transition(all .33s ease-out);
+
+  &.is-pushed {
+    @include transform(translate3d(16em,0,0));
+  }
+}
+
+div.canvas-blackout {
+  display: none;
+  @include position(absolute, 0px 0px 0px 0px);
+  background-color: rgba(0,0,0,0);
+  z-index: 888;
+
+  div.canvas.is-pushed & {
+    display: block;
+    &:active ~ .header .off-canvas {
+      background-color: $color-tan_gray;
+    }
+  }
+}
+
+div.canvas-is-pushed {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: visible;
+}
+
+main {
+  display: block;
+  padding: 20px;
+  background: url(/styles/i/mainbg.gif) repeat-x;
+
+  @include clear;
+
+  .main-well {
+    margin-bottom: 25px;
+  }
+}
+
+/* Device Adaption
+   (throwing a bone to IE10 which ignores the
+    meta viewport tag in favor of this)
+---------------------------------------- */
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+.clear {
+  &:before,
+  &:after {
+      content: "";
+      display: table;
+  }
+  &:after {
+      clear:both;
+  }
+  *zoom: 1;
+}
+
+@include breakpoint(sm) {
+  .canvas {
+    @include transition(none);
+
+    &.is-pushed {
+      @include transform(translate3d(0,0,0));
+    }
+  }
+  .canvas-blackout {
+    display: none;
+    @include position(absolute, 0px 0px 0px 0px);
+    background-color: rgba(0,0,0,0);
+  }
+  html {
+    background-color:$color-tan_gray-1;
+  }
+  main {
+        position:relative;
+    }
+}
+
+
+
+$recedeamount: 40px;
+@include breakpoint(lg) {
+    .canvas {
+        margin:0 auto;
+        width:1000px;
+        // padding-left: $recedeamount;
+        // padding-right:$recedeamount;
+    }
+    main {
+        // margin-left:-$recedeamount;
+        // margin-right:-$recedeamount;
+        // padding-left: $recedeamount + 20px;
+        // padding-right:$recedeamount + 20px;
+        position:relative;
+    }
+}

@@ -1,0 +1,13 @@
+@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/badges";
+
+.badge, .nav-pills > .active > a > .badge {
+  background-color: $brand-primary;
+  color: white;
+}
+
+.btn-primary {
+  .badge {
+    color: $brand-primary;
+    background-color: white;
+  }
+}

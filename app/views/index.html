@@ -1,0 +1,192 @@
+
+<!DOCTYPE html>
+
+<!--[if lt IE 7]>     <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"     lang="en"> <![endif]-->
+<!--[if IE 7]>        <html class="no-js lt-ie10 lt-ie9 lt-ie8 gt-ie6 ie7" lang="en"> <![endif]-->
+<!--[if IE 8]>        <html class="no-js lt-ie10 lt-ie9 gt-ie6 gt-ie7 ie8" lang="en"> <![endif]-->
+<!--[if IE 9]>        <html class="no-js lt-ie10 gt-ie6 gt-ie7 gt-ie8 ie9" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+
+<head>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="MobileOptimized" content="320" />
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
+  <title>NCARB Style Guide</title>
+  <link rel="stylesheet" href="//cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/ncarb-design-components-1.0.0.min.css" />
+  <link rel="stylesheet" href="css/layouts/library.css" media="all" />
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script>
+    $('html').removeClass('no-js').addClass('js'); // located here to eliminate FOUC
+  </script>
+  <script src="js/modernizr.custom.24308.js"></script>
+  <script src="bower_components/respond/dest/respond.min.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+  <script src="js/ncarb-design-library-1.0.0.min.js"></script> <!-- warning: this breaks jquery plugins, TODO fix -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/jquery.details.min.js"></script>
+  <script src="js/jquery.placeholder.min.js"></script>
+  <script>
+    $('details').details();
+  </script>
+  <!--[if lt IE 9]>
+    <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE9.js"></script>
+  <![endif]-->
+  <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
+</head>
+<body ng-app="designSystem">
+  <div class="strip-top"></div>
+  <a class="skip" href="#main">Skip navigation</a>
+  <div class="canvas">
+    <header class="header header-01" role="banner">
+      <div class="header-brand">
+      <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+    </div>
+      <ul class="header-strip">
+        <!-- <li><figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
+        <li><a href="#link">Tool name 1</a></li>
+        <li><a href="#link">Tool name 2</a></li>
+        <li><a href="#link">Tool name 3</a></li>
+        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
+      </ul>
+    </header>
+      
+      <!-- <div class="header-brand">
+        <figure class="logo"><a href="index.html"><img src="components/page/i/ncarb-logo.png" alt="NCARB Home" /></a></figure>
+        <div class="search">
+            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
+            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
+                <fieldset>
+                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
+                    <button class="search-submit" type="submit">Submit</button>
+                </fieldset>
+            </form>
+        </div>
+      </div> -->
+
+      <main class="main" role="main" id="main" tabindex="1">
+        <nav class="main-nav" id="nav" role="navigation">
+            <ul>
+              <li>
+                <a ui-sref="introduction" ui-sref-active="active" class="level-one">General stuff</a>
+              </li>
+              <li>
+                <a ui-sref="layout" ui-sref-active="active" class="level-one">Layout</a>
+              </li>
+              <li>
+                <a ui-sref="color" ui-sref-active="active" class="level-one">Color</a>
+              </li>
+              <li>
+                <a ui-sref="typography" ui-sref-active="active" class="level-one">Typography</a>
+              </li>
+              <li>
+                <a ui-sref="iconography" ui-sref-active="active" class="level-one">Iconography</a>
+              </li>
+              <li>
+                <a ui-sref="formElements" ui-sref-active="active" class="level-one">Form Elements</a>
+              </li>
+              <li>
+                <a ui-sref="navigation" ui-sref-active="active" class="level-one">Navigation</a>
+              </li>
+              <li>
+                <a ui-sref="content" ui-sref-active="active" class="level-one">Content</a>
+              </li>
+              <li>
+                <a ui-sref="bootstrap-css" ui-sref-active="active" class="level-one">Bootstrap CSS</a>
+              </li>
+              <li>
+                <a ui-sref="bootstrap-components" ui-sref-active="active" class="level-one">Bootstrap Components</a>
+              </li>
+              <li>
+                <a ui-sref="bootstrap-javascript" ui-sref-active="active" class="level-one">Bootstrap Javascript</a>
+              </li>
+            </ul>
+            <ul class="other">
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <div class="level-one">Other Menu</div>
+                    <button class="level-two_toggle">Show Subnav</button>
+                    <ul class="level-two">
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                        <li><a href="#link">Other sub nav</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+
+    <!-- <header class="header header-01">
+      <figure class="logo">
+        <a href="http://prototypes.eightshapes.com/ncarb">
+          <img class="ncarb-logo" src="components/page/i/ncarb-logo.png" alt="NCARB">
+        </a>
+      </figure>
+    </header> -->
+    
+      <section class="t-box-frame l-top">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <div ui-view></div>
+
+      </section>
+    </main>
+
+
+    <footer class="footer" role="contentinfo">
+          <div class="vcard">
+            <figure class="footer-logo photo"><a href="http://www.ncarb.org" class="url"><img src="components/page/i/ncarb-logo_w.png" alt="NCARB home" /></a></figure>
+            <ul class="org-card">
+                <li>
+                    <span class="org">National Council of Architectural Registration Boards</span>
+                </li>
+                <li>
+                    <ul class="adr">
+                        <li><span class="street-address">1801 K Street, NW Suite 700K</span></li>
+                        <li>
+                            <span class="locality">Washington</span>, 
+                            <span class="region">DC</span>, 
+                            <span class="postal-code">20006</span>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <span class="tel">
+                        <span class="type">P<span class="label-hide">hone</span></span>:
+                        <span class="value">202-879-0520</span>
+                    </span>
+                    <span class="tel">
+                        <span class="type">F<span class="label-hide">ax</span></span>:
+                        <span class="value">202-783-0290</span>
+                    </span>
+                </li>
+            </ul>
+          </div>
+          <ul class="footer-links">
+              <li><a href="index.html">NCARB Home</a></li>
+              <li><a href="http://ncarb.org/en/FAQs.aspx">FAQs</a></li>
+              <li><a href="http://ncarb.org/en/Contact-Us.aspx">Contact Us</a></li>
+          </ul>
+          
+          <div class="copyright">
+              <p>&copy; National Council of Architectural Registration Boards</p>
+              <p><a href="#link">Privacy Policy</a></p>
+          </div>
+      </footer>
+  </div>
+</body>
+</html>

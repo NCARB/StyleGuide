@@ -13,7 +13,7 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // middleware to rewrite routes in html5Mode
-  var modRewrite = require('connect-modrewrite');
+  require('connect-modrewrite');
 
   // Time how long tasks take. Can help when optimizing build times
   require('time-grunt')(grunt);
@@ -47,9 +47,9 @@ module.exports = function (grunt) {
         files: ['test/spec/{,*/}*.js'],
         tasks: ['newer:jshint:test', 'karma']
       },
-      compass: {
-        files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
-        tasks: ['compass:server', 'autoprefixer']
+      sass: {
+        files: ['**/*.scss'],
+        tasks: ['sass:server', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -175,37 +175,83 @@ module.exports = function (grunt) {
         ignorePath:  /\.\.\//
       },
       sass: {
-        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}', '<%= yeoman.app %>/components/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
     },
 
     // Compiles Sass to CSS and generates necessary files if requested
-    compass: {
-      options: {
-        sassDir: '<%= yeoman.app %>/styles',
-        cssDir: '.tmp/styles',
-        generatedImagesDir: '.tmp/images/generated',
-        imagesDir: '<%= yeoman.app %>/images',
-        javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
-        importPath: './bower_components',
-        httpImagesPath: '/images',
-        httpGeneratedImagesPath: '/images/generated',
-        httpFontsPath: '/styles/fonts',
-        relativeAssets: false,
-        assetCacheBuster: false,
-        raw: 'Sass::Script::Number.precision = 10\n'
-      },
+    sass: {
       dist: {
         options: {
-          generatedImagesDir: '<%= yeoman.dist %>/images/generated'
-        }
-      },
-      server: {
+          loadPath: 'app/',
+          update: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'app/components',
+            src: ['**/*.scss'],
+            dest: 'dist/components',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/styles',
+            src: ['**/*.scss'],
+            dest: 'dist/styles',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/components',
+            src: ['**/*.scss'],
+            dest: 'app/components',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/styles',
+            src: ['**/*.scss'],
+            dest: 'app/styles',
+            ext: '.css'
+          }
+        ]
+      }, server: {
         options: {
-          debugInfo: true
-        }
+          loadPath: 'app/',
+          update: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'app/components',
+            src: ['**/*.scss'],
+            dest: '.tmp/components',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/styles',
+            src: ['**/*.scss'],
+            dest: '.tmp/styles',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/components',
+            src: ['**/*.scss'],
+            dest: 'app/components',
+            ext: '.css'
+          },
+          {
+            expand: true,
+            cwd: 'app/styles',
+            src: ['**/*.scss'],
+            dest: 'app/styles',
+            ext: '.css'
+          }
+        ]
       }
     },
 
@@ -214,8 +260,9 @@ module.exports = function (grunt) {
       dist: {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
-          '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'          
+          //'<%= yeoman.dist %>/styles/{,*/}*.min.css',
+          '<%= yeoman.dist %>/styles/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'        
         ]
       }
     },
@@ -347,60 +394,29 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
-            'styles/fonts/Agenda/*.otf',
-            'styles/i/*.png',
-            'styles/font-awesome-4.1.0/{,*/}*'
+            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            'styles/i/*.{png,jpg,jpeg,gif,webp,svg}',
+            'components/**/*.{png,jpg,jpeg,gif,webp,svg}'
           ]
-        }, {
-          expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/images',
-          src: ['generated/*']
-        }, {
-          expand: true,
-          flatten: true,            
-          src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-          dest: '<%= yeoman.dist %>/fonts/bootstrap'
         }, {
           expand: true,
           cwd: '.',
           src: 'bower_components/oauth-ng/dist/views/templates/default.html',
           dest: '<%= yeoman.dist %>'
-        },{
-          expand: true,
-          cwd: '.tmp/i',
-          dest: '<%= yeoman.dist %>/i',
-          src: ['generated/*']
         }]
-      },
-      styles: {
-        expand: true,
-        cwd: '<%= yeoman.app %>/styles',
-        src: [
-          '{,*/}*.css',
-          'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*'
-        ],
-        dest: '.tmp/styles/'        
-      },
-      fonts : {
-        expand: true,
-        flatten: true,
-        src: 'bower_components/bootstrap-sass-official/assets/fonts/bootstrap/*',
-        dest: '.tmp/fonts/bootstrap'
       }
     },
 
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
-        'compass:server'
+        'sass:server'
       ],
       test: [
-        'compass'
+        'sass'
       ],
       dist: [
-        'compass:dist',
+        'sass:dist',
         'imagemin',
         'svgmin'
       ]
@@ -411,21 +427,6 @@ module.exports = function (grunt) {
       unit: {
         configFile: 'test/karma.conf.js',
         singleRun: true
-      }
-    },
-
-    buildcontrol: {
-      options: {
-          dir: 'dist',
-          commit: true,
-          push: true,
-          message: 'Built %sourceName% from commit %sourceCommit% on branch %sourceBranch%'
-      },
-      heroku: {
-          options: {
-              remote: 'git@heroku.com:warm-meadow-4976.git',
-              branch: 'master'
-          }
       }
     }
   });
@@ -441,7 +442,6 @@ module.exports = function (grunt) {
       'wiredep',
       'concurrent:server',
       'autoprefixer',
-      'copy:fonts',
       'connect:livereload',
       'watch'
     ]);
@@ -483,5 +483,5 @@ module.exports = function (grunt) {
     'build'
   ]);
 
-  grunt.registerTask('deploy', ['buildcontrol']);
+  grunt.registerTask('heroku', ['build']);
 };

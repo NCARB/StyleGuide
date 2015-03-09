@@ -1,5 +1,9 @@
+'use strict';
+
+angular.module('jquery', []).factory('$', function () { return window.jQuery; });
+
 angular.module('designSystem.controllers', [])
-  .controller('BootstrapJsCtrl', [function () {
+  .controller('BootstrapJsCtrl', ['jquery', function ($) {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
   }]);
@@ -9,7 +13,7 @@ angular.module('designSystem.directives', [])
       return {
           restrict: 'E',
           link: function (scope, elem, attrs) {
-              if (attrs.href && attrs.href.indexOf('#') == 0 && !attrs.uiSref) {
+              if (attrs.href && attrs.href.indexOf('#') === 0 && !attrs.uiSref) {
                   elem.on('click', function (e) {
                       e.preventDefault();
                   });
@@ -68,7 +72,7 @@ angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'design
         .state('bootstrap-javascript', {
           url: '/bootstrap-javascript',
           templateUrl: 'views/bootstrap-javascript.html',
-          controller: "BootstrapJsCtrl"
+          controller: 'BootstrapJsCtrl'
         });
     }
   ]);

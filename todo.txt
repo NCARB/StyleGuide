@@ -1,4 +1,0 @@
-make sure on serve
-- clean: everything is moved to .tmp
-- build: into dist
-- jquery use bower
