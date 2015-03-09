@@ -69,7 +69,13 @@
   <dt><code>.flex-md-show</code></dt>
   <dd>An item shown on a browser of a regular screen or larger.</dd>
 
-  <dt><code>.flex(-sm|-md|-lg)?-(full|show|hide|([1-12]of)?[2-12])</code></dt>
+  <dt><code>.flex-md-fill</code></dt>
+  <dd>IE10+: An item fills evenly distributed on a browser of a regular screen or larger.</dd>
+
+  <dt><code>.flex-md-collapse</code></dt>
+  <dd>An item shrinks to minimum width on a browser of a regular screen or larger.</dd>
+
+  <dt><code>.flex(-sm|-md|-lg)?-(([1-12]of)?[2-12]|full|show|hide|collapse|fill[2-12]?)</code></dt>
   <dd>Pattern</dd>
 </dl>
 
@@ -177,6 +183,19 @@
   </div>
   <div class="flex-item flex-hide flex-md-show">
     <div class="t-demo"><code>flex-item flex-hide flex-md-show</code></div>
+  </div>
+</div>
+
+<h4><code>flex-container flex-gutters with flex-fill and flex-collapse</code></h4>
+<div class="flex-container flex-gutters t-demo">
+  <div class="flex-item flex-md-fill">
+    <div class="t-demo"><code>.. flex-md-fill</code></div>
+  </div>
+  <div class="flex-item flex-md-fill-2">
+    <div class="t-demo"><code>.. flex-md-fill-2</code></div>
+  </div>
+  <div class="flex-item flex-md-collapse">
+    <div class="t-demo"><code>.. collapse</code></div>
   </div>
 </div>
 
