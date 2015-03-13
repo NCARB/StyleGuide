@@ -1680,28 +1680,40 @@ ul.form-group {
   right: 100%; }
 
 .flex-gutters {
-  margin-left: -0.5rem;
-  margin-bottom: 0.5rem; }
+  margin-left: -0.5rem; }
   .flex-gutters > .flex-item {
-    padding-left: 0.5rem; }
+    padding-left: 0.5rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem; }
+  .flex-gutters > .flex-item-cancel-v-margin {
+    margin-bottom: -0.5rem; }
 
 .flex-gutters-wide {
-  margin-left: -1rem;
-  margin-bottom: 1rem; }
+  margin-left: -1rem; }
   .flex-gutters-wide > .flex-item {
-    padding-left: 1rem; }
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem; }
+  .flex-gutters-wide > .flex-item-cancel-v-margin {
+    margin-bottom: -1rem; }
 
 .flex-gutters-wider {
-  margin-left: -2rem;
-  margin-bottom: 2rem; }
+  margin-left: -2rem; }
   .flex-gutters-wider > .flex-item {
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem; }
+  .flex-gutters-wider > .flex-item-cancel-v-margin {
+    margin-bottom: -2rem; }
 
 .flex-gutters-wider {
-  margin-left: -3rem;
-  margin-bottom: 3rem; }
+  margin-left: -3rem; }
   .flex-gutters-wider > .flex-item {
-    padding-left: 3rem; }
+    padding-left: 3rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem; }
+  .flex-gutters-wider > .flex-item-cancel-v-margin {
+    margin-bottom: -3rem; }
 
 @media (min-width: 768px) {
   .flex-sm-2 > .flex-item, .flex-sm-4 > .flex-item.flex-2, .flex-sm-6 > .flex-item.flex-3, .flex-sm-8 > .flex-item.flex-4, .flex-sm-10 > .flex-item.flex-5, .flex-sm-12 > .flex-item.flex-6 {
@@ -2191,28 +2203,40 @@ ul.form-group {
     right: 100%; }
 
   .flex-sm-gutters {
-    margin-left: -0.5rem;
-    margin-bottom: 0.5rem; }
+    margin-left: -0.5rem; }
     .flex-sm-gutters > .flex-item {
-      padding-left: 0.5rem; }
+      padding-left: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem; }
+    .flex-sm-gutters > .flex-item-cancel-v-margin {
+      margin-bottom: -0.5rem; }
 
   .flex-sm-gutters-wide {
-    margin-left: -1rem;
-    margin-bottom: 1rem; }
+    margin-left: -1rem; }
     .flex-sm-gutters-wide > .flex-item {
-      padding-left: 1rem; }
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+    .flex-sm-gutters-wide > .flex-item-cancel-v-margin {
+      margin-bottom: -1rem; }
 
   .flex-sm-gutters-wider {
-    margin-left: -2rem;
-    margin-bottom: 2rem; }
+    margin-left: -2rem; }
     .flex-sm-gutters-wider > .flex-item {
-      padding-left: 2rem; }
+      padding-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .flex-sm-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -2rem; }
 
   .flex-sm-gutters-wider {
-    margin-left: -3rem;
-    margin-bottom: 3rem; }
+    margin-left: -3rem; }
     .flex-sm-gutters-wider > .flex-item {
-      padding-left: 3rem; } }
+      padding-left: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; }
+    .flex-sm-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -3rem; } }
 @media (min-width: 960px) {
   .flex-md-2 > .flex-item, .flex-md-4 > .flex-item.flex-2, .flex-md-6 > .flex-item.flex-3, .flex-md-8 > .flex-item.flex-4, .flex-md-10 > .flex-item.flex-5, .flex-md-12 > .flex-item.flex-6 {
     width: 50%; }
@@ -2701,28 +2725,40 @@ ul.form-group {
     right: 100%; }
 
   .flex-md-gutters {
-    margin-left: -0.5rem;
-    margin-bottom: 0.5rem; }
+    margin-left: -0.5rem; }
     .flex-md-gutters > .flex-item {
-      padding-left: 0.5rem; }
+      padding-left: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem; }
+    .flex-md-gutters > .flex-item-cancel-v-margin {
+      margin-bottom: -0.5rem; }
 
   .flex-md-gutters-wide {
-    margin-left: -1rem;
-    margin-bottom: 1rem; }
+    margin-left: -1rem; }
     .flex-md-gutters-wide > .flex-item {
-      padding-left: 1rem; }
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+    .flex-md-gutters-wide > .flex-item-cancel-v-margin {
+      margin-bottom: -1rem; }
 
   .flex-md-gutters-wider {
-    margin-left: -2rem;
-    margin-bottom: 2rem; }
+    margin-left: -2rem; }
     .flex-md-gutters-wider > .flex-item {
-      padding-left: 2rem; }
+      padding-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .flex-md-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -2rem; }
 
   .flex-md-gutters-wider {
-    margin-left: -3rem;
-    margin-bottom: 3rem; }
+    margin-left: -3rem; }
     .flex-md-gutters-wider > .flex-item {
-      padding-left: 3rem; } }
+      padding-left: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; }
+    .flex-md-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -3rem; } }
 @media (min-width: 1260px) {
   .flex-lg-2 > .flex-item, .flex-lg-4 > .flex-item.flex-2, .flex-lg-6 > .flex-item.flex-3, .flex-lg-8 > .flex-item.flex-4, .flex-lg-10 > .flex-item.flex-5, .flex-lg-12 > .flex-item.flex-6 {
     width: 50%; }
@@ -3211,28 +3247,40 @@ ul.form-group {
     right: 100%; }
 
   .flex-lg-gutters {
-    margin-left: -0.5rem;
-    margin-bottom: 0.5rem; }
+    margin-left: -0.5rem; }
     .flex-lg-gutters > .flex-item {
-      padding-left: 0.5rem; }
+      padding-left: 0.5rem;
+      margin-top: 0.25rem;
+      margin-bottom: 0.25rem; }
+    .flex-lg-gutters > .flex-item-cancel-v-margin {
+      margin-bottom: -0.5rem; }
 
   .flex-lg-gutters-wide {
-    margin-left: -1rem;
-    margin-bottom: 1rem; }
+    margin-left: -1rem; }
     .flex-lg-gutters-wide > .flex-item {
-      padding-left: 1rem; }
+      padding-left: 1rem;
+      margin-top: 0.5rem;
+      margin-bottom: 0.5rem; }
+    .flex-lg-gutters-wide > .flex-item-cancel-v-margin {
+      margin-bottom: -1rem; }
 
   .flex-lg-gutters-wider {
-    margin-left: -2rem;
-    margin-bottom: 2rem; }
+    margin-left: -2rem; }
     .flex-lg-gutters-wider > .flex-item {
-      padding-left: 2rem; }
+      padding-left: 2rem;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
+    .flex-lg-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -2rem; }
 
   .flex-lg-gutters-wider {
-    margin-left: -3rem;
-    margin-bottom: 3rem; }
+    margin-left: -3rem; }
     .flex-lg-gutters-wider > .flex-item {
-      padding-left: 3rem; } }
+      padding-left: 3rem;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem; }
+    .flex-lg-gutters-wider > .flex-item-cancel-v-margin {
+      margin-bottom: -3rem; } }
 .alert {
   position: relative;
   margin: 0.8rem;
