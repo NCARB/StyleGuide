@@ -14,6 +14,10 @@
     }
 }
 
+.flex-vertical {
+  flex-direction: column;
+}
+
 %mobile-first {
   width: 100%;
 }
@@ -25,29 +29,6 @@
 .flex-item {
   @extend %mobile-first;
   box-sizing: border-box;
-}
-
-%flex-flex {
-  width: auto;
-}
-
-$i: 0;
-$name: "";
-@while $i < 6 {
-  $i: $i + 1;
-  @if $i > 1 {
-    $name: "-#{$i}";
-  } @else {
-    $name: "";
-  }
-  .flex-fill#{$name} {
-    @extend %flex-flex;
-    flex-grow: $i;
-  }
-}
-
-.flex-collapse {
-  @extend %flex-flex;
 }
 
 .flex-top {
@@ -93,7 +74,7 @@ $name: "";
 //  .flex-md-3 > .flex-md-2
 //  .flex-md-3 > .flex-2
 //  .flex-md-1of2
-@mixin grid-sizing($name: "") {
+@mixin grid-sizing($name: "") {  
   @if $name != "" and $name != "xs" {
     $name: "-#{$name}";
   } @else {
@@ -174,6 +155,41 @@ $name: "";
   .flex-container > .flex-item.flex#{$name}-full {
     @extend %width100#{$name};
   }
+
+  %flex-flex#{$name} {
+    width: auto;
+  }
+  .flex-container > .flex-item.flex#{$name}-fill {
+    @extend %flex-flex#{$name};
+    flex: 1 1 1px;
+    -ms-flex: 1 1 1px;
+  }
+  $i: 1;
+  @while $i < 12 {
+    $i: $i + 1;
+    .flex-container > .flex-item.flex#{$name}-fill-#{$i} {
+      @extend %flex-flex#{$name};
+      flex: $i 1 1px;
+      -ms-flex: $i 1 1px;
+    }
+  }
+  .flex#{$name}-collapse {
+    @extend %flex-flex#{$name};
+  }
+
+  .flex-container > .flex-item.flex#{$name}-order {
+    @extend %flex-flex#{$name};
+    flex-order: 1;
+  }
+  $i: 1;
+  @while $i < 12 {
+    $i: $i + 1;
+    .flex-container > .flex-item.flex#{$name}-order-#{$i} {
+      @extend %flex-flex#{$name};
+      flex-order: $i;
+    }
+  }
+
   $name_: $name;
   @if $name == "" {
     $name: "-xs";
