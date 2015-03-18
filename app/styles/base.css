@@ -3250,8 +3250,12 @@ ul.form-group {
     margin: 0;
     padding: 0 0 1rem;
     margin-top: 0;
+    padding-bottom: 0;
     font-weight: bold;
     color: inherit; }
+    .alert h4 + p {
+      margin-top: 1rem;
+    }
   .alert a, .alert .alert-link {
     font-weight: bold; }
   .alert ul,
