@@ -26,8 +26,8 @@
   @include fontSize($type-XXL);
   @include lineHeight($type-XXL);
   letter-spacing: 0.05rem;
-  margin: 0;
-  padding: calculateRem(30px) 0;
+  padding: 0;
+  margin: calculateRem(30px) 0;
   text-transform: uppercase;
 }
 
@@ -38,8 +38,8 @@
   @include fontSize($type-XXL);
   @include lineHeight($type-XXL);
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: calculateRem(30px) 0;
+  padding: 0;
+  margin: calculateRem(30px) 0;
 }
 
 @mixin type-3 {
@@ -49,9 +49,8 @@
   @include fontSize($type-XL);
   @include lineHeight($type-XL);
   letter-spacing: 0.05rem;
-  margin: 0;
   padding: 0;
-  padding: calculateRem(20px) 0 calculateRem(15px);
+  margin: calculateRem(20px) 0 calculateRem(15px);
   text-transform: uppercase;
 }
 
@@ -62,8 +61,8 @@
   @include fontSize($type-XL);
   @include lineHeight($type-XL);
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: calculateRem(15px) 0 calculateRem(10px);
+  padding: 0;
+  margin: calculateRem(15px) 0 calculateRem(10px);
 }
 
 @mixin type-5 {
@@ -73,8 +72,8 @@
   @include fontSize($type-L);
   @include lineHeight(35px);
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: calculateRem(8px) 0 calculateRem(5px);
+  padding: 0;
+  margin: calculateRem(8px) 0 calculateRem(5px);
 }
 
 @mixin type-6 {
@@ -84,8 +83,8 @@
   @include fontSize($type-L);
   @include lineHeight(35px);
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: calculateRem(5px) 0;
+  padding: 0;
+  margin: calculateRem(5px) 0;
 }
 
 @mixin type-small {
@@ -99,8 +98,8 @@
   font-family: $font_regular;
   @include fontSize($type-M);
   @include lineHeight(20px);
-  margin: 0;
-  padding: 0 0 calculateRem(16px);
+  padding: 0;
+  margin: 0 0 calculateRem(16px);
 }
 
 @mixin type-xsmall {
@@ -120,7 +119,7 @@
   letter-spacing: 0.008rem;
   text-transform: uppercase;
   margin: 0;
-  padding: calculateRem(10px) 0 ;
+  padding: calculateRem(10px) 0;
 }
 
 @mixin sub-section-title() {

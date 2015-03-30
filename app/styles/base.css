@@ -309,8 +309,8 @@ body {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.9375rem 0 0.625rem;
+  padding: 0;
+  margin: 0.9375rem 0 0.625rem;
   background-color: #fff;
   padding: 20px 20px 0;
   text-align: center; }
@@ -445,8 +445,8 @@ h1 {
   line-height: 36px;
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
-  margin: 0;
-  padding: 1.875rem 0;
+  padding: 0;
+  margin: 1.875rem 0;
   text-transform: uppercase; }
 
 h2 {
@@ -458,8 +458,8 @@ h2 {
   line-height: 36px;
   line-height: 2.25rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 1.875rem 0; }
+  padding: 0;
+  margin: 1.875rem 0; }
 
 h3 {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
@@ -470,9 +470,8 @@ h3 {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
-  margin: 0;
   padding: 0;
-  padding: 1.25rem 0 0.9375rem;
+  margin: 1.25rem 0 0.9375rem;
   text-transform: uppercase; }
 
 h4 {
@@ -484,8 +483,8 @@ h4 {
   line-height: 24px;
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.9375rem 0 0.625rem; }
+  padding: 0;
+  margin: 0.9375rem 0 0.625rem; }
 
 h5 {
   font-family: Arial, Helvetica, sans-serif;
@@ -496,8 +495,8 @@ h5 {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.5rem 0 0.3125rem; }
+  padding: 0;
+  margin: 0.5rem 0 0.3125rem; }
 
 h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -508,8 +507,8 @@ h6 {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.3125rem 0; }
+  padding: 0;
+  margin: 0.3125rem 0; }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -517,8 +516,8 @@ p {
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem;
-  margin: 0;
-  padding: 0 0 1rem; }
+  padding: 0;
+  margin: 0 0 1rem; }
 
 .small {
   font-family: Arial, Helvetica, sans-serif;
@@ -771,8 +770,8 @@ ol {
   font-size: 1rem;
   line-height: 20px;
   line-height: 1.25rem;
-  margin: 0;
-  padding: 0 0 1rem;
+  padding: 0;
+  margin: 0 0 1rem;
   margin: 0;
   padding: 0; }
   ul > li,
@@ -866,8 +865,8 @@ ol {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.5rem 0 0.3125rem;
+  padding: 0;
+  margin: 0.5rem 0 0.3125rem;
   color: #00A4E3;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold; }
@@ -1197,8 +1196,8 @@ legend {
   line-height: 35px;
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
-  margin: 0;
-  padding: 0.5rem 0 0.3125rem;
+  padding: 0;
+  margin: 0.5rem 0 0.3125rem;
   border-bottom: 0; }
 
 ul.form-group {
@@ -3295,15 +3294,17 @@ ul.form-group {
     font-size: 1rem;
     line-height: 20px;
     line-height: 1.25rem;
+    padding: 0;
+    margin: 0 0 1rem;
     margin: 0;
-    padding: 0 0 1rem;
-    margin-top: 0;
-    padding-bottom: 0;
     font-weight: bold;
     color: inherit; }
     .alert h4 + p {
-      margin-top: 1rem;
-    }
+      margin-top: 1rem; }
+  .alert p {
+    margin: 0; }
+    .alert p + p {
+      margin-top: 0.75rem; }
   .alert a, .alert .alert-link {
     font-weight: bold; }
   .alert ul,
@@ -7181,18 +7182,18 @@ a.list-group-item-danger {
       border-bottom: 1px solid #ddd; }
 
 .panel-default {
-  border-color: #ddd; }
+  border-color: #E2E2E2; }
   .panel-default > .panel-heading {
     color: #444444;
-    background-color: #f5f5f5;
-    border-color: #ddd; }
+    background-color: #fff;
+    border-color: #E2E2E2; }
     .panel-default > .panel-heading + .panel-collapse > .panel-body {
-      border-top-color: #ddd; }
+      border-top-color: #E2E2E2; }
     .panel-default > .panel-heading .badge {
-      color: #f5f5f5;
+      color: #fff;
       background-color: #444444; }
   .panel-default > .panel-footer + .panel-collapse > .panel-body {
-    border-bottom-color: #ddd; }
+    border-bottom-color: #E2E2E2; }
 
 .panel-primary {
   border-color: #00A4E3; }
@@ -7263,6 +7264,76 @@ a.list-group-item-danger {
       background-color: #9C1A20; }
   .panel-danger > .panel-footer + .panel-collapse > .panel-body {
     border-bottom-color: #D2222A; }
+
+.panel {
+  border-width: 1px 0 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-left: 30px; }
+
+.panel-well.panel, .panel-well .panel {
+  padding: 10px 0 10px 50px; }
+
+.panel-heading {
+  color: #000;
+  font-weight: bold;
+  border-bottom: none; }
+
+.panel-heading, .panel-footer {
+  margin-left: -30px;
+  padding-left: 30px; }
+
+.panel-body {
+  padding-left: 0; }
+
+h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, h6.panel-title {
+  font-weight: bold;
+  text-transform: none;
+  margin: 0; }
+
+.panel-title > a {
+  padding-left: 25px;
+  margin-left: -25px;
+  position: relative;
+  display: block;
+  text-decoration: none; }
+  .panel-title > a:hover {
+    text-decoration: none; }
+
+.panel-title > a:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transform: translate(0, 0);
+  content: "";
+  font-weight: bold;
+  font-weight: bold;
+  color: #00A4E3;
+  position: absolute;
+  width: 2em;
+  top: 0.15em;
+  left: 3px; }
+
+.panel-open .panel-title > a:before,
+.panel-open.panel-title > a:before {
+  content: "";
+  left: 1px; }
+
+.panel-group .panel-heading + .panel-collapse > .panel-body {
+  border-top: none; }
+
+.panel-heading + .panel-body {
+  padding-top: 10px; }
+
+.panel-collapse > .panel-body {
+  padding-top: 0; }
+
+.panel-group .panel+.panel {
+  margin-top: 0;
+}
 
 .popover {
   position: absolute;
