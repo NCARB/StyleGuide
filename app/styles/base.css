@@ -4044,6 +4044,7 @@ input[type="button"].btn-block {
   border: 0;
   padding: 0;
   cursor: pointer;
+  color: #000;
   -webkit-appearance: none; }
   .close > span {
     display: none; }
@@ -4060,7 +4061,6 @@ input[type="button"].btn-block {
     font-size: 20px;
     font-size: 1.25rem;
     content: "";
-    color: #000;
     text-shadow: 0 1px 0 #fff; }
 
 code,
