@@ -7,6 +7,7 @@
   border: 0;
   padding: 0;
   cursor: pointer;
+  color: $close-color;
   -webkit-appearance: none;
   & > span {
     display: none;
@@ -17,7 +18,6 @@
     @include fa-icon();
     @include fontSize(20px);
     content: $fa-var-close;
-    color: $close-color;
     text-shadow: $close-text-shadow;
   }
 }
