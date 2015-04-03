@@ -173,7 +173,7 @@
       -ms-flex: $i 1 1px;
     }
   }
-  .flex#{$name}-collapse {
+  .flex-container > .flex-item.flex#{$name}-collapse {
     @extend %flex-flex#{$name};
   }
 

@@ -1477,7 +1477,7 @@ ul.form-group {
 .flex-container > .flex-item.flex-full, .col-xs-12 {
   width: 100%; }
 
-.flex-container > .flex-item.flex-fill, .flex-container > .flex-item.flex-fill-2, .flex-container > .flex-item.flex-fill-3, .flex-container > .flex-item.flex-fill-4, .flex-container > .flex-item.flex-fill-5, .flex-container > .flex-item.flex-fill-6, .flex-container > .flex-item.flex-fill-7, .flex-container > .flex-item.flex-fill-8, .flex-container > .flex-item.flex-fill-9, .flex-container > .flex-item.flex-fill-10, .flex-container > .flex-item.flex-fill-11, .flex-container > .flex-item.flex-fill-12, .flex-collapse {
+.flex-container > .flex-item.flex-fill, .flex-container > .flex-item.flex-fill-2, .flex-container > .flex-item.flex-fill-3, .flex-container > .flex-item.flex-fill-4, .flex-container > .flex-item.flex-fill-5, .flex-container > .flex-item.flex-fill-6, .flex-container > .flex-item.flex-fill-7, .flex-container > .flex-item.flex-fill-8, .flex-container > .flex-item.flex-fill-9, .flex-container > .flex-item.flex-fill-10, .flex-container > .flex-item.flex-fill-11, .flex-container > .flex-item.flex-fill-12, .flex-container > .flex-item.flex-collapse {
   width: auto; }
 
 .flex-container > .flex-item.flex-fill {
@@ -2000,7 +2000,7 @@ ul.form-group {
   .flex-container > .flex-item.flex-sm-full, .col-sm-12 {
     width: 100%; }
 
-  .flex-container > .flex-item.flex-sm-fill, .flex-container > .flex-item.flex-sm-fill-2, .flex-container > .flex-item.flex-sm-fill-3, .flex-container > .flex-item.flex-sm-fill-4, .flex-container > .flex-item.flex-sm-fill-5, .flex-container > .flex-item.flex-sm-fill-6, .flex-container > .flex-item.flex-sm-fill-7, .flex-container > .flex-item.flex-sm-fill-8, .flex-container > .flex-item.flex-sm-fill-9, .flex-container > .flex-item.flex-sm-fill-10, .flex-container > .flex-item.flex-sm-fill-11, .flex-container > .flex-item.flex-sm-fill-12, .flex-sm-collapse {
+  .flex-container > .flex-item.flex-sm-fill, .flex-container > .flex-item.flex-sm-fill-2, .flex-container > .flex-item.flex-sm-fill-3, .flex-container > .flex-item.flex-sm-fill-4, .flex-container > .flex-item.flex-sm-fill-5, .flex-container > .flex-item.flex-sm-fill-6, .flex-container > .flex-item.flex-sm-fill-7, .flex-container > .flex-item.flex-sm-fill-8, .flex-container > .flex-item.flex-sm-fill-9, .flex-container > .flex-item.flex-sm-fill-10, .flex-container > .flex-item.flex-sm-fill-11, .flex-container > .flex-item.flex-sm-fill-12, .flex-container > .flex-item.flex-sm-collapse {
     width: auto; }
 
   .flex-container > .flex-item.flex-sm-fill {
@@ -2522,7 +2522,7 @@ ul.form-group {
   .flex-container > .flex-item.flex-md-full, .col-md-12 {
     width: 100%; }
 
-  .flex-container > .flex-item.flex-md-fill, .flex-container > .flex-item.flex-md-fill-2, .flex-container > .flex-item.flex-md-fill-3, .flex-container > .flex-item.flex-md-fill-4, .flex-container > .flex-item.flex-md-fill-5, .flex-container > .flex-item.flex-md-fill-6, .flex-container > .flex-item.flex-md-fill-7, .flex-container > .flex-item.flex-md-fill-8, .flex-container > .flex-item.flex-md-fill-9, .flex-container > .flex-item.flex-md-fill-10, .flex-container > .flex-item.flex-md-fill-11, .flex-container > .flex-item.flex-md-fill-12, .flex-md-collapse {
+  .flex-container > .flex-item.flex-md-fill, .flex-container > .flex-item.flex-md-fill-2, .flex-container > .flex-item.flex-md-fill-3, .flex-container > .flex-item.flex-md-fill-4, .flex-container > .flex-item.flex-md-fill-5, .flex-container > .flex-item.flex-md-fill-6, .flex-container > .flex-item.flex-md-fill-7, .flex-container > .flex-item.flex-md-fill-8, .flex-container > .flex-item.flex-md-fill-9, .flex-container > .flex-item.flex-md-fill-10, .flex-container > .flex-item.flex-md-fill-11, .flex-container > .flex-item.flex-md-fill-12, .flex-container > .flex-item.flex-md-collapse {
     width: auto; }
 
   .flex-container > .flex-item.flex-md-fill {
@@ -3044,7 +3044,7 @@ ul.form-group {
   .flex-container > .flex-item.flex-lg-full, .col-lg-12 {
     width: 100%; }
 
-  .flex-container > .flex-item.flex-lg-fill, .flex-container > .flex-item.flex-lg-fill-2, .flex-container > .flex-item.flex-lg-fill-3, .flex-container > .flex-item.flex-lg-fill-4, .flex-container > .flex-item.flex-lg-fill-5, .flex-container > .flex-item.flex-lg-fill-6, .flex-container > .flex-item.flex-lg-fill-7, .flex-container > .flex-item.flex-lg-fill-8, .flex-container > .flex-item.flex-lg-fill-9, .flex-container > .flex-item.flex-lg-fill-10, .flex-container > .flex-item.flex-lg-fill-11, .flex-container > .flex-item.flex-lg-fill-12, .flex-lg-collapse {
+  .flex-container > .flex-item.flex-lg-fill, .flex-container > .flex-item.flex-lg-fill-2, .flex-container > .flex-item.flex-lg-fill-3, .flex-container > .flex-item.flex-lg-fill-4, .flex-container > .flex-item.flex-lg-fill-5, .flex-container > .flex-item.flex-lg-fill-6, .flex-container > .flex-item.flex-lg-fill-7, .flex-container > .flex-item.flex-lg-fill-8, .flex-container > .flex-item.flex-lg-fill-9, .flex-container > .flex-item.flex-lg-fill-10, .flex-container > .flex-item.flex-lg-fill-11, .flex-container > .flex-item.flex-lg-fill-12, .flex-container > .flex-item.flex-lg-collapse {
     width: auto; }
 
   .flex-container > .flex-item.flex-lg-fill {
