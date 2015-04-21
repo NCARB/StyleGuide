@@ -6,9 +6,9 @@
   vertical-align: baseline;
   &:before {
     @include fa-icon();
-    content: $fa-var-caret-down;
+    content: $fa-var-angle-down;
     position: relative;
-    top: 3px;
+    top: 1px;
   }
 }
 
@@ -18,7 +18,7 @@
   .caret {
     border: none;
     &:before {
-      content: $fa-var-caret-up;
+      content: $fa-var-angle-up;
       top: -3px;
     }
   }

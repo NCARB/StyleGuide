@@ -8,8 +8,8 @@ angular.module('designSystem.controllers', [])
     $('[data-toggle="popover"]').popover();
   }]);
 
-angular.module('designSystem.directives', [])
-  .directive('a', function () {
+angular.module('designSystem.directives', []);
+  /*.directive('a', function () {
       return {
           restrict: 'E',
           link: function (scope, elem, attrs) {
@@ -21,7 +21,7 @@ angular.module('designSystem.directives', [])
           }
       };
   }); 
-
+*/
 angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives'])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
