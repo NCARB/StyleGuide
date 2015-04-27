@@ -6372,7 +6372,6 @@ a.list-group-item-danger {
 .navbar {
   position: relative;
   min-height: 50px;
-  margin-bottom: 20px;
   border-bottom: 1px solid #e6e6e6; }
   .navbar:before, .navbar:after {
     content: " ";
@@ -6389,9 +6388,14 @@ a.list-group-item-danger {
   display: table; }
 .navbar-header:after {
   clear: both; }
+.navbar-header figure {
+  text-align: center; }
 @media (min-width: 960px) {
   .navbar-header {
-    float: left; } }
+    float: left; }
+    .navbar-header figure {
+      margin: 1em 0px;
+      text-align: left; } }
 
 .navbar-collapse {
   overflow-x: visible;

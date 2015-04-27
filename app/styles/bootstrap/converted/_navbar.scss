@@ -11,7 +11,6 @@
 .navbar {
   position: relative;
   min-height: $navbar-height; // Ensure a navbar always shows (e.g., without a .navbar-brand in collapsed mode)
-  margin-bottom: $navbar-margin-bottom;
   border-bottom: 1px solid #e6e6e6;
 
   // Prevent floats from breaking the navbar
@@ -32,8 +31,17 @@
 .navbar-header {
   @include clearfix();
 
+  figure {
+    text-align: center;
+  }
+
   @media (min-width: $grid-float-breakpoint) {
     float: left;
+
+    figure {
+      margin: 1em 0px;
+      text-align: left;
+    }
   }
 }
 
