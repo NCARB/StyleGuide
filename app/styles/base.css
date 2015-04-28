@@ -6398,6 +6398,7 @@ a.list-group-item-danger {
       text-align: left; } }
 
 .navbar-collapse {
+  width: 300px;
   overflow-x: visible;
   padding-right: 15px;
   padding-left: 15px;
@@ -6479,7 +6480,7 @@ a.list-group-item-danger {
   border-width: 1px 0 0; }
 
 .navbar-brand {
-  padding: 20px 15px;
+  padding: 30px 15px;
   font-size: 18px;
   line-height: 20px;
   height: 50px; }
@@ -6492,8 +6493,8 @@ a.list-group-item-danger {
       margin-left: 0px; } }
 
 .navbar-toggle {
-  position: relative;
-  float: left;
+  position: absolute;
+  left: 0px;
   margin-left: 15px;
   padding: 9px 10px;
   margin-top: 8px;
@@ -6516,7 +6517,7 @@ a.list-group-item-danger {
       display: none; } }
 
 .nav.navbar-nav {
-  margin: 10px -15px; }
+  margin: 15px -15px; }
   .nav.navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -6545,8 +6546,8 @@ a.list-group-item-danger {
       .nav.navbar-nav > li {
         float: left; }
         .nav.navbar-nav > li > a {
-          padding-top: 20px;
-          padding-bottom: 20px; }
+          padding-top: 30px;
+          padding-bottom: 30px; }
       .nav.navbar-nav.navbar-right:last-child {
         margin-right: -15px; }
       .nav.navbar-nav .dropdown {

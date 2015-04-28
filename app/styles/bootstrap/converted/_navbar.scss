@@ -57,6 +57,8 @@
 // content for the user's viewport.
 
 .navbar-collapse {
+  width: 300px;
+
   overflow-x: visible;
   padding-right: $navbar-padding-horizontal;
   padding-left:  $navbar-padding-horizontal;
@@ -200,8 +202,8 @@
 // JavaScript plugin.
 
 .navbar-toggle {
-  position: relative;
-  float: left;
+  position: absolute;
+  left: 0px;
   margin-left: $navbar-padding-horizontal;
   padding: 9px 10px;
   @include navbar-vertical-align(34px);

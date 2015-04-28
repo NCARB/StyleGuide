@@ -17,12 +17,11 @@
   <link rel="stylesheet" href="styles/base.css" />
   <!-- endbuild -->
   <!-- build:css(dist) styles/components.min.css -->
-  <link rel="stylesheet" href="components/page/page.css" />  
+  <link rel="stylesheet" href="components/navbar/navbar.css" />  
   <link rel="stylesheet" href="components/nav-tabs-01/nav-tabs-01.css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="styles/site.css" />
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
-  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
 </head>
 <body>
   <div class="strip-top"></div>
@@ -36,12 +35,13 @@
   <div class="container-fluid">
 
     <div class="navbar-header">
+      <figure class="logo">
       <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#ncarbNavmenu" data-canvas="body">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <figure class="logo">
+      
         <a class="navbar-brand" href="#">
           <img src="images/ncarb-logo.png" alt="NCARB Home" />
         </a>
@@ -49,7 +49,7 @@
     </div>
 
 
-    <div id="ncarbNavmenu" class="collapse navbar-collapse" role="navigation">
+    <div id="ncarbNavmenu" class="collapse navbar-collapse navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navbar-nav">
         <li class="dropdown global-nav">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Style Guide <span class="caret"></span></a>
@@ -205,9 +205,8 @@
   <script src="scripts/app.js"></script>  
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/components.js -->
-  <script src="components/page/page.js"></script>  
+  <script src="components/navbar/navbar.js"></script>  
   <script src="components/nav-tabs-01/nav-tabs-01.js"></script>  
   <!-- endbuild -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
 </body>
 </html>
