@@ -4,6 +4,9 @@
 <!--[if gt IE 9]><!-->
 <html ng-app="designSystem" class="no-js" lang="en"><!--<![endif]-->
 <head>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace("no-js","js");
+  </script>
   <title>NCARB Style Guide</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,6 +16,10 @@
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="//cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <!-- build:css(.) styles/vendor.min.css -->
+  <!-- bower:css -->
+  <!-- endbower -->        
+  <!-- endbuild -->
   <!-- build:css(dist) styles/style.min.css -->
   <link rel="stylesheet" href="styles/base.css" />
   <!-- endbuild -->
@@ -24,9 +31,8 @@
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
-  <div class="strip-top"></div>
   <!--[if lt IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <a class="skip" href="#main">Skip navigation</a>
   <div class="canvas">
@@ -53,7 +59,7 @@
       <ul class="nav navbar-nav">
         <li class="dropdown global-nav">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Style Guide <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu bullet pull-center" role="menu">
             <li><a href="#">Style Guide</a></li>
           </ul>
         </li>
@@ -63,7 +69,7 @@
         <li><a ui-sref="introduction" ui-sref-active="active" class="level-one">General stuff</a></li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CSS <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu bullet pull-center " role="menu">
             <li><a ui-sref="layout" ui-sref-active="active" class="level-one">Layout</a></li>
             <li><a ui-sref="color" ui-sref-active="active" class="level-one">Color</a></li>
             <li><a ui-sref="typography" ui-sref-active="active" class="level-one">Typography</a></li>
@@ -76,7 +82,7 @@
         </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
+          <ul class="dropdown-menu bullet pull-center" role="menu">
             <li><a ui-sref="bootstrap-css" ui-sref-active="active" class="level-one">Bootstrap CSS</a></li>
             <li><a ui-sref="bootstrap-components" ui-sref-active="active" class="level-one">Bootstrap Components</a></li>
             <li><a ui-sref="bootstrap-javascript" ui-sref-active="active" class="level-one">Bootstrap Javascript</a></li>
@@ -169,7 +175,6 @@
   <!-- endbuild -->    
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/respond/dest/respond.src.js"></script>
@@ -180,18 +185,6 @@
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
   <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -199,13 +192,15 @@
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/restangular/dist/restangular.js"></script>
   <script src="bower_components/requirejs/require.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/jasny-bootstrap/js/offcanvas.js"></script>
+  <script src="bower_components/bootstrap-dropdowns-enhancement/dist/js/dropdowns-enhancement.js"></script>
   <!-- endbower -->        
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>  
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/components.js -->
-  <script src="components/navbar/navbar.js"></script>  
   <script src="components/nav-tabs-01/nav-tabs-01.js"></script>  
   <!-- endbuild -->
 </body>

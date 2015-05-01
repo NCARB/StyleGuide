@@ -1,15 +1,16 @@
 'use strict';
 
-angular.module('jquery', []).factory('$', function () { return window.jQuery; });
+angular.module('jQuery', []).factory('jQuery', ['$window', function ($window) { return $window.jQuery; }]);
 
-angular.module('designSystem.controllers', [])
-  .controller('BootstrapJsCtrl', ['jquery', function ($) {
+angular.module('designSystem.controllers', ['jQuery'])
+  .controller('BootstrapJsCtrl', ['jQuery', function ($) {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
   }]);
 
 angular.module('designSystem.directives', []);
-  /*.directive('a', function () {
+  /*
+  .directive('a', function () {
       return {
           restrict: 'E',
           link: function (scope, elem, attrs) {
@@ -21,7 +22,8 @@ angular.module('designSystem.directives', []);
           }
       };
   }); 
-*/
+  */
+
 angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives'])
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {

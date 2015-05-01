@@ -375,7 +375,7 @@ $navbar-default-link-color:                $color-tan_gray !default;
 $navbar-default-link-hover-color:          $color-blue !default;
 $navbar-default-link-hover-bg:             transparent !default;
 $navbar-default-link-active-color:         $color-blue !default;
-$navbar-default-link-active-bg:            darken($navbar-default-bg, 6.5%) !default;
+$navbar-default-link-active-bg:            transparent; //darken($navbar-default-bg, 6.5%) !default;
 $navbar-default-link-disabled-color:       #ccc !default;
 $navbar-default-link-disabled-bg:          transparent !default;
 

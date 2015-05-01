@@ -1,3 +1,5 @@
+@import "../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+
 //
 // Navbars
 // --------------------------------------------------
@@ -29,16 +31,19 @@
 // styling of responsive aspects.
 
 .navbar-header {
-  @include clearfix();
+  @include clearfix(); 
 
   figure {
     text-align: center;
+    padding-top: 1em;
+    margin-top: 0;
   }
 
   @media (min-width: $grid-float-breakpoint) {
     float: left;
 
     figure {
+      padding-top: 0;
       margin: 1em 0px;
       text-align: left;
     }
@@ -113,7 +118,8 @@
 // Both navbar header and collapse
 //
 // When a container is present, change the behavior of the header and collapse.
-
+/*
+// issues with tablet sizes 
 .container,
 .container-fluid {
   > .navbar-header,
@@ -127,6 +133,7 @@
     }
   }
 }
+*/
 
 
 //
@@ -688,7 +695,70 @@
 }
 
 
+/* from jansy-bootstrap.. just the offcanvas part */
+.navmenu,
+.navbar-offcanvas {
+  width: 300px;
+  height: auto;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+}
+.navmenu-fixed-left,
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1030;
+  overflow-y: auto;
+  border-radius: 0;
+}
+.navmenu-fixed-left,
+.navbar-offcanvas.navmenu-fixed-left {
+  right: auto;
+  left: 0;
+  border-width: 0 1px 0 0;
+}
+.navmenu-fixed-right,
+.navbar-offcanvas {
+  right: 0;
+  left: auto;
+  border-width: 0 0 0 1px;
+}
+.navmenu-nav {
+  margin-bottom: 10px;
+}
+.navmenu-nav.dropdown-menu {
+  position: static;
+  float: none;
+  padding-top: 0;
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
 
 
+/* added interop with dropdowns-enhancement */
 
+.navbar-collapse.collapse .dropdown-menu.bullet:before,
+.navbar-collapse.collapse .dropdown-menu.bullet:after {
+  display: none;
+}
 
+/* added interop with navbar-collapse */
+
+@media (min-width: 960px) {
+  .navbar-collapse.collapse.navmenu-fixed-left,
+  .navbar-collapse.collapse.navmenu-fixed-right,
+  .navbar-collapse.collapse.navbar-offcanvas {
+      position: static;
+  }
+  
+  .navbar-collapse.collapse .dropdown-menu.bullet:before,
+  .navbar-collapse.collapse .dropdown-menu.bullet:after {
+    display: inherit;
+  }
+}

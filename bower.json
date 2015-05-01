@@ -20,7 +20,6 @@
     "angular": "~1.3.11",
     "es5-shim": "~3.1.0",
     "jquery": "2",
-    "normalize-css": "~3.0.1",
     "respond": "~1.4.2",
     "angular-resource": "~1.3.2",
     "angular-cookies": "~1.3.2",
@@ -40,10 +39,30 @@
     "restangular": "~1.4.0",
     "requirejs": "~2.1.15",
     "lodash": "~3.4.0",
-    "modernizr": "~2.8.3"
+    "jasny-bootstrap": "~3.1.3",
+    "bootstrap-dropdowns-enhancement": "git@github.com:davious/bootstrap_dropdowns_enhancement.git"
   },
   "resolutions": {
     "angular": "~1.3.15",
     "lodash": "~3.4.0"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": "./dist/js/bootstrap.js",
+      "note": "no css, we are building from sass, see below"
+    },
+    "bootstrap-sass-official": {
+      "main": [],
+      "note": "no css, we are importing that cherry-pick style, see base/bootstrap.scss"
+    },
+    "font-awesome": {
+      "main": []
+    },
+    "jasny-bootstrap": {
+      "main": "./js/offcanvas.js"
+    },
+    "bootstrap-dropdowns-enhancement": {
+      "main": "./dist/js/dropdowns-enhancement.js"
+    }
   }
 }
