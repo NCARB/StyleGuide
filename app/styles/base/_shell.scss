@@ -151,7 +151,7 @@ main {
   *zoom: 1;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .canvas {
     @include transition(none);
 
