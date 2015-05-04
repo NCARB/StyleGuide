@@ -375,6 +375,10 @@ main {
   main .main-well {
     margin-bottom: 25px; }
 
+.footer {
+  padding: 40px 20px 10px;
+  background-color: #DBD9D1; }
+
 /* Device Adaption
    (throwing a bone to IE10 which ignores the
     meta viewport tag in favor of this)
@@ -6815,7 +6819,7 @@ a.list-group-item-danger {
       display: none; } }
 
 .nav.navbar-nav {
-  margin: 15px -15px; }
+  margin: 0px -15px; }
   .nav.navbar-nav > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -6927,18 +6931,39 @@ a.list-group-item-danger {
       background-color: transparent; }
   .navbar-ncarb .navbar-text {
     color: #777; }
+  .navbar-ncarb .navbar-nav > li {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
   .navbar-ncarb .navbar-nav > li > a {
     color: #fff;
     font-weight: bold; }
     .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
       color: #fff;
       background-color: #00719d; }
-  .navbar-ncarb .navbar-nav > .active > a, .navbar-ncarb .navbar-nav > .active > a:hover, .navbar-ncarb .navbar-nav > .active > a:focus {
+  .navbar-ncarb .navbar-nav > li > a.active, .navbar-ncarb .navbar-nav > li > a.active:hover, .navbar-ncarb .navbar-nav > li > a.active:focus,
+  .navbar-ncarb .navbar-nav > li > ul > li > a.active,
+  .navbar-ncarb .navbar-nav > li > ul > li > a.active:hover,
+  .navbar-ncarb .navbar-nav > li > ul > li > a.active:focus {
     color: #fff;
     background-color: #00719d; }
-  .navbar-ncarb .navbar-nav > .disabled > a, .navbar-ncarb .navbar-nav > .disabled > a:hover, .navbar-ncarb .navbar-nav > .disabled > a:focus {
+  .navbar-ncarb .navbar-nav > li a.disabled, .navbar-ncarb .navbar-nav > li a.disabled:hover, .navbar-ncarb .navbar-nav > li a.disabled:focus {
     color: #444;
     background-color: transparent; }
+  @media (min-width: 959px) {
+    .navbar-ncarb .navbar-nav > li {
+      border-bottom: none; }
+    .navbar-ncarb .navbar-nav > li > a {
+      color: #97958C;
+      font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+      font-weight: normal; }
+      .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
+        color: #00A4E3;
+        background-color: transparent; }
+    .navbar-ncarb .navbar-nav > li a.active, .navbar-ncarb .navbar-nav > li a.active:hover, .navbar-ncarb .navbar-nav > li a.active:focus {
+      color: #00A4E3;
+      background-color: transparent; }
+    .navbar-ncarb .navbar-nav > li > a.disabled, .navbar-ncarb .navbar-nav > li > a.disabled:hover, .navbar-ncarb .navbar-nav > li > a.disabled:focus {
+      color: #ccc;
+      background-color: transparent; } }
   .navbar-ncarb .navbar-toggle {
     border-color: #ddd; }
     .navbar-ncarb .navbar-toggle:hover, .navbar-ncarb .navbar-toggle:focus {
@@ -6951,35 +6976,27 @@ a.list-group-item-danger {
   .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
     background-color: #00719d;
     color: #fff; }
+  .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:focus {
+    background-color: #00719d;
+    color: #fff; }
+  @media (min-width: 959px) {
+    .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
+      background-color: transparent;
+      color: #00A4E3; } }
+  .navbar-ncarb .navbar-nav > .dropdown {
+    margin-bottom: 0px; }
   @media (max-width: 959px) {
     .navbar-ncarb .navbar-nav .open .dropdown-menu > li > a {
       color: #fff; }
       .navbar-ncarb .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-ncarb .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #fff;
-        background-color: transparent; }
+        background-color: #00719d; }
     .navbar-ncarb .navbar-nav .open .dropdown-menu > .active > a, .navbar-ncarb .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-ncarb .navbar-nav .open .dropdown-menu > .active > a:focus {
       color: #fff;
       background-color: #00719d; }
     .navbar-ncarb .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-ncarb .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-ncarb .navbar-nav .open .dropdown-menu > .disabled > a:focus {
       color: #444;
       background-color: transparent; } }
-  @media (min-width: 959px) {
-    .navbar-ncarb .navbar-nav > li > a {
-      color: #97958C;
-      font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-      font-weight: normal; }
-      .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
-        color: #00A4E3;
-        background-color: transparent; }
-    .navbar-ncarb .navbar-nav > .active > a, .navbar-ncarb .navbar-nav > .active > a:hover, .navbar-ncarb .navbar-nav > .active > a:focus {
-      color: #00A4E3;
-      background-color: transparent; }
-    .navbar-ncarb .navbar-nav > .disabled > a, .navbar-ncarb .navbar-nav > .disabled > a:hover, .navbar-ncarb .navbar-nav > .disabled > a:focus {
-      color: #ccc;
-      background-color: transparent; }
-    .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
-      background-color: transparent;
-      color: #00A4E3; } }
   .navbar-ncarb .navbar-link {
     color: #97958C; }
     .navbar-ncarb .navbar-link:hover {
