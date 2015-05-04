@@ -8,18 +8,10 @@
 
 section {
   clear: both;
-  // margin: 90px 0;
-  margin: 90px 0 0 0px;
   padding: 1rem 0;
 
   &.top {
     margin-top: 5px;
-  }
-}
-
-@include breakpoint(sm) {
-  section {
-    margin: 0px 0 0 200px;
   }
 }
 
