@@ -6671,7 +6671,7 @@ a.list-group-item-danger {
     width: 900px; } }
 .navbar {
   position: relative;
-  min-height: 50px;
+  min-height: 40px;
   border-bottom: 1px solid #e6e6e6; }
   .navbar::after {
     clear: both;
@@ -6695,7 +6695,7 @@ a.list-group-item-danger {
     float: left; }
     .navbar-header figure {
       padding-top: 0;
-      margin: 1em 0px;
+      margin: 10px auto;
       text-align: left; } }
 
 .navbar-collapse {
@@ -6782,14 +6782,14 @@ a.list-group-item-danger {
   border-width: 1px 0 0; }
 
 .navbar-brand {
-  padding: 30px 15px;
+  padding: 20px 15px;
   font-size: 18px;
   line-height: 20px;
-  height: 50px; }
+  height: 40px; }
   .navbar-brand:hover, .navbar-brand:focus {
     text-decoration: none; }
   .navbar-brand img {
-    width: 124px; }
+    width: 100px; }
   @media (min-width: 960px) {
     .navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
       margin-left: 0px; } }
@@ -6799,8 +6799,8 @@ a.list-group-item-danger {
   left: 0px;
   margin-left: 15px;
   padding: 9px 10px;
-  margin-top: 8px;
-  margin-bottom: 8px;
+  margin-top: 3px;
+  margin-bottom: 3px;
   background-color: transparent;
   background-image: none;
   border: 1px solid transparent;
@@ -6848,8 +6848,8 @@ a.list-group-item-danger {
       .nav.navbar-nav > li {
         float: left; }
         .nav.navbar-nav > li > a {
-          padding-top: 30px;
-          padding-bottom: 30px; }
+          padding-top: 20px;
+          padding-bottom: 20px; }
       .nav.navbar-nav.navbar-right:last-child {
         margin-right: -15px; }
       .nav.navbar-nav .dropdown {
@@ -6873,8 +6873,8 @@ a.list-group-item-danger {
   border-bottom: 1px solid transparent;
   -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 3px;
+  margin-bottom: 3px; }
   @media (max-width: 959px) {
     .navbar-form .form-group {
       margin-bottom: 5px; } }
@@ -6901,18 +6901,18 @@ a.list-group-item-danger {
   border-bottom-right-radius: 0; }
 
 .navbar-btn {
-  margin-top: 8px;
-  margin-bottom: 8px; }
+  margin-top: 3px;
+  margin-bottom: 3px; }
   .navbar-btn.btn-sm, .btn-group-sm > .navbar-btn.btn {
-    margin-top: 18px;
-    margin-bottom: 18px; }
+    margin-top: 13px;
+    margin-bottom: 13px; }
   .navbar-btn.btn-xs, .btn-group-xs > .navbar-btn.btn {
-    margin-top: 14px;
-    margin-bottom: 14px; }
+    margin-top: 9px;
+    margin-bottom: 9px; }
 
 .navbar-text {
-  margin-top: 15px;
-  margin-bottom: 15px; }
+  margin-top: 10px;
+  margin-bottom: 10px; }
   @media (min-width: 960px) {
     .navbar-text {
       float: left;
