@@ -261,7 +261,7 @@
     .open .dropdown-menu {
       position: static;
       float: none;
-      width: auto;
+      width: 18em;
       margin-top: 0;
       background-color: transparent;
       border: 0;
@@ -467,7 +467,8 @@
         background-color: $navbar-inverse-link-active-bg;
       }
     }
-    > li a.disabled {
+    > li a.disabled,
+    > li > ul > li a.disabled {
       &,
       &:hover,
       &:focus {
@@ -480,7 +481,8 @@
       > li {
         border-bottom: none;
       }
-      > li > a {
+      > li > a,
+      > li >ul >li > a {
         color: $navbar-default-link-color;
         font-family: "Agenda Light", Arial, Helvetica, sans-serif;
         font-weight: normal;
@@ -491,15 +493,18 @@
           background-color: $navbar-default-link-hover-bg;
         }
       }
-      > li a.active {
+      > li a.active,
+      > li > ul > li > a.active {
         &,
         &:hover,
         &:focus {
           color: $navbar-default-link-active-color;
           background-color: $navbar-default-link-active-bg;
+          font-weight: bold;
         }
       }
-      > li > a.disabled {
+      > li > a.disabled,
+      > li > ul > li > a.disabled {
         &,
         &:hover,
         &:focus {
@@ -530,6 +535,7 @@
   .navbar-nav {
     // Remove background color from open dropdown
     > .open > a {
+      white-space: normal;
       &,
       &:hover,
       &:focus {
@@ -538,13 +544,16 @@
       }
     }
 
-     > .dropdown > ul > li > a {
+    > .dropdown > ul > li > a {
+      color: $navbar-inverse-link-active-color;
+      white-space: normal;
+
       &:hover,
       &:focus {
         background-color: $navbar-inverse-link-active-bg;
-        color: $navbar-inverse-link-active-color;
+        
       }
-     }
+    }
 
     @media (min-width: $grid-float-breakpoint-max) {
     // Remove background color from open dropdown
@@ -556,13 +565,26 @@
           color: $navbar-default-link-active-color;
         }
       }
+
+      > .dropdown > ul > li > a {
+        color: $navbar-default-link-color;
+
+        &:hover,
+        &:focus {
+          background-color: $navbar-default-link-active-bg;
+          color: $navbar-default-link-active-color;
+        }
+      }
+
     }
 
     > .dropdown {
       margin-bottom: 0px;
     }
 
-    @media (max-width: $grid-float-breakpoint-max) {
+    /* I think the below is duplicated elsewhere now -Kenji */
+
+    /*@media (max-width: $grid-float-breakpoint-max) {
       // Dropdowns get custom display when collapsed
       .open .dropdown-menu {
         > li > a {
@@ -590,7 +612,7 @@
           }
         }
       }
-    }
+    }*/
   }
   // Links in navbars
   //

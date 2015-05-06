@@ -402,7 +402,7 @@ $navbar-inverse-link-hover-color:           $color-white !default;
 $navbar-inverse-link-hover-bg:              $color-blue-4;
 $navbar-inverse-link-active-color:          $navbar-inverse-link-hover-color !default;
 $navbar-inverse-link-active-bg:             $color-blue-4 !default;
-$navbar-inverse-link-disabled-color:        #444 !default;
+$navbar-inverse-link-disabled-color:        $color-blue-1 !default;
 $navbar-inverse-link-disabled-bg:           transparent !default;
 
 // Inverted navbar brand label
