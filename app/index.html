@@ -4,6 +4,9 @@
 <!--[if gt IE 9]><!-->
 <html ng-app="designSystem" class="no-js" lang="en"><!--<![endif]-->
 <head>
+  <script>
+    document.documentElement.className = document.documentElement.className.replace("no-js","js");
+  </script>
   <title>NCARB Style Guide</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -13,117 +16,94 @@
   <meta content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0" name="viewport" />
   <link rel="stylesheet" href="//cloud.webtype.com/css/00cc1781-6788-422c-b07b-239beb77cdf2.css" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <!-- build:css(.) styles/vendor.min.css -->
+  <!-- bower:css -->
+  <!-- endbower -->        
+  <!-- endbuild -->
   <!-- build:css(dist) styles/style.min.css -->
   <link rel="stylesheet" href="styles/base.css" />
   <!-- endbuild -->
   <!-- build:css(dist) styles/components.min.css -->
-  <link rel="stylesheet" href="components/page/page.css" />  
+  <link rel="stylesheet" href="components/navbar/navbar.css" />  
   <link rel="stylesheet" href="components/nav-tabs-01/nav-tabs-01.css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="styles/site.css" />
   <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?skin=sunburst"></script>
 </head>
 <body>
-  <div class="strip-top"></div>
   <!--[if lt IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
   <a class="skip" href="#main">Skip navigation</a>
   <div class="canvas">
-    <header class="header header-01" role="banner">
-      <div class="header-brand">
-      <figure class="logo"><a href="index.html"><img src="images/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-    </div>
-      <ul class="header-strip">
-        <!-- <li><figure class="logo"><a href="index.html"><img src="images/ncarb-logo.png" alt="NCARB Home" /></a></figure></li> -->
-        <li><a href="#link">Tool name 1</a></li>
-        <li><a href="#link">Tool name 2</a></li>
-        <li><a href="#link">Tool name 3</a></li>
-        <li class="hd-login"><a href="#link">Login to MyNCARB</a></li>
-      </ul>
-    </header>
-      
-      <!-- <div class="header-brand">
-        <figure class="logo"><a href="index.html"><img src="images/ncarb-logo.png" alt="NCARB Home" /></a></figure>
-        <div class="search">
-            <p class="search-toggle"><label class="search-toggle-target" for="searchbox">Search</label></p>
-            <form role="search" action="http://ncarb.org/Search.aspx" method="get" accept-charset="utf-8">
-                <fieldset>
-                    <input type="text" placeholder="SEARCH" autocomplete="off" name="q" id="searchbox" />
-                    <button class="search-submit" type="submit">Submit</button>
-                </fieldset>
-            </form>
-        </div>
-      </div> -->
 
-      <main class="main" role="main" id="main" tabindex="1">
-        <nav class="main-nav" id="nav" role="navigation">
-            <ul>
-              <li>
-                <a ui-sref="introduction" ui-sref-active="active" class="level-one">General stuff</a>
-              </li>
-              <li>
-                <a ui-sref="layout" ui-sref-active="active" class="level-one">Layout</a>
-              </li>
-              <li>
-                <a ui-sref="color" ui-sref-active="active" class="level-one">Color</a>
-              </li>
-              <li>
-                <a ui-sref="typography" ui-sref-active="active" class="level-one">Typography</a>
-              </li>
-              <li>
-                <a ui-sref="iconography" ui-sref-active="active" class="level-one">Iconography</a>
-              </li>
-              <li>
-                <a ui-sref="formElements" ui-sref-active="active" class="level-one">Form Elements</a>
-              </li>
-              <li>
-                <a ui-sref="navigation" ui-sref-active="active" class="level-one">Navigation</a>
-              </li>
-              <li>
-                <a ui-sref="content" ui-sref-active="active" class="level-one">Content</a>
-              </li>
-              <li>
-                <a ui-sref="bootstrap-css" ui-sref-active="active" class="level-one">Bootstrap CSS</a>
-              </li>
-              <li>
-                <a ui-sref="bootstrap-components" ui-sref-active="active" class="level-one">Bootstrap Components</a>
-              </li>
-              <li>
-                <a ui-sref="bootstrap-javascript" ui-sref-active="active" class="level-one">Bootstrap Javascript</a>
-              </li>
-            </ul>
-            <ul class="other">
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <div class="level-one">Other Menu</div>
-                    <button class="level-two_toggle">Show Subnav</button>
-                    <ul class="level-two">
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                        <li><a href="#link">Other sub nav</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
+<nav class="navbar navbar-ncarb">
+  <div class="container-fluid">
 
-
-    <!-- <header class="header header-01">
+    <div class="navbar-header">
       <figure class="logo">
-        <a href="http://prototypes.eightshapes.com/ncarb">
-          <img class="ncarb-logo" src="images/ncarb-logo.png" alt="NCARB">
+        <button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target="#ncarbNavmenu" data-canvas="body">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span> 
+        </button>
+        
+        <a class="navbar-brand" href="#">
+          <img src="images/ncarb-logo.png" alt="NCARB Home" />
         </a>
-      </figure>
-    </header> -->
+    </figure>
+    </div>
+
+
+    <div id="ncarbNavmenu" class="collapse navbar-collapse navmenu-fixed-left offcanvas" role="navigation">
+      <ul class="nav navbar-nav">
+        <li class="dropdown global-nav">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Style Guide <span class="caret"></span></a>
+          <ul class="dropdown-menu bullet pull-center" role="menu">
+            <li><a href="http://www.ncarb.org">www.ncarb.org</a></li>
+            <li><a href="http://blog.ncarb.org">Blog</a></li>
+            <li><a href="https://my.ncarb.org">My NCARB</a></li>
+            <li><a class="active" href="#">Style Guide</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav"> 
+        <li><a ui-sref="introduction" ui-sref-active="active">General stuff</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CSS <span class="caret"></span></a>
+          <ul class="dropdown-menu bullet pull-center " role="menu">
+            <li><a ui-sref="layout" ui-sref-active="active">Layout</a></li>
+            <li><a ui-sref="color" ui-sref-active="active">Color</a></li>
+            <li><a ui-sref="typography" ui-sref-active="active">Typography</a></li>
+            <li><a ui-sref="iconography" ui-sref-active="active">Iconography</a></li>
+            <li><a ui-sref="formElements" ui-sref-active="active">Form Elements</a></li>
+            <li><a class="disabled" ui-sref="navigation" ui-sref-active="active">Navigation</a></li>
+          </ul>
+        </li>
+        <li><a ui-sref="content" ui-sref-active="active">Content</a>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
+          <ul class="dropdown-menu bullet pull-center" role="menu">
+            <li><a ui-sref="bootstrap-css" ui-sref-active="active">Bootstrap CSS</a></li>
+            <li><a ui-sref="bootstrap-components" ui-sref-active="active">Bootstrap Components</a></li>
+            <li><a ui-sref="bootstrap-javascript" ui-sref-active="active">Bootstrap Javascript</a></li>
+          </ul>
+        </li>
+        </li>
+      </ul>
+
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#">Messages</a></li>
+        <li><a href="#">Login</a></li>
+      </ul>
+
+    </div>
+  </div>
+</nav>
     
+    <main>
       <section class="t-box-frame l-top">
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -195,7 +175,6 @@
   <!-- endbuild -->    
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
-  <script src="bower_components/modernizr/modernizr.js"></script>
   <script src="bower_components/jquery/dist/jquery.js"></script>
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/respond/dest/respond.src.js"></script>
@@ -206,18 +185,6 @@
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/affix.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/alert.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/button.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/carousel.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/collapse.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/dropdown.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tab.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/transition.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/scrollspy.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/modal.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/tooltip.js"></script>
-  <script src="bower_components/bootstrap-sass-official/assets/javascripts/bootstrap/popover.js"></script>
   <script src="bower_components/jquery-placeholder/jquery.placeholder.js"></script>
   <script src="bower_components/underscore/underscore.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
@@ -225,13 +192,15 @@
   <script src="bower_components/lodash/lodash.js"></script>
   <script src="bower_components/restangular/dist/restangular.js"></script>
   <script src="bower_components/requirejs/require.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/jasny-bootstrap/js/offcanvas.js"></script>
+  <script src="bower_components/bootstrap-dropdowns-enhancement/dist/js/dropdowns-enhancement.js"></script>
   <!-- endbower -->        
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
   <script src="scripts/app.js"></script>  
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/components.js -->
-  <script src="components/page/page.js"></script>  
   <script src="components/nav-tabs-01/nav-tabs-01.js"></script>  
   <!-- endbuild -->
 </body>

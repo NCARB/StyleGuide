@@ -14,20 +14,28 @@ html {
 
 body {
   margin: 0;
+  padding-top: $bodytopspacing;
   font-family: $font_regular;
   font-size: 100%;
   line-height: $base-line-height;
   color: $color_base;
+  @include breakpoint(sm) {
+    padding-top: ($bodytopspacing + 4px);
+  }
 }
 
 :focus {
   outline: none;
 }
 
-.strip-top {
+body:before {
+  content: "";
+  position: absolute;
+  top: 0;
   width: 100%;
   height: $bodytopspacing;
-  background: $color-blue;
+  background: #00a4e3;
+  z-index: 1;
 
   @include breakpoint(sm) {
     height:($bodytopspacing + 4px);
@@ -117,6 +125,11 @@ main {
   }
 }
 
+.footer {
+    padding:40px 20px 10px;
+    background-color:$color-tan_gray-2;
+}
+
 /* Device Adaption
    (throwing a bone to IE10 which ignores the
     meta viewport tag in favor of this)
@@ -143,7 +156,7 @@ main {
   *zoom: 1;
 }
 
-@include breakpoint(sm) {
+@include breakpoint(md) {
   .canvas {
     @include transition(none);
 

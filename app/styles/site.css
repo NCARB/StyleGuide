@@ -7,14 +7,10 @@
 
 section {
   clear: both;
-  margin: 90px 0 0 0px;
   padding: 1rem 0; }
   section.top {
     margin-top: 5px; }
 
-@media (min-width: 768px) {
-  section {
-    margin: 0px 0 0 200px; } }
 .intro-text {
   min-width: 300px; }
 

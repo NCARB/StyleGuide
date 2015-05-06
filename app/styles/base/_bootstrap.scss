@@ -12,6 +12,7 @@
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/code";
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/component-animations";
 @import "../bootstrap/converted/dropdowns";        // font-awesome caret icon   
+@import "../bootstrap/converted/dropdowns-enhancement";
 @import "../bootstrap/converted/forms";            // form-control optional, control-label optional
 														// feedback-control-icon automatically iconed
 @import "../bootstrap/converted/glyphicons";       // uses font-awesome
@@ -23,7 +24,8 @@
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/media";
 //@import "../bootstrap/mixins";
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/modals";                     // TODO style
-@import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/navbar";                     // TODO style
+@import "../bootstrap/converted/navbar";                     // converting now
+@import "../../../bower_components/jasny-bootstrap/scss/_offcanvas.scss"; 
 @import "../bootstrap/converted/navs";             // customized, adds nav-choices
 //@import "../bootstrap/normalize";                we already have this; our normalize has more stuff in it
 @import "../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/pager";                      // TODO style
