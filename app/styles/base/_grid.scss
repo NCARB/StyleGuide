@@ -69,43 +69,17 @@
 }
 
 // Examples:
-//  .flex-3 > .flex-2
 //  .flex-full
 //  .flex-1of2
-//  .flex-md-3 > .flex-md-2
-//  .flex-md-3 > .flex-2
 //  .flex-md-1of2
+//  .flex-fill
+//  .flex-sm-fill-2
+//  .flex-collapse
 @mixin grid-sizing($name: "") {  
   @if $name != "" and $name != "xs" {
     $name: "-#{$name}";
   } @else {
     $name: "";
-  }
-  $percents: ();
-  $ofs: ();
-  $i: 1;
-  @if not($name == "") {
-    @while $i < 12 {
-      $i: $i + 1;
-      $j: 1;
-      @while $j <= $i {
-        $percent-key: round(100 * $j / $i);
-        @if not map-has-key($percents, $percent-key) {
-          $percents: map-merge($percents, ($percent-key: true));
-          %percent#{$name}-unnamed#{$percent_key} {
-              width: percentage($j / $i);
-          }
-        }
-        $number_name: ".flex-#{$j}";
-        @if $j == 1 {
-          $number_name: "";
-        }
-        .flex#{$name}-#{$i} > .flex-item#{$number_name} {
-          @extend %percent#{$name}-unnamed#{$percent-key};
-        }
-        $j: $j + 1;
-      }
-    }
   }
   $percents: ();
   $ofs: ();
@@ -121,24 +95,12 @@
             width: percentage($j / $i);
         }
       }
-      $number_name: ".flex-#{$j}";
-      @if $j == 1 {
-        $number_name: "";
-      }
-      @if $name == "" {
-        .flex-#{$i} > .flex-item#{$number_name} {
-          @extend %percent#{$percent-key};
-        }
-      }
-      @else {  
-        .flex#{$name}-#{$i} > .flex-item.flex#{$name}-#{$j} {
+      @if $j < $i {
+        .flex#{$name}-#{$j}of#{$i} {
           @extend %percent#{$name}#{$percent-key};
-        }
-      }
-      @if $j < $i and not map-has-key($ofs, $percent-key) {
-        $ofs: map-merge($ofs, ($percent-key: true));
-        .flex-container > .flex-item.flex#{$name}-#{$j}of#{$i} {
-          @extend %percent#{$name}#{$percent-key};
+          .lt-ie10 & {
+            @extend %percent#{$name}#{$percent-key};
+          }
         }
       }
       $j: $j + 1;
@@ -153,39 +115,41 @@
   %width100#{$name} {
     width: 100%;
   }
-  .flex-container > .flex-item.flex#{$name}-full {
+  .flex-item.flex#{$name}-full {
     @extend %width100#{$name};
   }
 
   %flex-flex#{$name} {
     width: auto;
   }
-  .flex-container > .flex-item.flex#{$name}-fill {
+  .flex#{$name}-fill {
     @extend %flex-flex#{$name};
     flex: 1 1 1px;
     -ms-flex: 1 1 1px;
   }
   $i: 1;
-  @while $i < 12 {
+  @while $i < 6 {
     $i: $i + 1;
-    .flex-container > .flex-item.flex#{$name}-fill-#{$i} {
+    .flex#{$name}-fill-#{$i} {
       @extend %flex-flex#{$name};
       flex: $i 1 1px;
       -ms-flex: $i 1 1px;
     }
   }
-  .flex-container > .flex-item.flex#{$name}-collapse {
+  .flex#{$name}-collapse {
     @extend %flex-flex#{$name};
   }
 
-  $i: 0;
-  @while $i < 12 {
+  $i: -7;
+  @while $i < 6 {
     $i: $i + 1;
     .flex#{$name}-order-#{$i} {
       order: $i;
+      -ms-flex-order: $i;
     }
   }
 
+  // bootstrap classes
   $name_: $name;
   @if $name == "" {
     $name: "-xs";
