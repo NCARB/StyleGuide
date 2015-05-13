@@ -458,7 +458,7 @@ h1 {
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
   padding: 0;
-  margin: 1.875rem 0;
+  margin: 0;
   text-transform: uppercase; }
 
 h2 {
@@ -6851,7 +6851,7 @@ a.list-group-item-danger {
   .nav > li > a > img, nav > ul > li > a > img, nav > ol > li > a > img {
     max-width: none; }
 
-.nav-tabs > li > a, .nav-pills > li > a, .nav-choices > li > a {
+.nav-tabs > li > a, .nav-pills > li > a, .nav-choices > li > a, .nav-sub > li > a {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-weight: normal;
   margin-right: 0; }
@@ -6934,6 +6934,29 @@ a.list-group-item-danger {
   .nav-choices > li.active > a, .nav-choices > li.active > a:hover, .nav-choices > li.active > a:focus {
     border-bottom-color: #6e6e6e;
     color: #000; }
+
+.nav-stacked > li {
+  float: none; }
+  .nav-stacked > li + li {
+    margin-top: 2px;
+    margin-left: 0; }
+
+.nav-sub {
+  float: right;
+  font-size: 1.2em; }
+  .nav-sub > li {
+    float: left; }
+    .nav-sub > li + li {
+      margin-left: 1em; }
+    .nav-sub > li > a {
+      padding: 4px 4px 2px;
+      color: #00A4E3; }
+      .nav-sub > li > a:hover, .nav-sub > li > a:focus {
+        background-color: #fff;
+        color: #000; }
+    .nav-sub > li.active > a, .nav-sub > li.active > a:hover, .nav-sub > li.active > a:focus {
+      color: #00A4E3;
+      font-weight: bold; }
 
 .nav-stacked > li {
   float: none; }
