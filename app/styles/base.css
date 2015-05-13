@@ -318,7 +318,7 @@ body:before {
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.9375rem 0 0.625rem;
+  margin: 0 0 0.625rem;
   background-color: #fff;
   padding: 20px 20px 0;
   text-align: center; }
@@ -458,8 +458,7 @@ h1 {
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
   padding: 0;
-  margin: 0;
-  text-transform: uppercase; }
+  margin: 0 0 1.875rem; }
 
 h2 {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
@@ -471,7 +470,7 @@ h2 {
   line-height: 2.25rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 1.875rem 0; }
+  margin: 0 0 1.875rem; }
 
 h3 {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
@@ -483,8 +482,7 @@ h3 {
   line-height: 1.5rem;
   letter-spacing: 0.05rem;
   padding: 0;
-  margin: 1.25rem 0 0.9375rem;
-  text-transform: uppercase; }
+  margin: 0 0 0.9375rem; }
 
 h4 {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
@@ -496,7 +494,7 @@ h4 {
   line-height: 1.5rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.9375rem 0 0.625rem; }
+  margin: 0 0 0.625rem; }
 
 h5 {
   font-family: Arial, Helvetica, sans-serif;
@@ -508,7 +506,7 @@ h5 {
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.5rem 0 0.3125rem; }
+  margin: 0 0 0.3125rem; }
 
 h6 {
   font-family: Arial, Helvetica, sans-serif;
@@ -520,7 +518,7 @@ h6 {
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.3125rem 0; }
+  margin: 0 0 0.3125rem; }
 
 p {
   font-family: Arial, Helvetica, sans-serif;
@@ -878,7 +876,7 @@ ol {
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.5rem 0 0.3125rem;
+  margin: 0 0 0.3125rem;
   color: #00A4E3;
   font-family: Arial, Helvetica, sans-serif;
   font-weight: bold; }
@@ -1209,7 +1207,7 @@ legend {
   line-height: 2.1875rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0.5rem 0 0.3125rem;
+  margin: 0 0 0.3125rem;
   border-bottom: 0; }
 
 ul.form-group {
