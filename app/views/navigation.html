@@ -1,79 +1,234 @@
-<h1>Navigation</h1>
-
-<div class="system-element">
-  <details>
-    <summary class="small header">Nav-Tabs 01 (Component: nav-tabs-01)</summary>
-    <pre class="prettyprint">
-      <xmp>
-<div class="nav nav-tabs-01">
-<div data-object="drawer" data-state="is-closed">
-<a href="#nav-tabs-01-item1"
-class="drawer-toggle t-drawer-toggle t-drawer-face"
-data-behavior="accordion">
-Item 1
-</a>
-<div class="drawer t-drawer">
-<ul class="drawer-list">
-<li>Contents</li>
-<li>More contents</li>
-</ul>
-</div>
-</div>
-<div data-object="drawer" data-state="is-closed">
-<a href="#nav-tabs-01-item2"
-class="drawer-toggle t-drawer-toggle t-drawer-face last"
-data-behavior="accordion">
-Item 2
-</a>
-<div class="drawer t-drawer">
-<ul class="drawer-list">
-<li>These Contents</li>
-<li>Yet More contents</li>
-</ul>
-</div>
-</div>
-</div>
-      </xmp>
-    </pre>
-  </details>
-  <div class="nav nav-tabs-01">
-    <div data-object="drawer" data-state="is-closed">
-      <a href="#nav-tabs-01-item1"
-         class="drawer-toggle t-drawer-toggle t-drawer-face"
-         data-behavior="accordion">
-        Item 1
-      </a>
-      <div class="drawer t-drawer">
-        <ul class="drawer-list">
-          <li>Contents</li>
-          <li>More contents</li>
-        </ul>
-      </div>
-    </div>
-    <div data-object="drawer" data-state="is-closed">
-      <a href="#nav-tabs-01-item2"
-        class="drawer-toggle t-drawer-toggle t-drawer-face last"
-        data-behavior="accordion">
-        Item 2
-      </a>
-      <div class="drawer t-drawer">
-        <ul class="drawer-list">
-          <li>These Contents</li>
-          <li>Yet More contents</li>
-        </ul>
-      </div>
-    </div>
+<div class="flex-container">
+  <div class="flex-item flex-1of2">
+    <h1>Navigation</h1>
+  </div>
+  <div class="flex-item flex-1of2">
+    <nav class="subpage">
+      <ul class="nav nav-sub">
+        <li role="presentation" class="active"><a href="#">Item 1</a></li>
+        <li role="presentation"><a href="#">Item 2</a></li>
+        <li role="presentation"><a href="#">Item 3</a></li>
+      </ul>
+    </nav>
   </div>
 </div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
-<br />
+
+<article>
+  <h2>Navs</h2>
+
+  <p>We've adapted Navs from Bootstrap. They have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
+
+ <!--  <div class="bs-callout bs-callout-info" id="callout-navs-tabs-plugin">
+    <h4>Using navs for tab panels requires JavaScript tabs plugin</h4>
+    <p>For tabs with tabbable areas, you must use the <a href="../javascript/#tabs">tabs JavaScript plugin</a>. The markup will also require additional <code>role</code> and ARIA attributes – see the plugin's <a href="../javascript/#tabs-usage">example markup</a> for further details.</p>
+  </div> -->
+
+  <div class="bs-callout bs-callout-warning" id="callout-navs-accessibility">
+    <h4>Make navs used as navigation accessible</h4>
+    <p>If you are using navs to provide a navigation bar, be sure to add a <code>role="navigation"</code> to the most logical parent container of the <code>&lt;ul&gt;</code>, or wrap a <code>&lt;nav&gt;</code> element around the whole navigation. Do not add the role to the <code>&lt;ul&gt;</code> itself, as this would prevent it from being announced as an actual list by assistive technologies.</p>
+  </div>
+
+  <!-- 
+  <h2 id="nav-tabs">Tabs</h2>
+  <p>Note the <code>.nav-tabs</code> class requires the <code>.nav</code> base class.</p>
+  <div class="bs-example" data-example-id="simple-nav-tabs">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+
+  <h2 id="nav-pills">Pills</h2>
+  <p>Take that same HTML, but use <code>.nav-pills</code> instead:</p>
+  <div class="bs-example" data-example-id="simple-nav-pills">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+  <p>Pills are also vertically stackable. Just add <code>.nav-stacked</code>.</p>
+  <div class="bs-example" data-example-id="simple-nav-stacked">
+    <ul class="nav nav-pills nav-stacked" style="max-width: 300px;">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills nav-stacked"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+-->
+
+  <h3 id="nav-subpage">Subpage Navigation</h3>
+  <p>For navigation between pages in a section (eg. Roster's Group Search, People Search, and Group Mail), iuse <code>.nav-sub</code>. The example below would normally be floated right (see example at the top of this page).</p>
+  <div class="bs-example" data-example-id="simple-nav-choices">
+    <ul class="nav nav-sub" style="float: inherit;">
+      <li role="presentation" class="active"><a href="#">All</a></li>
+      <li role="presentation"><a href="#">Pending</a></li>
+      <li role="presentation"><a href="#">Completed</a></li>
+    </ul>
+  </div>
+  <br />
+  <details>
+      <summary>Show HTML</summary>
+<pre class="prettyprint">
+<xmp>
+  <nav class="subpage">
+    <ul class="nav nav-sub">
+      <li role="presentation" class="active"><a href="#">Item 1</a></li>
+      <li role="presentation"><a href="#">Item 2</a></li>
+      <li role="presentation"><a href="#">Item 3</a></li>
+    </ul>
+  </nav>
+</xmp>
+</pre>
+    </details>
+
+  <h3 id="nav-choices">Choices</h3>
+  <p>Take that same HTML, but use <code>.nav-choices</code> instead:</p>
+  <div class="bs-example" data-example-id="simple-nav-choices">
+    <ul class="nav nav-choices">
+      <li role="presentation" class="active"><a href="#">All</a></li>
+      <li role="presentation"><a href="#">Pending</a></li>
+      <li role="presentation"><a href="#">Completed</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-choices"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span></code></pre></div>
+
+<!--
+
+  <h2 id="nav-justified">Justified</h2>
+  <p>Easily make tabs or pills equal widths of their parent at screens wider than 768px with <code>.nav-justified</code>. On smaller screens, the nav links are stacked.</p>
+  <p><strong class="text-danger">Justified navbar nav links are currently not supported.</strong></p>
+  <div class="bs-callout bs-callout-warning" id="callout-navs-justified-safari">
+    <h4>Safari and responsive justified navs</h4>
+    <p>As of v8.0, Safari exhibits a bug in which resizing your browser horizontally causes rendering errors in the justified nav that are cleared upon refreshing. This bug is also shown in the <a href="../examples/justified-nav/">justified nav example</a>.</p>
+  </div>
+  <div class="bs-example" data-example-id="simple-nav-justified">
+    <ul class="nav nav-tabs nav-justified">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+    <br>
+    <ul class="nav nav-pills nav-justified">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Profile</a></li>
+      <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs nav-justified"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills nav-justified"</span><span class="nt">&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+
+  <h2 id="nav-disabled-links">Disabled links</h2>
+  <p>For any nav component (tabs or pills), add <code>.disabled</code> for <strong>gray links and no hover effects</strong>.</p>
+
+  <div class="bs-callout bs-callout-warning" id="callout-navs-anchor-disabled">
+    <h4>Link functionality not impacted</h4>
+    <p>This class will only change the <code>&lt;a&gt;</code>'s appearance, not its functionality. Use custom JavaScript to disable links here.</p>
+  </div>
+
+  <div class="bs-example" data-example-id="disabled-nav-link">
+    <ul class="nav nav-pills">
+      <li role="presentation"><a href="#">Clickable link</a></li>
+      <li role="presentation"><a href="#">Clickable link</a></li>
+      <li role="presentation" class="disabled"><a href="#">Disabled link</a></li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"disabled"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Disabled link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+
+  <h2 id="nav-dropdowns">Using dropdowns</h2>
+  <p>Add dropdown menus with a little extra HTML and the <a href="../javascript/#dropdowns">dropdowns JavaScript plugin</a>.</p>
+
+  <h3>Tabs with dropdowns</h3>
+  <div class="bs-example" data-example-id="nav-tabs-with-dropdown">
+    <ul class="nav nav-tabs">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Help</a></li>
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          Dropdown <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-tabs"</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      ...
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+  <h3>Pills with dropdowns</h3>
+  <div class="bs-example" data-example-id="nav-pills-with-dropdown">
+    <ul class="nav nav-pills">
+      <li role="presentation" class="active"><a href="#">Home</a></li>
+      <li role="presentation"><a href="#">Help</a></li>
+      <li role="presentation" class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-expanded="false">
+          Dropdown <span class="caret"></span>
+        </a>
+        <ul class="dropdown-menu" role="menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li class="divider"></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /example -->
+<!-- 
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-pills"</span><span class="nt">&gt;</span>
+  ...
+  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"dropdown"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"dropdown-toggle"</span> <span class="na">data-toggle=</span><span class="s">"dropdown"</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">role=</span><span class="s">"button"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;</span>
+      Dropdown <span class="nt">&lt;span</span> <span class="na">class=</span><span class="s">"caret"</span><span class="nt">&gt;&lt;/span&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"dropdown-menu"</span> <span class="na">role=</span><span class="s">"menu"</span><span class="nt">&gt;</span>
+      ...
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  ...
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+</article> -->
