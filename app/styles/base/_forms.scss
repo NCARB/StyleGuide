@@ -172,7 +172,7 @@ input[type="checkbox"] {
       margin-right: 1.2rem;
       &::before {
         @include fa-icon();
-        color: $color-gray-3;
+        color: $color-gray-4;
         font-weight: bold;
         font-size: 21px;
         vertical-align: middle;

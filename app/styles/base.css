@@ -1140,7 +1140,7 @@ input[type="checkbox"] {
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         transform: translate(0, 0);
-        color: #CCCCCC;
+        color: #999999;
         font-weight: bold;
         font-size: 21px;
         vertical-align: middle; }
