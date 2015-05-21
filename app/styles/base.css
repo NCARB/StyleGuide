@@ -6479,16 +6479,17 @@ a.list-group-item-danger {
     .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
       color: #fff;
       background-color: #00719d; }
-  .navbar-ncarb .navbar-nav > li > a.active, .navbar-ncarb .navbar-nav > li > a.active:hover, .navbar-ncarb .navbar-nav > li > a.active:focus,
-  .navbar-ncarb .navbar-nav > li > ul > li > a.active,
-  .navbar-ncarb .navbar-nav > li > ul > li > a.active:hover,
-  .navbar-ncarb .navbar-nav > li > ul > li > a.active:focus {
+  .navbar-ncarb .navbar-nav > li.active > a, .navbar-ncarb .navbar-nav > li.active > a:hover, .navbar-ncarb .navbar-nav > li.active > a:focus,
+  .navbar-ncarb .navbar-nav > li > ul > li.active > a,
+  .navbar-ncarb .navbar-nav > li > ul > li.active > a:hover,
+  .navbar-ncarb .navbar-nav > li > ul > li.active > a:focus {
     color: #fff;
-    background-color: #00719d; }
-  .navbar-ncarb .navbar-nav > li a.disabled, .navbar-ncarb .navbar-nav > li a.disabled:hover, .navbar-ncarb .navbar-nav > li a.disabled:focus,
-  .navbar-ncarb .navbar-nav > li > ul > li a.disabled,
-  .navbar-ncarb .navbar-nav > li > ul > li a.disabled:hover,
-  .navbar-ncarb .navbar-nav > li > ul > li a.disabled:focus {
+    background-color: #00719d;
+    font-weight: bold; }
+  .navbar-ncarb .navbar-nav > li.disabled > a, .navbar-ncarb .navbar-nav > li.disabled > a:hover, .navbar-ncarb .navbar-nav > li.disabled > a:focus,
+  .navbar-ncarb .navbar-nav > li > ul > li.disabled > a,
+  .navbar-ncarb .navbar-nav > li > ul > li.disabled > a:hover,
+  .navbar-ncarb .navbar-nav > li > ul > li.disabled > a:focus {
     color: #ABEAFF;
     background-color: transparent; }
   @media (min-width: 959px) {
@@ -6504,17 +6505,17 @@ a.list-group-item-danger {
       .navbar-ncarb .navbar-nav > li > ul > li > a:focus {
         color: #00A4E3;
         background-color: transparent; }
-    .navbar-ncarb .navbar-nav > li a.active, .navbar-ncarb .navbar-nav > li a.active:hover, .navbar-ncarb .navbar-nav > li a.active:focus,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.active,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.active:hover,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.active:focus {
+    .navbar-ncarb .navbar-nav > li.active > a, .navbar-ncarb .navbar-nav > li.active > a:hover, .navbar-ncarb .navbar-nav > li.active > a:focus,
+    .navbar-ncarb .navbar-nav > li > ul > li.active > a,
+    .navbar-ncarb .navbar-nav > li > ul > li.active > a:hover,
+    .navbar-ncarb .navbar-nav > li > ul > li.active > a:focus {
       color: #00A4E3;
       background-color: transparent;
       font-weight: bold; }
-    .navbar-ncarb .navbar-nav > li > a.disabled, .navbar-ncarb .navbar-nav > li > a.disabled:hover, .navbar-ncarb .navbar-nav > li > a.disabled:focus,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.disabled,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.disabled:hover,
-    .navbar-ncarb .navbar-nav > li > ul > li > a.disabled:focus {
+    .navbar-ncarb .navbar-nav > li.disabled > a, .navbar-ncarb .navbar-nav > li.disabled > a:hover, .navbar-ncarb .navbar-nav > li.disabled > a:focus,
+    .navbar-ncarb .navbar-nav > li > ul > li.disabled > a,
+    .navbar-ncarb .navbar-nav > li > ul > li.disabled > a:hover,
+    .navbar-ncarb .navbar-nav > li > ul > li.disabled > a:focus {
       color: #ccc;
       background-color: transparent; } }
   .navbar-ncarb .navbar-toggle {

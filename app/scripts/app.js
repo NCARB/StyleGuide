@@ -28,34 +28,42 @@ angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'design
   .config(['$stateProvider', '$urlRouterProvider',
     function($stateProvider, $urlRouterProvider) {
 
-      $urlRouterProvider.otherwise('/');
+      $urlRouterProvider
+      .when('/css', '/css/layout')
+      .when('/bootstrap', '/bootstrap/css')
+      .otherwise('/');
 
       $stateProvider
         .state('introduction', {
           url: '/',
           templateUrl: 'views/introduction.html'
         })
-        .state('layout', {
+        .state('css', {
+          url: '/css',
+          abstract: true,
+          template: '<ui-view/>'
+        })
+        .state('css.layout', {
           url: '/layout',
           templateUrl: 'views/layout.html'
         })
-        .state('color', {
+        .state('css.color', {
           url: '/color',
           templateUrl: 'views/color.html'
         })
-        .state('typography', {
+        .state('css.typography', {
           url: '/typography',
           templateUrl: 'views/typography.html'
         })
-        .state('iconography', {
+        .state('css.iconography', {
           url: '/iconography',
           templateUrl: 'views/iconography.html'
         })
-        .state('formElements', {
+        .state('css.formElements', {
           url: '/formElements',
           templateUrl: 'views/form_elements.html'
         })
-        .state('navigation', {
+        .state('css.navigation', {
           url: '/navigation',
           templateUrl: 'views/navigation.html'
         })
@@ -63,16 +71,21 @@ angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'design
           url: '/content',
           templateUrl: 'views/content.html'
         })
-        .state('bootstrap-css', {
-          url: '/bootstrap-css',
+        .state('bootstrap', {
+          url: "/bootstrap",
+          abstract: true,
+          template: '<ui-view/>'
+        })
+        .state('bootstrap.css', {
+          url: '/css',
           templateUrl: 'views/bootstrap-css.html'
         })
-        .state('bootstrap-components', {
-          url: '/bootstrap-components',
+        .state('bootstrap.components', {
+          url: '/components',
           templateUrl: 'views/bootstrap-components.html'
         })
-        .state('bootstrap-javascript', {
-          url: '/bootstrap-javascript',
+        .state('bootstrap.javascript', {
+          url: '/javascript',
           templateUrl: 'views/bootstrap-javascript.html',
           controller: 'BootstrapJsCtrl'
         });
