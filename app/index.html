@@ -69,26 +69,26 @@
       </ul>
 
       <ul class="nav navbar-nav"> 
-        <li><a ui-sref="introduction" ui-sref-active="active">General stuff</a></li>
-        <li class="dropdown">
+        <li ui-sref-active="active"><a ui-sref="introduction">General stuff</a></li>
+        <li class="dropdown" ng-class="{active: ('css' | includedByState)}">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CSS <span class="caret"></span></a>
           <ul class="dropdown-menu bullet pull-center " role="menu">
-            <li><a ui-sref="layout" ui-sref-active="active">Layout</a></li>
-            <li><a ui-sref="color" ui-sref-active="active">Color</a></li>
-            <li><a ui-sref="typography" ui-sref-active="active">Typography</a></li>
-            <li><a ui-sref="iconography" ui-sref-active="active">Iconography</a></li>
-            <li><a ui-sref="formElements" ui-sref-active="active">Form Elements</a></li>
-            <li><a ui-sref="navigation" ui-sref-active="active">Navigation</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.layout">Layout</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.color">Color</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.typography">Typography</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.iconography">Iconography</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.formElements">Form Elements</a></li>
+            <li ui-sref-active="active"><a ui-sref="css.navigation">Navigation</a></li>
           </ul>
         </li>
-        <li><a ui-sref="content" ui-sref-active="active">Content</a>
+        <li ui-sref-active="active"><a ui-sref="content">Content</a>
         </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
+        <li class="dropdown" ng-class="{active: ('bootstrap' | includedByState)}">
+          <a stop-event href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
           <ul class="dropdown-menu bullet pull-center" role="menu">
-            <li><a ui-sref="bootstrap-css" ui-sref-active="active">Bootstrap CSS</a></li>
-            <li><a ui-sref="bootstrap-components" ui-sref-active="active">Bootstrap Components</a></li>
-            <li><a ui-sref="bootstrap-javascript" ui-sref-active="active">Bootstrap Javascript</a></li>
+            <li ui-sref-active="active"><a ui-sref="bootstrap.css">Bootstrap CSS</a></li>
+            <li ui-sref-active="active"><a ui-sref="bootstrap.components">Bootstrap Components</a></li>
+            <li ui-sref-active="active"><a ui-sref="bootstrap.javascript">Bootstrap Javascript</a></li>
           </ul>
         </li>
         </li>

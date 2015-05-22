@@ -458,17 +458,19 @@
         background-color: $navbar-inverse-link-hover-bg;
       }
     }
-    > li > a.active,
-    > li > ul > li > a.active  {
+    
+    > li.active > a,
+    > li > ul > li.active > a {
       &,
       &:hover,
       &:focus {
         color: $navbar-inverse-link-active-color;
         background-color: $navbar-inverse-link-active-bg;
+        font-weight: bold;
       }
     }
-    > li a.disabled,
-    > li > ul > li a.disabled {
+    > li.disabled > a,
+    > li > ul > li.disabled > a {
       &,
       &:hover,
       &:focus {
@@ -477,12 +479,12 @@
       }
     }
     @media (min-width: $grid-float-breakpoint-max) {
-      // Styling for when meny is in desktop mode
+      // Styling for when menu is in desktop mode
       > li {
         border-bottom: none;
       }
       > li > a,
-      > li >ul >li > a {
+      > li > ul > li > a {
         color: $navbar-default-link-color;
         font-family: "Agenda Light", Arial, Helvetica, sans-serif;
         font-weight: normal;
@@ -493,8 +495,8 @@
           background-color: $navbar-default-link-hover-bg;
         }
       }
-      > li a.active,
-      > li > ul > li > a.active {
+      > li.active > a,
+      > li > ul > li.active > a {
         &,
         &:hover,
         &:focus {
@@ -503,8 +505,8 @@
           font-weight: bold;
         }
       }
-      > li > a.disabled,
-      > li > ul > li > a.disabled {
+      > li.disabled > a,
+      > li > ul > li.disabled > a {
         &,
         &:hover,
         &:focus {
