@@ -451,7 +451,16 @@
     > li > a {
       color: $navbar-inverse-link-color;
       font-weight: bold;
-
+       /* turn on narrow items when in desktop mode... */
+      @media (min-width: $grid-float-breakpoint) {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+      /* ...but release once we go wider */
+      @media (min-width: $grid-narrow-breakpoint) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
       &:hover,
       &:focus {
         color: $navbar-inverse-link-hover-color;
@@ -478,7 +487,8 @@
         background-color: $navbar-inverse-link-disabled-bg;
       }
     }
-    @media (min-width: $grid-float-breakpoint-max) {
+    
+    @media (min-width: $grid-float-breakpoint) {
       // Styling for when menu is in desktop mode
       > li {
         border-bottom: none;
@@ -557,7 +567,7 @@
       }
     }
 
-    @media (min-width: $grid-float-breakpoint-max) {
+    @media (min-width: $grid-float-breakpoint) {
     // Remove background color from open dropdown
       > .open > a {
         &,
@@ -749,7 +759,7 @@
         }
       }
     }
-    @media (min-width: $grid-float-breakpoint-max) {
+    @media (min-width: $grid-float-breakpoint) {
       // Styling for when meny is in desktop mode
       > li > a {
         color: $navbar-default-link-color;
@@ -999,7 +1009,7 @@
 
 /* added interop with navbar-collapse */
 
-@media (min-width: 960px) {
+@media (min-width: $grid-float-breakpoint) {
   .navbar-collapse.collapse.navmenu-fixed-left,
   .navbar-collapse.collapse.navmenu-fixed-right,
   .navbar-collapse.collapse.navbar-offcanvas {
