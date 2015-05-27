@@ -24,7 +24,6 @@
   <link rel="stylesheet" href="styles/base.css" />
   <!-- endbuild -->
   <!-- build:css(dist) styles/components.min.css -->
-  <link rel="stylesheet" href="components/navbar/navbar.css" />  
   <link rel="stylesheet" href="components/nav-tabs-01/nav-tabs-01.css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="styles/site.css" />
@@ -58,7 +57,7 @@
     <div id="ncarbNavmenu" class="collapse navbar-collapse navmenu-fixed-left offcanvas" role="navigation">
       <ul class="nav navbar-nav">
         <li class="dropdown global-nav">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Style Guide <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false">Style Guide <span class="caret"></span></a>
           <ul class="dropdown-menu bullet pull-center" role="menu">
             <li><a href="http://www.ncarb.org">www.ncarb.org</a></li>
             <li><a href="http://blog.ncarb.org">Blog</a></li>
@@ -71,7 +70,7 @@
       <ul class="nav navbar-nav"> 
         <li ui-sref-active="active"><a ui-sref="introduction">General stuff</a></li>
         <li class="dropdown" ng-class="{active: ('css' | includedByState)}">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">CSS <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false">CSS <span class="caret"></span></a>
           <ul class="dropdown-menu bullet pull-center " role="menu">
             <li ui-sref-active="active"><a ui-sref="css.layout">Layout</a></li>
             <li ui-sref-active="active"><a ui-sref="css.color">Color</a></li>
@@ -84,7 +83,7 @@
         <li ui-sref-active="active"><a ui-sref="content">Content</a>
         </li>
         <li class="dropdown" ng-class="{active: ('bootstrap' | includedByState)}">
-          <a stop-event href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
+          <a stop-event href="#" class="dropdown-toggle" data-hover="dropdown" role="button" aria-expanded="false">Bootstrap <span class="caret"></span></a>
           <ul class="dropdown-menu bullet pull-center" role="menu">
             <li ui-sref-active="active"><a ui-sref="bootstrap.css">Bootstrap CSS</a></li>
             <li ui-sref-active="active"><a ui-sref="bootstrap.components">Bootstrap Components</a></li>
@@ -194,7 +193,8 @@
   <script src="bower_components/requirejs/require.js"></script>
   <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
   <script src="bower_components/jasny-bootstrap/js/offcanvas.js"></script>
-  <script src="bower_components/bootstrap-dropdowns-enhancement/dist/js/dropdowns-enhancement.js"></script>
+  <script src="bower_components/bootstrap-dropdowns-enhancement-for-hover/dist/js/dropdowns-enhancement.js"></script>
+  <script src="bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js"></script>
   <!-- endbower -->        
   <!-- endbuild -->
   <!-- build:js({.tmp,app}) scripts/scripts.js -->

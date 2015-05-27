@@ -40,7 +40,8 @@
     "requirejs": "~2.1.15",
     "lodash": "~3.4.0",
     "jasny-bootstrap": "~3.1.3",
-    "bootstrap-dropdowns-enhancement": "git://github.com/davious/bootstrap_dropdowns_enhancement.git#3.1.1"
+    "bootstrap-dropdowns-enhancement-for-hover": "git://github.com/davious/bootstrap_dropdowns_enhancement_for_hover.git#4.0",
+    "bootstrap-hover-dropdown": "~2.1.3"
   },
   "resolutions": {
     "angular": "~1.3.15",
@@ -61,7 +62,7 @@
     "jasny-bootstrap": {
       "main": "./js/offcanvas.js"
     },
-    "bootstrap-dropdowns-enhancement": {
+    "bootstrap-dropdowns-enhancement-for-hover": {
       "main": "./dist/js/dropdowns-enhancement.js"
     }
   }
