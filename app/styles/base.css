@@ -651,30 +651,22 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     outline: 0; }
   .btn:active, .btn.active {
     background-color: #c5c1b4; }
-  .btn.btn-continue, .btn.btn-plus {
-    text-align: left;
-    padding-right: 36px; }
-    .btn.btn-continue:after, .btn.btn-plus:after {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      display: inline-block;
-      font: normal normal normal 14px/1 FontAwesome;
-      font-size: inherit;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      transform: translate(0, 0);
-      line-height: 1; }
-      .lt-ie8 .btn.btn-continue:after, .lt-ie8 .btn.btn-plus:after {
-        display: none; }
+  .btn.btn-continue:after, .btn.btn-plus:after {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    padding: 0 .02em 0 .75em; }
   .btn.btn-continue:after {
     font-weight: bold;
     content: ""; }
   .btn.btn-plus:after {
     content: "";
-    font-size: 16px;
-    line-height: 18px; }
+    position: relative;
+    top: .1em; }
 
 .btn-primary {
   background: #00A4E3 no-repeat 100% center;
