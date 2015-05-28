@@ -6508,8 +6508,7 @@ a.list-group-item-danger {
     .navbar-ncarb .navbar-nav > li > a,
     .navbar-ncarb .navbar-nav > li > ul > li > a {
       color: #97958C;
-      font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-      font-weight: normal; }
+      font-family: "Agenda Light", Arial, Helvetica, sans-serif; }
       .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus,
       .navbar-ncarb .navbar-nav > li > ul > li > a:hover,
       .navbar-ncarb .navbar-nav > li > ul > li > a:focus {
@@ -6568,14 +6567,11 @@ a.list-group-item-danger {
         }
       }
     }*/ }
-    .navbar-ncarb .navbar-nav > .open > a {
-      white-space: normal; }
-      .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
-        background-color: #00719d;
-        color: #fff; }
+    .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
+      background-color: #00719d;
+      color: #fff; }
     .navbar-ncarb .navbar-nav > .dropdown > ul > li > a {
-      color: #fff;
-      white-space: normal; }
+      color: #fff; }
       .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:focus {
         background-color: #00719d; }
     @media (min-width: 768px) {
