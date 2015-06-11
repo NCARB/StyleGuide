@@ -153,6 +153,13 @@
   $name_: $name;
   @if $name == "" {
     $name: "-xs";
+    $i: 0;
+    @while $i < 12 {
+      $i: $i + 1;
+      .col-xs-#{$i} {
+        @extend %relative;
+      }
+    }
     @each $breakpoint, $min-width in $breakpoints {
       $i: 0;
       @while $i < 12 {
@@ -204,6 +211,13 @@
 .lt-ie10 {
   .flex-item {
     @extend %col;
+  }
+  $i: 0;
+  @while $i < 12 {
+    $i: $i + 1;
+    .col-xs-#{$i} {
+      @extend %col;
+    }
   }
   @each $name, $min-width in $breakpoints {
     $i: 0;
