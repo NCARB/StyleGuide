@@ -6465,20 +6465,19 @@ a.list-group-item-danger {
     color: #777; }
   .navbar-ncarb .navbar-nav > li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-  .navbar-ncarb .navbar-nav > li > a {
+  .navbar-ncarb .navbar-nav > li a {
     color: #fff;
-    font-weight: bold;
     /* turn on narrow items when in desktop mode... */
     /* ...but release once we go wider */ }
     @media (min-width: 768px) {
-      .navbar-ncarb .navbar-nav > li > a {
+      .navbar-ncarb .navbar-nav > li a {
         padding-left: 10px;
         padding-right: 10px; } }
     @media (min-width: 960px) {
-      .navbar-ncarb .navbar-nav > li > a {
+      .navbar-ncarb .navbar-nav > li a {
         padding-left: 15px;
         padding-right: 15px; } }
-    .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
+    .navbar-ncarb .navbar-nav > li a:hover, .navbar-ncarb .navbar-nav > li a:focus {
       color: #fff;
       background-color: #00719d; }
   .navbar-ncarb .navbar-nav > li.active > a, .navbar-ncarb .navbar-nav > li.active > a:hover, .navbar-ncarb .navbar-nav > li.active > a:focus,
