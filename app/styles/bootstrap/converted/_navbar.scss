@@ -448,9 +448,8 @@
       border-bottom:1px solid rgba(255,255,255,.4);
     }
 
-    > li > a {
+    > li a {
       color: $navbar-inverse-link-color;
-      font-weight: bold;
        /* turn on narrow items when in desktop mode... */
       @media (min-width: $grid-float-breakpoint) {
         padding-left: 10px;
