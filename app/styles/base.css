@@ -3684,14 +3684,23 @@ tbody.collapse.in {
   transition: height 0.35s ease; }
 
 .caret {
-  display: inline-block;
+  border: none;
+  display: inline;
   width: 0;
   height: 0;
   margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent; }
+  vertical-align: baseline; }
+  .caret:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+    content: "";
+    position: relative;
+    top: 1px; }
 
 .dropdown {
   position: relative; }
@@ -3727,7 +3736,7 @@ tbody.collapse.in {
     margin: 9px 0;
     overflow: hidden;
     background-color: #e5e5e5; }
-  .dropdown-menu > li > a {
+  .dropdown-menu > li a {
     display: block;
     padding: 3px 20px;
     clear: both;
@@ -3736,7 +3745,7 @@ tbody.collapse.in {
     color: #444444;
     white-space: nowrap; }
 
-.dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus {
+.dropdown-menu > li a:hover, .dropdown-menu > li a:focus {
   text-decoration: none;
   color: #373737;
   background-color: #f5f5f5; }
@@ -3792,9 +3801,12 @@ tbody.collapse.in {
 
 .dropup .caret,
 .navbar-fixed-bottom .dropdown .caret {
-  border-top: 0;
-  border-bottom: 4px solid;
+  border: none;
   content: ""; }
+  .dropup .caret:before,
+  .navbar-fixed-bottom .dropdown .caret:before {
+    content: "";
+    top: -3px; }
 .dropup .dropdown-menu,
 .navbar-fixed-bottom .dropdown .dropdown-menu {
   top: auto;
@@ -3808,30 +3820,6 @@ tbody.collapse.in {
   .navbar-right .dropdown-menu-left {
     left: 0;
     right: auto; } }
-.caret {
-  border: none;
-  display: inline;
-  vertical-align: baseline; }
-  .caret:before {
-    display: inline-block;
-    font: normal normal normal 14px/1 FontAwesome;
-    font-size: inherit;
-    text-rendering: auto;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
-    content: "";
-    position: relative;
-    top: 1px; }
-
-.dropup .caret,
-.navbar-fixed-bottom .dropdown .caret {
-  border: none; }
-  .dropup .caret:before,
-  .navbar-fixed-bottom .dropdown .caret:before {
-    content: "";
-    top: -3px; }
-
 .dropdown-menu > li > label {
   display: block;
   padding: 3px 20px;
@@ -6462,22 +6450,29 @@ a.list-group-item-danger {
       color: #7e7c72;
       background-color: transparent; }
   .navbar-ncarb .navbar-text {
-    color: #777; }
+    display: none; }
+    @media (min-width: 768px) {
+      .navbar-ncarb .navbar-text {
+        display: block;
+        color: #777;
+        white-space: nowrap;
+        padding-right: 0;
+        padding-left: 0; } }
   .navbar-ncarb .navbar-nav > li {
     border-bottom: 1px solid rgba(255, 255, 255, 0.4); }
-  .navbar-ncarb .navbar-nav > li a {
+  .navbar-ncarb .navbar-nav > li > a {
     color: #fff;
     /* turn on narrow items when in desktop mode... */
     /* ...but release once we go wider */ }
     @media (min-width: 768px) {
-      .navbar-ncarb .navbar-nav > li a {
+      .navbar-ncarb .navbar-nav > li > a {
         padding-left: 10px;
         padding-right: 10px; } }
     @media (min-width: 960px) {
-      .navbar-ncarb .navbar-nav > li a {
+      .navbar-ncarb .navbar-nav > li > a {
         padding-left: 15px;
         padding-right: 15px; } }
-    .navbar-ncarb .navbar-nav > li a:hover, .navbar-ncarb .navbar-nav > li a:focus {
+    .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus {
       color: #fff;
       background-color: #00719d; }
   .navbar-ncarb .navbar-nav > li.active > a, .navbar-ncarb .navbar-nav > li.active > a:hover, .navbar-ncarb .navbar-nav > li.active > a:focus,
@@ -6497,12 +6492,12 @@ a.list-group-item-danger {
     .navbar-ncarb .navbar-nav > li {
       border-bottom: none; }
     .navbar-ncarb .navbar-nav > li > a,
-    .navbar-ncarb .navbar-nav > li > ul > li > a {
+    .navbar-ncarb .navbar-nav > li > ul > li a {
       color: #97958C;
       font-family: "Agenda Light", Arial, Helvetica, sans-serif; }
       .navbar-ncarb .navbar-nav > li > a:hover, .navbar-ncarb .navbar-nav > li > a:focus,
-      .navbar-ncarb .navbar-nav > li > ul > li > a:hover,
-      .navbar-ncarb .navbar-nav > li > ul > li > a:focus {
+      .navbar-ncarb .navbar-nav > li > ul > li a:hover,
+      .navbar-ncarb .navbar-nav > li > ul > li a:focus {
         color: #00A4E3;
         background-color: transparent; }
     .navbar-ncarb .navbar-nav > li.active > a, .navbar-ncarb .navbar-nav > li.active > a:hover, .navbar-ncarb .navbar-nav > li.active > a:focus,
@@ -6561,17 +6556,17 @@ a.list-group-item-danger {
     .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
       background-color: #00719d;
       color: #fff; }
-    .navbar-ncarb .navbar-nav > .dropdown > ul > li > a {
+    .navbar-ncarb .navbar-nav > .dropdown > ul > li a {
       color: #fff; }
-      .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:focus {
+      .navbar-ncarb .navbar-nav > .dropdown > ul > li a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li a:focus {
         background-color: #00719d; }
     @media (min-width: 768px) {
       .navbar-ncarb .navbar-nav > .open > a, .navbar-ncarb .navbar-nav > .open > a:hover, .navbar-ncarb .navbar-nav > .open > a:focus {
         background-color: transparent;
         color: #00A4E3; }
-      .navbar-ncarb .navbar-nav > .dropdown > ul > li > a {
+      .navbar-ncarb .navbar-nav > .dropdown > ul > li a {
         color: #97958C; }
-        .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li > a:focus {
+        .navbar-ncarb .navbar-nav > .dropdown > ul > li a:hover, .navbar-ncarb .navbar-nav > .dropdown > ul > li a:focus {
           background-color: transparent;
           color: #00A4E3; } }
     .navbar-ncarb .navbar-nav > .dropdown {
