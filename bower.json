@@ -40,7 +40,7 @@
     "requirejs": "~2.1.15",
     "lodash": "~3.4.0",
     "jasny-bootstrap": "~3.1.3",
-    "bootstrap-dropdowns-enhancement-for-hover": "git://github.com/davious/bootstrap_dropdowns_enhancement_for_hover.git#4.0",
+    "bootstrap-dropdowns-enhancement-for-hover": "git://github.com/davious/bootstrap_dropdowns_enhancement_for_hover.git#v4.2",
     "bootstrap-hover-dropdown": "~2.1.3"
   },
   "resolutions": {

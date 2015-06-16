@@ -440,7 +440,17 @@
   }
 
   .navbar-text {
-    color: $navbar-default-color;
+    display: none;
+  }
+  
+  @media (min-width: $grid-float-breakpoint) {
+    & li > .navbar-text {
+      display: block;
+      color: $navbar-default-color;
+      white-space: nowrap;
+      padding-right: 0;
+      padding-left: 0;
+    }
   }
 
   .navbar-nav {
@@ -448,7 +458,7 @@
       border-bottom:1px solid rgba(255,255,255,.4);
     }
 
-    > li a {
+    > li > a {
       color: $navbar-inverse-link-color;
        /* turn on narrow items when in desktop mode... */
       @media (min-width: $grid-float-breakpoint) {
@@ -756,7 +766,7 @@
       }
     }
     @media (min-width: $grid-float-breakpoint) {
-      // Styling for when meny is in desktop mode
+      // Styling for when menu is in desktop mode
       > li > a {
         color: $navbar-default-link-color;
         font-family: "Agenda Light", Arial, Helvetica, sans-serif;
