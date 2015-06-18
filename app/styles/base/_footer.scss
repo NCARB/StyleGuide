@@ -1,0 +1,142 @@
+// Header v01 (he01)
+@import "bourbon";
+@import "functions";
+@import "breakpoints";
+@import "colors";
+@import "type_sizes";
+
+.footer {
+    padding: 40px 20px 18px;
+    background-color:$color-tan_gray-2;
+    text-align: center;
+    & figure {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}
+
+.footer-links {
+    margin-top: -8px;
+
+    > li {
+        a {
+            //@include type-1;
+            margin:0;
+            color:$color_base;
+            text-decoration:none;
+            display:block;
+            border-top:1px solid rgba(255,255,255,.6);
+            padding:10px 20px;
+            &:hover {
+                background-color:darken($color-tan_gray-2,3%);
+            }
+        }
+        .js & {
+            margin-left:-20px;
+            margin-right:-20px;
+        }
+    }
+}
+
+.footer-logo {
+    margin-bottom:20px;
+    img {
+        width: 200px;
+        height:auto;
+        -webkit-transition: width 0.2s ease-out;
+           -moz-transition: width 0.2s ease-out; 
+             -o-transition: width 0.2s ease-out; 
+                transition: width 0.2s ease-out; 
+    }
+}
+.org-card {
+    line-height:$base-line-height;
+    margin: 40px 0;
+    > li {
+        margin-bottom:1em;
+    }
+    .org {
+        display:block;
+        font-size:$type-M + 2px;
+        font-family:$font_light;
+        font-weight:bold;
+    }
+    .tel {
+        margin-right:10px;
+    }
+}
+        
+.label-hide {
+    /* Accessible hide */
+    position: absolute !important;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+    padding:0 !important;
+    margin:0 !important;
+    border:0 !important;
+    height: 1px !important; 
+    width: 1px !important; 
+    overflow: hidden;
+}
+
+.copyright {
+    font-family:$font_light;
+    font-weight:bold;
+    a {
+        font-family:$font_regular;
+        color:$color_base;
+        font-weight:normal;
+    }
+    text-align:center;
+    font-size:$type-M;
+    padding: 20px 40px 0;
+}
+
+@include breakpoint(md) {
+    .footer {
+        text-align: left;
+    }
+    
+    .footer-logo {
+        float:left;
+        width: 25%;
+    }
+    .org-card {
+        float:left;
+        width: 45%;
+        margin: 0;
+        > li {
+            margin-left:4px;
+        }
+    }
+    .footer-links {
+        float:right;
+        padding-right: 3em;
+        > li a {
+            border-top: none;
+        }
+    }
+    .copyright {
+        clear: both;
+        text-align:left;
+        p {
+            display:inline-block;
+        }
+        p + p {
+            margin-left:7px;
+            border-left:1px solid rgba(255,255,255,.6);
+            padding-left:12px;
+        }
+        a {
+            text-decoration:none;
+            font-size:$type-S;
+            &:hover {
+                text-decoration:underline;
+            }
+        }
+    }
+
+}
+
+
+

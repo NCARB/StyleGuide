@@ -12,3 +12,8 @@
 // @import "font-awesome/font-awesome";
 @import "../../../bower_components/font-awesome/scss/variables";
 @import "../../../bower_components/font-awesome/scss/mixins";
+
+.fa-padded {
+    padding: 0 9px;
+    display: inline-block;
+}

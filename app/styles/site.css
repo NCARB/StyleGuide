@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.fa-padded {
+  padding: 0 9px;
+  display: inline-block; }
+
 .body-header {
   font-size: 18px;
   font-size: 1.125rem;

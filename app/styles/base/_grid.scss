@@ -32,40 +32,64 @@
   box-sizing: border-box;
 }
 
+.flex-right {
+  @include justify-content(flex-end);
+}
+
+.flex-center {
+  @include justify-content(center);
+}
+
+.flex-space-around {
+  @include justify-content(space-around);
+}
+
+.flex-space-between {
+  @include justify-content(space-between);
+}
+
 .flex-top {
   @include align-items(flex-start);
+}
+
+.flex-middle {
+  @include align-items(center);
 }
 
 .flex-bottom {
   @include align-items(flex-end);
 }
 
-.flex-center {
-  @include align-items(center);
-}
-
-.flex-v-top {
-  @include justify-content(flex-start);
-}
-
-.flex-v-bottom {
-  @include justify-content(flex-end);
-}
-
-.flex-v-center {
-  @include justify-content(center);
+.flex-baseline {
+  @include align-items(baseline);
+  .lt-ie10 & {
+    display: table-cell;
+    vertical-align: baseline;
+  }
 }
 
 .flex-item-top {
   @include align-self(flex-start);
+  .lt-ie10 & {
+    display: table-cell;
+    vertical-align: top;
+  }
+}
+
+.flex-item-middle {
+  @include align-self(center);
+  .lt-ie10 & {
+    display: table-cell;
+    vertical-align: middle;
+  }
 }
 
 .flex-item-bottom {
   @include align-self(flex-end);
-}
-
-.flex-item-center {
-  @include align-self(center);
+  .lt-ie10 & {
+    display: table-cell;
+    vertical-align: bottom;
+  }
 }
 
 // Examples:
@@ -239,37 +263,33 @@
   @if $name != "" and $name != "xs" {
     $name: "-#{$name}";
   }
-  .flex#{$name}-gutters {
-    margin-left: -0.5rem;
-    & > .flex-item {
-      padding-left: 0.5rem;
-      margin-top: 0.25rem;
-      margin-bottom: 0.25rem;
+  @each $part in 0.5, 1, 2, 3 {
+    $wide: "";
+    @if $part == 1 {
+      $wide: "-wide";
+    } @else if $part == 2 {
+      $wide: "-wider";
+    } @else if $part == 3 {
+      $wide: "-widest";
     }
-    & > .flex-item-cancel-v-margin {
-      margin-bottom: -0.5rem;
-    }
-  }
-  @each $part in 1, 2, 3 {
-    $r: "";
-    @if $part > 1 {
-      $r: "r";
-    } @else if $part > 2 {
-      $r: "st";
-    }
-    .flex#{$name}-gutters-wide#{$r} {
+    .flex#{$name}-gutters#{$wide} {
       margin-left: -1rem * $part;
       & > .flex-item {
         padding-left: 1rem * $part;
-        margin-top: 0.5rem * $part;
-        margin-bottom: 0.5rem * $part;
+        margin-bottom: 1rem * $part;
+        &.flex-item-no-bottom-gutter {
+          margin-bottom: 0;
+        }
       }
-      & > .flex-item-cancel-v-margin {
+      &.flex-no-bottom-gutter {
         margin-bottom: -1rem * $part;
       }
     }
   }
 }
+
+
+    
 
 @include grid-sizing();
 @include grid-gutters();

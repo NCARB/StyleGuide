@@ -57,3 +57,12 @@
 .affix {
   position: fixed;
 }
+
+.relative {
+  position: relative;
+}
+
+.truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

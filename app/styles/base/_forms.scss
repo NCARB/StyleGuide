@@ -65,6 +65,16 @@ input[type="week"] {
   }
 }
 
+[placeholder]:focus::-webkit-input-placeholder {
+  transition: opacity 0.5s 0.5s ease;
+  opacity: 0;
+}
+
+[placeholder]:-ms-input-placeholder {
+  padding: .5em;
+  color: $input-color-placeholder;
+}
+
 textarea,
 input:not([type]),
 input[type="date"],
@@ -121,11 +131,6 @@ input[type="search"]::-webkit-search-results-decoration {
   }
 }
 
-[placeholder]:focus::-webkit-input-placeholder {
-  transition: opacity 0.5s 0.5s ease;
-  opacity: 0;
-}
-
 select,
 select.form-control {
   display: block;
@@ -173,7 +178,6 @@ input[type="checkbox"] {
       &::before {
         @include fa-icon();
         color: $color-gray-4;
-        font-weight: bold;
         font-size: 21px;
         vertical-align: middle;
       }
@@ -239,8 +243,4 @@ legend {
 ul.form-group {
   list-style: none;
   padding-left: 0;
-}
-
-.btn-continue {
-  max-width: 204px;
 }
