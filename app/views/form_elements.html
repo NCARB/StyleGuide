@@ -12,11 +12,11 @@
       <div class="flex-item flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn" type="button">
+<button class="btn">
 Button
 </button>
 <a href="#form_elements" class="btn">Link button</a>
-<input type="button" class="btn" value ="Input button" />
+<input class="btn" value ="Input button" />
 <input type="submit" class="btn btn-block" value ="Load More" />
           </xmp>
         </pre>
@@ -33,7 +33,7 @@ Button
     </div>
   </details>
   <div class="button-examples">
-    <button class="btn" type="button">Button</button>
+    <button class="btn">Button</button>
     <a href="#form_elements" class="btn">Link button</a>
     <input type="button" class="btn" value ="Input button" />
     <input type="submit" class="btn btn-block" value ="Load More" />
@@ -47,7 +47,17 @@ Button
       <div class="flex-item flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn btn-secondary btn-block">Block</button>
+  <div class="flex-container flex-gutters">
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block">Block</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-plus">Block w/Plus</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-continue">Block w/Continue</button>
+    </div>
+  </div>
           </xmp>
         </pre>
       </div>
@@ -55,14 +65,22 @@ Button
         <div class="usage">
           <p>Usage:</p>
           <p>
-            The <code>.btn-block</code> class gives the button 100% width.
+            The <code>.btn-block</code> is from bootstrap and it works with our <code>btn-plus</code> and <code>btn-continue</code> classes.
           </p>
         </div>
       </div>
     </div>
   </details>
-  <div class="button-examples">
-    <button class="btn btn-block">Block</button>
+  <div class="flex-container flex-gutters">
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block">Block</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-plus">Block w/Plus</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-continue">Block w/Continue</button>
+    </div>
   </div>
 </div>
 
@@ -73,7 +91,7 @@ Button
       <div class="flex-item flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn btn-primary" type="button">
+<button class="btn btn-primary">
 Button
 </button>
 <a href="#form_elements" class="btn btn-primary btn-continue">
@@ -94,7 +112,7 @@ Link button
     </div>
   </details>
   <div class="button-examples">
-    <button type="button" class="btn btn-primary">Button Title</button>
+    <button class="btn btn-primary">Button Title</button>
     <a href="#form_elements" class="btn btn-primary btn-continue">Link button</a>
   </div>
 </div>
@@ -106,12 +124,8 @@ Link button
       <div class="flex-item flex-full flex-md-fit">
         <pre class="prettyprint">
           <xmp>
-<button class="btn btn-secondary" type="button">
-Secondary - Default
-</button>
-<button class="btn btn-secondary btn-plus" type="button">
-Secondary w/Plus
-</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-secondary btn-plus">Secondary w/Plus</button>
           </xmp>
         </pre>
       </div>
@@ -126,8 +140,8 @@ Secondary w/Plus
     </div>
   </details>
   <div class="button-examples">
-    <button type="button" class="btn btn-secondary">Secondary</button>
-    <button class="btn btn-secondary plus" type="button">Secondary w/Plus</button>
+    <button class="btn btn-secondary">Secondary</button>
+    <button class="btn btn-secondary btn-plus">Secondary w/Plus</button>
   </div>
 </div>
 
@@ -433,7 +447,7 @@ value="Submit" class="search-submit">
       <pre class="prettyprint">
         <xmp>
 <div class="alert alert-success alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Success header
     </h4>
@@ -444,7 +458,7 @@ value="Submit" class="search-submit">
     </pre>
   </details>
   <div class="alert alert-success alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Success header
     </h4>
@@ -458,7 +472,7 @@ value="Submit" class="search-submit">
     <pre class="prettyprint">
       <xmp>
   <div class="alert alert-danger alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Danger header
     </h4>
@@ -468,7 +482,7 @@ value="Submit" class="search-submit">
     </pre>
   </details>
   <div class="alert alert-danger alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Danger header
     </h4>
@@ -482,7 +496,7 @@ value="Submit" class="search-submit">
     <pre class="prettyprint">
       <xmp>
   <div class="alert alert-warning alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Warning header
     </h4>
@@ -492,7 +506,7 @@ value="Submit" class="search-submit">
     </pre>
   </details>
   <div class="alert alert-warning alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Warning header
     </h4>
@@ -506,7 +520,7 @@ value="Submit" class="search-submit">
     <pre class="prettyprint">
       <xmp>
   <div class="alert alert-info alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Info header
     </h4>
@@ -516,7 +530,7 @@ value="Submit" class="search-submit">
     </pre>
   </details>
   <div class="alert alert-info alert-icon" role="alert">
-    <button type="button" class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
         Info header
     </h4>
