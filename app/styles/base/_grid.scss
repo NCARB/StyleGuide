@@ -7,12 +7,10 @@
   -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
-}
-
-.lt-ie10 {
-  .flex-container, .row, .form-horizontal .form-group {
-      @include clearfix;
-    }
+  
+  .lt-ie10 & {
+    @include clearfix;
+  }
 }
 
 .flex-vertical {
@@ -62,34 +60,18 @@
 
 .flex-baseline {
   @include align-items(baseline);
-  .lt-ie10 & {
-    display: table-cell;
-    vertical-align: baseline;
-  }
 }
 
 .flex-item-top {
   @include align-self(flex-start);
-  .lt-ie10 & {
-    display: table-cell;
-    vertical-align: top;
-  }
 }
 
 .flex-item-middle {
   @include align-self(center);
-  .lt-ie10 & {
-    display: table-cell;
-    vertical-align: middle;
-  }
 }
 
 .flex-item-bottom {
   @include align-self(flex-end);
-  .lt-ie10 & {
-    display: table-cell;
-    vertical-align: bottom;
-  }
 }
 
 // Examples:
@@ -287,9 +269,6 @@
     }
   }
 }
-
-
-    
 
 @include grid-sizing();
 @include grid-gutters();
