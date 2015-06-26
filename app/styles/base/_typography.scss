@@ -7,15 +7,16 @@ h4,
 h5,
 h6 {
   color: $color-black;
-}
-
-h1 a,
-h2 a,
-h3 a,
-h4 a,
-h5 a,
-h6 a {
-  font-weight: inherit;
+  & a {
+    font-weight: inherit;
+  }
+  & small {
+    color: $color-gray-3;
+  }
+  & .normal {
+    font-size: .8em;
+    line-height: normal;
+  }
 }
 
 h1 {
@@ -65,22 +66,6 @@ strong, b {
 
 small {
   @include fontSize($type-XS);
-}
-
-h1 small,
-h2 small,
-h3 small,
-h4 small,
-h5 small {
-  color: $color-gray-3;
-}
-
-h1 .normal,
-h2 .normal,
-h3 .normal,
-h4 .normal,
-h5 .normal {
-  font-size: .8em;
 }
 
 hr {
