@@ -369,6 +369,7 @@ div.canvas-is-pushed {
 main {
   display: block;
   padding: 20px;
+  background: white url(/styles/i/mainbg.gif) repeat-x;
   *zoom: 1; }
   main:before, main:after {
     content: "";
@@ -6400,6 +6401,13 @@ a.list-group-item-danger {
     .navbar-toggle {
       display: none; } }
 
+@media (max-width: 767px) {
+  main, .navbar-header {
+    position: relative;
+    z-index: 1; }
+
+  .navbar-header {
+    background-color: white; } }
 .nav.navbar-nav {
   margin: 0px -15px; }
   .nav.navbar-nav > li > a, .nav.navbar-nav > li > .navbar-text {
@@ -6796,7 +6804,6 @@ a.list-group-item-danger {
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 1030;
   overflow-y: auto;
   border-radius: 0; }
 
@@ -8856,6 +8863,8 @@ input[datepicker-popup] {
 
 .footer-links {
   margin-top: -8px; }
+  .footer-links > li:last-child a {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6); }
   .footer-links > li a {
     margin: 0;
     color: #444444;
@@ -8936,6 +8945,8 @@ input[datepicker-popup] {
     padding-right: 3em; }
     .footer-links > li a {
       border-top: none; }
+    .footer-links > li:last-child a {
+      border-bottom: none; }
 
   .copyright {
     clear: both;
@@ -8951,3 +8962,5 @@ input[datepicker-popup] {
       font-size: 14px; }
       .copyright a:hover {
         text-decoration: underline; } }
+
+/*# sourceMappingURL=base.css.map */
