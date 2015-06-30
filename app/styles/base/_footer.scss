@@ -19,6 +19,10 @@
     margin-top: -8px;
 
     > li {
+        
+        &:last-child a {
+           border-bottom:1px solid rgba(255,255,255,.6); 
+        }
         a {
             //@include type-1;
             margin:0;
@@ -112,8 +116,13 @@
     .footer-links {
         float:right;
         padding-right: 3em;
-        > li a {
-            border-top: none;
+        > li {
+            & a {
+                border-top: none;
+            }
+            &:last-child a {
+                border-bottom: none;
+            }
         }
     }
     .copyright {

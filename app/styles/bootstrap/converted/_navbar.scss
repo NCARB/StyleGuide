@@ -247,6 +247,17 @@
 // Builds on top of the `.nav` components with its own modifier class to make
 // the nav the full height of the horizontal nav (above 768px).
 
+
+@media (max-width: $grid-float-breakpoint-max) {
+  main, .navbar-header {
+    position: relative;
+    z-index: 1;
+  }
+  .navbar-header {
+    background-color: white;
+  }
+}
+
 .nav.navbar-nav {
   margin: 0px (-$navbar-padding-horizontal);
 
@@ -257,6 +268,7 @@
   }
 
   @media (max-width: $grid-float-breakpoint-max) {
+
     // Dropdowns get custom display when collapsed
     .open .dropdown-menu {
       position: static;
@@ -986,7 +998,6 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 1030;
   overflow-y: auto;
   border-radius: 0;
 }
