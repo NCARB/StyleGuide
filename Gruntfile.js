@@ -395,7 +395,6 @@ module.exports = function (grunt) {
             '*.html',
             'views/{,*/}*.html',
             'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            'styles/i/*.{png,jpg,jpeg,gif,webp,svg}',
             'components/**/*.{png,jpg,jpeg,gif,webp,svg}'
           ]
         }, {
