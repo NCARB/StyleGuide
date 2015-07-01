@@ -25,69 +25,85 @@ angular.module('designSystem.directives', []);
   */
 
 angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives'])
-  .config(['$stateProvider', '$urlRouterProvider',
-    function($stateProvider, $urlRouterProvider) {
+  .config(config)
+  .run(run);
+  
+config.$inject = ['$stateProvider', '$urlRouterProvider'];
+function config($stateProvider, $urlRouterProvider) {
+  $urlRouterProvider
+  .when('/css', '/css/layout')
+  .when('/bootstrap', '/bootstrap/css')
+  .otherwise('/');
 
-      $urlRouterProvider
-      .when('/css', '/css/layout')
-      .when('/bootstrap', '/bootstrap/css')
-      .otherwise('/');
+  $stateProvider
+    .state('introduction', {
+      url: '/',
+      templateUrl: 'views/introduction.html'
+    })
+    .state('css', {
+      url: '/css',
+      abstract: true,
+      template: '<ui-view/>'
+    })
+    .state('css.layout', {
+      url: '/layout',
+      templateUrl: 'views/layout.html'
+    })
+    .state('css.color', {
+      url: '/color',
+      templateUrl: 'views/color.html'
+    })
+    .state('css.typography', {
+      url: '/typography',
+      templateUrl: 'views/typography.html'
+    })
+    .state('css.iconography', {
+      url: '/iconography',
+      templateUrl: 'views/iconography.html'
+    })
+    .state('css.formElements', {
+      url: '/formElements',
+      templateUrl: 'views/form_elements.html'
+    })
+    .state('css.navigation', {
+      url: '/navigation',
+      templateUrl: 'views/navigation.html'
+    })
+    .state('content', {
+      url: '/content',
+      templateUrl: 'views/content.html'
+    })
+    .state('bootstrap', {
+      url: "/bootstrap",
+      abstract: true,
+      template: '<ui-view/>'
+    })
+    .state('bootstrap.css', {
+      url: '/css',
+      templateUrl: 'views/bootstrap-css.html'
+    })
+    .state('bootstrap.components', {
+      url: '/components',
+      templateUrl: 'views/bootstrap-components.html'
+    })
+    .state('bootstrap.javascript', {
+      url: '/javascript',
+      templateUrl: 'views/bootstrap-javascript.html',
+      controller: 'BootstrapJsCtrl'
+    });
+}
 
-      $stateProvider
-        .state('introduction', {
-          url: '/',
-          templateUrl: 'views/introduction.html'
-        })
-        .state('css', {
-          url: '/css',
-          abstract: true,
-          template: '<ui-view/>'
-        })
-        .state('css.layout', {
-          url: '/layout',
-          templateUrl: 'views/layout.html'
-        })
-        .state('css.color', {
-          url: '/color',
-          templateUrl: 'views/color.html'
-        })
-        .state('css.typography', {
-          url: '/typography',
-          templateUrl: 'views/typography.html'
-        })
-        .state('css.iconography', {
-          url: '/iconography',
-          templateUrl: 'views/iconography.html'
-        })
-        .state('css.formElements', {
-          url: '/formElements',
-          templateUrl: 'views/form_elements.html'
-        })
-        .state('css.navigation', {
-          url: '/navigation',
-          templateUrl: 'views/navigation.html'
-        })
-        .state('content', {
-          url: '/content',
-          templateUrl: 'views/content.html'
-        })
-        .state('bootstrap', {
-          url: "/bootstrap",
-          abstract: true,
-          template: '<ui-view/>'
-        })
-        .state('bootstrap.css', {
-          url: '/css',
-          templateUrl: 'views/bootstrap-css.html'
-        })
-        .state('bootstrap.components', {
-          url: '/components',
-          templateUrl: 'views/bootstrap-components.html'
-        })
-        .state('bootstrap.javascript', {
-          url: '/javascript',
-          templateUrl: 'views/bootstrap-javascript.html',
-          controller: 'BootstrapJsCtrl'
-        });
+run.$inject = ['$rootScope', '$history', '$state'];
+function run($rootScope, $history, $state) {
+  $rootScope.$on("$stateChangeSuccess", function(event, to, toParams, from, fromParams) {
+    if (!from.abstract) {
+      $history.push(from, fromParams);
     }
-  ]);
+    // close hamburger menu if open
+    if($("#ncarbNavmenu").hasClass('in')) {
+      $('[data-toggle=offcanvas]').trigger('click.bs.offcanvas.data-api');
+    }
+  });
+  
+  $history.push($state.current, $state.params);
+}
