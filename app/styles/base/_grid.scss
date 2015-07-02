@@ -150,8 +150,7 @@
   @while $i < 6 {
     $i: $i + 1;
     .flex#{$name}-order-#{$i} {
-      order: $i;
-      -ms-flex-order: $i;
+      @include order($i);
     }
   }
 
