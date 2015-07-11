@@ -1,6 +1,7 @@
 @import "variables";
-@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/tab-focus";
-@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/image";
+@import "../../base/bourbon";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/tab-focus";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/mixins/image";
 //
 // Scaffolding
 // --------------------------------------------------

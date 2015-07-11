@@ -1,5 +1,6 @@
 // Icons
 @import "bourbon";
+@import "fonts";
 
 @mixin cost-icon() {
   @include icon(63px);
@@ -99,4 +100,9 @@ $radio-checkbox-size: 21px;
   font-size: $radio-checkbox-size;
   font-weight: bold;
   color: $color-gray-3;
+}
+
+.fa-padded {
+    padding: 0 9px;
+    display: inline-block;
 }

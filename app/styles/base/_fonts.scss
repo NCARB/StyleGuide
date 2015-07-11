@@ -10,10 +10,5 @@
 // Font Awesome is an icon-font set: http://fortawesome.github.io/Font-Awesome/
 // a cdn is used
 // @import "font-awesome/font-awesome";
-@import "../../../bower_components/font-awesome/scss/variables";
-@import "../../../bower_components/font-awesome/scss/mixins";
-
-.fa-padded {
-    padding: 0 9px;
-    display: inline-block;
-}
+@import "font-awesome/scss/variables";
+@import "font-awesome/scss/mixins";

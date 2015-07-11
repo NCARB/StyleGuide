@@ -1,4 +1,5 @@
-@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/tables";
+@import "../../base/breakpoints";
 
 .table-hover, .table-hover-pointer {
   > tbody > tr:hover {
