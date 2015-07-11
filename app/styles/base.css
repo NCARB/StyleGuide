@@ -2,16 +2,6 @@
 /**
  * Copyright (C) 2014 NCARB, National Council of Architectural Registration Boards
  */
-.body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
-  margin-bottom: 10px;
-  color: #444444; }
-
-.fa-padded {
-  padding: 0 9px;
-  display: inline-block; }
-
 /*! normalize.css v3.0.0 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -242,6 +232,12 @@ img {
   overflow: visible;
   clip: auto; }
 
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 html {
   position: relative;
   font-family: Arial, Helvetica, sans-serif;
@@ -429,6 +425,12 @@ main {
 
   main {
     position: relative; } }
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 /*  Typography
 ---------------------------------------- */
 h1,
@@ -585,9 +587,6 @@ img {
   max-width: 100%;
   height: auto;
   width: auto; }
-
-.ie7 img {
-  -ms-interpolation-mode: bicubic; }
 
 /* Links
 ---------------------------------------- */
@@ -774,6 +773,16 @@ input[type="submit"].btn-inline {
   ::-moz-focus-inner {
     border: 0;
     padding: 0; } }
+.fa-padded {
+  padding: 0 9px;
+  display: inline-block; }
+
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 ul,
 ol {
   list-style: none;
@@ -897,6 +906,12 @@ ol {
 
 details summary::-webkit-details-marker {
   color: #00A4E3; }
+
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
 
 select:focus, select:active,
 textarea:focus,
@@ -3131,6 +3146,12 @@ ul.form-group {
         margin-bottom: 0; }
     .flex-lg-gutters-widest.flex-no-bottom-gutter {
       margin-bottom: -3rem; } }
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 .alert {
   position: relative;
   margin: 0.8rem;
@@ -3886,6 +3907,12 @@ input[type="button"].btn-block {
 
   .carousel-indicators {
     bottom: 20px; } }
+.body-header {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+  color: #444444; }
+
 .close {
   float: right;
   background: none;
@@ -7440,6 +7467,10 @@ a.list-group-item-danger {
 .pagination-sm > li:last-child > span {
   border-bottom-right-radius: 0;
   border-top-right-radius: 0; }
+
+.fa-padded {
+  padding: 0 9px;
+  display: inline-block; }
 
 .panel {
   margin-bottom: 20px;

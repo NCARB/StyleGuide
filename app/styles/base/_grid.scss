@@ -1,5 +1,5 @@
 @import "breakpoints";
-@import "../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import "bourbon";
 
 .flex-container, .row, .form-horizontal .form-group {
   @include display(flex);

@@ -1,5 +1,7 @@
 @import "bourbon";
-@import 'icons';
+@import "icons";
+@import "type_mixins";
+@import "variables";
 
 @mixin defaultList() {
   list-style: none;

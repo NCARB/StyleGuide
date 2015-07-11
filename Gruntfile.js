@@ -206,7 +206,10 @@ module.exports = function (grunt) {
       },
       server: {
         options: {
-          loadPath: '<%= yeoman.app %>/',
+          loadPath: [
+          'bower_components',
+          '<%= yeoman.app %>/'
+          ],
           update: true
         },
         files: [
