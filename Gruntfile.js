@@ -175,7 +175,7 @@ module.exports = function (grunt) {
         ignorePath:  /\.\.\//
       },
       sass: {
-        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}', '<%= yeoman.app %>/components/{,*/}*.{scss,sass}'],
+        src: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
         ignorePath: /(\.\.\/){1,2}bower_components\//
       }
     },
@@ -184,71 +184,44 @@ module.exports = function (grunt) {
     sass: {
       dist: {
         options: {
-          loadPath: 'app/',
+          loadPath: '<%= yeoman.app %>/',
           update: true
         },
         files: [
           {
             expand: true,
-            cwd: 'app/components',
+            cwd: '<%= yeoman.app %>/styles',
             src: ['**/*.scss'],
-            dest: 'dist/components',
+            dest: '<%= yeoman.dist %>/styles',
             ext: '.css'
           },
           {
             expand: true,
-            cwd: 'app/styles',
+            cwd: '<%= yeoman.app %>/styles',
             src: ['**/*.scss'],
-            dest: 'dist/styles',
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: 'app/components',
-            src: ['**/*.scss'],
-            dest: 'app/components',
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: 'app/styles',
-            src: ['**/*.scss'],
-            dest: 'app/styles',
+            dest: '<%= yeoman.app %>/styles',
             ext: '.css'
           }
         ]
-      }, server: {
+      },
+      server: {
         options: {
-          loadPath: 'app/',
+          loadPath: '<%= yeoman.app %>/',
           update: true
         },
         files: [
           {
             expand: true,
-            cwd: 'app/components',
-            src: ['**/*.scss'],
-            dest: '.tmp/components',
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: 'app/styles',
+            cwd: '<%= yeoman.app %>/styles',
             src: ['**/*.scss'],
             dest: '.tmp/styles',
             ext: '.css'
           },
           {
             expand: true,
-            cwd: 'app/components',
+            cwd: '<%= yeoman.app %>/styles',
             src: ['**/*.scss'],
-            dest: 'app/components',
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: 'app/styles',
-            src: ['**/*.scss'],
-            dest: 'app/styles',
+            dest: '<%= yeoman.app %>/styles',
             ext: '.css'
           }
         ]
@@ -394,8 +367,7 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-            'components/**/*.{png,jpg,jpeg,gif,webp,svg}'
+            'images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
           ]
         }, {
           expand: true,
@@ -482,6 +454,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-
+  
   grunt.registerTask('heroku', ['build']);
 };
