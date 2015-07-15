@@ -1,6 +1,6 @@
 {
   "name": "ncarb-style",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "authors": [
     "Equan Simmonds <esimmonds@ncarb.org>",
     "Kenji Bohlin <kbohlin@ncarb.org>",
@@ -21,46 +21,26 @@
     "test"
   ],
   "dependencies": {
-    "jquery": "2",
-    "jquery-placeholder": "~2.1.1",
-    "respond": "~1.4.2",
-    "angular": "1.3.12",
-    "angular-animate": "1.3.12",
+    "angular": "^1.3.12",
+    "angular-animate": "^1.3.12",
     "angular-bootstrap": "~0.13.0",
-    "angular-cookies": "1.3.12",
-    "angular-loading-bar": "0.6.0",
-    "angular-mocks": "1.3.12",
-    "angular-resource": "1.3.12",
-    "angular-route": "1.3.12",
-    "angular-sanitize": "1.3.12",
-    "angular-touch": "1.3.12",
-    "angular-ui-router": "0.2.13",
-    "bootstrap-sass-official": "3.2.0+2",
-    "font-awesome": "~4.3.0",
-    "json3": "3.3.1",
-    "ng-tags-input": "2.3.0",
-    "ngInfiniteScroll": "1.2.0",
-    "underscore": "1.8.0",
-    "jasny-bootstrap": "~3.1.3",
-    "bootstrap-dropdowns-enhancement-for-hover": "git://github.com/davious/bootstrap_dropdowns_enhancement_for_hover.git#v4.2",
-    "bootstrap-hover-dropdown": "~2.1.3",
-    "toastr": "2.1.1"
-  },
-  "resolutions": {
-    "angular": "~1.3.15",
-    "lodash": "~3.4.0"
+    "angular-loading-bar": "~0.7.0",
+    "angular-route": "^1.3.12",
+    "angular-touch": "^1.3.12",
+    "angular-ui-router": "~0.2.13",
+    "bourbon": "^4.2.3",
+    "bootstrap-sass-official": "^3.2.0",
+    "font-awesome": "^4.3.0",
+    "jasny-bootstrap": "^3.1.3",
+    "bootstrap-dropdowns-enhancement-for-hover": "^4.0",
+    "bootstrap-hover-dropdown": "^2.1.3",
+    "toastr": "^2.1.1",
+    "respond": "^1.4.2"
   },
   "overrides": {
-    "bootstrap": {
-      "main": "./dist/js/bootstrap.js",
-      "note": "no css, we are building from sass, see below"
-    },
     "bootstrap-sass-official": {
       "main": [],
       "note": "no css, we are importing that cherry-pick style, see base/bootstrap.scss"
-    },
-    "font-awesome": {
-      "main": []
     },
     "jasny-bootstrap": {
       "main": "./js/offcanvas.js"
