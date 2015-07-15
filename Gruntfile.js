@@ -182,11 +182,11 @@ module.exports = function (grunt) {
 
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
+      options: {
+        loadPath: ['bower_components', '<%= yeoman.app %>/styles/base'],
+        update: true
+      },
       dist: {
-        options: {
-          loadPath: '<%= yeoman.app %>/',
-          update: true
-        },
         files: [
           {
             expand: true,
@@ -205,13 +205,6 @@ module.exports = function (grunt) {
         ]
       },
       server: {
-        options: {
-          loadPath: [
-          'bower_components',
-          '<%= yeoman.app %>/'
-          ],
-          update: true
-        },
         files: [
           {
             expand: true,
