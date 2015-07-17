@@ -48,7 +48,7 @@
 
 // Links
 
-//a {
+a {
   //color: $link-color;
   //text-decoration: none;
   //
@@ -57,11 +57,11 @@
   //  color: $link-hover-color;
   //  text-decoration: $link-hover-decoration;
   //}
-  //
-  //&:focus {
-  //  @include tab-focus;
-  //}
-//}
+
+  &:focus {
+    @include tab-focus;
+  }
+}
 
 
 // Figures

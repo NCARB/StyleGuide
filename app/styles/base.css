@@ -195,6 +195,11 @@ th {
 *:after {
   box-sizing: border-box; }
 
+a:focus {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+  outline-offset: -2px; }
+
 img {
   vertical-align: middle; }
 
