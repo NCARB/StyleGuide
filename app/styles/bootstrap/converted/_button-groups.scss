@@ -1,4 +1,5 @@
-@import "../../../../bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
+@import "variables";
+@import "bootstrap-sass-official/assets/stylesheets/bootstrap/button-groups";
 
 .btn-group { 
   > .btn + .btn,

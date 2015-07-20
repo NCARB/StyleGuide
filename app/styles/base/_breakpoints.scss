@@ -1,6 +1,6 @@
 // Include this file to get at the breakpoints mixin
 
-@import "../bootstrap/converted/variables";
+@import "variables";
 
 $breakpoints: (
   "sm": $screen-sm-min,

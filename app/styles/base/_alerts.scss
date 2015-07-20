@@ -1,3 +1,7 @@
+@import "type_mixins";
+@import "fonts";
+@import "variables";
+
 // Message
 
 @mixin messageColors($text, $background, $border, $close) {

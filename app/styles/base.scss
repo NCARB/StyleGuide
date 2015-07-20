@@ -3,15 +3,16 @@
  */
 
 // Bourbon is a Sass mixin library: http://bourbon.io/
-@import "base/bourbon";
+// @import "base/bourbon";
+// @import "base/variables";
 
 // mixins
-@import "base/colors";
-@import "base/type_sizes";
-@import "base/type_mixins";
-@import "base/functions";
-@import "base/breakpoints";
-@import "base/fonts";
+// @import "base/colors";
+// @import "base/type_sizes";
+// @import "base/type_mixins";
+// @import "base/functions";
+// @import "base/breakpoints";
+// @import "base/fonts";
 
 // basics
 @import "base/normalize";
