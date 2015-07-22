@@ -43,9 +43,6 @@
     },
     "jasny-bootstrap": {
       "main": "./js/offcanvas.js"
-    },
-    "bootstrap-dropdowns-enhancement-for-hover": {
-      "main": "./dist/js/dropdowns-enhancement.js"
     }
   }
 }
