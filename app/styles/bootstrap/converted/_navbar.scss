@@ -610,6 +610,7 @@
       }
       
       > .dropdown > ul > li > .navbar-text {
+        float: none;
         display: block;
         color: $navbar-default-color;
         white-space: nowrap;
