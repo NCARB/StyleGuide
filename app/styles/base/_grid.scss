@@ -82,7 +82,7 @@
 //  .flex-sm-fill-2
 //  .flex-collapse
 @mixin grid-sizing($name: "") {  
-  @if $name != "" and $name != "xs" {
+  @if $name != "" {
     $name: "-#{$name}";
   } @else {
     $name: "";
@@ -166,12 +166,14 @@
       }
     }
     @each $breakpoint, $min-width in $breakpoints {
-      $i: 0;
-      @while $i < 12 {
-        $i: $i + 1;
-        .col-#{$breakpoint}-#{$i} {
-          @extend %mobile-first;
-          @extend %relative;
+      @if($breakpoint != "xs") {
+        $i: 0;
+        @while $i < 12 {
+          $i: $i + 1;
+          .col-#{$breakpoint}-#{$i} {
+            @extend %mobile-first;
+            @extend %relative;
+          }
         }
       }
     }
@@ -241,7 +243,7 @@
 //    .flex-md-gutters-wider
 //    .flex-lg-gutters-widest
 @mixin grid-gutters($name: "") {
-  @if $name != "" and $name != "xs" {
+  @if $name != "" {
     $name: "-#{$name}";
   }
   @each $part in 0.5, 1, 2, 3 {
