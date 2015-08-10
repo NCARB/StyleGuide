@@ -115,7 +115,6 @@
   @include fontSize($type-S);
   @include lineHeight($type-S);
   letter-spacing: 0.008rem;
-  text-transform: uppercase;
   margin: 0;
   padding: calculateRem(10px) 0;
 }
@@ -127,7 +126,6 @@
   font-weight: 600;
   letter-spacing: 0.05em;
   color: $color_gray-5;
-  text-transform: uppercase;
 }
 
 .body-header {
