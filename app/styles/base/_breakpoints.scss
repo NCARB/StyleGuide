@@ -3,6 +3,7 @@
 @import "variables";
 
 $breakpoints: (
+  "xs": $screen-xs-min,
   "sm": $screen-sm-min,
   "md": $screen-md-min,
   "lg": $screen-lg-min
