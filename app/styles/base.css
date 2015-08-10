@@ -7026,6 +7026,7 @@ button.list-group-item-danger {
           background-color: transparent;
           color: #00A4E3; }
       .navbar-ncarb .navbar-nav > .dropdown > ul > li > .navbar-text {
+        float: none;
         display: block;
         color: #777;
         white-space: nowrap;
