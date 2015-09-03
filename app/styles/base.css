@@ -36,7 +36,7 @@ audio:not([controls]) {
   display: none;
   height: 0; }
 
-[hidden],
+html [hidden],
 template {
   display: none; }
 
@@ -9490,7 +9490,7 @@ address {
   border-radius: 0; }
 
 /* angular basics */
-[ng-click], [ui-sref] {
+html [ng-click], html [ui-sref] {
   cursor: pointer; }
 
 /* ... angular basics */
@@ -9498,11 +9498,11 @@ address {
 .dropdown-menu[datepicker-popup-wrap] {
   padding: 0; }
 
-[datepicker] table thead > tr + tr {
+html [datepicker] table thead > tr + tr {
   display: none; }
-[datepicker] .btn {
+html [datepicker] .btn {
   width: 100%; }
-  [datepicker] .btn:not(.btn-info) {
+  html [datepicker] .btn:not(.btn-info) {
     background-color: white; }
 
 input[datepicker-popup] {

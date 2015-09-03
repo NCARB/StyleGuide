@@ -1,6 +1,8 @@
 /* angular basics */
-[ng-click], [ui-sref] {
-    cursor: pointer;
+html {
+    [ng-click], [ui-sref] {
+        cursor: pointer;
+    }
 }
 /* ... angular basics */
 
@@ -9,7 +11,7 @@
     padding:0;
 }
 
-[datepicker] {
+html [datepicker] {
     table thead > tr + tr {
         display: none;
     }
