@@ -70,7 +70,7 @@ audio:not([controls]) {
 // Hide the `template` element in IE, Safari, and Firefox < 22.
 //
 
-[hidden],
+html [hidden],
 template {
   display: none;
 }
