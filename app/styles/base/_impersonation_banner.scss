@@ -1,0 +1,36 @@
+@import "fonts";
+@import "bootstrap";
+@import "colors";
+
+#impersonation_banner {
+    position: fixed;
+    z-index: 1001;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #ffbab2;
+    text-align: center;
+    line-height: 2em;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 12px;
+    @include box-shadow(0 0 5px black);
+    
+    & a.stop {
+        font-size: 11px;
+        text-decoration: none;
+        margin-left: 2px;
+        &:hover {
+            color: $color-blue;
+        }
+        &:after {
+            @include fa-icon();
+            content: $fa-var-times-circle;
+            font-size: 15px;
+            margin-left: 3px;
+            border-radius: 4px;
+            position: relative;
+            top: 2px;
+        }
+    }
+}
