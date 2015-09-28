@@ -6,6 +6,7 @@ angular.module('designSystem.controllers', ['jQuery'])
   .controller('BootstrapJsCtrl', ['jQuery', function ($) {
     $('[data-toggle="tooltip"]').tooltip();
     $('[data-toggle="popover"]').popover();
+    $('[data-toggle="dropdown"]').dropdown();
   }]);
 
 angular.module('designSystem.directives', []);
@@ -84,7 +85,8 @@ function config($stateProvider, $urlRouterProvider) {
     })
     .state('bootstrap.components', {
       url: '/components',
-      templateUrl: 'views/bootstrap-components.html'
+      templateUrl: 'views/bootstrap-components.html',
+      controller: 'BootstrapJsCtrl'
     })
     .state('bootstrap.javascript', {
       url: '/javascript',
