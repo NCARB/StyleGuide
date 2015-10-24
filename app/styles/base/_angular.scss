@@ -31,6 +31,10 @@ input[datepicker-popup] {
     background-position-y: center;
     background-position-x: 93%;
     background-position-x: calc(100% - 12px);
+    .lt-ie10 & {
+         /* calc crashes in IE9 */
+        background-position-x: 93%;
+    }
 }
 /* ... angular-bootstap-ui datepicker */
 
