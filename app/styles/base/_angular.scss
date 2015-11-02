@@ -17,9 +17,25 @@ html [datepicker] {
     }
     .btn {
         width: 100%;
+        font-size: 14px;
         &:not(.btn-info) {
             background-color: white;
         }
+    }
+    [ng-switch-when="year"] .btn, [ng-switch-when="month"] .btn {
+        padding: 15px 10px;
+    }
+}
+
+
+body:not(:-moz-handler-blocked) [datepicker] {
+    .btn {
+        font-weight: normal;
+    }
+}
+
+html [datepicker] {
+    .btn {
     }
 }
 
@@ -28,12 +44,11 @@ input[datepicker-popup] {
     //background-image: url('data:image/svg+xml;charset=UTF-8,<svg width="16px" height="16px" version="1.1" xmlns="http://www.w3.org/2000/svg"><path transform="scale(0.008, -0.008) translate(0, -1500)" unicode="&#xf073;" horiz-adv-x="1664" d="M128 -128h288v288h-288v-288zM480 -128h320v288h-320v-288zM128 224h288v320h-288v-320zM480 224h320v320h-320v-320zM128 608h288v288h-288v-288zM864 -128h320v288h-320v-288zM480 608h320v288h-320v-288zM1248 -128h288v288h-288v-288zM864 224h320v320h-320v-320z M512 1088v288q0 13 -9.5 22.5t-22.5 9.5h-64q-13 0 -22.5 -9.5t-9.5 -22.5v-288q0 -13 9.5 -22.5t22.5 -9.5h64q13 0 22.5 9.5t9.5 22.5zM1248 224h288v320h-288v-320zM864 608h320v288h-320v-288zM1248 608h288v288h-288v-288zM1280 1088v288q0 13 -9.5 22.5t-22.5 9.5h-64 q-13 0 -22.5 -9.5t-9.5 -22.5v-288q0 -13 9.5 -22.5t22.5 -9.5h64q13 0 22.5 9.5t9.5 22.5zM1664 1152v-1280q0 -52 -38 -90t-90 -38h-1408q-52 0 -90 38t-38 90v1280q0 52 38 90t90 38h128v96q0 66 47 113t113 47h64q66 0 113 -47t47 -113v-96h384v96q0 66 47 113t113 47 h64q66 0 113 -47t47 -113v-96h128q52 0 90 -38t38 -90z" /></svg>');
     padding-right: 32px;
     background-repeat: no-repeat;
-    background-position-y: center;
-    background-position-x: 93%;
-    background-position-x: calc(100% - 12px);
+    background-position: 93% center;
+    background-position: calc(100% - 12px) center;
     .lt-ie10 & {
          /* calc crashes in IE9 */
-        background-position-x: 93%;
+        background-position: 93% center;
     }
 }
 /* ... angular-bootstap-ui datepicker */
