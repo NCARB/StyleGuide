@@ -1,3 +1,5 @@
+@import "variables";
+
 /* angular basics */
 html {
     [ng-click], [ui-sref] {
@@ -57,14 +59,20 @@ input[datepicker-popup] {
 
 #loading-bar {
     position: absolute;
-    height: 8px;
+    height: $bodytopspacing;
     top: 0;
     background: #eeeae3;
     z-index: 1999;
     width: 100%;
     .bar {
-        height: 8px !important;
+        height: $bodytopspacing !important;
         background: #00a4e3;
+    }
+    @include breakpoint(sm) {
+        height: $bodytopspacing + 4px;
+        .bar {
+            height: $bodytopspacing + 4px !important;
+        }
     }
 }
 

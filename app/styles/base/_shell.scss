@@ -1,9 +1,9 @@
 @import "breakpoints";
 @import "type_mixins";
 @import "bourbon";
+@import "variables";
 
 // Shell
-$bodytopspacing: 4px;
 
 html {
   position: relative;

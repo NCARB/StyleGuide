@@ -9525,14 +9525,19 @@ input[datepicker-popup] {
 /* loading bar */
 #loading-bar {
   position: absolute;
-  height: 8px;
+  height: 4px;
   top: 0;
   background: #eeeae3;
   z-index: 1999;
   width: 100%; }
   #loading-bar .bar {
-    height: 8px !important;
+    height: 4px !important;
     background: #00a4e3; }
+  @media (min-width: 768px) {
+    #loading-bar {
+      height: 8px; }
+      #loading-bar .bar {
+        height: 8px !important; } }
 
 /* ... loading bar */
 /* Color Shortcuts
