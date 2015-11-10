@@ -49,7 +49,7 @@ module.exports = function (grunt) {
       },
       sass: {
         files: ['**/*.scss'],
-        tasks: ['sass:server', 'autoprefixer']
+        tasks: ['sass:app', 'sass:server', 'autoprefixer']
       },
       gruntfile: {
         files: ['Gruntfile.js']
@@ -183,10 +183,12 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-        loadPath: ['bower_components', '<%= yeoman.app %>/styles/base'],
-        update: true
+        loadPath: ['bower_components', '<%= yeoman.app %>/styles/base']
       },
       dist: {
+        options: {
+          sourcemap: 'none'
+        },
         files: [
           {
             expand: true,
@@ -194,7 +196,14 @@ module.exports = function (grunt) {
             src: ['**/*.scss'],
             dest: '<%= yeoman.dist %>/styles',
             ext: '.css'
-          },
+          }
+        ]
+      },
+      app: {
+        options: {
+          sourcemap: 'none'
+        },
+        files: [
           {
             expand: true,
             cwd: '<%= yeoman.app %>/styles',
@@ -211,13 +220,6 @@ module.exports = function (grunt) {
             cwd: '<%= yeoman.app %>/styles',
             src: ['**/*.scss'],
             dest: '.tmp/styles',
-            ext: '.css'
-          },
-          {
-            expand: true,
-            cwd: '<%= yeoman.app %>/styles',
-            src: ['**/*.scss'],
-            dest: '<%= yeoman.app %>/styles',
             ext: '.css'
           }
         ]
@@ -377,12 +379,14 @@ module.exports = function (grunt) {
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
+        'sass:app',
         'sass:server'
       ],
       test: [
         'sass'
       ],
       dist: [
+        'sass:app',
         'sass:dist',
         'imagemin',
         'svgmin'
@@ -435,6 +439,7 @@ module.exports = function (grunt) {
     'autoprefixer',
     'concat',
     'ngAnnotate',
+    'sass:app',
     'sass:dist',
     'copy:dist',
     'cdnify',
