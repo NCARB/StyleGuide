@@ -9495,29 +9495,29 @@ html [ng-click], html [ui-sref] {
 
 /* ... angular basics */
 /* angular-bootstap-ui datepicker */
-.dropdown-menu[datepicker-popup-wrap] {
+.dropdown-menu[datepicker-popup-wrap], .dropdown-menu[uib-datepicker-popup-wrap] {
   padding: 0; }
 
-html [datepicker] table thead > tr + tr {
+html [datepicker] table thead > tr + tr, html [uib-datepicker] table thead > tr + tr {
   display: none; }
-html [datepicker] .btn {
+html [datepicker] .btn, html [uib-datepicker] .btn {
   width: 100%;
   font-size: 14px; }
-  html [datepicker] .btn:not(.btn-info) {
+  html [datepicker] .btn:not(.btn-info), html [uib-datepicker] .btn:not(.btn-info) {
     background-color: white; }
-html [datepicker] [ng-switch-when="year"] .btn, html [datepicker] [ng-switch-when="month"] .btn {
+html [datepicker] [ng-switch-when="year"] .btn, html [datepicker] [ng-switch-when="month"] .btn, html [uib-datepicker] [ng-switch-when="year"] .btn, html [uib-datepicker] [ng-switch-when="month"] .btn {
   padding: 15px 10px; }
 
-body:not(:-moz-handler-blocked) [datepicker] .btn {
+body:not(:-moz-handler-blocked) [datepicker] .btn, body:not(:-moz-handler-blocked) [uib-datepicker] .btn {
   font-weight: normal; }
 
-input[datepicker-popup] {
+input[datepicker-popup], input[uib-datepicker-popup] {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAAAAAA6mKC9AAAAXklEQVQY07WPQQ2AMBTF6mBzAA7AwZeABZwMCThiDpAwKeW0kCxcaXp6SQ8PB1DXyOq2pKZiq0itdTXOWzGDABhwi8ABwD7DJRIxddMloqUb30Mp0Z1+SxZeUpPx/gOW6qBGclvG6gAAAABJRU5ErkJggg==);
   padding-right: 32px;
   background-repeat: no-repeat;
   background-position: 93% center;
   background-position: calc(100% - 12px) center; }
-  .lt-ie10 input[datepicker-popup] {
+  .lt-ie10 input[datepicker-popup], .lt-ie10 input[uib-datepicker-popup] {
     /* calc crashes in IE9 */
     background-position: 93% center; }
 
