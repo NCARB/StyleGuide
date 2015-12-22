@@ -68,6 +68,10 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       @include fa-icon();
       padding: 0 .02em 0 .75em;
     }
+    &:before {
+      @include fa-icon();
+      padding: 0 .5em 0 .0em;
+    }
     &.btn-block {
       text-align: left;
       &:after {
@@ -83,12 +87,12 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     }
   }
   &.btn-plus {
-    &:after {
+    &:before {
       content: $fa-var-plus;
       position: relative;
       top: .1em;
     }
-    &.btn-block:after {
+    &.btn-block:before {
       top: auto;
       padding-top: 0.5px;
     }
