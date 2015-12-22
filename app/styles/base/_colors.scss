@@ -50,6 +50,39 @@ $color-green-3      : #88BA3A;
 $color-green-4      : #39B549;
 $color-green        : $color-green-4;
 
+// New Brand Colors
+
+$color-primary-blue    : #00a4e4;
+$color-primary-blue-80 : #39aedf;
+$color-primary-blue-50 : #83cceb;
+$color-primary-blue-20 : #cdebf7;
+
+$color-primary-gray    : #717375;
+$color-primary-gray-80 : #8d8f91;
+$color-primary-gray-50 : #b8b9ba;
+$color-primary-gray-20 : #e3e3e3;
+
+$color-secondary-yellow	    : #ffd24f;
+$color-secondary-yellow-80   : #ffdb72;
+$color-secondary-yellow-50	: #ffe8a7;
+$color-secondary-yellow-20   : #fff6dc;
+
+$color-secondary-orange	    : #f6905d;
+$color-secondary-orange-80   : #f8a67d;
+$color-secondary-orange-50	: #fac7ae;
+$color-secondary-orange-20   : #fde9df;
+
+$color-secondary-purple	    : #5a3f99;
+$color-secondary-purple-80   : #7b65ad;
+$color-secondary-purple-50	: #ac9fcc;
+$color-secondary-purple-20   : #ded9eb;
+
+$color-secondary-green	    : #00af91;
+$color-secondary-green-80   : #33bfa7;
+$color-secondary-green-50	: #7fd7c8;
+$color-secondary-green-20   : #ccefe9;
+
+
 // Colors by type
 $color_base         : $color-gray;
 $color_link         : $color-blue;
@@ -60,6 +93,36 @@ $color_linkactive    : $color-black;
 $color_button-default : #DBD9D1;
 
 $colors: (
+	primary-blue: $color-primary-blue,
+	primary-blue-80: $color-primary-blue-80,
+	primary-blue-50: $color-primary-blue-50,
+	primary-blue-20: $color-primary-blue-20,
+
+	primary-gray: $color-primary-gray,
+	primary-gray-80: $color-primary-gray-80,
+	primary-gray-50: $color-primary-gray-50,
+	primary-gray-20: $color-primary-gray-20,
+
+	secondary-green: $color-secondary-green,
+	secondary-green-80: $color-secondary-green-80,
+	secondary-green-50: $color-secondary-green-50,
+	secondary-green-20: $color-secondary-green-20,
+
+	secondary-yellow: $color-secondary-yellow,
+	secondary-yellow-80: $color-secondary-yellow-80,
+	secondary-yellow-50: $color-secondary-yellow-50,
+	secondary-yellow-20: $color-secondary-yellow-20,
+
+	secondary-orange: $color-secondary-orange,
+	secondary-orange-80: $color-secondary-orange-80,
+	secondary-orange-50: $color-secondary-orange-50,
+	secondary-orange-20: $color-secondary-orange-20,
+
+	secondary-purple: $color-secondary-purple,
+	secondary-purple-80: $color-secondary-purple-80,
+	secondary-purple-50: $color-secondary-purple-50,
+	secondary-purple-20: $color-secondary-purple-20,
+
 	"white": $color-white,
 	"black": $color-black,
 
