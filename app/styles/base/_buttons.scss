@@ -61,13 +61,16 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 .btn {
   @extend %button;
+
   @include button-colors($color_button-default, $color-gray);
+
+  &.btn-continue:after,
+  &.btn-plus:before {
+    @include fa-icon();
+  }
+
   &.btn-continue,
   &.btn-plus {
-    &:after {
-      @include fa-icon();
-      padding: 0 .02em 0 .75em;
-    }
     &.btn-block {
       text-align: left;
       &:after {
@@ -76,23 +79,22 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       }
     }
   }
+
   &.btn-continue {
     &:after {
       font-weight: bold;
       content: $fa-var-angle-right;
+      padding: 0 0 0 .75em;
     }
   }
+
   &.btn-plus {
-    &:after {
+    &:before {
       content: $fa-var-plus;
-      position: relative;
-      top: .1em;
-    }
-    &.btn-block:after {
-      top: auto;
-      padding-top: 0.5px;
+      padding: 0 .5em 0 0;
     }
   }
+
 }
 
 .btn-primary {
