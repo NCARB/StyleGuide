@@ -83,7 +83,6 @@ ul.figure li a {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      transform: translate(0, 0);
       content: "";
       font-weight: bold;
       padding-right: 5px; }
