@@ -660,8 +660,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0); }
+    -moz-osx-font-smoothing: grayscale; }
   .btn.btn-continue.btn-block, .btn.btn-plus.btn-block {
     text-align: left; }
     .btn.btn-continue.btn-block:after, .btn.btn-plus.btn-block:after {
@@ -1157,7 +1156,6 @@ input[type="checkbox"] {
         text-rendering: auto;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        transform: translate(0, 0);
         color: #999999;
         font-size: 21px;
         vertical-align: middle; }
@@ -3631,7 +3629,6 @@ ul.form-group {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      transform: translate(0, 0);
       position: absolute;
       top: 18px;
       left: 14px; }
@@ -4076,12 +4073,14 @@ a.badge:hover, a.badge:focus {
   border-radius: 0; }
 .btn-group-vertical > .btn:first-child:not(:last-child) {
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-bottom-left-radius: 0;
   border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
@@ -4270,7 +4269,8 @@ input[type="button"].btn-block {
   font-size: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: transparent; }
   .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -4367,14 +4367,14 @@ input[type="button"].btn-block {
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -15px;
+    margin-top: -10px;
     font-size: 30px; }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -15px; }
+    margin-left: -10px; }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -15px; }
+    margin-right: -10px; }
 
   .carousel-caption {
     left: 20%;
@@ -4411,7 +4411,6 @@ input[type="button"].btn-block {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
     font-size: 20px;
     font-size: 1.25rem;
     content: "";
@@ -4635,7 +4634,6 @@ tbody.collapse.in {
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
     content: "";
     position: relative;
     top: 1px; }
@@ -5447,7 +5445,6 @@ input.input-lg:not([type]),
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
     position: absolute; }
 
 .input-lg + .form-control-feedback, .input-group-lg > .form-control + .form-control-feedback, .input-group-lg > select + .form-control-feedback,
@@ -6656,7 +6653,9 @@ input.input-lg:not([type]),
   .jumbotron > hr {
     border-top-color: #c9c9c9; }
   .container .jumbotron, .container-fluid .jumbotron {
-    border-radius: 0; }
+    border-radius: 0;
+    padding-left: 15px;
+    padding-right: 15px; }
   .jumbotron .container {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
@@ -7021,8 +7020,12 @@ button.list-group-item-danger {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-  min-height: 16.25px; }
+  border-bottom: 1px solid #e5e5e5; }
+  .modal-header:before, .modal-header:after {
+    content: " ";
+    display: table; }
+  .modal-header:after {
+    clear: both; }
 
 .modal-header .close {
   margin-top: -2px; }
@@ -8350,7 +8353,6 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transform: translate(0, 0);
   content: "";
   font-weight: bold;
   font-weight: bold;
@@ -9908,7 +9910,6 @@ input[datepicker-popup], input[uib-datepicker-popup] {
       text-rendering: auto;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      transform: translate(0, 0);
       content: "";
       font-size: 15px;
       margin-left: 3px;
