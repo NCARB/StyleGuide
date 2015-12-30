@@ -654,15 +654,14 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
     outline: 0; }
   .btn:active, .btn.active {
     background-color: #c5c1b4; }
-  .btn.btn-continue:after, .btn.btn-plus:after {
+  .btn.btn-continue:after, .btn.btn-plus:before {
     display: inline-block;
     font: normal normal normal 14px/1 FontAwesome;
     font-size: inherit;
     text-rendering: auto;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    transform: translate(0, 0);
-    padding: 0 .02em 0 .75em; }
+    transform: translate(0, 0); }
   .btn.btn-continue.btn-block, .btn.btn-plus.btn-block {
     text-align: left; }
     .btn.btn-continue.btn-block:after, .btn.btn-plus.btn-block:after {
@@ -670,14 +669,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       right: 0.75em; }
   .btn.btn-continue:after {
     font-weight: bold;
-    content: ""; }
-  .btn.btn-plus:after {
+    content: "";
+    padding: 0 0 0 .75em; }
+  .btn.btn-plus:before {
     content: "";
-    position: relative;
-    top: .1em; }
-  .btn.btn-plus.btn-block:after {
-    top: auto;
-    padding-top: 0.5px; }
+    padding: 0 .5em 0 0; }
 
 .btn-primary {
   background: #00A4E3 no-repeat 100% center;
