@@ -10,15 +10,13 @@
     <summary class="small header">.btn</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-item flex-full flex-md-fit">
-        <pre class="prettyprint">
-          <xmp>
+        <pre hljs hljs-language="html">
 <button class="btn">
 Button
 </button>
 <a href="#form_elements" class="btn">Link button</a>
 <input class="btn" value ="Input button" />
 <input type="submit" class="btn btn-block" value ="Load More" />
-          </xmp>
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
@@ -45,8 +43,7 @@ Button
     <summary class="small header">.btn .btn-block</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-item flex-full flex-md-fit">
-        <pre class="prettyprint">
-          <xmp>
+        <pre hljs hljs-language="html">
   <div class="flex-container flex-gutters">
     <div class="flex-item flex-1of3">
       <button class="btn btn-block">Block</button>
@@ -58,7 +55,6 @@ Button
       <button class="btn btn-block btn-continue">Block w/Continue</button>
     </div>
   </div>
-          </xmp>
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
@@ -89,15 +85,13 @@ Button
     <summary class="small header">.btn .btn-primary</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-item flex-full flex-md-fit">
-        <pre class="prettyprint">
-          <xmp>
+        <pre hljs hljs-language="html">
 <button class="btn btn-primary">
 Button
 </button>
 <a href="#form_elements" class="btn btn-primary btn-continue">
 Link button
 </a>
-          </xmp>
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
@@ -122,11 +116,9 @@ Link button
     <summary class="small header">.btn .btn-secondary</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-item flex-full flex-md-fit">
-        <pre class="prettyprint">
-          <xmp>
-            <button class="btn btn-secondary">Secondary</button>
-            <button class="btn btn-secondary btn-plus">Secondary w/Plus</button>
-          </xmp>
+        <pre hljs hljs-language="html">
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-secondary btn-plus">Secondary w/Plus</button>
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
@@ -150,13 +142,11 @@ Link button
     <summary class="small header">.btn .btn-success, .btn .btn-warning, .btn .btn-info, .btn .btn-danger</summary>
     <div class="flex-container flex-sm-gutters">
       <div class="flex-item flex-full flex-md-fit">
-        <pre class="prettyprint">
-          <xmp>
+        <pre hljs hljs-language="html">
     <button class="btn btn-warning">Warning</button>
     <a href="#form_elements" class="btn btn-success">Success</a>
     <a href="#form_elements" class="btn btn-info">Info</a>
     <a href="#form_elements" class="btn btn-danger">Danger</a>
-          </xmp>
         </pre>
       </div>
       <div class="flex-item flex-full flex-md-1of3">
@@ -182,10 +172,8 @@ Link button
   <div class="system-element first">
     <details>
       <summary class="small header">label</summary>
-      <pre class="prettyprint">
-        <xmp>
-<label>Agenda Light Bold All Caps, 14px</label>
-        </xmp>
+      <pre hljs hljs-language="html">
+    <label>Agenda Light Bold All Caps, 14px</label>
       </pre>
     </details>
     <label>Agenda Light Bold All Caps, 14px</label>
@@ -197,11 +185,9 @@ Link button
   <div class="system-element first l-text-input">
     <details>
       <summary class="small header">input[type="text"]</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
 <label for="card_number">Card Number</label>
 <input type="text" id="card_number" name="card_number" value="123456789" />
-        </xmp>
       </pre>
     </details>
     <label for="card_number">Card Number</label>
@@ -211,11 +197,9 @@ Link button
   <div class="system-element l-text-input">
     <details>
       <summary class="small header">input[type="date"]</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
 <label for="start_date">Start Date</label>
 <input type="date" id="start_date" name="start_date" value="" />
-        </xmp>
       </pre>
     </details>
     <label for="start_date">Start Date</label>
@@ -226,8 +210,7 @@ Link button
   <div class="system-element first l-text-input">
     <details>
       <summary class="small header">input[type="search"]</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
 <div class="search-box" role="search">
 <fieldset>
 <input name="SearchBox" type="search"
@@ -236,7 +219,6 @@ placeholder="SEARCH" autocomplete="off" class="search-box">
 value="Submit" class="search-submit">
 </fieldset>
 </div>
-        </xmp>
       </pre>
     </details>
     <div class="search-box" role="search">
@@ -251,40 +233,38 @@ value="Submit" class="search-submit">
   <div class="system-element first">
     <details>
       <summary class="small header">select</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
 <div class="form-group l-state">
 <div class="state">
 <label for="state">State</label>
 <select class="form-control" name="state">
-<option selected value="">Please select</option>
-<optgroup label="UNITED STATES">
-<option value="AL">Alabama</option>
-<option value="AK">Alaska</option>
-<option value="AZ">Arizona</option>
-<option value="AR">Arkansas</option>
-<option value="CA">California</option>
-<option value="..">...</option>
-</optgroup>
-<optgroup label="CANADA">
-<option value="AB">Alberta</option>
-<option value="BC">British Columbia</option>
-<option value="MB">Manitoba</option>
-<option value="NB">New Brunswick</option>
-<option value="NF">Newfoundland and Labrador</option>
-<option value="NT">Northwest Territories</option>
-<option value="NS">Nova Scotia</option>
-<option value="NU">Nunavut</option>
-<option value="ON">Ontario</option>
-<option value="PE">Prince Edward Island</option>
-<option value="PQ">Quebec</option>
-<option value="SK">Saskatchewan</option>
-<option value="YT">Yukon Territory</option>
-</optgroup>
+  <option selected value="">Please select</option>
+  <optgroup label="UNITED STATES">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="..">...</option>
+  </optgroup>
+  <optgroup label="CANADA">
+    <option value="AB">Alberta</option>
+    <option value="BC">British Columbia</option>
+    <option value="MB">Manitoba</option>
+    <option value="NB">New Brunswick</option>
+    <option value="NF">Newfoundland and Labrador</option>
+    <option value="NT">Northwest Territories</option>
+    <option value="NS">Nova Scotia</option>
+    <option value="NU">Nunavut</option>
+    <option value="ON">Ontario</option>
+    <option value="PE">Prince Edward Island</option>
+    <option value="PQ">Quebec</option>
+    <option value="SK">Saskatchewan</option>
+    <option value="YT">Yukon Territory</option>
+  </optgroup>
 </select>
 </div>
 </div>
-        </xmp>
       </pre>
     </details>
     <div class="form-group l-state">
@@ -369,8 +349,7 @@ value="Submit" class="search-submit">
   <div class="system-element first">
     <details>
       <summary class="small header">input[type="radio"]</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
   <div class="radio-group">
   <input type="radio" id="opt1" name="radio-exp"
   value="option 1" checked="checked" />
@@ -383,7 +362,6 @@ value="Submit" class="search-submit">
   Option 2
   </label>
   </div>
-        </xmp>
       </pre>
     </details>
     <div class="radio-group">
@@ -403,8 +381,7 @@ value="Submit" class="search-submit">
   <div class="system-element">
     <details>
       <summary class="small header">input[type="checkbox"]</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
   <div class="checkbox-group">
   <input type="checkbox" value="one"
   id="checkbox_1" name="checkbox_1" />
@@ -420,7 +397,6 @@ value="Submit" class="search-submit">
   disabled="disabled" checked="checked" />
   <label for="checkbox_3">Checked &amp; Disabled</label>
   </div>
-        </xmp>
       </pre>
     </details>
     <div class="checkbox-group">
@@ -444,8 +420,7 @@ value="Submit" class="search-submit">
 <div class="system-element first">
   <details>
     <summary class="small header">.alert.alert-success.alert-icon</summary>
-      <pre class="prettyprint">
-        <xmp>
+      <pre hljs hljs-language="html">
 <div class="alert alert-success alert-icon" role="alert">
     <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
@@ -454,7 +429,6 @@ value="Submit" class="search-submit">
     <p>This is the success message body <a href="#">with link</a>.</p>
   </div>
 </div>
-      </xmp>
     </pre>
   </details>
   <div class="alert alert-success alert-icon" role="alert">
@@ -469,8 +443,7 @@ value="Submit" class="search-submit">
 <div class="system-element">
   <details>
     <summary class="small header">.alert.alert-danger.alert-icon</summary>
-    <pre class="prettyprint">
-      <xmp>
+    <pre hljs hljs-language="html">
   <div class="alert alert-danger alert-icon" role="alert">
     <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
@@ -478,7 +451,6 @@ value="Submit" class="search-submit">
     </h4>
     <p>This is the danger message body <a href="#">with link</a>.</p>
   </div>
-      </xmp>
     </pre>
   </details>
   <div class="alert alert-danger alert-icon" role="alert">
@@ -493,8 +465,7 @@ value="Submit" class="search-submit">
 <div class="system-element">
   <details>
     <summary class="small header">.alert.alert-warning.alert-icon</summary>
-    <pre class="prettyprint">
-      <xmp>
+    <pre hljs hljs-language="html">
   <div class="alert alert-warning alert-icon" role="alert">
     <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
@@ -502,7 +473,6 @@ value="Submit" class="search-submit">
     </h4>
     <p>This is the warning message body <a href="#">with link</a>.</p>
   </div>
-      </xmp>
     </pre>
   </details>
   <div class="alert alert-warning alert-icon" role="alert">
@@ -517,8 +487,7 @@ value="Submit" class="search-submit">
 <div class="system-element">
   <details>
     <summary class="small header">.alert.alert-info.alert-icon</summary>
-    <pre class="prettyprint">
-      <xmp>
+    <pre hljs hljs-language="html">
   <div class="alert alert-info alert-icon" role="alert">
     <button class="close" data-dismiss="alert" aria-hidden="true"></button>
     <h4>
@@ -526,7 +495,6 @@ value="Submit" class="search-submit">
     </h4>
     <p>This is the info message body <a href="#">with link</a>.</p>
   </div>
-      </xmp>
     </pre>
   </details>
   <div class="alert alert-info alert-icon" role="alert">

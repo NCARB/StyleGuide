@@ -24,8 +24,9 @@ angular.module('designSystem.directives', []);
       };
   }); 
   */
+  
 
-angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives'])
+angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives', 'hljs'])
   .config(config)
   .run(run);
   

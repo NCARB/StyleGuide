@@ -36,6 +36,10 @@
     "toastr": "^2.1.1",
     "respond": "^1.4.2"
   },
+  "devDependencies" : {
+    "highlightjs": "~9.0.0",
+    "angular-highlightjs": "~0.5.1"
+  },
   "overrides": {
     "bootstrap-sass-official": {
       "main": [],
@@ -46,6 +50,12 @@
     },
     "bootstrap-dropdowns-enhancement-for-hover": {
       "main": "./dist/js/dropdowns-enhancement.js"
+    },
+    "highlightjs": {
+      "main": [
+        "./highlight.pack.js",
+        "./styles/sunburst.css"
+      ]
     }
   }
 }
