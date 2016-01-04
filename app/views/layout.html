@@ -16,7 +16,7 @@
   <dd>optionally inserted after the flex prefix in the classes below specify layout breakpoints</dd>
 </dl>
 
-<h4>Gutters</h4>
+<h3>Gutters</h3>
 <dl>
   <dt><code>.flex-gutters</code></dt>
   <dd>Creates a  0.5rem (8px) gutter between each item</dd>
@@ -32,6 +32,15 @@
 
   <dt><code>.flex(-xs|-sm|-md|-lg)?-gutters(-wide(r|st)?)?</code></dt>
   <dd>Pattern</dd>  
+</dl>
+
+<h3>Containers</h3>
+<dl>
+  <dt><code>.flex-middle</code></dt>
+  <dd>Vertically aligns all <code>flex-items</code> in a <code>flex-container</code> to the middle.</dd>
+
+  <dt><code>.flex-bottom</code></dt>
+  <dd>Vertically aligns all <code>flex-items</code> in a <code>flex-container</code> to the bottom.</dd>
 </dl>
 
 <h3>Items</h3>
@@ -56,6 +65,9 @@
 
   <dt><code>.flex(-xs|-sm|-md|-lg)?-([1-11]of[2-12]|full|show|hide|collapse|fill[2-6]?)</code></dt>
   <dd>Pattern</dd>
+
+  <dt><code>.flex-item-middle</code></dt>
+  <dd>Vertically aligns the <code>flex-item</code> to the middle of the <code>flex-container</code>.</dd>
 </dl>
 
 <h2>Examples</h2>
@@ -147,6 +159,22 @@
   </div>
   <div class="flex-item flex-fill flex-md-order--1">
     <div class="t-demo"><code>flex-item flex-fill flex-md-order--1</code></div>
+  </div>
+</div>
+
+<h4>Vertical Alignment</h4>
+<div class="flex-container flex-gutters t-demo">
+  <div class="flex-item flex-1of4">
+    <div class="t-demo"><code>flex-item flex-1of4<br />This is a second line.<br />Third line.<br />More lines<br />And even more lines.<br />Last line.</code></div>
+  </div>
+  <div class="flex-item flex-1of4">
+    <div class="t-demo"><code>flex-item flex-1of4</code></div>
+  </div>
+  <div class="flex-item flex-1of4 flex-center flex-item-middle">
+    <div class="t-demo"><code>flex-item flex-1of4<br />flex-item-middle</code></div>
+  </div>
+  <div class="flex-item flex-1of4 flex-item-bottom">
+    <div class="t-demo"><code>flex-item flex-1of4 flex-item-bottom</code></div>
   </div>
 </div>
 
