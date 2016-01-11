@@ -9540,6 +9540,150 @@ input[datepicker-popup], input[uib-datepicker-popup] {
 /* ... loading bar */
 /* Color Shortcuts
  * -------------------------- */
+.primary-blue {
+  color: #00a4e4; }
+
+.primary-blue-bg {
+  background-color: #00a4e4; }
+
+.primary-blue-80 {
+  color: #39aedf; }
+
+.primary-blue-80-bg {
+  background-color: #39aedf; }
+
+.primary-blue-50 {
+  color: #83cceb; }
+
+.primary-blue-50-bg {
+  background-color: #83cceb; }
+
+.primary-blue-20 {
+  color: #cdebf7; }
+
+.primary-blue-20-bg {
+  background-color: #cdebf7; }
+
+.primary-gray {
+  color: #717375; }
+
+.primary-gray-bg {
+  background-color: #717375; }
+
+.primary-gray-80 {
+  color: #8d8f91; }
+
+.primary-gray-80-bg {
+  background-color: #8d8f91; }
+
+.primary-gray-50 {
+  color: #b8b9ba; }
+
+.primary-gray-50-bg {
+  background-color: #b8b9ba; }
+
+.primary-gray-20 {
+  color: #e3e3e3; }
+
+.primary-gray-20-bg {
+  background-color: #e3e3e3; }
+
+.secondary-green {
+  color: #00af91; }
+
+.secondary-green-bg {
+  background-color: #00af91; }
+
+.secondary-green-80 {
+  color: #33bfa7; }
+
+.secondary-green-80-bg {
+  background-color: #33bfa7; }
+
+.secondary-green-50 {
+  color: #7fd7c8; }
+
+.secondary-green-50-bg {
+  background-color: #7fd7c8; }
+
+.secondary-green-20 {
+  color: #ccefe9; }
+
+.secondary-green-20-bg {
+  background-color: #ccefe9; }
+
+.secondary-yellow {
+  color: #ffd24f; }
+
+.secondary-yellow-bg {
+  background-color: #ffd24f; }
+
+.secondary-yellow-80 {
+  color: #ffdb72; }
+
+.secondary-yellow-80-bg {
+  background-color: #ffdb72; }
+
+.secondary-yellow-50 {
+  color: #ffe8a7; }
+
+.secondary-yellow-50-bg {
+  background-color: #ffe8a7; }
+
+.secondary-yellow-20 {
+  color: #fff6dc; }
+
+.secondary-yellow-20-bg {
+  background-color: #fff6dc; }
+
+.secondary-orange {
+  color: #f6905d; }
+
+.secondary-orange-bg {
+  background-color: #f6905d; }
+
+.secondary-orange-80 {
+  color: #f8a67d; }
+
+.secondary-orange-80-bg {
+  background-color: #f8a67d; }
+
+.secondary-orange-50 {
+  color: #fac7ae; }
+
+.secondary-orange-50-bg {
+  background-color: #fac7ae; }
+
+.secondary-orange-20 {
+  color: #fde9df; }
+
+.secondary-orange-20-bg {
+  background-color: #fde9df; }
+
+.secondary-purple {
+  color: #5a3f99; }
+
+.secondary-purple-bg {
+  background-color: #5a3f99; }
+
+.secondary-purple-80 {
+  color: #7b65ad; }
+
+.secondary-purple-80-bg {
+  background-color: #7b65ad; }
+
+.secondary-purple-50 {
+  color: #ac9fcc; }
+
+.secondary-purple-50-bg {
+  background-color: #ac9fcc; }
+
+.secondary-purple-20 {
+  color: #ded9eb; }
+
+.secondary-purple-20-bg {
+  background-color: #ded9eb; }
+
 .white {
   color: #fff; }
 

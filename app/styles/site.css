@@ -161,6 +161,54 @@ ul.figure li a {
     line-height: 1.125rem;
     letter-spacing: 0.008rem;
     margin: 0; }
+  .t-box-color-swatch.primary-blue {
+    background-color: #00a4e4; }
+  .t-box-color-swatch.primary-blue-80 {
+    background-color: #39aedf; }
+  .t-box-color-swatch.primary-blue-50 {
+    background-color: #83cceb; }
+  .t-box-color-swatch.primary-blue-20 {
+    background-color: #cdebf7; }
+  .t-box-color-swatch.primary-gray {
+    background-color: #717375; }
+  .t-box-color-swatch.primary-gray-80 {
+    background-color: #8d8f91; }
+  .t-box-color-swatch.primary-gray-50 {
+    background-color: #b8b9ba; }
+  .t-box-color-swatch.primary-gray-20 {
+    background-color: #e3e3e3; }
+  .t-box-color-swatch.secondary-green {
+    background-color: #00af91; }
+  .t-box-color-swatch.secondary-green-80 {
+    background-color: #33bfa7; }
+  .t-box-color-swatch.secondary-green-50 {
+    background-color: #7fd7c8; }
+  .t-box-color-swatch.secondary-green-20 {
+    background-color: #ccefe9; }
+  .t-box-color-swatch.secondary-yellow {
+    background-color: #ffd24f; }
+  .t-box-color-swatch.secondary-yellow-80 {
+    background-color: #ffdb72; }
+  .t-box-color-swatch.secondary-yellow-50 {
+    background-color: #ffe8a7; }
+  .t-box-color-swatch.secondary-yellow-20 {
+    background-color: #fff6dc; }
+  .t-box-color-swatch.secondary-orange {
+    background-color: #f6905d; }
+  .t-box-color-swatch.secondary-orange-80 {
+    background-color: #f8a67d; }
+  .t-box-color-swatch.secondary-orange-50 {
+    background-color: #fac7ae; }
+  .t-box-color-swatch.secondary-orange-20 {
+    background-color: #fde9df; }
+  .t-box-color-swatch.secondary-purple {
+    background-color: #5a3f99; }
+  .t-box-color-swatch.secondary-purple-80 {
+    background-color: #7b65ad; }
+  .t-box-color-swatch.secondary-purple-50 {
+    background-color: #ac9fcc; }
+  .t-box-color-swatch.secondary-purple-20 {
+    background-color: #ded9eb; }
   .t-box-color-swatch.white {
     background-color: #fff; }
   .t-box-color-swatch.black {
