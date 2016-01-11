@@ -1,6 +1,6 @@
 {
   "name": "ncarb-style",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "authors": [
     "Equan Simmonds <esimmonds@ncarb.org>",
     "Kenji Bohlin <kbohlin@ncarb.org>",
@@ -35,7 +35,7 @@
     "toastr": "^2.1.1",
     "respond": "^1.4.2"
   },
-  "devDependencies" : {
+  "devDependencies": {
     "highlightjs": "~9.0.0",
     "angular-highlightjs": "~0.5.1"
   },
