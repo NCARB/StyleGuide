@@ -121,7 +121,7 @@
   %width100#{$name} {
     width: 100%;
   }
-  .flex-item.flex#{$name}-full {
+  .flex#{$name}-full {
     @extend %width100#{$name};
   }
 

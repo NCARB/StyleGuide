@@ -1514,7 +1514,7 @@ ul.form-group {
 .flex-show {
   display: block; }
 
-.flex-item.flex-full, .col-xs-12 {
+.flex-full, .col-xs-12 {
   width: 100%; }
 
 .flex-fill, .flex-fill-2, .flex-fill-3, .flex-fill-4, .flex-fill-5, .flex-fill-6, .flex-collapse {
@@ -1957,7 +1957,7 @@ ul.form-group {
   .flex-xs-show {
     display: block; }
 
-  .flex-item.flex-xs-full, .col-xs-12 {
+  .flex-xs-full, .col-xs-12 {
     width: 100%; }
 
   .flex-xs-fill, .flex-xs-fill-2, .flex-xs-fill-3, .flex-xs-fill-4, .flex-xs-fill-5, .flex-xs-fill-6, .flex-xs-collapse {
@@ -2399,7 +2399,7 @@ ul.form-group {
   .flex-sm-show {
     display: block; }
 
-  .flex-item.flex-sm-full, .col-sm-12 {
+  .flex-sm-full, .col-sm-12 {
     width: 100%; }
 
   .flex-sm-fill, .flex-sm-fill-2, .flex-sm-fill-3, .flex-sm-fill-4, .flex-sm-fill-5, .flex-sm-fill-6, .flex-sm-collapse {
@@ -2841,7 +2841,7 @@ ul.form-group {
   .flex-md-show {
     display: block; }
 
-  .flex-item.flex-md-full, .col-md-12 {
+  .flex-md-full, .col-md-12 {
     width: 100%; }
 
   .flex-md-fill, .flex-md-fill-2, .flex-md-fill-3, .flex-md-fill-4, .flex-md-fill-5, .flex-md-fill-6, .flex-md-collapse {
@@ -3283,7 +3283,7 @@ ul.form-group {
   .flex-lg-show {
     display: block; }
 
-  .flex-item.flex-lg-full, .col-lg-12 {
+  .flex-lg-full, .col-lg-12 {
     width: 100%; }
 
   .flex-lg-fill, .flex-lg-fill-2, .flex-lg-fill-3, .flex-lg-fill-4, .flex-lg-fill-5, .flex-lg-fill-6, .flex-lg-collapse {
