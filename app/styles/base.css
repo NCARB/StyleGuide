@@ -178,6 +178,18 @@ td,
 th {
   padding: 0; }
 
+body, div, dl, dt, dd, ul, ol, li,
+h1, h2, h3, h4, h5, h6,
+pre, form, fieldset, input, textarea,
+p, blockquote, th, td {
+  margin: 0;
+  padding: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: 100%;
+  font-weight: normal;
+  margin-bottom: 24px; }
+
 * {
   box-sizing: border-box; }
 
@@ -236,14 +248,14 @@ img {
   clip: auto; }
 
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
 html {
   position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 100%;
   color: #444444;
   background-color: #00A4E3;
@@ -254,7 +266,7 @@ html {
 body {
   margin: 0;
   padding-top: 4px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 100%;
   line-height: 1.25;
   color: #444444; }
@@ -307,16 +319,15 @@ body:before {
 
 .no-js .skip {
   display: block;
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 24px;
-  line-height: 1.5rem;
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 0.625rem;
   background-color: #fff;
   padding: 20px 20px 0;
   text-align: center; }
@@ -429,8 +440,8 @@ main {
   main {
     position: relative; } }
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
@@ -467,7 +478,7 @@ h6 {
     line-height: normal; }
 
 h1 {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-style: normal;
   font-weight: 800;
   font-size: 36px;
@@ -475,71 +486,65 @@ h1 {
   line-height: 36px;
   line-height: 2.25rem;
   letter-spacing: 0.05rem;
-  padding: 0;
-  margin: 0 0 1.875rem; }
+  padding: 0; }
 
 h2 {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 36px;
-  font-size: 2.25rem;
-  line-height: 36px;
-  line-height: 2.25rem;
-  letter-spacing: 0.008rem;
-  padding: 0;
-  margin: 0 0 1.875rem; }
-
-h3 {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  letter-spacing: 0.05rem;
-  padding: 0;
-  margin: 0 0 0.9375rem; }
-
-h4 {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 24px;
-  line-height: 1.5rem;
-  letter-spacing: 0.008rem;
-  padding: 0;
-  margin: 0 0 0.625rem; }
-
-h5 {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 35px;
-  line-height: 2.1875rem;
-  letter-spacing: 0.008rem;
-  padding: 0;
-  margin: 0 0 0.3125rem; }
-
-h6 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-style: normal;
   font-weight: bold;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 35px;
-  line-height: 2.1875rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 24px;
+  line-height: 1.5rem;
   letter-spacing: 0.008rem;
-  padding: 0;
-  margin: 0 0 0.3125rem; }
+  padding: 0; }
+
+h3 {
+  font-family: "Agenda Light";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 20px;
+  line-height: 1.25rem;
+  letter-spacing: 0.05rem;
+  padding: 0; }
+
+h4 {
+  font-family: "Agenda Light";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0.008rem;
+  padding: 0; }
+
+h5 {
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
+  letter-spacing: 0.008rem;
+  padding: 0; }
+
+h6 {
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 14px;
+  line-height: 0.875rem;
+  letter-spacing: 0.008rem;
+  padding: 0; }
 
 p {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 20px;
@@ -548,15 +553,15 @@ p {
   margin: 0 0 1rem; }
 
 .small {
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
   line-height: 17px;
   line-height: 1.0625rem;
   margin: 0; }
 
 .fine-print {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 12px;
   font-size: 0.75rem;
   line-height: 18px;
@@ -581,7 +586,10 @@ hr {
   border: 1px solid #E2E2E2; }
 
 .agenda-light {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif; }
+  font-family: "Agenda Light"; }
+
+.nomargin {
+  margin: 0 !important; }
 
 p img {
   margin: 0; }
@@ -630,8 +638,8 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   position: relative;
   box-sizing: border-box;
   padding: 10px 15px 9px;
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
-  font-size: 18px;
+  font-family: "Agenda Light";
+  font-size: 20px;
   font-weight: 800;
   line-height: 1;
   text-decoration: none;
@@ -775,15 +783,15 @@ input[type="submit"].btn-inline {
   display: inline-block; }
 
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
 ul,
 ol {
   list-style: none;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   line-height: 20px;
@@ -875,18 +883,17 @@ ol {
         color: #00A4E3; }
 
 .list-media .header {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-style: italic;
   font-weight: normal;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 35px;
-  line-height: 2.1875rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 0.3125rem;
   color: #00A4E3;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-weight: bold; }
 .list-media .body {
   margin: 0;
@@ -905,8 +912,8 @@ details summary::-webkit-details-marker {
   color: #00A4E3; }
 
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
@@ -955,7 +962,7 @@ input {
 
 label {
   display: inline-block;
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-style: normal;
   font-weight: 800;
   font-size: 14px;
@@ -987,7 +994,7 @@ input[type="week"] {
   border: 1px solid #CCCCCC;
   font-size: 14px;
   font-size: 0.875rem;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-weight: bold;
   border-radius: 2px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2) inset; }
@@ -1011,22 +1018,22 @@ input[type="week"] {
     max-width: inherit; }
 
 [placeholder]::-webkit-input-placeholder {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1; }
 [placeholder]::-moz-placeholder {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1; }
 [placeholder]:-moz-placeholder {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1; }
 [placeholder]:-ms-input-placeholder {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-size: 16px;
   font-size: 1rem;
   line-height: 1; }
@@ -1065,7 +1072,7 @@ input[type="search"] {
   height: 40px;
   max-width: 100%;
   background-color: transparent;
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   line-height: normal; }
 
 input[type="search"]::-webkit-search-decoration,
@@ -1100,7 +1107,7 @@ select {
   width: 100%;
   height: 40px;
   padding: 8px 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 14px;
   font-size: 0.875rem;
   line-height: normal;
@@ -1213,16 +1220,15 @@ input[type="checkbox"] {
   position: relative; }
 
 legend {
-  font-family: Arial, Helvetica, sans-serif;
-  font-style: normal;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-style: italic;
   font-weight: normal;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 35px;
-  line-height: 2.1875rem;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 16px;
+  line-height: 1rem;
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 0.3125rem;
   border-bottom: 0; }
 
 ul.form-group {
@@ -3584,8 +3590,8 @@ ul.form-group {
     .flex-lg-gutters-widest.flex-no-bottom-gutter {
       margin-bottom: -3rem; } }
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
@@ -3598,7 +3604,7 @@ ul.form-group {
   .alert[data-state="is-hidden"] {
     display: none; }
   .alert h4 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 16px;
     font-size: 1rem;
     line-height: 20px;
@@ -4073,14 +4079,12 @@ a.badge:hover, a.badge:focus {
   border-radius: 0; }
 .btn-group-vertical > .btn:first-child:not(:last-child) {
   border-top-right-radius: 0;
-  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 .btn-group-vertical > .btn:last-child:not(:first-child) {
+  border-bottom-left-radius: 0;
   border-top-right-radius: 0;
-  border-top-left-radius: 0;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0; }
+  border-top-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
@@ -4164,7 +4168,7 @@ a.badge:hover, a.badge:focus {
 
 .btn-lg, .btn-group-lg > .btn {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 0; }
 
@@ -4269,8 +4273,7 @@ input[type="button"].btn-block {
   font-size: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
-  background-color: transparent; }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
   .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -4367,14 +4370,14 @@ input[type="button"].btn-block {
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -10px;
+    margin-top: -15px;
     font-size: 30px; }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -10px; }
+    margin-left: -15px; }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -10px; }
+    margin-right: -15px; }
 
   .carousel-caption {
     left: 20%;
@@ -4384,8 +4387,8 @@ input[type="button"].btn-block {
   .carousel-indicators {
     bottom: 20px; } }
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
@@ -5221,7 +5224,7 @@ input.input-lg:not([type]),
 .form-group-lg input[type="color"],
 .form-group-lg input:not([type]) {
   padding: 10px 5px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33;
   border-radius: 0; }
 
@@ -5250,7 +5253,7 @@ input.input-lg:not([type]),
 .input-group-lg > input[placeholder]:not([type])::-webkit-input-placeholder,
 .input-group-lg > [placeholder].input-group-addon::-webkit-input-placeholder,
 .input-group-lg > .input-group-btn > [placeholder].btn::-webkit-input-placeholder {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 2px; }
 .form-group-lg [placeholder]::-moz-placeholder, .input-lg[placeholder]::-moz-placeholder, .input-group-lg > [placeholder].form-control::-moz-placeholder, .input-group-lg > select[placeholder]::-moz-placeholder,
 .input-group-lg > textarea[placeholder]::-moz-placeholder,
@@ -5271,7 +5274,7 @@ input.input-lg:not([type]),
 .input-group-lg > input[placeholder]:not([type])::-moz-placeholder,
 .input-group-lg > [placeholder].input-group-addon::-moz-placeholder,
 .input-group-lg > .input-group-btn > [placeholder].btn::-moz-placeholder {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 2px; }
 .form-group-lg [placeholder]:-moz-placeholder, .input-lg[placeholder]:-moz-placeholder, .input-group-lg > [placeholder].form-control:-moz-placeholder, .input-group-lg > select[placeholder]:-moz-placeholder,
 .input-group-lg > textarea[placeholder]:-moz-placeholder,
@@ -5292,7 +5295,7 @@ input.input-lg:not([type]),
 .input-group-lg > input[placeholder]:-moz-placeholder:not([type]),
 .input-group-lg > [placeholder].input-group-addon:-moz-placeholder,
 .input-group-lg > .input-group-btn > [placeholder].btn:-moz-placeholder {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 2px; }
 .form-group-lg [placeholder]:-ms-input-placeholder, .input-lg[placeholder]:-ms-input-placeholder, .input-group-lg > [placeholder].form-control:-ms-input-placeholder, .input-group-lg > select[placeholder]:-ms-input-placeholder,
 .input-group-lg > textarea[placeholder]:-ms-input-placeholder,
@@ -5313,7 +5316,7 @@ input.input-lg:not([type]),
 .input-group-lg > input[placeholder]:-ms-input-placeholder:not([type]),
 .input-group-lg > [placeholder].input-group-addon:-ms-input-placeholder,
 .input-group-lg > .input-group-btn > [placeholder].btn:-ms-input-placeholder {
-  font-size: 18px;
+  font-size: 20px;
   padding-top: 2px; }
 
 .form-group-sm [placeholder]::-webkit-input-placeholder, .input-sm[placeholder]::-webkit-input-placeholder, .input-group-sm > [placeholder].form-control::-webkit-input-placeholder, .input-group-sm > select[placeholder]::-webkit-input-placeholder,
@@ -5402,7 +5405,7 @@ input.input-lg:not([type]),
   padding-top: 4px; }
 
 .form-group-lg .control-label, .form-group-lg label {
-  font-size: 18px; }
+  font-size: 20px; }
 
 .form-group-sm .control-label, .form-group-sm label {
   font-size: 14px; }
@@ -6554,7 +6557,7 @@ input.input-lg:not([type]),
   .input-group-lg > .input-group-addon,
   .input-group-lg > .input-group-btn > .input-group-addon.btn {
     padding: 10px 0.5em;
-    font-size: 18px;
+    font-size: 20px;
     border-radius: 0; }
   .input-group-addon input[type="radio"],
   .input-group-addon input[type="checkbox"] {
@@ -6651,9 +6654,7 @@ input.input-lg:not([type]),
   .jumbotron > hr {
     border-top-color: #c9c9c9; }
   .container .jumbotron, .container-fluid .jumbotron {
-    border-radius: 0;
-    padding-left: 15px;
-    padding-right: 15px; }
+    border-radius: 0; }
   .jumbotron .container {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
@@ -7018,12 +7019,8 @@ button.list-group-item-danger {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5; }
-  .modal-header:before, .modal-header:after {
-    content: " ";
-    display: table; }
-  .modal-header:after {
-    clear: both; }
+  border-bottom: 1px solid #e5e5e5;
+  min-height: 16.25px; }
 
 .modal-header .close {
   margin-top: -2px; }
@@ -7188,7 +7185,7 @@ button.list-group-item-danger {
 
 .navbar-brand {
   padding: 20px 15px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 20px;
   height: 40px; }
   .navbar-brand:hover, .navbar-brand:focus {
@@ -7742,7 +7739,7 @@ button.list-group-item-danger {
     max-width: none; }
 
 .nav-tabs > li > a, .nav-pills > li > a, .nav-choices > li > a, .nav-sub > li > a {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-weight: normal;
   margin-right: 0; }
 
@@ -7986,7 +7983,7 @@ button.list-group-item-danger {
 .pagination-lg > li > a,
 .pagination-lg > li > span {
   padding: 10px 16px;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.33; }
 .pagination-lg > li:first-child > a,
 .pagination-lg > li:first-child > span {
@@ -8385,7 +8382,7 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   display: none;
   max-width: 276px;
   padding: 1px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -9114,7 +9111,7 @@ a.thumbnail.active {
   position: absolute;
   z-index: 1070;
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   letter-spacing: normal;
@@ -9959,7 +9956,7 @@ input[datepicker-popup], input[uib-datepicker-popup] {
   .org-card .org {
     display: block;
     font-size: 18px;
-    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+    font-family: "Agenda Light";
     font-weight: bold; }
   .org-card .tel {
     margin-right: 10px; }
@@ -9978,13 +9975,13 @@ input[datepicker-popup], input[uib-datepicker-popup] {
   overflow: hidden; }
 
 .copyright {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-weight: bold;
   text-align: center;
   font-size: 16px;
   padding: 20px 40px 0; }
   .copyright a {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     color: #444444;
     font-weight: normal; }
 

@@ -71,6 +71,10 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/navigation',
       templateUrl: 'views/navigation.html'
     })
+    .state('css.tables', {
+      url: '/tables',
+      templateUrl: 'views/tables.html'
+    })
     .state('content', {
       url: '/content',
       templateUrl: 'views/content.html'

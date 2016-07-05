@@ -1,7 +1,7 @@
 @charset "UTF-8";
 .body-header {
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 20px;
+  font-size: 1.25rem;
   margin-bottom: 10px;
   color: #444444; }
 
@@ -158,7 +158,7 @@ ul.figure li a {
   .t-box-color-swatch .codename {
     margin: 0;
     text-align: right;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Agenda Light", Arial, Helvetica, sans-serif;
     font-size: 12px;
     font-size: 0.75rem;
     line-height: 18px;
@@ -321,7 +321,7 @@ ul.figure li a {
   margin: 50px 0 30px; }
 
 .fonts .t-agenda-light {
-  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light";
   font-style: normal;
   font-weight: normal;
   font-size: 48px;
@@ -329,7 +329,7 @@ ul.figure li a {
   line-height: 76px;
   line-height: 4.75rem; }
 .fonts .t-arial-bold {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 48px;
@@ -412,7 +412,7 @@ ul.figure li a {
   margin: 0 0.5rem;
   background-color: #CCCCCC;
   color: #444444;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-size: 36px;
   font-size: 2.25rem;
   text-align: center; }
