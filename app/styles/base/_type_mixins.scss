@@ -27,7 +27,6 @@
   @include lineHeight($type-XXL);
   letter-spacing: 0.05rem;
   padding: 0;
-  // margin: 0 0 calculateRem($type-XXL);
 }
 
 @mixin type-2 {
@@ -38,7 +37,6 @@
   @include lineHeight($type-XL);
   letter-spacing: 0.008rem;
   padding: 0;
-  // margin: 0 0 calculateRem(30px);
 }
 
 @mixin type-3 {
@@ -49,7 +47,6 @@
   @include lineHeight($type-L);
   letter-spacing: 0.05rem;
   padding: 0;
-  // margin: 0 0 calculateRem(15px);
 }
 
 @mixin type-4 {
@@ -60,7 +57,6 @@
   @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
-  // margin: 0 0 calculateRem(10px);
 }
 
 @mixin type-5 {
@@ -71,7 +67,6 @@
   @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
-  // margin: 0 0 calculateRem(5px);
 }
 
 @mixin type-6 {
@@ -82,7 +77,6 @@
   @include lineHeight($type-S);
   letter-spacing: 0.008rem;
   padding: 0;
-  // margin: 0 0 calculateRem(5px);
 }
 
 @mixin type-small {
