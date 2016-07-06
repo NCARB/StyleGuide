@@ -281,3 +281,9 @@
   }
 }
 
+@include breakpoint(sm) {
+  section.margins,
+  article.margins {
+    margin: 0 8.33333%;
+  }
+}

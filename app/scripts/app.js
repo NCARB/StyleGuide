@@ -114,3 +114,4 @@ function run($rootScope, $history, $state) {
   
   $history.push($state.current, $state.params);
 }
+

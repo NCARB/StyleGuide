@@ -406,7 +406,7 @@ main {
   .clear:after {
     clear: both; }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .canvas {
     -webkit-transition: none;
     -moz-transition: none;
@@ -432,10 +432,10 @@ main {
 
   main {
     position: relative; } }
-@media (min-width: 1260px) {
+@media (min-width: 980px) {
   .canvas {
     margin: 0 auto;
-    width: 1000px; }
+    width: 980px; }
 
   main {
     position: relative; } }
@@ -2705,7 +2705,7 @@ ul.form-group {
         margin-bottom: 0; }
     .flex-sm-gutters-widest.flex-no-bottom-gutter {
       margin-bottom: -3rem; } }
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .flex-md-1of2, .lt-ie10 .flex-md-1of2, .flex-md-2of4, .lt-ie10 .flex-md-2of4, .flex-md-3of6, .lt-ie10 .flex-md-3of6, .flex-md-4of8, .lt-ie10 .flex-md-4of8, .flex-md-5of10, .lt-ie10 .flex-md-5of10, .flex-md-6of12, .lt-ie10 .flex-md-6of12, .col-md-6 {
     width: 50%; }
 
@@ -3589,6 +3589,10 @@ ul.form-group {
         margin-bottom: 0; }
     .flex-lg-gutters-widest.flex-no-bottom-gutter {
       margin-bottom: -3rem; } }
+@media (min-width: 768px) {
+  section.margins,
+  article.margins {
+    margin: 0 8.33333%; } }
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
@@ -7068,7 +7072,7 @@ button.list-group-item-danger {
 
   .modal-sm {
     width: 300px; } }
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .modal-lg {
     width: 900px; } }
 .navbar {
@@ -7352,7 +7356,7 @@ button.list-group-item-danger {
       .navbar-ncarb .navbar-nav > li > a {
         padding-left: 10px;
         padding-right: 10px; } }
-    @media (min-width: 960px) {
+    @media (min-width: 980px) {
       .navbar-ncarb .navbar-nav > li > a {
         padding-left: 15px;
         padding-right: 15px; } }
@@ -7672,7 +7676,7 @@ button.list-group-item-danger {
     display: none; }
     .offcanvas-xs.in {
       display: block; } }
-@media (max-width: 959px) {
+@media (max-width: 979px) {
   .offcanvas-sm {
     display: none; }
     .offcanvas-sm.in {
@@ -8717,7 +8721,7 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   .visible-xs-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .visible-sm {
     display: block !important; }
 
@@ -8730,19 +8734,19 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   th.visible-sm,
   td.visible-sm {
     display: table-cell !important; } }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .visible-sm-block {
     display: block !important; } }
 
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .visible-sm-inline {
     display: inline !important; } }
 
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .visible-sm-inline-block {
     display: inline-block !important; } }
 
-@media (min-width: 960px) and (max-width: 1259px) {
+@media (min-width: 980px) and (max-width: 1259px) {
   .visible-md {
     display: block !important; }
 
@@ -8755,15 +8759,15 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   th.visible-md,
   td.visible-md {
     display: table-cell !important; } }
-@media (min-width: 960px) and (max-width: 1259px) {
+@media (min-width: 980px) and (max-width: 1259px) {
   .visible-md-block {
     display: block !important; } }
 
-@media (min-width: 960px) and (max-width: 1259px) {
+@media (min-width: 980px) and (max-width: 1259px) {
   .visible-md-inline {
     display: inline !important; } }
 
-@media (min-width: 960px) and (max-width: 1259px) {
+@media (min-width: 980px) and (max-width: 1259px) {
   .visible-md-inline-block {
     display: inline-block !important; } }
 
@@ -8795,10 +8799,10 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
 @media (max-width: 767px) {
   .hidden-xs {
     display: none !important; } }
-@media (min-width: 768px) and (max-width: 959px) {
+@media (min-width: 768px) and (max-width: 979px) {
   .hidden-sm {
     display: none !important; } }
-@media (min-width: 960px) and (max-width: 1259px) {
+@media (min-width: 980px) and (max-width: 1259px) {
   .hidden-md {
     display: none !important; } }
 @media (min-width: 1260px) {
@@ -9985,7 +9989,7 @@ input[datepicker-popup], input[uib-datepicker-popup] {
     color: #444444;
     font-weight: normal; }
 
-@media (min-width: 960px) {
+@media (min-width: 980px) {
   .footer {
     text-align: left; }
 

@@ -183,10 +183,10 @@ main {
 
 
 $recedeamount: 40px;
-@include breakpoint(lg) {
+@include breakpoint(md) {
     .canvas {
         margin:0 auto;
-        width:1000px;
+        width:980px;
         // padding-left: $recedeamount;
         // padding-right:$recedeamount;
     }
