@@ -583,7 +583,7 @@ hr {
 .agenda-light {
   font-family: "Agenda Light"; }
 
-.nomargin {
+.no-margin {
   margin: 0 !important; }
 
 p img {
@@ -3585,8 +3585,13 @@ ul.form-group {
     .flex-lg-gutters-widest.flex-no-bottom-gutter {
       margin-bottom: -3rem; } }
 @media (min-width: 768px) {
-  section.margins,
-  article.margins {
+  .margins-sm {
+    margin: 0 8.33333%; } }
+@media (min-width: 980px) {
+  .margins-md {
+    margin: 0 8.33333%; } }
+@media (min-width: 1260px) {
+  .margins-lg {
     margin: 0 8.33333%; } }
 .body-header {
   font-size: 20px;
