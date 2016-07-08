@@ -1820,6 +1820,9 @@ ul.form-group {
   .flex-gutters-widest.flex-no-bottom-gutter {
     margin-bottom: -3rem; }
 
+.margins {
+  margin: 0 8.33333%; }
+
 @media (min-width: 480px) {
   .flex-xs-1of2, .lt-ie10 .flex-xs-1of2, .flex-xs-2of4, .lt-ie10 .flex-xs-2of4, .flex-xs-3of6, .lt-ie10 .flex-xs-3of6, .flex-xs-4of8, .lt-ie10 .flex-xs-4of8, .flex-xs-5of10, .lt-ie10 .flex-xs-5of10, .flex-xs-6of12, .lt-ie10 .flex-xs-6of12, .col-xs-6 {
     width: 50%; }
@@ -2261,7 +2264,10 @@ ul.form-group {
       .flex-xs-gutters-widest > .flex-item.flex-item-no-bottom-gutter {
         margin-bottom: 0; }
     .flex-xs-gutters-widest.flex-no-bottom-gutter {
-      margin-bottom: -3rem; } }
+      margin-bottom: -3rem; }
+
+  .margins-xs {
+    margin: 0 8.33333%; } }
 @media (min-width: 768px) {
   .flex-sm-1of2, .lt-ie10 .flex-sm-1of2, .flex-sm-2of4, .lt-ie10 .flex-sm-2of4, .flex-sm-3of6, .lt-ie10 .flex-sm-3of6, .flex-sm-4of8, .lt-ie10 .flex-sm-4of8, .flex-sm-5of10, .lt-ie10 .flex-sm-5of10, .flex-sm-6of12, .lt-ie10 .flex-sm-6of12, .col-sm-6 {
     width: 50%; }
@@ -2703,7 +2709,10 @@ ul.form-group {
       .flex-sm-gutters-widest > .flex-item.flex-item-no-bottom-gutter {
         margin-bottom: 0; }
     .flex-sm-gutters-widest.flex-no-bottom-gutter {
-      margin-bottom: -3rem; } }
+      margin-bottom: -3rem; }
+
+  .margins-sm {
+    margin: 0 8.33333%; } }
 @media (min-width: 980px) {
   .flex-md-1of2, .lt-ie10 .flex-md-1of2, .flex-md-2of4, .lt-ie10 .flex-md-2of4, .flex-md-3of6, .lt-ie10 .flex-md-3of6, .flex-md-4of8, .lt-ie10 .flex-md-4of8, .flex-md-5of10, .lt-ie10 .flex-md-5of10, .flex-md-6of12, .lt-ie10 .flex-md-6of12, .col-md-6 {
     width: 50%; }
@@ -3145,7 +3154,10 @@ ul.form-group {
       .flex-md-gutters-widest > .flex-item.flex-item-no-bottom-gutter {
         margin-bottom: 0; }
     .flex-md-gutters-widest.flex-no-bottom-gutter {
-      margin-bottom: -3rem; } }
+      margin-bottom: -3rem; }
+
+  .margins-md {
+    margin: 0 8.33333%; } }
 @media (min-width: 1260px) {
   .flex-lg-1of2, .lt-ie10 .flex-lg-1of2, .flex-lg-2of4, .lt-ie10 .flex-lg-2of4, .flex-lg-3of6, .lt-ie10 .flex-lg-3of6, .flex-lg-4of8, .lt-ie10 .flex-lg-4of8, .flex-lg-5of10, .lt-ie10 .flex-lg-5of10, .flex-lg-6of12, .lt-ie10 .flex-lg-6of12, .col-lg-6 {
     width: 50%; }
@@ -3587,14 +3599,8 @@ ul.form-group {
       .flex-lg-gutters-widest > .flex-item.flex-item-no-bottom-gutter {
         margin-bottom: 0; }
     .flex-lg-gutters-widest.flex-no-bottom-gutter {
-      margin-bottom: -3rem; } }
-@media (min-width: 768px) {
-  .margins-sm {
-    margin: 0 8.33333%; } }
-@media (min-width: 980px) {
-  .margins-md {
-    margin: 0 8.33333%; } }
-@media (min-width: 1260px) {
+      margin-bottom: -3rem; }
+
   .margins-lg {
     margin: 0 8.33333%; } }
 .body-header {
@@ -4087,12 +4093,14 @@ a.badge:hover, a.badge:focus {
   border-radius: 0; }
 .btn-group-vertical > .btn:first-child:not(:last-child) {
   border-top-right-radius: 0;
+  border-top-left-radius: 0;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0; }
 .btn-group-vertical > .btn:last-child:not(:first-child) {
-  border-bottom-left-radius: 0;
   border-top-right-radius: 0;
-  border-top-left-radius: 0; }
+  border-top-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0; }
 
 .btn-group-vertical > .btn-group:not(:first-child):not(:last-child) > .btn {
   border-radius: 0; }
@@ -4281,7 +4289,8 @@ input[type="button"].btn-block {
   font-size: 20px;
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+  background-color: transparent; }
   .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
     background-image: -o-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
@@ -4378,14 +4387,14 @@ input[type="button"].btn-block {
   .carousel-control .icon-next {
     width: 30px;
     height: 30px;
-    margin-top: -15px;
+    margin-top: -10px;
     font-size: 30px; }
   .carousel-control .glyphicon-chevron-left,
   .carousel-control .icon-prev {
-    margin-left: -15px; }
+    margin-left: -10px; }
   .carousel-control .glyphicon-chevron-right,
   .carousel-control .icon-next {
-    margin-right: -15px; }
+    margin-right: -10px; }
 
   .carousel-caption {
     left: 20%;
@@ -6662,7 +6671,9 @@ input.input-lg:not([type]),
   .jumbotron > hr {
     border-top-color: #c9c9c9; }
   .container .jumbotron, .container-fluid .jumbotron {
-    border-radius: 0; }
+    border-radius: 0;
+    padding-left: 15px;
+    padding-right: 15px; }
   .jumbotron .container {
     max-width: 100%; }
   @media screen and (min-width: 768px) {
@@ -7027,8 +7038,12 @@ button.list-group-item-danger {
 
 .modal-header {
   padding: 15px;
-  border-bottom: 1px solid #e5e5e5;
-  min-height: 16.25px; }
+  border-bottom: 1px solid #e5e5e5; }
+  .modal-header:before, .modal-header:after {
+    content: " ";
+    display: table; }
+  .modal-header:after {
+    clear: both; }
 
 .modal-header .close {
   margin-top: -2px; }
