@@ -9,6 +9,10 @@ h3,
 h4,
 h5,
 h6 {
+  margin: 0 0 24px;
+  padding: 0;
+  font-size: 100%;
+  font-weight: normal;
   color: $color-black;
   & a {
     font-weight: inherit;
