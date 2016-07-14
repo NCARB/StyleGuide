@@ -7,7 +7,7 @@
   -ms-flex-wrap: wrap;  // IE10
   @include flex-basis($base-font-size);
   list-style: none;
-  
+
   .lt-ie10 & {
     @include clearfix;
   }
@@ -81,7 +81,7 @@
 //  .flex-fill
 //  .flex-sm-fill-2
 //  .flex-collapse
-@mixin grid-sizing($name: "") {  
+@mixin grid-sizing($name: "") {
   @if $name != "" {
     $name: "-#{$name}";
   } @else {
@@ -188,7 +188,7 @@
   @while $i < 12 {
     $i: $i + 1;
     $percent-key: round(100 * $i / 12);
-    @if($i < 12) { 
+    @if($i < 12) {
       .col#{$name}-#{$i} {
         @extend %percent#{$name_}#{$percent-key};
       }
@@ -271,13 +271,25 @@
   }
 }
 
+@mixin margins($name: "") {
+  @if $name != "" {
+    $name: "-#{$name}";
+  } @else {
+    $name: "";
+  }
+  .margins#{$name} {
+    margin: 0 8.33333%;
+  }
+}
+
 @include grid-sizing();
 @include grid-gutters();
+@include margins();
 
 @each $breakpoint, $min-width in $breakpoints {
   @include breakpoint($breakpoint) {
     @include grid-sizing($breakpoint);
-    @include grid-gutters($breakpoint); 
+    @include grid-gutters($breakpoint);
+    @include margins($breakpoint);
   }
 }
-

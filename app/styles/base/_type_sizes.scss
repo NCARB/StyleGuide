@@ -2,9 +2,9 @@
 // Font Variables
 @import 'functions';
 
-$font_regular  : Arial, Helvetica, sans-serif;
+$font_regular  : "Agenda Light", Arial, Helvetica, sans-serif;
 $font_base     : $font_regular;
-$font_light    : "Agenda Light", $font_regular;
+$font_light    : "Agenda Light";
 
 // ---------------------------------------------------------------------------
 // Type Sizes
@@ -12,7 +12,7 @@ $font_light    : "Agenda Light", $font_regular;
 $type-XS  : 12px;
 $type-S   : 14px;
 $type-M   : 16px;
-$type-L   : 18px;
+$type-L   : 20px;
 $type-XL  : 24px;
 $type-XXL : 36px;
 

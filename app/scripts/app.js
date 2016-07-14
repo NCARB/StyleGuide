@@ -71,6 +71,10 @@ function config($stateProvider, $urlRouterProvider) {
       url: '/navigation',
       templateUrl: 'views/navigation.html'
     })
+    .state('css.tables', {
+      url: '/tables',
+      templateUrl: 'views/tables.html'
+    })
     .state('content', {
       url: '/content',
       templateUrl: 'views/content.html'
@@ -110,3 +114,4 @@ function run($rootScope, $history, $state) {
   
   $history.push($state.current, $state.params);
 }
+

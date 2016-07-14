@@ -27,67 +27,61 @@
   @include lineHeight($type-XXL);
   letter-spacing: 0.05rem;
   padding: 0;
-  margin: 0 0 calculateRem(30px);
 }
 
 @mixin type-2 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: normal;
-  @include fontSize($type-XXL);
-  @include lineHeight($type-XXL);
+  font-weight: bold;
+  @include fontSize($type-XL);
+  @include lineHeight($type-XL);
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 calculateRem(30px);
 }
 
 @mixin type-3 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: 800;
-  @include fontSize($type-XL);
-  @include lineHeight($type-XL);
+  font-weight: bold;
+  @include fontSize($type-L);
+  @include lineHeight($type-L);
   letter-spacing: 0.05rem;
   padding: 0;
-  margin: 0 0 calculateRem(15px);
 }
 
 @mixin type-4 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: normal;
-  @include fontSize($type-XL);
-  @include lineHeight($type-XL);
+  font-weight: bold;
+  @include fontSize($type-M);
+  @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 calculateRem(10px);
 }
 
 @mixin type-5 {
   font-family: $font_regular;
-  font-style: normal;
+  font-style: italic;
   font-weight: normal;
-  @include fontSize($type-L);
-  @include lineHeight(35px);
+  @include fontSize($type-M);
+  @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 calculateRem(5px);
 }
 
 @mixin type-6 {
   font-family: $font_regular;
   font-style: normal;
   font-weight: bold;
-  @include fontSize($type-L);
-  @include lineHeight(35px);
+  @include fontSize($type-S);
+  @include lineHeight($type-S);
   letter-spacing: 0.008rem;
   padding: 0;
-  margin: 0 0 calculateRem(5px);
 }
 
 @mixin type-small {
   font-family: $font_regular;
-  @include fontSize($type-L);
+  @include fontSize($type-S);
   @include lineHeight(17px);
   margin: 0;
 }
