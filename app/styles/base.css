@@ -1204,7 +1204,7 @@ input[type="checkbox"] {
   .checkbox-group.checkbox-inline input[type="radio"] + label,
   .checkbox-group.radio-inline input[type="checkbox"] + label,
   .checkbox-group.radio-inline input[type="radio"] + label {
-    width: initial;
+    width: auto;
     padding-right: 2rem; }
 
 .radio-group input[type="radio"] + label::before {
