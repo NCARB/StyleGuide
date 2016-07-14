@@ -165,6 +165,8 @@ input[type="checkbox"] {
   @include clearfix();
   width: 100%;
   border: 0;
+  margin-left: 25px;
+  padding-right: 25px;
 
   input[type="checkbox"],
   input[type="radio"] {
@@ -178,6 +180,7 @@ input[type="checkbox"] {
 
     & + label {
       margin-right: 1.2rem;
+      width: 100%;
       &::before {
         @include fa-icon();
         color: $color-gray-4;
@@ -207,6 +210,15 @@ input[type="checkbox"] {
       opacity: 0.5;
     }
   }
+
+  &.checkbox-inline,
+  &.radio-inline {
+    input[type="checkbox"] + label,
+    input[type="radio"] + label {
+      width: initial;
+      padding-right: 2rem;
+    }
+  }
 }
 
 .radio-group {
@@ -214,6 +226,7 @@ input[type="checkbox"] {
     & + label::before {
       margin-right: 5px;
       content: $fa-var-circle-thin;
+      margin-left: -25px;
     }
     &:checked + label::before {
       content: $fa-var-check-circle;
@@ -224,19 +237,20 @@ input[type="checkbox"] {
 .checkbox-group {
   input[type="checkbox"] {
     & + label::before {
-      margin-right: 6px;
+      margin-right: 7px;
       content: $fa-var-square-o;
-      padding-right: 1.5px;
+      margin-left: -25px;
     }
     &:checked + label::before {
+      margin-right: 6px;
       content: $fa-var-check-square;
-      padding-right: 0;
-      top: -1px;
-      left: -1px;
-      position: relative;
+      font-size: 20px;
+      height: 21px;
     }
   }
 }
+
+
 
 legend {
   @include type-5();
