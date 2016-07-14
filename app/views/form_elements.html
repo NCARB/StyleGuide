@@ -375,6 +375,9 @@ value="Submit" class="search-submit">
     <label for="opt2">
     Option 2
     </label>
+    <input type="radio" id="opt3" name="radio-exp" value="option 3" />
+      <label for="opt3">
+        This is a really, really long radio button that should demonstrate the way labels should wrap on checkboxes. The second line of the label should align with the first letter of the label on line one, not with the edge of the checkbox itself.</label>
     </div>
   </div>
 
@@ -382,38 +385,100 @@ value="Submit" class="search-submit">
     <details>
       <summary class="small header">input[type="checkbox"]</summary>
       <pre hljs hljs-language="html">
-  <div class="checkbox-group">
-  <input type="checkbox" value="one"
+<div class="checkbox-group">
+    <input type="checkbox" value="one"
   id="checkbox_1" name="checkbox_1" />
-  <label for="checkbox_1">Unchecked</label>
-  <input type="checkbox" value="two"
-  id="checkbox_2" name="checkbox_2" checked="checked" />
-  <label for="checkbox_2">Checked</label>
-  <input type="checkbox" value="three"
-  id="checkbox_3" name="checkbox_3" disabled="disabled" />
-  <label for="checkbox_3">Disabled</label>
-  <input type="checkbox" value="three"
-  id="checkbox_3" name="checkbox_3"
-  disabled="disabled" checked="checked" />
-  <label for="checkbox_3">Checked &amp; Disabled</label>
-  </div>
+    <label for="checkbox_1">Unchecked</label>
+    <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked="checked" />
+    <label for="checkbox_2">Checked</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled" />
+    <label for="checkbox_3">Disabled</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" 
+    disabled="disabled" checked="checked" />
+    <label for="checkbox_3">Checked &amp; Disabled</label>
+</div>
       </pre>
     </details>
     <div class="checkbox-group">
+      <input type="checkbox" value="one"
+      id="checkbox_1" name="checkbox_1" />
+      <label for="checkbox_1">Unchecked</label>
+      <input type="checkbox" value="two"
+      id="checkbox_2" name="checkbox_2" checked="checked" />
+      <label for="checkbox_2">Checked</label>
+      <input type="checkbox" value="three"
+      id="checkbox_3" name="checkbox_3" disabled="disabled" />
+      <label for="checkbox_3">Disabled</label>
+      <input type="checkbox" value="three"
+      id="checkbox_3" name="checkbox_3"
+      disabled="disabled" checked="checked" />
+      <label for="checkbox_4">Checked &amp; Disabled</label>
+      <input type="checkbox" value="four"
+      id="checkbox_4" name="checkbox_1" />
+      <label for="checkbox_4">This is a really, really long checkbox that should demonstrate the way labels should wrap on checkboxes. The second line of the label should align with the first letter of the label on line one, not with the edge of the checkbox itself.</label>
+    </div>
+  </div>
+
+  <div class="system-element">
+    <details>
+      <summary class="small header">.checkbox-inline</summary>
+      <pre hljs hljs-language="html">
+<div class="checkbox-group checkbox-inline">
     <input type="checkbox" value="one"
-    id="checkbox_1" name="checkbox_1" />
+  id="checkbox_1" name="checkbox_1" />
     <label for="checkbox_1">Unchecked</label>
-    <input type="checkbox" value="two"
-    id="checkbox_2" name="checkbox_2" checked="checked" />
+    <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked="checked" />
     <label for="checkbox_2">Checked</label>
-    <input type="checkbox" value="three"
-    id="checkbox_3" name="checkbox_3" disabled="disabled" />
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled="disabled" />
     <label for="checkbox_3">Disabled</label>
-    <input type="checkbox" value="three"
-    id="checkbox_3" name="checkbox_3"
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" 
     disabled="disabled" checked="checked" />
     <label for="checkbox_3">Checked &amp; Disabled</label>
+</div>
+      </pre>
+    </details>
+    <div class="checkbox-group checkbox-inline">
+      <input type="checkbox" value="one"
+    id="checkbox_21" name="checkbox_21" />
+      <label for="checkbox_21">Unchecked</label>
+      <input type="checkbox" value="two" id="checkbox_22" name="checkbox_22" checked="checked" />
+      <label for="checkbox_22">Checked</label>
+      <input type="checkbox" value="three" id="checkbox_23" name="checkbox_23" disabled="disabled" />
+      <label for="checkbox_23">Disabled</label>
+      <input type="checkbox" value="three" id="checkbox_23" name="checkbox_23" 
+      disabled="disabled" checked="checked" />
+      <label for="checkbox_23">Checked &amp; Disabled</label>
     </div>
+
+  <div class="system-element">
+    <details>
+      <summary class="small header">.radio-inline</summary>
+      <pre hljs hljs-language="html">
+  <div class="radio-group radio-inline">
+  <input type="radio" id="opt1" name="radio-exp2"
+  value="option 1" checked="checked" />
+  <label for="opt1">
+  Option 1
+  </label>
+  <input type="radio" id="opt2" name="radio-exp2"
+  value="option 2" />
+  <label for="opt2">
+  Option 2
+  </label>
+  </div>
+      </pre>
+    </details>
+    <div class="radio-group radio-inline">
+    <input type="radio" id="opt21" name="radio-exp2"
+    value="option 1" checked="checked" />
+    <label for="opt21">
+    Option 1
+    </label>
+    <input type="radio" id="opt22" name="radio-exp2"
+    value="option 2" />
+    <label for="opt22">
+    Option 2
+    </label>
   </div>
 
 <h2>Alerts</h2>
