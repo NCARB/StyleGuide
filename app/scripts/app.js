@@ -30,12 +30,17 @@ angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'design
   .config(config)
   .run(run);
   
-config.$inject = ['$stateProvider', '$urlRouterProvider'];
-function config($stateProvider, $urlRouterProvider) {
+config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider'];
+function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+
+  $locationProvider.html5Mode(true).hashPrefix('!');
+  $httpProvider.defaults.useXDomain = true;
+  delete $httpProvider.defaults.headers.common['X-Requested-With'];
+
   $urlRouterProvider
-  .when('/css', '/css/layout')
-  .when('/bootstrap', '/bootstrap/css')
-  .otherwise('/');
+    .when('/css', '/css/layout')
+    .when('/bootstrap', '/bootstrap/css')
+    .otherwise('/');
 
   $stateProvider
     .state('introduction', {
