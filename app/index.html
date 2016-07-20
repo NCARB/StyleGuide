@@ -1,7 +1,12 @@
 <!doctype html>
+<!--[if gt IE 9]><!--><base href='/' /><!--<![endif]-->
 <!--[if lt IE 10]>
-<html ng-app="designSystem" class="no-js lt-ie10" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!-->
+  <html ng-app="designSystem" class="no-js lt-ie10" lang="en">
+  <script>
+    window.ie9 = true;
+    document.write("<base href='" + location.protocol + '//' + location.hostname+(location.port ? ':'+location.port: '') + "/' />");
+  </script>
+<![endif]-->
 <html ng-app="designSystem" class="no-js" lang="en"><!--<![endif]-->
 <head>
   <script>
