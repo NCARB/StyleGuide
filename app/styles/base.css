@@ -1148,7 +1148,8 @@ input[type="checkbox"] {
       width: 100%;
       position: relative;
       margin-right: 1.2rem;
-      padding-left: 1.7rem; }
+      padding-left: 1.7rem;
+      cursor: pointer; }
       .radio-group input[type="checkbox"] + label::before,
       .radio-group input[type="radio"] + label::before,
       .checkbox-group input[type="checkbox"] + label::before,

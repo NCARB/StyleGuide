@@ -182,6 +182,7 @@ input[type="checkbox"] {
       position: relative;
       margin-right: 1.2rem;
       padding-left: 1.7rem;
+      cursor: pointer;
       &::before {
         @include fa-icon();
         color: $color-gray-4;
