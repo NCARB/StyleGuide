@@ -1146,7 +1146,9 @@ input[type="checkbox"] {
     .checkbox-group input[type="radio"] + label {
       padding: 0.625rem 0;
       width: 100%;
-      position: relative; }
+      position: relative;
+      margin-right: 1.2rem;
+      padding-left: 1.7rem; }
       .radio-group input[type="checkbox"] + label::before,
       .radio-group input[type="radio"] + label::before,
       .checkbox-group input[type="checkbox"] + label::before,
@@ -1205,20 +1207,17 @@ input[type="checkbox"] {
   .checkbox-group.checkbox-inline input[type="radio"] + label,
   .checkbox-group.radio-inline input[type="checkbox"] + label,
   .checkbox-group.radio-inline input[type="radio"] + label {
-    width: auto;
-    padding-right: 2rem; }
+    width: auto; }
   .radio-group input[type="radio"] + label,
   .checkbox-group input[type="radio"] + label {
-    padding-left: 2rem; }
+    padding-left: 2rem;
+    margin-right: 1.5rem; }
   .radio-group input[type="radio"] + label::before,
   .checkbox-group input[type="radio"] + label::before {
     content: ""; }
   .radio-group input[type="radio"]:checked + label::before,
   .checkbox-group input[type="radio"]:checked + label::before {
     content: ""; }
-  .radio-group input[type="checkbox"] + label,
-  .checkbox-group input[type="checkbox"] + label {
-    padding-left: 1.7rem; }
   .radio-group input[type="checkbox"] + label::before,
   .checkbox-group input[type="checkbox"] + label::before {
     content: ""; }
