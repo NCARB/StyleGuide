@@ -1211,7 +1211,7 @@ input[type="checkbox"] {
   .radio-group input[type="radio"] + label,
   .checkbox-group input[type="radio"] + label {
     padding-left: 2rem;
-    margin-right: 1.5rem; }
+    margin-right: 2rem; }
   .radio-group input[type="radio"] + label::before,
   .checkbox-group input[type="radio"] + label::before {
     content: ""; }
