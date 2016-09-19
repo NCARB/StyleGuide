@@ -1123,9 +1123,7 @@ input[type="checkbox"] {
 .checkbox-group {
   clear: both;
   width: 100%;
-  border: 0;
-  margin-left: 25px;
-  padding-right: 25px; }
+  border: 0; }
   .radio-group::after,
   .checkbox-group::after {
     clear: both;
@@ -1146,8 +1144,9 @@ input[type="checkbox"] {
     .radio-group input[type="radio"] + label,
     .checkbox-group input[type="checkbox"] + label,
     .checkbox-group input[type="radio"] + label {
-      margin-right: 1.2rem;
-      width: 100%; }
+      padding: 0.625rem 0;
+      width: 100%;
+      position: relative; }
       .radio-group input[type="checkbox"] + label::before,
       .radio-group input[type="radio"] + label::before,
       .checkbox-group input[type="checkbox"] + label::before,
@@ -1160,7 +1159,10 @@ input[type="checkbox"] {
         -moz-osx-font-smoothing: grayscale;
         color: #999999;
         font-size: 21px;
-        vertical-align: middle; }
+        vertical-align: middle;
+        position: absolute;
+        left: 2px;
+        top: 7px; }
     .radio-group input[type="checkbox"]:checked, .radio-group input[type="checkbox"]:focus,
     .radio-group input[type="radio"]:checked,
     .radio-group input[type="radio"]:focus,
@@ -1205,23 +1207,26 @@ input[type="checkbox"] {
   .checkbox-group.radio-inline input[type="radio"] + label {
     width: auto;
     padding-right: 2rem; }
-
-.radio-group input[type="radio"] + label::before {
-  margin-right: 5px;
-  content: "";
-  margin-left: -25px; }
-.radio-group input[type="radio"]:checked + label::before {
-  content: ""; }
-
-.checkbox-group input[type="checkbox"] + label::before {
-  margin-right: 7px;
-  content: "";
-  margin-left: -25px; }
-.checkbox-group input[type="checkbox"]:checked + label::before {
-  margin-right: 6px;
-  content: "";
-  font-size: 20px;
-  height: 21px; }
+  .radio-group input[type="radio"] + label,
+  .checkbox-group input[type="radio"] + label {
+    padding-left: 2rem; }
+  .radio-group input[type="radio"] + label::before,
+  .checkbox-group input[type="radio"] + label::before {
+    content: ""; }
+  .radio-group input[type="radio"]:checked + label::before,
+  .checkbox-group input[type="radio"]:checked + label::before {
+    content: ""; }
+  .radio-group input[type="checkbox"] + label,
+  .checkbox-group input[type="checkbox"] + label {
+    padding-left: 1.7rem; }
+  .radio-group input[type="checkbox"] + label::before,
+  .checkbox-group input[type="checkbox"] + label::before {
+    content: ""; }
+  .radio-group input[type="checkbox"]:checked + label::before,
+  .checkbox-group input[type="checkbox"]:checked + label::before {
+    content: "";
+    font-size: 20px;
+    height: 21px; }
 
 legend {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
