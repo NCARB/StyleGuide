@@ -165,8 +165,6 @@ input[type="checkbox"] {
   @include clearfix();
   width: 100%;
   border: 0;
-  margin-left: 25px;
-  padding-right: 25px;
 
   input[type="checkbox"],
   input[type="radio"] {
@@ -179,13 +177,17 @@ input[type="checkbox"] {
     }
 
     & + label {
-      margin-right: 1.2rem;
+      padding: 0.625rem 0;
       width: 100%;
+      position: relative;
       &::before {
         @include fa-icon();
         color: $color-gray-4;
         font-size: 21px;
         vertical-align: middle;
+        position: absolute;
+        left: 2px;
+        top: 7px;
       }
     }
 
@@ -219,30 +221,27 @@ input[type="checkbox"] {
       padding-right: 2rem;
     }
   }
-}
 
-.radio-group {
-  input[type="radio"] {
+  & input[type="radio"] {
+    & + label {
+      padding-left: 2rem;
+    }
     & + label::before {
-      margin-right: 5px;
       content: $fa-var-circle-thin;
-      margin-left: -25px;
     }
     &:checked + label::before {
       content: $fa-var-check-circle;
     }
   }
-}
 
-.checkbox-group {
-  input[type="checkbox"] {
+  & input[type="checkbox"] {
+    & + label {
+      padding-left: 1.7rem;
+    }
     & + label::before {
-      margin-right: 7px;
       content: $fa-var-square-o;
-      margin-left: -25px;
     }
     &:checked + label::before {
-      margin-right: 6px;
       content: $fa-var-check-square;
       font-size: 20px;
       height: 21px;
