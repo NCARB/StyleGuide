@@ -225,10 +225,6 @@ input[type="checkbox"] {
   }
 
   & input[type="radio"] {
-    & + label {
-      padding-left: 2rem;
-      margin-right: 2rem;
-    }
     & + label::before {
       content: $fa-var-circle-thin;
     }
