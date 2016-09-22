@@ -180,6 +180,9 @@ input[type="checkbox"] {
       padding: 0.625rem 0;
       width: 100%;
       position: relative;
+      margin-right: 1.2rem;
+      padding-left: 1.7rem;
+      cursor: pointer;
       &::before {
         @include fa-icon();
         color: $color-gray-4;
@@ -218,14 +221,10 @@ input[type="checkbox"] {
     input[type="checkbox"] + label,
     input[type="radio"] + label {
       width: auto;
-      padding-right: 2rem;
     }
   }
 
   & input[type="radio"] {
-    & + label {
-      padding-left: 2rem;
-    }
     & + label::before {
       content: $fa-var-circle-thin;
     }
@@ -235,9 +234,6 @@ input[type="checkbox"] {
   }
 
   & input[type="checkbox"] {
-    & + label {
-      padding-left: 1.7rem;
-    }
     & + label::before {
       content: $fa-var-square-o;
     }
