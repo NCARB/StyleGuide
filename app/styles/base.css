@@ -8380,7 +8380,6 @@ h1.panel-title, h2.panel-title, h3.panel-title, h4.panel-title, h5.panel-title, 
   color: #00A4E3;
   position: absolute;
   width: 2em;
-  top: 0.15em;
   left: 3px; }
 
 .panel-open .panel-title > a:before,
