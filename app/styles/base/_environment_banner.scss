@@ -1,0 +1,18 @@
+@import "colors";
+
+.environment-banner {
+  width: 200px;
+  background: $color-secondary-green;
+  position: fixed;
+  top: 25px;
+  left: -auto;
+  right: -50px;
+  z-index: 1002;
+  text-align: center;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: #f0f0f0;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+}
