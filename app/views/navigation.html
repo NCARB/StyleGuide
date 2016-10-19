@@ -13,7 +13,6 @@
   </div>
 </div>
 
-<article>
   <h2>Navs</h2>
 
   <p>We've adapted Navs from Bootstrap. They have shared markup, starting with the base <code>.nav</code> class, as well as shared states. Swap modifier classes to switch between each style.</p>
@@ -72,19 +71,11 @@
 <span class="nt">&lt;/ul&gt;</span></code></pre></div>
 
 -->
-
-  <h3 id="nav-subpage">Subpage Navigation</h3>
-  <p>For navigation between pages in a section (eg. Roster's Group Search, People Search, and Group Mail), iuse <code>.nav-sub</code>. The example below would normally be floated right (see example at the top of this page).</p>
-  <div class="bs-example" data-example-id="simple-nav-choices">
-    <ul class="nav nav-sub" style="float: inherit;">
-      <li role="presentation" class="active"><a href="#">All</a></li>
-      <li role="presentation"><a href="#">Pending</a></li>
-      <li role="presentation"><a href="#">Completed</a></li>
-    </ul>
-  </div>
-  <br />
-  <details>
-      <summary>Show HTML</summary>
+<section>
+<h3>Navigation options</h3>
+<section class="margins">
+    <details>
+      <summary class="small header no-margin">.nav-sub</summary>
 <pre hljs hljs-language="html">
   <nav class="subpage">
     <ul class="nav nav-sub">
@@ -95,9 +86,26 @@
   </nav>
 </pre>
     </details>
+      <p>For navigation between pages in a section (eg. Roster's Group Search, People Search, and Group Mail), iuse <code>.nav-sub</code>. The example below would normally be floated right (see example at the top of this page).</p>
+  <div class="bs-example" data-example-id="simple-nav-choices">
+    <ul class="nav nav-sub" style="float: inherit;">
+      <li role="presentation" class="active"><a href="#">All</a></li>
+      <li role="presentation"><a href="#">Pending</a></li>
+      <li role="presentation"><a href="#">Completed</a></li>
+    </ul>
+  </div>
 
-  <h3 id="nav-choices">Choices</h3>
-  <p>Take that same HTML, but use <code>.nav-choices</code> instead:</p>
+    <details>
+      <summary class="small header">.nav-choices</summary>
+        <pre hljs hljs-language="html">
+<ul class="nav nav-choices">
+    <li role="presentation" class="active"><a href="#">All</a></li>
+    <li role="presentation"><a href="#">Pending</a></li>
+    <li role="presentation"><a href="#">Completed</a></li>
+</ul>
+</pre>
+    </details>
+  <p>Take that same HTML, but use <code>.nav-choices</code> instead.</p>
   <div class="bs-example" data-example-id="simple-nav-choices">
     <ul class="nav nav-choices">
       <li role="presentation" class="active"><a href="#">All</a></li>
@@ -105,10 +113,8 @@
       <li role="presentation"><a href="#">Completed</a></li>
     </ul>
   </div>
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav nav-choices"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span> <span class="na">class=</span><span class="s">"active"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Profile<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-  <span class="nt">&lt;li</span> <span class="na">role=</span><span class="s">"presentation"</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Messages<span class="nt">&lt;/a&gt;&lt;/li&gt;</span></code></pre></div>
+</section>
+</section>
 
 <!--
 
