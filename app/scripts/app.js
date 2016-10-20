@@ -80,6 +80,10 @@ function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProv
       url: '/tables',
       templateUrl: 'views/tables.html'
     })
+    .state('css.badges', {
+      url: '/badges',
+      templateUrl: 'views/labels-badges.html'
+    })
     .state('content', {
       url: '/content',
       templateUrl: 'views/content.html'
