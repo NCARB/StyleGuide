@@ -7,12 +7,12 @@
   padding: .15em .3em .2em;
   font-size: 75%;
   font-weight: bold;
+  text-transform: uppercase;
   line-height: 1;
   color: $label-color;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
   border: 2px solid transparent;
   border-width: 2px 3px;
   // [converter] extracted a& to a.label
@@ -58,7 +58,7 @@
 // Contextual variations (linked labels get darker on :hover)
 
 .label-default {
-  @include label-variant-custom($btn-default-color, $btn-default-bg);
+  @include label-variant-custom(white, $color-secondary-orange);
 }
 
 .label-primary {

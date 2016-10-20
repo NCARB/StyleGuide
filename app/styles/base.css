@@ -6689,12 +6689,12 @@ input.input-lg:not([type]),
   padding: .15em .3em .2em;
   font-size: 75%;
   font-weight: bold;
+  text-transform: uppercase;
   line-height: 1;
   color: #fff;
   text-align: center;
   white-space: nowrap;
   vertical-align: baseline;
-  border-radius: .25em;
   border: 2px solid transparent;
   border-width: 2px 3px; }
   .label:empty {
@@ -6704,13 +6704,13 @@ input.input-lg:not([type]),
     top: -1px; }
 
 .label-default {
-  color: #444444;
-  background-color: #DBD9D1;
-  border-color: #DBD9D1; }
+  color: white;
+  background-color: #f6905d;
+  border-color: #f6905d; }
   .label-default[href]:hover, .label-default[href]:focus {
-    color: #444444;
-    background-color: #c5c1b4;
-    border-color: #c5c1b4;
+    color: white;
+    background-color: #f36f2d;
+    border-color: #f36f2d;
     text-decoration: none; }
 
 .label-primary {
@@ -9600,10 +9600,10 @@ input[datepicker-popup], input[uib-datepicker-popup] {
   background-color: #e3e3e3; }
 
 .secondary-green {
-  color: #00af91; }
+  color: #00b194; }
 
 .secondary-green-bg {
-  background-color: #00af91; }
+  background-color: #00b194; }
 
 .secondary-green-80 {
   color: #33bfa7; }
