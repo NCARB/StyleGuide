@@ -210,9 +210,9 @@ input[type="checkbox"] {
     &:checked + label::before {
       color: $color-blue;
     }
-    &:disabled + label, 
+    &:disabled + label,
     &:disabled + label::before {
-      color: $color-gray-3 !important;
+      color: $color-gray-4 !important;
       opacity: 0.5;
     }
   }
