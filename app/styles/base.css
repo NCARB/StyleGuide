@@ -1194,9 +1194,12 @@ input[type="checkbox"] {
     .checkbox-group input[type="radio"]:focus:active + label::before,
     .checkbox-group input[type="radio"]:checked + label::before {
       color: #00A4E3; }
-    .radio-group input[type="checkbox"]:disabled + label::before,
+    .radio-group input[type="checkbox"]:disabled + label, .radio-group input[type="checkbox"]:disabled + label::before,
+    .radio-group input[type="radio"]:disabled + label,
     .radio-group input[type="radio"]:disabled + label::before,
+    .checkbox-group input[type="checkbox"]:disabled + label,
     .checkbox-group input[type="checkbox"]:disabled + label::before,
+    .checkbox-group input[type="radio"]:disabled + label,
     .checkbox-group input[type="radio"]:disabled + label::before {
       color: #CCCCCC !important;
       opacity: 0.5; }
