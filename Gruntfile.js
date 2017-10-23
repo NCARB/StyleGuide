@@ -184,7 +184,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-        loadPath: ['bower_components', '<%= yeoman.app %>/styles/base']
+        includePaths: ['bower_components', '<%= yeoman.app %>/styles/base']
       },
       dist: {
         options: {
@@ -234,7 +234,7 @@ module.exports = function (grunt) {
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           //'<%= yeoman.dist %>/styles/{,*/}*.min.css',
           '<%= yeoman.dist %>/styles/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'        
+          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
       }
     },
@@ -456,6 +456,6 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-  
+
   grunt.registerTask('heroku', ['build']);
 };
