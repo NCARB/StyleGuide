@@ -19,6 +19,7 @@ section {
 @media (min-width: 768px) {
   section {
     margin: 0px 0 0 200px; } }
+
 .intro-text {
   min-width: 300px; }
 
@@ -122,6 +123,7 @@ ul.figure li a {
 
 .flex-container.t-demo {
   padding-top: .5rem; }
+
 .flex-container .t-demo {
   width: 100%;
   padding: .8rem 1rem 0;
@@ -328,6 +330,7 @@ ul.figure li a {
   font-size: 3rem;
   line-height: 76px;
   line-height: 4.75rem; }
+
 .fonts .t-arial-bold {
   font-family: "Agenda Light", Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -393,8 +396,10 @@ ul.figure li a {
 
 .form-fields .text-input {
   max-width: 500px; }
+
 .form-fields h2 {
   padding-top: 4rem; }
+
 .form-fields .focus {
   outline: none;
   border: 1px solid #ABEAFF;
