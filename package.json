@@ -44,8 +44,7 @@
     "node": ">=6.11.4"
   },
   "scripts": {
-    "test": "grunt test",
-    "postinstall": "bower install"
+    "test": "grunt test"
   },
   "keywords": [
     "ncarb"
