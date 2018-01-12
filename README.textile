@@ -44,3 +44,9 @@ h3. Directory structure
 * **package.json**: Manifest of Node modules.
 * **config.rb**: To configure Compass
 * **bower.json**: Manifest of Bower packages
+
+h3. Running
+
+* npm install
+* bower install
+* grunt serve
