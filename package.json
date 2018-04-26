@@ -45,7 +45,8 @@
     "node": ">=6.11.4"
   },
   "scripts": {
-    "test": "grunt test"
+    "test": "grunt test",
+    "postinstall": "bower install && ./heroku-pr-postinstall.sh"
   },
   "keywords": [
     "ncarb"
