@@ -118,7 +118,7 @@ module.exports = function (grunt) {
       options: {
         jshintrc: '.jshintrc',
         reporter: require('jshint-stylish'),
-        reporterOutput: "",
+        reporterOutput: '',
         ignores: ['<%= yeoman.app %>/scripts/renewals.js']
       },
       all: {
