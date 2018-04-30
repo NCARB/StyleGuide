@@ -20,7 +20,7 @@ dist: trusty
 deploy:
   provider: heroku
   api_key:
-    secure: kXBRIA278980aastG/BNW+hhGJtTp/LtMI2eZA794EzJ3qiiBBRekycb4gI5h+24dnkkF631u4NlBI4uRxPuv43F+sObnX5QJneeu6f1dQ2JWiUwOteSj7XfmkNUUSJFpPFN76HfcD3bCyXGyTqzQKEO/fBuUOOK+q0Wa/CgtiM=
+    secure: qWhPJDin0bYbgnO+s7IZGFp8IKGJxrlnHVeUmabGB4LB3bNfWjINRMWoVb10uELBjJbruQ3aMdDTLbR++Id/YXGeU8DYijp9lyRCITF7sBMks3o5HNGPo+gbvEUbQKY+FbkEhXvyb6rvngqmDruLDi1L+oGPKq42e2lOQRmKtJc=
   app:
     develop: ncarb-styleguide
     travis: ncarb-styleguide-travis
