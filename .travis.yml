@@ -1,0 +1,27 @@
+language: node_js
+node_js:
+- '6'
+before_script:
+- sudo chown root /opt/google/chrome/chrome-sandbox
+- sudo chmod 4755 /opt/google/chrome/chrome-sandbox
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+- npm install -g grunt-cli bower
+- chmod +x ./travis/build.sh
+cache:
+  directories:
+  - node_modules
+  - bower_components
+script: "./travis/build.sh"
+notifications:
+  slack:
+    secure: hn8KZIEI2y3r88QGLOnt+KKfpL2yHlF7rVtmZUqMHq2qFw8R0+AoAZ6Ie5xt51DIxQ8AJXjp0AQTA7kPv53Yhmwg7624XNrAfQnymMzVvwisz0F61K6r27ESB6bmSwo+HdjPUi+cyDwE0pZAxVtqAbjPI/vXCmYXiPaqyUJ0Niq8e+iMjzmWkscfkYKmMWZDt3t+5CNQiK4b7+j61zDKRZ+sXyspVA2suw8cxJ8f6bmnR2ipBddqlcqr8aETd3uocvFGUmm+Xh4sg+B/rIJ8zRZesp1i8rYpriMBTAXXBpjmnfRNY6UaoZK3zgbbvz3RafecMxijx5nbS0Hv2H0fGy0EbKgBjbkZM4j3zWyubuLIZagNe3n2AIhC4hBkkvz0kJseTcUJB5Dp2JPlWcqshBNYH/mDr4inDLKPR+qEI/KltSqXB3CAlciAi6BsCFzxEGIyqQzFh9X4jmI3eaMMlZIQoFsp7sedObYS9+PBhKxUroIJEvV3HkDi+pYZJjgUc2sqNE8ensfpyl7ztRA394gomDQa5Qks/pnY7+Nz+b3BKLhTxydOGIRRqhkUvZywAv4LSRWEZVheU7Sxz+53WGl/SXLYMzg6mL7RzzeOywcj4PKrQUlwABtfOzjlMPiEyfbOVcqy0RS30K3/K+oGNHK5I4H94h/ZFcWDsSSmLGU=
+dist: trusty
+deploy:
+  provider: heroku
+  api_key:
+    secure: 2H5prdp77d3dEESxwRLsHMAE8934DzpSIPvb5vLBe9uZHVgo/GrbTvEkSL52zWdIJXUu3WVbXcnXeHerJ6hVu8gNv0WWTbG0jemqIpW3dYi8sa3k/WBtGb5BTc5iY8nBE+Po+U/oW7VTFZNTx/lcyNuetIppc6+mpJTGaYQSEA1ED0EXaxZ6QtLG03vIdG6IMkQCFdHxW8NEOgTxAWu3Sfn91HuvFqldQss0U3l2Adrk04G7Og+oi1brI/5aR+tXkBFQO6PSWWZNMyxdaJSJma0vF1SdgaWGaNZuJG5zf8jxChVJ6yIziUHVeJ9GoWRl7t5x7/QmsqHd7gAl7y/SHdFYSw/12uUyqRxXsvTMAMEXlWGJp+ltuAVxOkU6rM371oEUJUj0cbLJmVLj9k53JGJi0+2o2qC+TIX6V2Zo5ccj82GuLpzMP8s2olZcEl9yn8ASew7vmhde8WlOIpsKCykpJJFsa+zzrMQVOSNF4z2qmVnlzkwf/tMFkugV+5PqJ9/dWxgxJbP66wHrf5FFrcLzWryXicn/vJToPAgymkjKNg4r2AAZb1qSOjE0wUwL5af58GRUI2fHFriwpNVhSGdX+Jula9fCTUr1tDnYwr5j58v/qCGOhvsqtvEEzWnnrlnFzy17f8GFqiB3OP+jYY0DJyySo5JUTwAN24jzxrE=
+  app:
+    develop: ncarb-styleguide
+    travis: ncarb-styleguide-travis
+  skip_cleanup: true    

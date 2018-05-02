@@ -1,13 +1,12 @@
 // https://github.com/angular-ui/ui-router/issues/92#issuecomment-57345190
 (function (window, angular) {
     'use strict';
-    
+
     angular.module('designSystem')
-    .service("$history", ['$state', '$rootScope', '$window', 
-    function($state, $rootScope, $window) {
+    .service('$history', ['$state', function($state) {
 
       var history = [];
-    
+
       angular.extend(this, {
         push: function(state, params) {
           history.push({ state: state, params: params });
@@ -21,7 +20,7 @@
           //    shell out to $window.history when possible
           // (2) Attempt to figure out some algorthim for reversing that,
           //     so you can also go forward
-    
+
           var prev = this.previous(step || -1);
           return $state.go(prev.state, prev.params);
         },

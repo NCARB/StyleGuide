@@ -10,12 +10,12 @@ angular.module('designSystem.controllers', ['jQuery'])
   }]);
 
 angular.module('designSystem.directives', []);
-  
+
 
 angular.module('designSystem', ['ui.router', 'designSystem.controllers', 'designSystem.directives', 'hljs'])
   .config(config)
   .run(run);
-  
+
 config.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider', '$httpProvider'];
 function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
 
@@ -75,7 +75,7 @@ function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProv
       templateUrl: 'views/content.html'
     })
     .state('bootstrap', {
-      url: "/bootstrap",
+      url: '/bootstrap',
       abstract: true,
       template: '<ui-view/>'
     })
@@ -95,18 +95,17 @@ function config($stateProvider, $urlRouterProvider, $locationProvider, $httpProv
     });
 }
 
-run.$inject = ['$rootScope', '$history', '$state'];
-function run($rootScope, $history, $state) {
-  $rootScope.$on("$stateChangeSuccess", function(event, to, toParams, from, fromParams) {
+run.$inject = ['$rootScope', '$history', '$state', 'jQuery'];
+function run($rootScope, $history, $state, $) {
+  $rootScope.$on('$stateChangeSuccess', function(event, to, toParams, from, fromParams) {
     if (!from.abstract) {
       $history.push(from, fromParams);
     }
     // close hamburger menu if open
-    if($("#ncarbNavmenu").hasClass('in')) {
+    if($('#ncarbNavmenu').hasClass('in')) {
       $('[data-toggle=offcanvas]').trigger('click.bs.offcanvas.data-api');
     }
   });
-  
+
   $history.push($state.current, $state.params);
 }
-
