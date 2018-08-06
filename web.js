@@ -1,9 +1,10 @@
 var compression = require('compression');
 var express = require('express');
-var path = require('path')
+var path = require('path');
 var logger = require('morgan');
 var app = express();
 var modRewrite = require('connect-modrewrite');
+var port = process.env.PORT || 5000;
 
 app.use(logger('dev'));
 app.use(compression());
@@ -14,4 +15,6 @@ app.use(function(request, response, next) {
    response.sendfile(__dirname + '/dist/index.html');
 });
 
-app.listen(process.env.PORT || 5000);
+console.log('Started Server on port:', port );
+
+app.listen(port);
