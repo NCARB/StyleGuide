@@ -1,0 +1,11 @@
+.gitignore
+.git
+Dockerfile
+.DS_Store
+README.textile
+README.MD
+.tmp
+/tmp/*
+
+/node_modules
+/bower_components
