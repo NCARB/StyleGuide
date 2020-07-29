@@ -1,0 +1,158 @@
+<h1>Form Elements</h1> <h2>Buttons</h2> <p> All buttons are text and/or an icon enclosed in a rectangular shape. NCARB blue is used as the primary call-to-action button and secondary buttons can be light yellow, dark grey, green or beige. </p> <div class="system-element"> <details> <summary class="small header">.btn</summary> <div class="flex-container flex-sm-gutters"> <div class="flex-item flex-full flex-md-fit"> <pre hljs hljs-language="html">
+<button class="btn">
+Button
+</button>
+<a href="#form_elements" class="btn">Link button</a>
+<input class="btn" value="Input button">
+<input type="submit" class="btn btn-block" value="Load More">
+        </pre> </div> <div class="flex-item flex-full flex-md-1of3"> <p>Usage:</p> <p> The <code>.btn</code> class will style a default button. </p> <p> Adding the <code>.btn-block</code> class to a <code>.btn</code> will make the button a btn-block element with 100% width. </p> </div> </div> </details> <div class="button-examples"> <button class="btn">Button</button> <a href="#form_elements" class="btn">Link button</a> <input type="button" class="btn" value="Input button"> <input type="submit" class="btn btn-block" value="Load More"> </div> </div> <div class="system-element"> <details> <summary class="small header">.btn .btn-block</summary> <div class="flex-container flex-sm-gutters"> <div class="flex-item flex-full flex-md-fit"> <pre hljs hljs-language="html">
+  <div class="flex-container flex-gutters">
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block">Block</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-plus">Block w/Plus</button>
+    </div>
+    <div class="flex-item flex-1of3">
+      <button class="btn btn-block btn-continue">Block w/Continue</button>
+    </div>
+  </div>
+        </pre> </div> <div class="flex-item flex-full flex-md-1of3"> <div class="usage"> <p>Usage:</p> <p> The <code>.btn-block</code> is from bootstrap and it works with our <code>btn-plus</code> and <code>btn-continue</code> classes. </p> </div> </div> </div> </details> <div class="flex-container flex-gutters"> <div class="flex-item flex-1of3"> <button class="btn btn-block">Block</button> </div> <div class="flex-item flex-1of3"> <button class="btn btn-block btn-plus">Block w/Plus</button> </div> <div class="flex-item flex-1of3"> <button class="btn btn-block btn-continue">Block w/Continue</button> </div> </div> </div> <div class="system-element"> <details> <summary class="small header">.btn .btn-primary</summary> <div class="flex-container flex-sm-gutters"> <div class="flex-item flex-full flex-md-fit"> <pre hljs hljs-language="html">
+<button class="btn btn-primary">
+Button
+</button>
+<a href="#form_elements" class="btn btn-primary btn-continue">
+Link button
+</a>
+        </pre> </div> <div class="flex-item flex-full flex-md-1of3"> <p>Usage:</p> <p> The <code>.btn-primary</code> class will create a primary button. A primary button should be reserved for the main call to action for an entire page regardless of whether the button is found within a form, for selecting an item from a collection, applying a filter, or some other action. </p> <p> Adding the <code>.continue</code> class to any <code>.btn</code> adds a right facing arrow to the button. It should be used when selecting the button would continue to the next step of a process. </p> </div> </div> </details> <div class="button-examples"> <button class="btn btn-primary">Button Title</button> <a href="#form_elements" class="btn btn-primary btn-continue">Link button</a> </div> </div> <div class="system-element"> <details> <summary class="small header">.btn .btn-secondary</summary> <div class="flex-container flex-sm-gutters"> <div class="flex-item flex-full flex-md-fit"> <pre hljs hljs-language="html">
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-secondary btn-plus">Secondary w/Plus</button>
+        </pre> </div> <div class="flex-item flex-full flex-md-1of3"> <div class="usage"> <p>Usage:</p> <p> The <code>.btn-secondary</code> class will apply the secondary button styles and allow the secondary color palette. The default color is <code>$color-gray</code>. </p> </div> </div> </div> </details> <div class="button-examples"> <button class="btn btn-secondary">Secondary</button> <button class="btn btn-secondary btn-plus">Secondary w/Plus</button> </div> </div> <div class="system-element"> <details> <summary class="small header">.btn .btn-success, .btn .btn-warning, .btn .btn-info, .btn .btn-danger</summary> <div class="flex-container flex-sm-gutters"> <div class="flex-item flex-full flex-md-fit"> <pre hljs hljs-language="html">
+    <button class="btn btn-warning">Warning</button>
+    <a href="#form_elements" class="btn btn-success">Success</a>
+    <a href="#form_elements" class="btn btn-info">Info</a>
+    <a href="#form_elements" class="btn btn-danger">Danger</a>
+        </pre> </div> <div class="flex-item flex-full flex-md-1of3"> <div class="usage"> <p>Usage:</p> <p> Bootstrap color contexts. </p> </div> </div> </div> </details> <div class="button-examples"> <button class="btn btn-warning">Warning</button> <a href="#form_elements" class="btn btn-success">Success</a> <a href="#form_elements" class="btn btn-info">Info</a> <a href="#form_elements" class="btn btn-danger">Danger</a> </div> </div> <div class="form-fields"> <h2>Labels</h2> <div class="system-element first"> <details> <summary class="small header">label</summary> <pre hljs hljs-language="html">
+    <label>Agenda Light Bold All Caps, 14px</label>
+      </pre> </details> <label>Agenda Light Bold All Caps, 14px</label> </div> <h2>Input Fields</h2> <div class="system-element first l-text-input"> <details> <summary class="small header">input[type="text"]</summary> <pre hljs hljs-language="html">
+<label for="card_number">Card Number</label>
+<input type="text" id="card_number" name="card_number" value="123456789">
+      </pre> </details> <label for="card_number">Card Number</label> <input type="text" id="card_number" name="card_number" value="123456789"> </div> <div class="system-element l-text-input"> <details> <summary class="small header">input[type="date"]</summary> <pre hljs hljs-language="html">
+<label for="start_date">Start Date</label>
+<input type="date" id="start_date" name="start_date" value="">
+      </pre> </details> <label for="start_date">Start Date</label> <input type="date" id="start_date" name="start_date" value=""> </div> <h2>Search Field</h2> <div class="system-element first l-text-input"> <details> <summary class="small header">input[type="search"]</summary> <pre hljs hljs-language="html">
+<div class="search-box" role="search">
+<fieldset>
+<input name="SearchBox" type="search" placeholder="SEARCH" autocomplete="off" class="search-box">
+<input type="submit" name="SearchButton" value="Submit" class="search-submit">
+</fieldset>
+</div>
+      </pre> </details> <div class="search-box" role="search"> <fieldset> <input name="headercontent_1$SearchBox" type="search" placeholder="SEARCH" autocomplete="off" class="search-box"> <input type="submit" name="headercontent_1$SearchButton" value="Submit" class="search-submit"> </fieldset> </div> </div> <h2>Select Menus</h2> <div class="system-element first"> <details> <summary class="small header">select</summary> <pre hljs hljs-language="html">
+<div class="form-group l-state">
+<div class="state">
+<label for="state">State</label>
+<select class="form-control" name="state">
+  <option selected value="">Please select</option>
+  <optgroup label="UNITED STATES">
+    <option value="AL">Alabama</option>
+    <option value="AK">Alaska</option>
+    <option value="AZ">Arizona</option>
+    <option value="AR">Arkansas</option>
+    <option value="CA">California</option>
+    <option value="..">...</option>
+  </optgroup>
+  <optgroup label="CANADA">
+    <option value="AB">Alberta</option>
+    <option value="BC">British Columbia</option>
+    <option value="MB">Manitoba</option>
+    <option value="NB">New Brunswick</option>
+    <option value="NF">Newfoundland and Labrador</option>
+    <option value="NT">Northwest Territories</option>
+    <option value="NS">Nova Scotia</option>
+    <option value="NU">Nunavut</option>
+    <option value="ON">Ontario</option>
+    <option value="PE">Prince Edward Island</option>
+    <option value="PQ">Quebec</option>
+    <option value="SK">Saskatchewan</option>
+    <option value="YT">Yukon Territory</option>
+  </optgroup>
+</select>
+</div>
+</div>
+      </pre> </details> <div class="form-group l-state"> <div class="state"> <label for="state">State</label> <select class="form-control" id="state" name="state"> <option selected value="">Please select</option> <optgroup label="UNITED STATES"> <option value="AL">Alabama</option> <option value="AK">Alaska</option> <option value="AZ">Arizona</option> <option value="AR">Arkansas</option> <option value="CA">California</option> <option value="CO">Colorado</option> <option value="CT">Connecticut</option> <option value="DE">Delaware</option> <option value="DC">District of Columbia</option> <option value="FL">Florida</option> <option value="GA">Georgia</option> <option value="HI">Hawaii</option> <option value="ID">Idaho</option> <option value="IL">Illinois</option> <option value="IN">Indiana</option> <option value="IA">Iowa</option> <option value="KS">Kansas</option> <option value="KY">Kentucky</option> <option value="LA">Louisiana</option> <option value="ME">Maine</option> <option value="MD">Maryland</option> <option value="MA">Massachusetts</option> <option value="MI">Michigan</option> <option value="MN">Minnesota</option> <option value="MS">Mississippi</option> <option value="MO">Missouri</option> <option value="MT">Montana</option> <option value="NE">Nebraska</option> <option value="NV">Nevada</option> <option value="NH">New Hampshire</option> <option value="NJ">New Jersey</option> <option value="NM">New Mexico</option> <option value="NY">New York</option> <option value="NC">North Carolina</option> <option value="ND">North Dakota</option> <option value="OH">Ohio</option> <option value="OK">Oklahoma</option> <option value="OR">Oregon</option> <option value="PA">Pennsylvania</option> <option value="RI">Rhode Island</option> <option value="SC">South Carolina</option> <option value="SD">South Dakota</option> <option value="TN">Tennessee</option> <option value="TX">Texas</option> <option value="UT">Utah</option> <option value="VT">Vermont</option> <option value="VA">Virginia</option> <option value="WA">Washington</option> <option value="WV">West Virginia</option> <option value="WI">Wisconsin</option> <option value="WY">Wyoming</option> </optgroup> <optgroup label="CANADA"> <option value="AB">Alberta</option> <option value="BC">British Columbia</option> <option value="MB">Manitoba</option> <option value="NB">New Brunswick</option> <option value="NF">Newfoundland and Labrador</option> <option value="NT">Northwest Territories</option> <option value="NS">Nova Scotia</option> <option value="NU">Nunavut</option> <option value="ON">Ontario</option> <option value="PE">Prince Edward Island</option> <option value="PQ">Quebec</option> <option value="SK">Saskatchewan</option> <option value="YT">Yukon Territory</option> </optgroup> </select> </div> </div> </div> <h2>Radio Buttons &amp; Checkboxes</h2> <div class="system-element first"> <details> <summary class="small header">input[type="radio"]</summary> <pre hljs hljs-language="html">
+  <div class="radio-group">
+  <input type="radio" id="opt1" name="radio-exp" value="option 1" checked>
+  <label for="opt1">
+  Option 1
+  </label>
+  <input type="radio" id="opt2" name="radio-exp" value="option 2">
+  <label for="opt2">
+  Option 2
+  </label>
+  </div>
+      </pre> </details> <div class="radio-group"> <input type="radio" id="opt1" name="radio-exp" value="option 1" checked> <label for="opt1"> Option 1 </label> <input type="radio" id="opt2" name="radio-exp" value="option 2"> <label for="opt2"> Option 2 </label> <input type="radio" id="opt3" name="radio-exp" value="option 3"> <label for="opt3"> This is a really, really long radio button that should demonstrate the way labels should wrap on checkboxes. The second line of the label should align with the first letter of the label on line one, not with the edge of the checkbox itself.</label> </div> </div> <div class="system-element"> <details> <summary class="small header">input[type="checkbox"]</summary> <pre hljs hljs-language="html">
+<div class="checkbox-group">
+    <input type="checkbox" value="one" id="checkbox_1" name="checkbox_1">
+    <label for="checkbox_1">Unchecked</label>
+    <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked>
+    <label for="checkbox_2">Checked</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled>
+    <label for="checkbox_3">Disabled</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled checked>
+    <label for="checkbox_3">Checked &amp; Disabled</label>
+</div>
+      </pre> </details> <div class="checkbox-group"> <input type="checkbox" value="one" id="checkbox_1" name="checkbox_1"> <label for="checkbox_1">Unchecked</label> <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked> <label for="checkbox_2">Checked</label> <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled> <label for="checkbox_3">Disabled</label> <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled checked> <label for="checkbox_4">Checked &amp; Disabled</label> <input type="checkbox" value="four" id="checkbox_4" name="checkbox_1"> <label for="checkbox_4">This is a really, really long checkbox that should demonstrate the way labels should wrap on checkboxes. The second line of the label should align with the first letter of the label on line one, not with the edge of the checkbox itself.</label> </div> </div> <div class="system-element"> <details> <summary class="small header">.checkbox-inline</summary> <pre hljs hljs-language="html">
+<div class="checkbox-group checkbox-inline">
+    <input type="checkbox" value="one" id="checkbox_1" name="checkbox_1">
+    <label for="checkbox_1">Unchecked</label>
+    <input type="checkbox" value="two" id="checkbox_2" name="checkbox_2" checked>
+    <label for="checkbox_2">Checked</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled>
+    <label for="checkbox_3">Disabled</label>
+    <input type="checkbox" value="three" id="checkbox_3" name="checkbox_3" disabled checked>
+    <label for="checkbox_3">Checked &amp; Disabled</label>
+</div>
+      </pre> </details> <div class="checkbox-group checkbox-inline"> <input type="checkbox" value="one" id="checkbox_21" name="checkbox_21"> <label for="checkbox_21">Unchecked</label> <input type="checkbox" value="two" id="checkbox_22" name="checkbox_22" checked> <label for="checkbox_22">Checked</label> <input type="checkbox" value="three" id="checkbox_23" name="checkbox_23" disabled> <label for="checkbox_23">Disabled</label> <input type="checkbox" value="three" id="checkbox_23" name="checkbox_23" disabled checked> <label for="checkbox_23">Checked &amp; Disabled</label> </div> <div class="system-element"> <details> <summary class="small header">.radio-inline</summary> <pre hljs hljs-language="html">
+  <div class="radio-group radio-inline">
+  <input type="radio" id="opt1" name="radio-exp2" value="option 1" checked>
+  <label for="opt1">
+  Option 1
+  </label>
+  <input type="radio" id="opt2" name="radio-exp2" value="option 2">
+  <label for="opt2">
+  Option 2
+  </label>
+  </div>
+      </pre> </details> <div class="radio-group radio-inline"> <input type="radio" id="opt21" name="radio-exp2" value="option 1" checked> <label for="opt21"> Option 1 </label> <input type="radio" id="opt22" name="radio-exp2" value="option 2"> <label for="opt22"> Option 2 </label> </div> <h2>Alerts</h2> <div class="system-element first"> <details> <summary class="small header">.alert.alert-success.alert-icon</summary> <pre hljs hljs-language="html">
+<div class="alert alert-success alert-icon" role="alert">
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Success header
+    </h4>
+    <p>This is the success message body <a href="#">with link</a>.</p>
+  </div>
+</pre></details></div>   <div class="alert alert-success alert-icon" role="alert"> <button class="close" data-dismiss="alert" aria-hidden="true"></button> <h4> Success header </h4> <p>This is the success message body <a href="#">with link</a>.</p> </div> </div> <div class="system-element"> <details> <summary class="small header">.alert.alert-danger.alert-icon</summary> <pre hljs hljs-language="html">
+  <div class="alert alert-danger alert-icon" role="alert">
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Danger header
+    </h4>
+    <p>This is the danger message body <a href="#">with link</a>.</p>
+  </div>
+    </pre> </details> <div class="alert alert-danger alert-icon" role="alert"> <button class="close" data-dismiss="alert" aria-hidden="true"></button> <h4> Danger header </h4> <p>This is the danger message body <a href="#">with link</a>.</p> </div> </div> <div class="system-element"> <details> <summary class="small header">.alert.alert-warning.alert-icon</summary> <pre hljs hljs-language="html">
+  <div class="alert alert-warning alert-icon" role="alert">
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Warning header
+    </h4>
+    <p>This is the warning message body <a href="#">with link</a>.</p>
+  </div>
+    </pre> </details> <div class="alert alert-warning alert-icon" role="alert"> <button class="close" data-dismiss="alert" aria-hidden="true"></button> <h4> Warning header </h4> <p>This is the warning message body <a href="#">with link</a>.</p> </div> </div> <div class="system-element"> <details> <summary class="small header">.alert.alert-info.alert-icon</summary> <pre hljs hljs-language="html">
+  <div class="alert alert-info alert-icon" role="alert">
+    <button class="close" data-dismiss="alert" aria-hidden="true"></button>
+    <h4>
+        Info header
+    </h4>
+    <p>This is the info message body <a href="#">with link</a>.</p>
+  </div>
+    </pre> </details> <div class="alert alert-info alert-icon" role="alert"> <button class="close" data-dismiss="alert" aria-hidden="true"></button> <h4> Info header </h4> <p>This is the info message body <a href="#">with link</a>.</p> </div> </div> </div></div>

@@ -1,0 +1,18 @@
+<h1>Pills, Labels, and Badges</h1> <section> <h2 id="labels">Labels</h2> <h3>Example</h3> <div class="bs-example margins" data-example-id="labels-in-headings"> <h1>Example heading <span class="label label-default">New</span></h1> <h2>Example heading <span class="label label-default">New</span></h2> <h3>Example heading <span class="label label-default">New</span></h3> <h4>Example heading <span class="label label-default">New</span></h4> <h5>Example heading <span class="label label-default">New</span></h5> <h6>Example heading <span class="label label-default">New</span></h6> </div> <div class="system-element"> <details> <summary class="small header">Code</summary> <pre hljs hljs-language="html">
+<h3>Example heading <span class="label label-default">New</span></h3></pre> </details> <h3>Available variations</h3> <p>Add any of the below mentioned modifier classes to change the appearance of a label.</p> <div class="bs-example" data-example-id="label-variants"> <span class="label label-default">Default</span> <span class="label label-primary">Primary</span> <span class="label label-success">Success</span> <span class="label label-info">Info</span> <span class="label label-warning">Warning</span> <span class="label label-danger">Danger</span> </div> <details> <summary class="small header">Code</summary> <pre hljs hljs-language="html">
+<span class="label label-default">Default</span>
+<span class="label label-primary">Primary</span>
+<span class="label label-success">Success</span>
+<span class="label label-info">Info</span>
+<span class="label label-warning">Warning</span>
+<span class="label label-danger">Danger</span></pre> </details> </div></section> <section> <h2 id="badges">Badges</h2> <p>Easily highlight new or unread items by adding a <code>&lt;span class="badge"&gt;</code> to links, Bootstrap navs, and more.</p> <div class="bs-example" data-example-id="simple-badges"> <a href="#">Inbox <span class="badge">42</span></a> <br><br> <button class="btn btn-primary" type="button"> Messages <span class="badge">4</span> </button> </div> <details> <summary class="small header">Code</summary> <pre hljs hljs-language="html">
+<a href="#">Inbox <span class="badge">42</span></a>
+
+<button class="btn btn-primary" type="button">
+  Messages <span class="badge">4</span>
+</button></pre> </details> <h4>Self collapsing</h4> <p>When there are no new or unread items, badges will simply collapse (via CSS's <code>:empty</code> selector) provided no content exists within.</p> <div class="bs-callout bs-callout-danger" id="callout-badges-ie8-empty"> <h4>Cross-browser compatibility</h4> <p>Badges won't self collapse in Internet Explorer 8 because it lacks support for the <code>:empty</code> selector.</p> </div> <h4>Adapts to active nav states</h4> <p>Built-in styles are included for placing badges in active states in pill navigations.</p> <details> <summary class="small header">Code</summary> <pre hljs hljs-language="html">
+<ul class="nav nav-pills" role="tablist">
+  <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li>
+  <li role="presentation"><a href="#">Profile</a></li>
+  <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li>
+</ul></pre> </details> <div class="bs-example" data-example-id="badges-in-pills"> <ul class="nav nav-pills" role="tablist"> <li role="presentation" class="active"><a href="#">Home <span class="badge">42</span></a></li> <li role="presentation"><a href="#">Profile</a></li> <li role="presentation"><a href="#">Messages <span class="badge">3</span></a></li> </ul> </div> </section>
