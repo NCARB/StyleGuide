@@ -1,6 +1,8 @@
 // Generated on 2014-10-25 using generator-angular 0.9.8
 'use strict';
 
+const serveStatic = require('serve-static');
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -79,12 +81,12 @@ module.exports = function (grunt) {
           open: true,
           middleware: function (connect) {
             return [
-              connect.static('.tmp'),
+              serveStatic('.tmp'),
               connect().use(
                 '/bower_components',
-                connect.static('./bower_components')
+                serveStatic('./bower_components')
               ),
-              connect.static(appConfig.app)
+              serveStatic(appConfig.app)
             ];
           }
         }
@@ -94,13 +96,13 @@ module.exports = function (grunt) {
           port: 9001,
           middleware: function (connect) {
             return [
-              connect.static('.tmp'),
-              connect.static('test'),
+              serveStatic('.tmp'),
+              serveStatic('test'),
               connect().use(
                 '/bower_components',
-                connect.static('./bower_components')
+                serveStatic('./bower_components')
               ),
-              connect.static(appConfig.app)
+              serveStatic(appConfig.app)
             ];
           }
         }
@@ -185,6 +187,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
+        implementation: require('node-sass'),
         includePaths: ['bower_components', '<%= yeoman.app %>/styles/base']
       },
       dist: {
@@ -264,7 +267,12 @@ module.exports = function (grunt) {
       html: ['<%= yeoman.dist %>/{,*/}*.html'],
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images']
+        assetsDirs: ['<%= yeoman.dist %>','<%= yeoman.dist %>/images'],
+        blockReplacements: {
+          base: function (block) {
+              return ['<base href="', block.dest, '">'].join('');
+          }
+        }
       }
     },
 
@@ -457,6 +465,4 @@ module.exports = function (grunt) {
     'test',
     'build'
   ]);
-
-  grunt.registerTask('heroku', ['build']);
 };

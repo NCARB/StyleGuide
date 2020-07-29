@@ -48,5 +48,8 @@ h3. Directory structure
 h3. Running
 
 * npm install
-* bower install
-* grunt serve
+* npm run start
+
+h3. Deploying
+
+Once merged to master branch, the content is deployed using github pages and should be available at http://ncarb.github.io/StyleGuide/
