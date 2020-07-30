@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    # Publish these branches
+    branches:
+      - master
+      - next # temp
+      - next-pages # temp
+
+  # Run tests for any PRs.
+  pull_request:
+
+jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2.1.0
+        with:
+          node-version: "12"
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy
+        if: github.event_name == 'push' # don't deploy PRs
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
