@@ -123,7 +123,7 @@ ol {
   .body {
     margin: 0;
     padding-bottom: 0.25rem;
-    @include fontSize($type-M);
+    @include fontSizeAndWeight($type-M);
   }
   .sub-header {
     margin: 0;

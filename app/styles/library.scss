@@ -239,15 +239,13 @@ ul.figure li a {
   .t-agenda-light {
     font-family: $font_light;
     font-style: normal;
-    font-weight: normal;
-    @include fontSize(48px);
+    @include fontSizeAndWeight(48px, normal);
     @include lineHeight(76px);
   }
   .t-arial-bold {
     font-family: $font_regular;
     font-style: normal;
-    font-weight: bold;
-    @include fontSize(48px);
+    @include fontSizeAndWeight(48px, bold);
     @include lineHeight(76px);
   }
 }
@@ -324,7 +322,7 @@ ul.figure li a {
   background-color: $color-gray-3;
   color: $color-gray-6;
   font-family: $font_regular;
-  @include fontSize($type-XXL);
+  @include fontSizeAndWeight($type-XXL);
   text-align: center;
 
   .desc {

@@ -1,5 +1,16 @@
 @import "type_sizes";
 @import "colors";
+
+@mixin fontSizeAndWeight($size, $weight) {
+  @include fontSize($size);
+  @if (weight or $size <= 14) {
+    @if ($size <= 14 or $weight = bold or $weight > 500) {
+      $weight: 500;
+    }
+    font-weight: $weight;
+  }
+}
+
 // https://github.com/stubbornella/oocss/blob/master/oocss/src/components/utils/_fontSize.scss
 // Function for converting a px based font-size to rem.
 @function calculateRem($size) {
@@ -22,8 +33,7 @@
 @mixin type-1 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: 800;
-  @include fontSize($type-XXL);
+  @include fontSizeAndWeight($type-XXL, 800);
   @include lineHeight($type-XXL);
   letter-spacing: 0.05rem;
   padding: 0;
@@ -32,8 +42,7 @@
 @mixin type-2 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: bold;
-  @include fontSize($type-XL);
+  @include fontSizeAndWeight($type-XL, bold);
   @include lineHeight($type-XL);
   letter-spacing: 0.008rem;
   padding: 0;
@@ -42,8 +51,7 @@
 @mixin type-3 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: bold;
-  @include fontSize($type-L);
+  @include fontSizeAndWeight($type-L, bold);
   @include lineHeight($type-L);
   letter-spacing: 0.05rem;
   padding: 0;
@@ -52,8 +60,7 @@
 @mixin type-4 {
   font-family: $font_light;
   font-style: normal;
-  font-weight: bold;
-  @include fontSize($type-M);
+  @include fontSizeAndWeight($type-M, bold);
   @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
@@ -62,8 +69,7 @@
 @mixin type-5 {
   font-family: $font_regular;
   font-style: italic;
-  font-weight: normal;
-  @include fontSize($type-M);
+  @include fontSizeAndWeight($type-M, normal);
   @include lineHeight($type-M);
   letter-spacing: 0.008rem;
   padding: 0;
@@ -72,8 +78,7 @@
 @mixin type-6 {
   font-family: $font_regular;
   font-style: normal;
-  font-weight: bold;
-  @include fontSize($type-S);
+  @include fontSizeAndWeight($type-S, bold);
   @include lineHeight($type-S);
   letter-spacing: 0.008rem;
   padding: 0;
@@ -81,14 +86,14 @@
 
 @mixin type-small {
   font-family: $font_regular;
-  @include fontSize($type-S);
+  @include fontSizeAndWeight($type-S);
   @include lineHeight(17px);
   margin: 0;
 }
 
 @mixin type-body() {
   font-family: $font_regular;
-  @include fontSize($type-M);
+  @include fontSizeAndWeight($type-M);
   @include lineHeight(20px);
   padding: 0;
   margin: 0 0 calculateRem(16px);
@@ -96,7 +101,7 @@
 
 @mixin type-xsmall {
   font-family: $font_regular;
-  @include fontSize($type-XS);
+  @include fontSizeAndWeight($type-XS);
   @include lineHeight(18px);
   letter-spacing: 0.008rem;
   margin: 0;
@@ -105,8 +110,7 @@
 @mixin type-label() {
   font-family: $font_light;
   font-style: normal;
-  font-weight: 800;
-  @include fontSize($type-S);
+  @include fontSizeAndWeight($type-S, 800);
   @include lineHeight($type-S);
   letter-spacing: 0.008rem;
   margin: 0;
@@ -116,14 +120,13 @@
 @mixin sub-section-title() {
   margin-bottom: 0;
   font-family: $font_light;
-  @include fontSize($type-S + 1);
-  font-weight: 600;
+  @include fontSizeAndWeight($type-S + 1, 600);
   letter-spacing: 0.05em;
   color: $color_gray-5;
 }
 
 .body-header {
-  @include fontSize($type-L);
+  @include fontSizeAndWeight($type-L);
   margin-bottom: 10px;
   color: $color_gray-6;
 }

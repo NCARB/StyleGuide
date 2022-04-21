@@ -511,13 +511,11 @@
       > li > .navbar-text {
         font-weight: normal;
         color: $navbar-default-link-color;
-        font-family: "Agenda Light", Arial, Helvetica, sans-serif;
       }
       
       > li > a,
       > li > ul > li > a {
         color: $navbar-default-link-color;
-        font-family: "Agenda Light", Arial, Helvetica, sans-serif;
         
         &:hover,
         &:focus {
@@ -705,7 +703,6 @@
   .navbar-nav {
     > li > a {
       color: #FFF;
-      font-family: "Agenda Light", Arial, Helvetica, sans-serif;
 
 
       &:hover,
@@ -793,7 +790,6 @@
       // Styling for when menu is in desktop mode
       > li > a {
         color: $navbar-default-link-color;
-        font-family: "Agenda Light", Arial, Helvetica, sans-serif;
 
         &:hover,
         &:focus {
