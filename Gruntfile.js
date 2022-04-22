@@ -187,7 +187,7 @@ module.exports = function (grunt) {
     // Compiles Sass to CSS and generates necessary files if requested
     sass: {
       options: {
-        implementation: require('node-sass'),
+        implementation: require('sass'),
         includePaths: ['bower_components', '<%= yeoman.app %>/styles/base']
       },
       dist: {

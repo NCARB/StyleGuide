@@ -7,7 +7,6 @@
   "resolutions": {
     "graceful-fs": "4.2.3"
   },
-  "dependencies": {},
   "engines": {
     "node": "^10.0.0"
   },
@@ -55,7 +54,7 @@
     "karma-jasmine": "1.1.0",
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^2.4.1",
-    "node-sass": "^4.14.1",
+    "sass": "^1.50.1",
     "time-grunt": "^0.3.1"
   }
 }
