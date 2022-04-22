@@ -317,7 +317,7 @@
     .global-nav {
       > a {
         color: $color-blue;
-        @include fontSizeAndWeight(1.1rem, bold);
+        @include fontSizeAndWeight(1.1 * $type-M, bold);
       }
       > .navbar-text {
         font-size: 1.1rem;
