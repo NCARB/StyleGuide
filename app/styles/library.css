@@ -1,7 +1,6 @@
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -143,7 +142,6 @@ ul.figure li a {
   color: #444444 !important;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   padding: 10px;
 }
 
@@ -535,7 +533,6 @@ ul.figure li a {
   font-family: agenda, Arial, Helvetica, sans-serif;
   font-size: 36px;
   font-size: 2.25rem;
-  font-weight: 0;
   text-align: center;
 }
 .img-box .desc {

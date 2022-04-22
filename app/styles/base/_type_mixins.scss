@@ -3,7 +3,7 @@
 
 @mixin fontSizeAndWeight($size, $weight: 0) {
   @include fontSize($size);
-  @if ($weight or $size <= 14) {
+  @if ($weight != 0 or $size <= 14) {
     @if ($size <= 14 or $weight == bold or ($weight != normal and $weight > 500)) {
       $weight: 500;
     }

@@ -287,7 +287,6 @@ img {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -518,7 +517,6 @@ main .main-well {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -639,7 +637,6 @@ p {
   font-family: agenda, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 20px;
   line-height: 1.25rem;
   padding: 0;
@@ -933,7 +930,6 @@ input[type=submit].btn-inline {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -944,7 +940,6 @@ ol {
   font-family: agenda, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 20px;
   line-height: 1.25rem;
   padding: 0;
@@ -1071,7 +1066,6 @@ ol > li ol {
   padding-bottom: 0.25rem;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
 }
 .list-media .sub-header {
   margin: 0;
@@ -1090,7 +1084,6 @@ details summary::-webkit-details-marker {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -1139,7 +1132,6 @@ form {
 input {
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
 }
 
 label {
@@ -1205,28 +1197,24 @@ input[type=week].sized {
   font-family: agenda;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 1;
 }
 [placeholder]::-moz-placeholder {
   font-family: agenda;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 1;
 }
 [placeholder]:-moz-placeholder {
   font-family: agenda;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 1;
 }
 [placeholder]:-ms-input-placeholder {
   font-family: agenda;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 1;
 }
 
@@ -4479,7 +4467,6 @@ ul.form-group {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -4498,7 +4485,6 @@ ul.form-group {
   font-family: agenda, Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 0;
   line-height: 20px;
   line-height: 1.25rem;
   padding: 0;
@@ -4623,7 +4609,6 @@ ul.form-group {
   .lead {
     font-size: 24px;
     font-size: 1.5rem;
-    font-weight: 0;
   }
 }
 
@@ -4825,7 +4810,6 @@ blockquote {
   margin: 0 0 20px;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   border-left: 5px solid #E2E2E2;
 }
 blockquote p:last-child,
@@ -5481,7 +5465,6 @@ input[type=button].btn-block {
 .body-header {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   margin-bottom: 10px;
   color: #444444;
 }
@@ -6425,7 +6408,6 @@ input.input-lg:not([type]),
   padding: 10px 5px;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   line-height: 1.33;
   border-radius: 0;
 }
@@ -6458,7 +6440,6 @@ input.input-lg:not([type]),
 .input-group-lg > .input-group-btn > [placeholder].btn::-webkit-input-placeholder {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   padding-top: 2px;
 }
 .form-group-lg [placeholder]::-moz-placeholder, .input-lg[placeholder]::-moz-placeholder, .input-group-lg > [placeholder].form-control::-moz-placeholder, .input-group-lg > select[placeholder]::-moz-placeholder,
@@ -6482,7 +6463,6 @@ input.input-lg:not([type]),
 .input-group-lg > .input-group-btn > [placeholder].btn::-moz-placeholder {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   padding-top: 2px;
 }
 .form-group-lg [placeholder]:-moz-placeholder, .input-lg[placeholder]:-moz-placeholder, .input-group-lg > [placeholder].form-control:-moz-placeholder, .input-group-lg > select[placeholder]:-moz-placeholder,
@@ -6506,7 +6486,6 @@ input.input-lg:not([type]),
 .input-group-lg > .input-group-btn > [placeholder].btn:-moz-placeholder {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   padding-top: 2px;
 }
 .form-group-lg [placeholder]:-ms-input-placeholder, .input-lg[placeholder]:-ms-input-placeholder, .input-group-lg > [placeholder].form-control:-ms-input-placeholder, .input-group-lg > select[placeholder]:-ms-input-placeholder,
@@ -6530,7 +6509,6 @@ input.input-lg:not([type]),
 .input-group-lg > .input-group-btn > [placeholder].btn:-ms-input-placeholder {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   padding-top: 2px;
 }
 
@@ -6634,7 +6612,6 @@ input.input-lg:not([type]),
 .form-group-lg .control-label, .form-group-lg label {
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
 }
 
 .form-group-sm .control-label, .form-group-sm label {
@@ -8047,7 +8024,6 @@ input.input-lg:not([type]),
   padding: 10px 0.5em;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   border-radius: 0;
 }
 .input-group-addon input[type=radio],
@@ -8826,7 +8802,6 @@ button.list-group-item-danger.active:focus {
   padding: 20px 15px;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   line-height: 20px;
   height: 40px;
 }
@@ -11394,7 +11369,6 @@ a.thumbnail.active {
   .lead {
     font-size: 24px;
     font-size: 1.5rem;
-    font-weight: 0;
   }
 }
 
@@ -11594,7 +11568,6 @@ blockquote {
   margin: 0 0 20px;
   font-size: 20px;
   font-size: 1.25rem;
-  font-weight: 0;
   border-left: 5px solid #E2E2E2;
 }
 blockquote p:last-child,
