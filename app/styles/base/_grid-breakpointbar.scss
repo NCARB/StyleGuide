@@ -7,7 +7,6 @@
 
 
 body::after {
-  font-weight: bold;
   display: block;
   text-align: center;
   position: fixed;
@@ -20,7 +19,7 @@ body::after {
   text-align:right;
   padding: 4px 8px;
   background: rgba(204,204,204, 0.8);
-  font-size: $type-S;
+  @include fontSizeAndWeight($type-S, bold);
   line-height:1;
 }
 
@@ -34,7 +33,7 @@ body::after {
   padding: 5px;
   color: black;
   background: rgba(204,204,204, 0.8);
-  font-size: $type-S;
+  @include fontSizeAndWeight($type-S);
 
   span {
     display: block;
@@ -66,7 +65,6 @@ body::after {
 // Use this to debug any component or sub-body grid section
 @mixin breakpoint-debug($msg, $color: rgba(204,204,104,0.8)) {
   &::after {
-    font-weight: bold;
     display: block;
     text-align: center;
     position: absolute;
@@ -76,6 +74,6 @@ body::after {
     z-index: 99;
     content: $msg;
     background: #{$color};
-    font-size: 10px;
+    @include fontSizeAndWeight(10px, bold);
   }
 }

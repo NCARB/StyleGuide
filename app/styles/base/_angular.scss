@@ -22,7 +22,7 @@ html {
         }
         .btn {
             width: 100%;
-            font-size: 14px;
+            @include fontSizeAndWeight(14px);
             &:not(.btn-info) {
                 background-color: white;
             }

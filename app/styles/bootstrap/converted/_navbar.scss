@@ -181,7 +181,7 @@
 
 .navbar-brand {
   padding: $navbar-padding-vertical $navbar-padding-horizontal;
-  font-size: $font-size-large;
+  @include fontSizeAndWeight($font-size-large);
   line-height: $line-height-computed;
   height: $navbar-height;
 
@@ -316,9 +316,8 @@
 
     .global-nav {
       > a {
-        color: $color-blue; 
-        font-size: 1.1rem;
-        font-weight: bold;
+        color: $color-blue;
+        @include fontSizeAndWeight(1.1rem, bold);
       }
       > .navbar-text {
         font-size: 1.1rem;

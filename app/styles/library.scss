@@ -130,7 +130,7 @@ ul.figure li a {
 
     &:before {
       color: $color-gray-6 !important;
-      font-size: 20px;
+      @include fontSizeAndWeight(20px);
       padding: 10px;
     }
   }

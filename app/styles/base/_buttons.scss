@@ -43,8 +43,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   box-sizing: border-box;
   padding: 10px 15px 9px;
   font-family: $font_light;
-  font-size: $type-L;
-  font-weight: 800;
+  @include fontSizeAndWeight($type-L, 800);
   line-height: 1;
   text-decoration: none;
   letter-spacing: 0.05rem;
@@ -121,12 +120,11 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 
 // .btn-toggle {
 //   font-family: $font_light;
-//   font-weight: 800;
 //   background-color: #f4f4f2;
 //   background-image: none;
 //   color: #97948b;
 //   border: 1px solid #97958c; // stroke
-//   font-size: 18px;
+//   @include fontSizeAndWeight(18px, 800);
 //   letter-spacing: 0.05em;
 //   text-shadow: 0 1px 0 #fff;
 //   @include transition(all .2s ease-in-out);

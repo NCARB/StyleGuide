@@ -69,8 +69,7 @@ body:before {
     padding: 10px;
     line-height: 1;
     color: #fff;
-    font-weight: bold;
-    font-size: $type-M;
+    @include fontSizeAndWeight($type-M, bold);
     clip: auto !important;
     overflow: visible;
   }

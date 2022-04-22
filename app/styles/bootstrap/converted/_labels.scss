@@ -5,8 +5,7 @@
 .label {
   display: inline;
   padding: .15em .3em .2em;
-  font-size: 75%;
-  font-weight: bold;
+  @include fontSizeAndWeight(75%, bold);
   text-transform: uppercase;
   line-height: 1;
   color: $label-color;
