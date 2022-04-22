@@ -1,10 +1,10 @@
 @import "type_sizes";
 @import "colors";
 
-@mixin fontSizeAndWeight($size, $weight) {
+@mixin fontSizeAndWeight($size, $weight: 0) {
   @include fontSize($size);
-  @if (weight or $size <= 14) {
-    @if ($size <= 14 or $weight = bold or $weight > 500) {
+  @if ($weight or $size <= 14) {
+    @if ($size <= 14 or $weight == bold or ($weight != normal and $weight > 500)) {
       $weight: 500;
     }
     font-weight: $weight;
