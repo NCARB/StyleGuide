@@ -1,6 +1,6 @@
 {
   "name": "ncarb-style",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "repository": {
     "private": true
   },
@@ -14,7 +14,7 @@
     "start": "grunt serve",
     "postinstall": "bower install",
     "build": "grunt build",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx force-resolutions"
   },
   "keywords": [
     "ncarb"
