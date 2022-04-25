@@ -7,7 +7,7 @@ input[type="button"].btn,
 input[type="submit"].btn,
 input[type="file"] > input[type="button"].btn,
 button.btn {
-  @include appearance(none);
+  appearance: none;
 }
 
 /* Hide inner focus effect in Firefox */
@@ -127,7 +127,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 //   @include fontSizeAndWeight(18px, 800);
 //   letter-spacing: 0.05em;
 //   text-shadow: 0 1px 0 #fff;
-//   @include transition(all .2s ease-in-out);
+//   transition(all .2s ease-in-out);
 // 
 //   &:focus,
 //   &:hover {

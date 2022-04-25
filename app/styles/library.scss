@@ -78,12 +78,12 @@ ul.figure li a {
 .main .inline-nav {
   display: block;
   margin: 1rem 0;
-  @include column-count(2);
-  @include column-gap(10px);
+  column-count: 2;
+  column-gap: 10px;
 
   @include breakpoint(sm) {
-    @include column-count(3);
-    @include column-gap(20px);
+    column-count:  3;
+    column-gap: 20px;
   }
 
   a {

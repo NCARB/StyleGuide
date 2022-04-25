@@ -60,7 +60,7 @@ input[type="week"] {
 }
 
 [placeholder] {
-  @include placeholder {
+  ::placeholder {
     font-family: $font_light;
     @include fontSizeAndWeight($type-M);
     line-height: 1;
@@ -96,7 +96,7 @@ input[type="week"] {
 }
 
 input[type="search"] {
-  @include appearance(none);
+  appearance: none;
   height: 40px;
   max-width: 100%;
   background-color: transparent;
@@ -147,14 +147,14 @@ select.form-control {
   background-image: none;
   border: 1px solid $color-gray-3;
   border-radius: 2px;
-  @include transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 input[type="checkbox"] {
   border: 1px solid $color-gray;
   border-radius: 2px;
   background-color: $color_gray-2;
-  @include background-image(linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(0,0,0,.05) 49.51%, rgba(255,255,255,.05) 50.24%, rgba(255,255,255,.05) 100%));
+  background-image: linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(0,0,0,.05) 49.51%, rgba(255,255,255,.05) 50.24%, rgba(255,255,255,.05) 100%);
 }
 
 
