@@ -1,3 +1,4 @@
+@use 'sass:math';
 @import "breakpoints";
 @import "bourbon";
 
@@ -94,11 +95,11 @@
     $i: $i + 1;
     $j: 1;
     @while $j <= $i {
-      $percent-key: round(100 * $j / $i);
+      $percent-key: round(100 * math.div($j, $i));
       @if not map-has-key($percents, $percent-key) {
         $percents: map-merge($percents, ($percent-key: true));
         %percent#{$name}#{$percent_key} {
-            width: percentage($j / $i);
+            width: percentage(math.div($j, $i));
         }
       }
       @if $j < $i {
@@ -187,7 +188,7 @@
   $i: 0;
   @while $i < 12 {
     $i: $i + 1;
-    $percent-key: round(100 * $i / 12);
+    $percent-key: round(100 * math.div($i, 12));
     @if($i < 12) {
       .col#{$name}-#{$i} {
         @extend %percent#{$name_}#{$percent-key};
@@ -199,13 +200,13 @@
     }
 
     .col#{$name}-offset-#{$i} {
-      margin-left: percentage($i / 12);
+      margin-left: percentage(math.div($i, 12));
     }
     .col#{$name}-push-#{$i} {
-      left: percentage($i / 12);
+      left: percentage(math.div($i, 12));
     }
     .col#{$name}-pull-#{$i} {
-      right: percentage($i / 12);
+      right: percentage(math.div($i, 12));
     }
   }
 }
