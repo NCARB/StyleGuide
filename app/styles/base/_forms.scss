@@ -15,7 +15,7 @@ form {
 }
 
 input {
-  @include fontSize($type-M);
+  @include fontSizeAndWeight($type-M);
 }
 
 label {
@@ -43,9 +43,8 @@ input[type="week"] {
   // max-width: 600px;
   width: 100%;
   border: 1px solid $color-gray-3;
-  @include fontSize($type-S);
+  @include fontSizeAndWeight($type-S, bold);
   font-family: $font_regular;
-  font-weight: bold;
   border-radius: 2px;
   box-shadow: 1px 1px 3px rgba(0,0,0,.2) inset;
 
@@ -61,9 +60,9 @@ input[type="week"] {
 }
 
 [placeholder] {
-  @include placeholder {
+  ::placeholder {
     font-family: $font_light;
-    @include fontSize($type-M);
+    @include fontSizeAndWeight($type-M);
     line-height: 1;
   }
 }
@@ -97,7 +96,7 @@ input[type="week"] {
 }
 
 input[type="search"] {
-  @include appearance(none);
+  appearance: none;
   height: 40px;
   max-width: 100%;
   background-color: transparent;
@@ -141,21 +140,21 @@ select.form-control {
   height: 40px;
   padding: 8px 10px;
   font-family: $font_regular;
-  @include fontSize($type-S);
+  @include fontSizeAndWeight($type-S);
   line-height: normal;
   color: $color-gray;
   background-color: $color_white;
   background-image: none;
   border: 1px solid $color-gray-3;
   border-radius: 2px;
-  @include transition(border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s);
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 }
 
 input[type="checkbox"] {
   border: 1px solid $color-gray;
   border-radius: 2px;
   background-color: $color_gray-2;
-  @include background-image(linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(0,0,0,.05) 49.51%, rgba(255,255,255,.05) 50.24%, rgba(255,255,255,.05) 100%));
+  background-image: linear-gradient(bottom, rgba(0,0,0,.05) 0%, rgba(0,0,0,.05) 49.51%, rgba(255,255,255,.05) 50.24%, rgba(255,255,255,.05) 100%);
 }
 
 

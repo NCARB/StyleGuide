@@ -150,7 +150,7 @@ output {
 //  border: 1px solid $input-border;
 //  border-radius: $input-border-radius;
 //  @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075));
-//  @include transition(border-color ease-in-out .15s, box-shadow ease-in-out .15s);
+//  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 //
 //  // Customize the `:focus` state to imitate native WebKit styles.
 //  @include form-control-focus;
@@ -335,7 +335,7 @@ output {
 @mixin input-size-custom($parent, $input-height, $padding-vertical, $padding-horizontal, $font-size, $line-height, $border-radius) {
   #{$parent} {
     padding: $padding-vertical $padding-horizontal;
-    font-size: $font-size;
+    @include fontSizeAndWeight($font-size);
     line-height: $line-height;
     border-radius: $border-radius;
   }
@@ -366,22 +366,22 @@ output {
 
 .form-group-lg [placeholder], .input-lg[placeholder] {
   @include bourbon-placeholder {
-    font-size: $type-L;
+    @include fontSizeAndWeight($type-L);
     padding-top: 2px;
   }
 }
 .form-group-sm [placeholder], .input-sm[placeholder] {
   @include bourbon-placeholder {
-    font-size: $type-S;
+    @include fontSizeAndWeight($type-S);
     padding-top: 4px;
   }
 }
 
 .form-group-lg .control-label {
-  font-size: $type-L;
+  @include fontSizeAndWeight($type-L);
 }
 .form-group-sm .control-label {
-  font-size: $type-S;
+  @include fontSizeAndWeight($type-S);
 }
 
 // Form control feedback states

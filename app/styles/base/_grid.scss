@@ -1,11 +1,12 @@
+@use 'sass:math';
 @import "breakpoints";
 @import "bourbon";
 
 .flex-container, .row, .form-horizontal .form-group {
-  @include display(flex);
-  @include flex-flow(row wrap);
+  display: flex;
+  flex-flow: row wrap;
   -ms-flex-wrap: wrap;  // IE10
-  @include flex-basis($base-font-size);
+  flex-basis: $base-font-size;
   list-style: none;
 
   .lt-ie10 & {
@@ -31,47 +32,47 @@
 }
 
 .flex-right {
-  @include justify-content(flex-end);
+  justify-content: flex-end;
 }
 
 .flex-center {
-  @include justify-content(center);
+  justify-content: center;
 }
 
 .flex-space-around {
-  @include justify-content(space-around);
+  justify-content: space-around;
 }
 
 .flex-space-between {
-  @include justify-content(space-between);
+  justify-content: space-between;
 }
 
 .flex-top {
-  @include align-items(flex-start);
+  align-items: flex-start;
 }
 
 .flex-middle {
-  @include align-items(center);
+  align-items: center;
 }
 
 .flex-bottom {
-  @include align-items(flex-end);
+  align-items: flex-end;
 }
 
 .flex-baseline {
-  @include align-items(baseline);
+  align-items: baseline;
 }
 
 .flex-item-top {
-  @include align-self(flex-start);
+  align-self: flex-start;
 }
 
 .flex-item-middle {
-  @include align-self(center);
+  align-self: center;
 }
 
 .flex-item-bottom {
-  @include align-self(flex-end);
+  align-self: flex-end;
 }
 
 // Examples:
@@ -94,11 +95,11 @@
     $i: $i + 1;
     $j: 1;
     @while $j <= $i {
-      $percent-key: round(100 * $j / $i);
+      $percent-key: round(100 * math.div($j, $i));
       @if not map-has-key($percents, $percent-key) {
         $percents: map-merge($percents, ($percent-key: true));
         %percent#{$name}#{$percent_key} {
-            width: percentage($j / $i);
+            width: percentage(math.div($j, $i));
         }
       }
       @if $j < $i {
@@ -150,7 +151,7 @@
   @while $i < 6 {
     $i: $i + 1;
     .flex#{$name}-order-#{$i} {
-      @include order($i);
+      order: $i;
     }
   }
 
@@ -187,7 +188,7 @@
   $i: 0;
   @while $i < 12 {
     $i: $i + 1;
-    $percent-key: round(100 * $i / 12);
+    $percent-key: round(100 * math.div($i, 12));
     @if($i < 12) {
       .col#{$name}-#{$i} {
         @extend %percent#{$name_}#{$percent-key};
@@ -199,13 +200,13 @@
     }
 
     .col#{$name}-offset-#{$i} {
-      margin-left: percentage($i / 12);
+      margin-left: percentage(math.div($i, 12));
     }
     .col#{$name}-push-#{$i} {
-      left: percentage($i / 12);
+      left: percentage(math.div($i, 12));
     }
     .col#{$name}-pull-#{$i} {
-      right: percentage($i / 12);
+      right: percentage(math.div($i, 12));
     }
   }
 }

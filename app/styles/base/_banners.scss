@@ -11,12 +11,11 @@
     text-align: center;
     line-height: 2em;
     overflow: hidden;
-    font-weight: bold;
-    font-size: 12px;
+    @include fontSizeAndWeight(12px, bold);
     @include box-shadow(0 0 5px black);
     
     & a.stop {
-        font-size: 11px;
+        @include fontSizeAndWeight(11px);
         text-decoration: none;
         margin-left: 2px;
         &:hover {

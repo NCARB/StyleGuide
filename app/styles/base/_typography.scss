@@ -72,7 +72,7 @@ strong, b {
 }
 
 small {
-  @include fontSize($type-XS);
+  @include fontSizeAndWeight($type-XS);
 }
 
 hr {

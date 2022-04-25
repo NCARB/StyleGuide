@@ -69,8 +69,7 @@ body:before {
     padding: 10px;
     line-height: 1;
     color: #fff;
-    font-weight: bold;
-    font-size: $type-M;
+    @include fontSizeAndWeight($type-M, bold);
     clip: auto !important;
     overflow: visible;
   }
@@ -86,11 +85,11 @@ body:before {
 
 div.canvas {
   background-color: #fff;
-  @include transform(none);
-  @include transition(all .33s ease-out);
+  transform: none;
+  transition: all .33s ease-out;
 
   &.is-pushed {
-    @include transform(translate3d(16em,0,0));
+    transform: translate3d(16em,0,0);
   }
 }
 
@@ -161,10 +160,10 @@ main {
 
 @include breakpoint(md) {
   .canvas {
-    @include transition(none);
+    transition: none;
 
     &.is-pushed {
-      @include transform(translate3d(0,0,0));
+      transform: translate3d(0,0,0);
     }
   }
   .canvas-blackout {

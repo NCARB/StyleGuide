@@ -47,10 +47,7 @@
     img {
         width: 200px;
         height:auto;
-        -webkit-transition: width 0.2s ease-out;
-           -moz-transition: width 0.2s ease-out; 
-             -o-transition: width 0.2s ease-out; 
-                transition: width 0.2s ease-out; 
+        transition: width 0.2s ease-out; 
     }
 }
 .org-card {
@@ -61,9 +58,8 @@
     }
     .org {
         display:block;
-        font-size:$type-M + 2px;
+        @include fontSizeAndWeight($type-M + 2px, bold);
         font-family:$font_light;
-        font-weight:bold;
     }
     .tel {
         margin-right:10px;
@@ -85,14 +81,13 @@
 
 .copyright {
     font-family:$font_light;
-    font-weight:bold;
     a {
         font-family:$font_regular;
         color:$color_base;
         font-weight:normal;
     }
     text-align:center;
-    font-size:$type-M;
+    @include fontSizeAndWeight($type-M, bold);
     padding: 20px 40px 0;
 }
 
@@ -138,7 +133,7 @@
         }
         a {
             text-decoration:none;
-            font-size:$type-S;
+            @include fontSizeAndWeight($type-S);
             &:hover {
                 text-decoration:underline;
             }
