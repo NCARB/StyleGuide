@@ -14,7 +14,7 @@
     "start": "grunt serve",
     "postinstall": "bower install",
     "build": "grunt build",
-    "preinstall": "npx npm-force-resolutions"
+    "preinstall": "npx force-resolutions"
   },
   "keywords": [
     "ncarb"
