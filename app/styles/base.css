@@ -7618,8 +7618,7 @@ input.input-lg:not([type]),
 .label {
   display: inline;
   padding: 0.15em 0.3em 0.2em;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 75%;
   font-weight: 500;
   text-transform: uppercase;
   line-height: 1;
