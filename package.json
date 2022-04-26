@@ -1,6 +1,6 @@
 {
   "name": "ncarb-style",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "repository": {
     "private": true
   },
@@ -19,9 +19,11 @@
   "keywords": [
     "ncarb"
   ],
+  "dependencies": {
+    "bower": "*"
+  },
   "devDependencies": {
     "autoprefixer": "^9.8.6",
-    "bower": "*",
     "compression": "^1.7.1",
     "connect-modrewrite": "^0.7.11",
     "grunt": "^1.0.3",
