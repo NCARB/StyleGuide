@@ -58,7 +58,7 @@
     "load-grunt-tasks": "^0.4.0",
     "lodash": "^2.4.1",
     "node-uuid": "^1.4.8",
-    "postcss": "^8.4.12",
+    "postcss": "^8.5.23",
     "sass": "^1.50.1",
     "time-grunt": "^0.3.1"
   }
